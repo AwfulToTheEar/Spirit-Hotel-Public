@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="22">
+ <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
+ <tileset firstgid="8" source="../tilesets/player.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="10">
+  <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,
+2,0,6,0,6,0,0,0,6,2,
+2,0,6,0,6,0,6,0,6,2,
+2,0,6,0,0,0,6,0,6,2,
+2,0,6,0,6,6,6,0,0,0,
+2,0,6,0,6,0,0,0,0,0,
+2,0,6,0,6,0,6,6,0,2,
+2,0,0,0,0,0,6,6,0,2,
+2,0,0,0,0,0,0,0,0,2,
+2,2,2,2,0,0,2,2,2,2
+</data>
+ </layer>
+ <objectgroup id="7" name="objects">
+  <object id="14" x="32" y="32" width="32" height="32">
+   <properties>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::IsTrigger"/>
+    <property name="load_level" type="class" propertytype="spirit_hotel::game::level::LoadLevel">
+     <properties>
+      <property name="0" value="tiled\worlds\world2.world"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="18" template="../templates/player.tx" x="262" y="256"/>
+ </objectgroup>
+</map>

@@ -1,0 +1,264 @@
+[
+  {
+    "id": 123,
+    "name": "spirit_hotel::audio::Music",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 3,
+    "name": "spirit_hotel::audio::SoundEffect",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 315,
+    "name": "spirit_hotel::game::animation::AnimationPath",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "spirit_hotel::game::dialogue::StartConversation",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "name": "spirit_hotel::game::level::LevelAssets",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "music",
+        "type": "file",
+        "value": null
+      },
+      {
+        "name": "world",
+        "propertyType": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::world::asset::TiledWorld>>",
+        "type": "class",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "spirit_hotel::game::level::LoadLevel",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 294,
+    "name": "spirit_hotel::game::movement::CanMove",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "up",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "down",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "left",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "right",
+        "type": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "name": "spirit_hotel::game::movement::MovementDuration",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "float",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "name": "spirit_hotel::game::player::Player",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 102,
+    "name": "spirit_hotel::game::trigger::IsTrigger",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": ":variant",
+        "propertyType": "spirit_hotel::game::trigger::IsTrigger:::Variant",
+        "type": "class",
+        "value": "Instant"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "spirit_hotel::game::trigger::IsTrigger:::Variant",
+    "type": "enum",
+    "storageType": "string",
+    "values": [
+      "Instant",
+      "Interact"
+    ],
+    "valuesAsFlags": false
+  },
+  {
+    "id": 326,
+    "name": "spirit_hotel::menus::credits::CreditsAssets",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "music",
+        "type": "file",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "spirit_hotel::menus::settings::GlobalVolumeLabel",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 222,
+    "name": "spirit_hotel::theme::interaction::InteractionAssets",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "hover",
+        "type": "file",
+        "value": null
+      },
+      {
+        "name": "click",
+        "type": "file",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "spirit_hotel::theme::interaction::InteractionPalette",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "none",
+        "type": "color",
+        "value": null
+      },
+      {
+        "name": "hovered",
+        "type": "color",
+        "value": null
+      },
+      {
+        "name": "pressed",
+        "type": "color",
+        "value": null
+      }
+    ]
+  }
+]
