@@ -1,8 +1,8 @@
-use avian2d::{collision::collider::contact_query, prelude::Collider};
+use avian2d::{collision::collider::contact_query, prelude::{Collider, ColliderDisabled}};
 use bevy::prelude::*;
 use bevy_ecs_tiled::{map::{self, TiledMapHandle}, prelude::TiledMap};
 
-use crate::{game::{level::{InsideMap, LevelAssets}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::{InsideMap, LevelAssets}, path_finding::ScanCollider, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
@@ -10,10 +10,9 @@ pub(super) fn plugin(app: &mut App) {
         .register_type::<MovementDuration>()
 
         .add_systems(Update, (
-            tick_move_to_location.in_set(AppSystems::TickTimers),
             (
                 find_step_size.run_if(resource_exists::<LevelAssets>),
-                apply_intent,
+                apply_intent
             )
                 .in_set(AppSystems::Update)
                 .in_set(GameplaySystems)
@@ -21,6 +20,7 @@ pub(super) fn plugin(app: &mut App) {
         ))
 
         .add_systems(FixedUpdate, (
+            tick_move_to_location,
             apply_move_to_location,
             remove_move_to_location
         )
@@ -68,7 +68,7 @@ pub struct MovementStepSize(Vec2);
 pub fn apply_intent(
     mut commands: Commands,
     q_entities_with_intent: Query<(Entity, &MovementIntent, &MovementDuration, &MovementStepSize, &Transform, &Children), (With<CanMove>, Without<MoveToLocation>)>,
-    q_colliders: Query<(Entity, &Collider, &GlobalTransform), Without<TriggerCollider>>,
+    q_colliders: Query<(Entity, &Collider, &GlobalTransform), (Without<TriggerCollider>, Without<ColliderDisabled>, Without<ScanCollider>)>,
 ) {
     for (entity, intent, duration,  step_size, transform, children) in q_entities_with_intent.iter() {
         let step = (intent.0 * step_size.0).extend(0.);
@@ -158,12 +158,13 @@ pub fn remove_move_to_location(
     q_timers: Query<(Entity, &MoveToLocation), (With<MovementIntent>, With<MovementStepSize>)>
 ) {
     for (entity, move_to_location) in q_timers.iter() {
-        if !move_to_location.timer.just_finished() {
+        if !move_to_location.timer.finished() {
             return
         }
 
-        commands.entity(entity)
-            .remove::<MovementIntent>()
-            .remove::<MoveToLocation>();
+        commands.entity(entity).remove::<(
+            MovementIntent,
+            MoveToLocation
+        )>();
     }
 }

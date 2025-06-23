@@ -1,6 +1,36 @@
 [
   {
-    "id": 123,
+    "id": 273,
+    "name": "bevy_render::view::visibility::Visibility",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": ":variant",
+        "propertyType": "bevy_render::view::visibility::Visibility:::Variant",
+        "type": "class",
+        "value": "Inherited"
+      }
+    ]
+  },
+  {
+    "id": 272,
+    "name": "bevy_render::view::visibility::Visibility:::Variant",
+    "type": "enum",
+    "storageType": "string",
+    "values": [
+      "Inherited",
+      "Hidden",
+      "Visible"
+    ],
+    "valuesAsFlags": false
+  },
+  {
+    "id": 37,
     "name": "spirit_hotel::audio::Music",
     "type": "class",
     "useAs": [
@@ -11,7 +41,7 @@
     "members": []
   },
   {
-    "id": 3,
+    "id": 21,
     "name": "spirit_hotel::audio::SoundEffect",
     "type": "class",
     "useAs": [
@@ -22,7 +52,7 @@
     "members": []
   },
   {
-    "id": 315,
+    "id": 9,
     "name": "spirit_hotel::game::animation::AnimationPath",
     "type": "class",
     "useAs": [
@@ -33,13 +63,13 @@
     "members": [
       {
         "name": "0",
-        "type": "string",
-        "value": ""
+        "type": "file",
+        "value": null
       }
     ]
   },
   {
-    "id": 78,
+    "id": 29,
     "name": "spirit_hotel::game::dialogue::StartConversation",
     "type": "class",
     "useAs": [
@@ -56,7 +86,7 @@
     ]
   },
   {
-    "id": 316,
+    "id": 27,
     "name": "spirit_hotel::game::level::LevelAssets",
     "type": "class",
     "useAs": [
@@ -79,7 +109,7 @@
     ]
   },
   {
-    "id": 121,
+    "id": 213,
     "name": "spirit_hotel::game::level::LoadLevel",
     "type": "class",
     "useAs": [
@@ -90,13 +120,13 @@
     "members": [
       {
         "name": "0",
-        "type": "string",
-        "value": ""
+        "type": "file",
+        "value": null
       }
     ]
   },
   {
-    "id": 294,
+    "id": 236,
     "name": "spirit_hotel::game::movement::CanMove",
     "type": "class",
     "useAs": [
@@ -128,7 +158,7 @@
     ]
   },
   {
-    "id": 265,
+    "id": 259,
     "name": "spirit_hotel::game::movement::MovementDuration",
     "type": "class",
     "useAs": [
@@ -145,7 +175,41 @@
     ]
   },
   {
-    "id": 240,
+    "id": 270,
+    "name": "spirit_hotel::game::path_finding::FollowPath",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "object",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "name": "spirit_hotel::game::path_finding::PathNode",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "object",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 93,
     "name": "spirit_hotel::game::player::Player",
     "type": "class",
     "useAs": [
@@ -156,7 +220,7 @@
     "members": []
   },
   {
-    "id": 102,
+    "id": 55,
     "name": "spirit_hotel::game::trigger::IsTrigger",
     "type": "class",
     "useAs": [
@@ -174,7 +238,7 @@
     ]
   },
   {
-    "id": 101,
+    "id": 54,
     "name": "spirit_hotel::game::trigger::IsTrigger:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -185,7 +249,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 326,
+    "id": 289,
     "name": "spirit_hotel::menus::credits::CreditsAssets",
     "type": "class",
     "useAs": [
@@ -202,7 +266,7 @@
     ]
   },
   {
-    "id": 46,
+    "id": 253,
     "name": "spirit_hotel::menus::settings::GlobalVolumeLabel",
     "type": "class",
     "useAs": [
@@ -213,7 +277,7 @@
     "members": []
   },
   {
-    "id": 222,
+    "id": 30,
     "name": "spirit_hotel::theme::interaction::InteractionAssets",
     "type": "class",
     "useAs": [
@@ -235,7 +299,7 @@
     ]
   },
   {
-    "id": 200,
+    "id": 350,
     "name": "spirit_hotel::theme::interaction::InteractionPalette",
     "type": "class",
     "useAs": [

@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <properties>
+  <property name="visibility" type="class" propertytype="bevy_render::view::visibility::Visibility">
+   <properties>
+    <property name=":variant" propertytype="bevy_render::view::visibility::Visibility:::Variant" value="Hidden"/>
+   </properties>
+  </property>
+ </properties>
  <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="10">
   <data encoding="csv">
-4,4,4,4,0,0,4,4,4,4,
-4,0,0,0,0,0,0,0,0,4,
-4,0,0,0,0,0,0,0,0,4,
-4,0,0,0,0,0,0,0,0,4,
+6,6,6,6,0,0,6,6,6,6,
+6,0,0,0,0,0,0,0,0,6,
+6,0,0,0,0,0,0,0,0,6,
+6,0,0,0,0,0,0,0,0,6,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-4,0,0,0,0,0,0,0,0,4,
-4,0,0,0,0,0,0,0,0,4,
-4,0,0,0,0,0,0,0,0,4,
-4,4,4,4,0,0,4,4,4,4
+6,0,0,0,0,0,0,0,0,6,
+6,0,0,0,0,0,0,0,0,6,
+6,0,0,0,0,0,0,0,0,6,
+6,6,6,6,0,0,6,6,6,6
 </data>
  </layer>
 </map>

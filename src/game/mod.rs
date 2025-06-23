@@ -17,6 +17,7 @@ mod movement;
 mod player;
 mod animation;
 mod dialogue;
+mod path_finding;
 
 pub(super) fn plugin(app: &mut App) {
     app
@@ -28,7 +29,8 @@ pub(super) fn plugin(app: &mut App) {
             movement::plugin,
             player::plugin,
             animation::plugin,
-            dialogue::plugin
+            dialogue::plugin,
+            path_finding::plugin
         ))
 
         .configure_sets(PreUpdate,
@@ -51,10 +53,12 @@ pub(super) fn plugin(app: &mut App) {
 
                 info!("Export Tiled types to '{:?}'", &path);
                 map::export_types(&reg, path, |name| {
-                    let mut split = name.split("::");
+                    if name.contains("spirit_hotel::") {
+                        return true;
+                    }
 
-                    if let Some(package) = split.next() {
-                        return package == "spirit_hotel"
+                    if name.contains("bevy_render::view::visibility::Visibility") {
+                        return true;
                     }
 
                     return false;

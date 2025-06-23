@@ -24,6 +24,7 @@ tracing = { version = "0.1", features = [
     "release_max_level_warn",
 ] }
 avian2d = "0.3.1"
+bevy_northstar = "0.2.0"
 
 [patch.crates-io]
 bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }

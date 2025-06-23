@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object>
+  <point/>
+  <properties>
+   <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::PathNode"/>
+  </properties>
+ </object>
+</template>

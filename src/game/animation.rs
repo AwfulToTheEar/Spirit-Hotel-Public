@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use bevy::prelude::*;
 use bevy_aseprite_ultra::prelude::AseAnimation;
 
@@ -28,7 +30,7 @@ pub struct PausedByState;
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
-pub struct AnimationPath(pub String);
+pub struct AnimationPath(pub PathBuf);
 
 pub fn start_animation_movement(
     mut q_moving_entities: Query<(&MovementIntent, &mut AseAnimation, &CanMove), Added<MoveToLocation>>,

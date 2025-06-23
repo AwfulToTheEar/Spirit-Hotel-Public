@@ -13,6 +13,36 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 18,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "bevy_render::view::visibility::Visibility:::Variant",
+                    "type": "string",
+                    "value": "Inherited"
+                }
+            ],
+            "name": "bevy_render::view::visibility::Visibility",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 19,
+            "name": "bevy_render::view::visibility::Visibility:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Inherited",
+                "Hidden",
+                "Visible"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 1,
             "members": [
             ],
@@ -41,7 +71,7 @@
             "members": [
                 {
                     "name": "0",
-                    "type": "string",
+                    "type": "file",
                     "value": ""
                 }
             ],
@@ -63,6 +93,45 @@
                 }
             ],
             "name": "spirit_hotel::game::dialogue::StartConversation",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 16,
+            "members": [
+                {
+                    "name": "music",
+                    "type": "file",
+                    "value": ""
+                },
+                {
+                    "name": "world",
+                    "type": "std::nullptr_t",
+                    "value": null
+                }
+            ],
+            "name": "spirit_hotel::game::level::LevelAssets",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 17,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel::game::level::LoadLevel",
             "type": "class",
             "useAs": [
                 "property"
@@ -239,20 +308,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 16,
+            "id": 22,
             "members": [
                 {
-                    "name": "music",
-                    "type": "file",
-                    "value": ""
-                },
-                {
-                    "name": "world",
-                    "type": "std::nullptr_t",
-                    "value": null
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
                 }
             ],
-            "name": "spirit_hotel::game::level::LevelAssets",
+            "name": "spirit_hotel::game::path_finding::FollowPath",
             "type": "class",
             "useAs": [
                 "property"
@@ -261,15 +325,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 17,
+            "id": 23,
             "members": [
                 {
                     "name": "0",
-                    "type": "string",
-                    "value": ""
+                    "type": "object",
+                    "value": 0
                 }
             ],
-            "name": "spirit_hotel::game::level::LoadLevel",
+            "name": "spirit_hotel::game::path_finding::PathNode",
             "type": "class",
             "useAs": [
                 "property"

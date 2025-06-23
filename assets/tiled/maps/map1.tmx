@@ -22,7 +22,7 @@
     <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::IsTrigger"/>
     <property name="load_level" type="class" propertytype="spirit_hotel::game::level::LoadLevel">
      <properties>
-      <property name="0" value="tiled\worlds\world2.world"/>
+      <property name="0" type="file" value="../worlds/world2.world"/>
      </properties>
     </property>
    </properties>

@@ -7,14 +7,16 @@ use bevy::{
 };
 use bevy_ecs_tiled::debug::TiledDebugPluginGroup;
 use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
+use bevy_northstar::{debug::NorthstarDebugPlugin, prelude::CardinalNeighborhood};
 
 use crate::screens::Screen;
 
 pub(super) fn plugin(app: &mut App) {
     app.add_plugins((
         EguiPlugin { enable_multipass_for_primary_context: true },
-        TiledDebugPluginGroup,
         WorldInspectorPlugin::new(),
+        TiledDebugPluginGroup,
+        NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
         PhysicsDebugPlugin::default()
     ));
     // Log `Screen` state transitions.

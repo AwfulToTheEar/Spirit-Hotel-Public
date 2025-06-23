@@ -1,12 +1,14 @@
 //! Spawn the main level.
 
-use avian2d::prelude::Collider;
+use std::path::PathBuf;
+
+use avian2d::prelude::{Collider, ColliderDisabled, RigidBody};
 use bevy::prelude::*;
 use bevy_aseprite_ultra::prelude::AseAnimation;
 use bevy_ecs_tiled::prelude::*;
 
 use crate::{
-    asset_tracking::LoadResource, audio::music, game::{animation::AnimationPath, trigger::{IsTrigger, TriggerActivatedEvent, TriggerCollider}, GameplaySystems}, screens::Screen, AppSystems, PausableSystems
+    asset_tracking::LoadResource, audio::music, game::{animation::AnimationPath, movement::CanMove, path_finding::PathNode, trigger::{IsTrigger, TriggerActivatedEvent, TriggerCollider}, GameplaySystems}, screens::Screen, AppSystems, PausableSystems
 };
 
 pub(super) fn plugin(app: &mut App) {
@@ -21,9 +23,13 @@ pub(super) fn plugin(app: &mut App) {
 
         .load_resource::<LevelAssets>()
 
-        .add_systems(PreUpdate,
-            handle_object_event
-                .in_set(GameplaySystems)
+        .add_systems(PreUpdate,(
+                handle_object_animation_path,
+                handle_object_is_trigger,
+                handle_object_path_node,
+                handle_collider_static,
+            )
+            .in_set(GameplaySystems)
         )
 
         .add_systems(Update,
@@ -58,7 +64,7 @@ impl FromWorld for LevelAssets {
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
-pub struct LoadLevel(pub String);
+pub struct LoadLevel(pub PathBuf);
 
 #[derive(Component, Clone, PartialEq, Eq, Debug, Reflect)]
 #[reflect(Component, PartialEq, Debug, FromWorld, Clone)]
@@ -95,9 +101,13 @@ pub fn mark_objects_inside_map(
     mut commands: Commands,
     tiled_maps: Res<Assets<TiledMap>>,
     mut q_tiled_map_objects: Query<(Entity, &GlobalTransform, Option<&mut InsideMap>), (With<TiledMapObject>, Changed<GlobalTransform>)>,
-    q_maps: Query<(Entity, &TiledMapHandle, &GlobalTransform)>
+    q_maps: Query<(Entity, &TiledMapHandle, &GlobalTransform, &ViewVisibility)>
 ) {
-    for (map_entity, handle, map_transform) in q_maps.iter() {
+    for (map_entity, handle, map_transform, view_visibility) in q_maps.iter() {
+        if !view_visibility.get() {
+            continue;
+        }
+
         let Some(tiled_map) = tiled_maps.get(handle.0.id()) else {
             continue;
         };
@@ -145,7 +155,11 @@ pub fn load_level_from_activated_trigger(
             continue;
         };
 
-        level_assets.world = Some(asset_server.load(load_level.0.clone()));
+        let mut path = PathBuf::from("tiled");
+        path.push("worlds");
+        path.push(load_level.0.clone());
+
+        level_assets.world = Some(asset_server.load(path));
 
         next_screen.set(Screen::Loading);
 
@@ -153,30 +167,85 @@ pub fn load_level_from_activated_trigger(
     }
 }
 
-pub fn handle_object_event(
+pub fn handle_object_animation_path(
     mut commands: Commands,
     asset_server: Res<AssetServer>,
     mut e_object_created: EventReader<TiledObjectCreated>,
-    q_triggers: Query<&Children, With<IsTrigger>>,
     q_animations: Query<(Entity, &AnimationPath)>,
+) {
+    for e in e_object_created.read() {
+        let Ok((entity, animation_path)) = q_animations.get(e.entity) else {
+            continue;
+        };
+
+        let mut path = PathBuf::from("tiled");
+        path.push("worlds");
+        path.push(animation_path.0.clone());
+
+        commands.entity(entity).insert(AseAnimation {
+            aseprite: asset_server.load(path),
+            ..default()
+        });
+    }
+}
+
+pub fn handle_object_is_trigger(
+    mut commands: Commands,
+    mut e_object_created: EventReader<TiledObjectCreated>,
+    q_triggers: Query<&Children, With<IsTrigger>>,
     q_colliders: Query<Entity, (With<Collider>, With<ChildOf>)>
 ) {
     for e in e_object_created.read() {
-        if let Ok(children) = q_triggers.get(e.entity) {
-            for entity in children.iter() {
-                if !q_colliders.contains(entity) {
-                    continue;
-                }
+        let Ok(children) = q_triggers.get(e.entity) else {
+            continue;
+        };
 
-                commands.entity(entity).insert(TriggerCollider);
+        for entity in children.iter() {
+            if !q_colliders.contains(entity) {
+                continue;
             }
+
+            commands.entity(entity).insert(TriggerCollider);
+        }
+    }
+}
+
+pub fn handle_object_path_node(
+    mut commands: Commands,
+    mut e_object_created: EventReader<TiledObjectCreated>,
+    q_path_nodes: Query<&Children, With<PathNode>>,
+    q_colliders: Query<Entity, (With<Collider>, With<ChildOf>)>
+) {
+    for e in e_object_created.read() {
+        let Ok(children) = q_path_nodes.get(e.entity) else {
+            continue;
+        };
+
+        for entity in children.iter() {
+            if !q_colliders.contains(entity) {
+                continue;
+            }
+
+            commands.entity(entity).insert(ColliderDisabled);
+        }
+    }
+}
+
+pub fn handle_collider_static(
+    mut commands: Commands,
+    mut e_collider_created: EventReader<TiledColliderCreated>,
+    q_static: Query<&Children, Without<CanMove>>,
+    q_colliders: Query<(Entity, &ChildOf), (With<Collider>, With<ChildOf>)>
+) {
+    for e in e_collider_created.read() {
+        let Ok((entity, child_of)) = q_colliders.get(e.entity) else {
+            continue;
+        };
+
+        if !q_static.contains(child_of.0) {
+            continue;
         }
 
-        if let Ok((entity, animation_path)) = q_animations.get(e.entity) {
-            commands.entity(entity).insert(AseAnimation {
-                aseprite: asset_server.load(animation_path.0.clone()),
-                ..default()
-            });
-        }
+        commands.entity(entity).insert(RigidBody::Static);
     }
 }
