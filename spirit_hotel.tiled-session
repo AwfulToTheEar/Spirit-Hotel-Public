@@ -5,12 +5,12 @@
     },
     "activeFile": "assets/tiled/maps/map2.tmx",
     "expandedProjectPaths": [
-        "assets/tiled",
-        ".",
-        "assets",
         "assets/tiled/worlds",
         "assets/tiled/maps",
-        "assets/tiled/tilesets"
+        ".",
+        "assets/tiled",
+        "assets/tiled/tilesets",
+        "assets"
     ],
     "fileStates": {
         "assets/tiled/maps/chunk.tmx": {
@@ -64,7 +64,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 160.12293507491356,
-                "y": 253.5535920092201
+                "y": 177.94852093737998
             }
         },
         "assets/tiled/tiles/orthogonal_1.tsx": {
@@ -104,13 +104,13 @@
     "project": "spirit_hotel.tiled-project",
     "property.type": "spirit_hotel::game::path_finding::FollowPath",
     "recentFiles": [
+        "assets/tiled/tilesets/orthogonal_1.tsx",
+        "assets/tiled/tilesets/player.tsx",
+        "assets/tiled/maps/map2.tmx",
         "assets/tiled/maps/chunk3.tmx",
         "assets/tiled/maps/chunk2.tmx",
         "assets/tiled/maps/chunk1.tmx",
         "assets/tiled/maps/map1.tmx",
-        "assets/tiled/tilesets/orthogonal_1.tsx",
-        "assets/tiled/tilesets/player.tsx",
-        "assets/tiled/maps/map2.tmx",
         "assets/tiled/maps/chunk.tmx"
     ]
 }

@@ -7,12 +7,12 @@ use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, Tilem
 use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 use bevy_northstar::prelude::*;
 
-use crate::{game::{level::InsideMap, movement::{CanMove, MoveToLocation}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::InsideMap, movement::{remove_move_to_location, CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
         .add_plugins(NorthstarPlugin::<CardinalNeighborhood>::default())
-        .add_plugins(FilterQueryInspectorPlugin::<With<FollowPath>>::default())
+        .add_plugins(FilterQueryInspectorPlugin::<(With<Path>, With<GridPos>, With<Pathfind>)>::default())
 
         .register_type::<PathNode>()
         .register_type::<FollowPath>()
@@ -23,7 +23,13 @@ pub(super) fn plugin(app: &mut App) {
                 compute_grid_collision,
                 (
                     set_grid_pos_from_transform,
-                    apply_goal_from_path_node
+                    apply_goal_from_path_node,
+                    (
+                        remove_next_pos,
+                        apply_intent_from_next_pos
+                    )
+                        .chain()
+                        .after(remove_move_to_location)
                 )
                     .in_set(PausableSystems)
             )
@@ -42,6 +48,10 @@ pub struct PathNode(pub Option<Entity>);
 #[reflect(Component, Default)]
 #[require(Transform, CanMove)]
 pub struct FollowPath(pub Option<Entity>);
+
+#[derive(Component, Default, Debug, Reflect)]
+#[reflect(Component, Default)]
+pub struct NextPosToBeRemoved;
 
 #[derive(Component, Reflect)]
 #[reflect(Component)]
@@ -135,7 +145,7 @@ pub fn build_world_path_finding_grid(
                     tile_width: tile_size.x as u32,
                     tile_height: tile_size.y as u32,
                     map_type: DebugMapType::Square,
-                    draw_chunks: true,
+                    draw_chunks: false,
                     draw_points: true,
                     draw_entrances: false,
                     draw_cached_paths: false,
@@ -209,7 +219,7 @@ fn compute_grid_collision(
 pub fn set_grid_pos_from_transform(
     mut commands: Commands,
     mut s_grid: Single<(&mut Grid<CardinalNeighborhood>, &GridTileSize, &TilemapAnchor)>,
-    mut q_movables: Query<(Entity, &GlobalTransform, Option<&mut GridPos>), (Changed<Transform>, With<FollowPath>, With<CanMove>)>,
+    mut q_grid_items: Query<(Entity, &GlobalTransform, Option<&mut GridPos>), (Changed<Transform>, Or<(With<FollowPath>, With<PathNode>)>)>,
 ) {
     let (grid, tile_size, anchor) = s_grid.deref_mut();
 
@@ -220,45 +230,48 @@ pub fn set_grid_pos_from_transform(
         &TilemapType::Square,
     );
 
-    for (entity, transform, grid_pos_option) in q_movables.iter_mut() {
-        let grid_pos_vec = ((transform.translation().truncate() - Vec2::new(offset.x + tile_size.0.x, -(offset.y + tile_size.0.y))) / tile_size.0).as_uvec2().extend(0);
-
-        info!("real pos: {}, offset: {}, world pos: {}, grid pos: {}", transform.translation().truncate(), Vec2::new(offset.x + tile_size.0.x, -(offset.y + tile_size.0.y)), (transform.translation().truncate() - Vec2::new(offset.x + tile_size.0.x, -(offset.y + tile_size.0.y))), grid_pos_vec);
+    for (entity, transform, grid_pos_option) in q_grid_items.iter_mut() {
+        let grid_pos_vec = ((transform.translation().truncate() - offset + tile_size.0 / 2.) / tile_size.0);
 
         let Some(mut grid_pos) = grid_pos_option else {
             commands.entity(entity).insert(
-                GridPos(grid_pos_vec)
+                GridPos(UVec3::new(grid_pos_vec.x as u32, grid_pos_vec.y as u32, 0))
             );
 
             continue;
         };
 
-        grid_pos.0 = grid_pos_vec
+        grid_pos.0 = UVec3::new(grid_pos_vec.x as u32, grid_pos_vec.y as u32, 0)
     }
 }
 
 pub fn apply_goal_from_path_node(
     mut commands: Commands,
-    s_tile_size: Single<&GridTileSize>,
-    mut q_movables: Query<(Entity, &mut FollowPath), (With<CanMove>, Without<Pathfind>, Without<Path>, Without<MoveToLocation>)>,
-    q_path_nodes: Query<(&Transform, &PathNode), Without<CanMove>>
+    mut q_movables: Query<(Entity, &mut FollowPath, &GridPos), (With<GridPos>, With<CanMove>, Without<Pathfind>, Without<Path>, Without<MoveToLocation>)>,
+    q_path_nodes: Query<(&GridPos, &PathNode), Without<CanMove>>
 ) {
-    let tile_size = s_tile_size.into_inner().0;
-
-    for (entity,  mut goal) in q_movables.iter_mut() {
+    for (entity,  mut goal, start_pos) in q_movables.iter_mut() {
         let Some(goal_entity) = goal.0 else {
             continue;
         };
 
-        let Ok((goal_transform, next)) = q_path_nodes.get(goal_entity) else {
+        let Ok((goal_pos, next)) = q_path_nodes.get(goal_entity) else {
             continue
         };
 
         goal.0 = next.0;
 
+        info!("{} to {}", start_pos.0, goal_pos.0);
+
         commands.entity(entity).insert((
             Pathfind {
-                goal: (goal_transform.translation.truncate() / tile_size).as_uvec2().extend(0),
+                goal: goal_pos.0,
+                ..default()
+            },
+            DebugPath {
+                tile_width: 32,
+                tile_height: 32,
+                map_type: DebugMapType::Square,
                 ..default()
             }
         ));
@@ -266,7 +279,30 @@ pub fn apply_goal_from_path_node(
 }
 
 pub fn apply_intent_from_next_pos(
-
+    mut commands: Commands,
+    q_next_positions: Query<(Entity, &GridPos, &NextPos), (Without<MovementIntent>, Without<MoveToLocation>, Without<NextPosToBeRemoved>)>
 ) {
+    for (entity, grid_pos, next_pos) in q_next_positions.iter() {
+        commands.entity(entity).insert((
+            MovementIntent((next_pos.0.as_vec3() - grid_pos.0.as_vec3()).truncate().normalize()),
+            NextPosToBeRemoved
+        ));
+    }
+}
 
+pub fn remove_next_pos(
+    mut commands: Commands,
+    q_next_positions: Query<(Entity, &GridPos, &NextPos), (Without<MovementIntent>, Without<MoveToLocation>, With<NextPosToBeRemoved>)>
+) {
+    for (entity, grid_pos, next_pos) in q_next_positions.iter() {
+        if grid_pos.0 != next_pos.0 {
+            warn!("movement unsuccessful");
+            continue;
+        }
+
+        commands.entity(entity).remove::<(
+            NextPos,
+            NextPosToBeRemoved
+        )>();
+    }
 }

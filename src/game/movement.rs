@@ -73,6 +73,7 @@ pub fn apply_intent(
     for (entity, intent, duration,  step_size, transform, children) in q_entities_with_intent.iter() {
         let step = (intent.0 * step_size.0).extend(0.);
 
+        let mut collider_found = false;
         for child in children.iter() {
             let Ok((_, collider, collider_transform)) = q_colliders.get(child) else {
                 continue;
@@ -95,10 +96,15 @@ pub fn apply_intent(
                 };
 
                 if result {
+                    collider_found = true;
                     commands.entity(entity).remove::<MovementIntent>();
-                    return;
+                    break;
                 }
             }
+        }
+
+        if collider_found {
+            continue;
         }
 
         commands.entity(entity).insert(MoveToLocation {
@@ -159,7 +165,7 @@ pub fn remove_move_to_location(
 ) {
     for (entity, move_to_location) in q_timers.iter() {
         if !move_to_location.timer.finished() {
-            return
+            continue;
         }
 
         commands.entity(entity).remove::<(

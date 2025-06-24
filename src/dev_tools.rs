@@ -15,9 +15,9 @@ pub(super) fn plugin(app: &mut App) {
     app.add_plugins((
         EguiPlugin { enable_multipass_for_primary_context: true },
         WorldInspectorPlugin::new(),
-        TiledDebugPluginGroup,
+        //TiledDebugPluginGroup,
         NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
-        PhysicsDebugPlugin::default()
+        //PhysicsDebugPlugin::default()
     ));
     // Log `Screen` state transitions.
     app.add_systems(Update, log_transitions::<Screen>);

@@ -72,7 +72,7 @@
     </property>
    </properties>
   </object>
-  <object id="42" gid="9" x="102" y="224" width="20" height="32">
+  <object id="42" gid="9" x="38" y="224" width="20" height="32">
    <properties>
     <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::CanMove"/>
     <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::FollowPath">
@@ -81,9 +81,6 @@
      </properties>
     </property>
    </properties>
-  </object>
-  <object id="44" x="15.3669" y="366.961">
-   <point/>
   </object>
  </objectgroup>
 </map>
