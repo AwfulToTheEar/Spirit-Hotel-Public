@@ -17,16 +17,12 @@ pub(super) fn plugin(app: &mut App) {
                 .run_if(resource_added::<StartingGameScene>)
         )
         .add_systems(Update,(
-                (
-                    hide_non_current_scene_entities,
-                    show_current_scene_entities
-                )
-                    .chain(),
-                change_scene_from_activated_trigger
+                change_scene_from_activated_trigger,
+                hide_non_current_scene_entities,
+                show_current_scene_entities
             )
                 .in_set(GameplaySystems)
                 .in_set(AppSystems::Update)
-                .in_set(PausableSystems)
         );
 
 }
@@ -68,17 +64,15 @@ pub fn hide_non_current_scene_entities(
             continue;
         }
 
-        info!("hid entity {}", entity);
-
         *visibility = Visibility::Hidden;
     }
 }
 
 pub fn show_current_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(&InGameScene, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>)>
+    mut q_scenes: Query<(Entity, &InGameScene, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>)>
 ) {
-    for (in_scene, mut visibility) in q_scenes.iter_mut() {
+    for (entity, in_scene, mut visibility) in q_scenes.iter_mut() {
         if !current_scenes.0.contains(&in_scene.0) {
             continue;
         }
@@ -92,8 +86,6 @@ pub fn set_starting_scene(
     starting_game_scene: Res<StartingGameScene>,
     mut current_game_scenes: ResMut<CurrentGameScenes>
 ) {
-    info!("starting scene set");
-
     current_game_scenes.0.clear();
     current_game_scenes.0.insert(starting_game_scene.0.clone());
 

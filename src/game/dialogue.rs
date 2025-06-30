@@ -22,7 +22,6 @@ pub(super) fn plugin(app: &mut App) {
             start_conversation_from_activated_trigger
             .in_set(AppSystems::Update)
             .in_set(GameplaySystems)
-            .in_set(PausableSystems)
         );
 }
 

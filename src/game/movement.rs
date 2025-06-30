@@ -2,22 +2,19 @@ use avian2d::{collision::collider::contact_query, prelude::{Collider}};
 use bevy::prelude::*;
 use bevy_ecs_tiled::{map::{self, TiledMapHandle}, prelude::TiledMap};
 
-use crate::{game::{level::{InsideMap, LevelAssets}, path_finding::ScanCollider, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::{InsideMap, LevelAssets}, path_finding::{GridTileSize, ScanCollider}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
         .register_type::<CanMove>()
         .register_type::<MovementDuration>()
 
-        .add_systems(Update, (
-            (
-                find_step_size.run_if(resource_exists::<LevelAssets>),
-                apply_intent
-            )
+        .add_systems(Update,
+            apply_intent
                 .in_set(AppSystems::Update)
                 .in_set(GameplaySystems)
                 .in_set(PausableSystems)
-        ))
+        )
 
         .add_systems(FixedUpdate, (
             tick_move_to_location.in_set(AppSystems::TickTimers),
@@ -65,17 +62,16 @@ impl Default for MovementDuration {
     }
 }
 
-#[derive(Component, Reflect)]
-#[reflect(Component)]
-pub struct MovementStepSize(Vec2);
-
 pub fn apply_intent(
     mut commands: Commands,
-    q_entities_with_intent: Query<(Entity, &MovementIntent, &MovementDuration, &MovementStepSize, &Transform, &Children), (With<CanMove>, Without<MoveToLocation>)>,
+    s_grid_tile_size: Single<&GridTileSize>,
+    q_entities_with_intent: Query<(Entity, &MovementIntent, &MovementDuration, &Transform, &Children), (With<CanMove>, Without<MoveToLocation>)>,
     q_colliders: Query<(Entity, &Collider, &GlobalTransform), (Without<TriggerCollider>, Without<ScanCollider>)>,
 ) {
-    for (entity, intent, duration,  step_size, transform, children) in q_entities_with_intent.iter() {
-        let step = (intent.0 * step_size.0).extend(0.);
+    let grid_tile_size = s_grid_tile_size.into_inner();
+
+    for (entity, intent, duration,  transform, children) in q_entities_with_intent.iter() {
+        let step = (intent.0 * grid_tile_size.0).extend(0.);
 
         let mut collider_found = false;
         for child in children.iter() {
@@ -119,33 +115,6 @@ pub fn apply_intent(
     }
 }
 
-pub fn find_step_size(
-    mut commands: Commands,
-    tiled_maps: Res<Assets<TiledMap>>,
-    mut q_movables: Query<(Entity, &InsideMap, Option<&mut MovementStepSize>), (With<CanMove>, Changed<InsideMap>)>,
-    q_maps: Query<&TiledMapHandle>
-) {
-    for (entity, inside_map, step_size_option) in q_movables.iter_mut() {
-        let Ok(map_handle) = q_maps.get(inside_map.0) else {
-            continue;
-        };
-
-        let Some(tiled_map) = tiled_maps.get(map_handle.0.id()) else {
-            continue;
-        };
-
-        let tile_size = map::utils::get_tile_size(&tiled_map.map);
-
-        let Some(mut step_size) = step_size_option else {
-            commands.entity(entity).insert(MovementStepSize(Vec2::new(tile_size.x, tile_size.y)));
-
-            continue;
-        };
-
-        step_size.0 = Vec2::new(tile_size.x, tile_size.y);
-    }
-}
-
 pub fn tick_move_to_location(
     time: Res<Time>,
     mut q_timers: Query<&mut MoveToLocation>
@@ -165,7 +134,7 @@ pub fn apply_move_to_location(
 
 pub fn remove_move_to_location(
     mut commands: Commands,
-    q_timers: Query<(Entity, &MoveToLocation), (With<MovementIntent>, With<MovementStepSize>)>
+    q_timers: Query<(Entity, &MoveToLocation), With<MovementIntent>>
 ) {
     for (entity, move_to_location) in q_timers.iter() {
         if !move_to_location.timer.finished() {

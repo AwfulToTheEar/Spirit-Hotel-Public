@@ -19,7 +19,6 @@ pub(super) fn plugin(app: &mut App) {
         )
             .in_set(AppSystems::Update)
             .in_set(GameplaySystems)
-            .in_set(PausableSystems)
     );
 }
 

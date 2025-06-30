@@ -47,7 +47,6 @@ pub(super) fn plugin(app: &mut App) {
                 .in_set(LevelSystems)
                 .in_set(AppSystems::Update)
                 .in_set(GameplaySystems)
-                .in_set(PausableSystems)
         )
 
         .add_systems(PostUpdate,(
@@ -152,7 +151,7 @@ pub fn reparent_player_to_world(
 pub fn mark_objects_inside_map(
     mut commands: Commands,
     tiled_maps: Res<Assets<TiledMap>>,
-    mut q_tiled_map_objects: Query<(Entity, &GlobalTransform, Option<&mut InsideMap>), (With<TiledMapObject>, Changed<GlobalTransform>)>,
+    mut q_tiled_map_objects: Query<(Entity, &GlobalTransform, Option<&mut InsideMap>), (Or<(With<TiledMapObject>, With<TiledColliderMarker>)>, Changed<GlobalTransform>)>,
     q_maps: Query<(Entity, &TiledMapHandle, &GlobalTransform)>
 ) {
     for (map_entity, handle, map_transform) in q_maps.iter() {
@@ -183,8 +182,6 @@ pub fn mark_objects_inside_map(
             if inside_map.0 == map_entity {
                 continue;
             }
-
-            info!("map changed to {}", map_entity);
 
             inside_map.0 = map_entity
         }
@@ -227,8 +224,6 @@ pub fn disable_tiled_entities_when_hidden(
             continue;
         }
 
-        info!("disabled entity {}", entity);
-
         commands.entity(entity).insert((
             Disabled,
             DisabledByVisibility
@@ -257,8 +252,6 @@ pub fn disable_tiled_colliders_when_parent_disabled(
         if !q_parents.contains(child_of.0) {
             continue;
         };
-
-        info!("disabled collider {}", entity);
 
         commands.entity(entity).insert((
             DisabledByParent,
@@ -367,16 +360,24 @@ pub fn handle_collider_static(
     }
 }
 
+//this breaks if there are no objects with collision or no layers with collision in the world
 pub fn handle_colliders_spawned(
     mut commands: Commands,
     e_collider_created: EventReader<TiledColliderCreated>,
     q_tiled_entities: Query<Entity, (Without<TiledCollidersSpawned>, Or<(With<TiledMapMarker>, With<TiledMapLayer>, With<TiledMapObject>)>)>,
+    mut counter: Local<i16>
 ) {
     if e_collider_created.is_empty() {
         return;
     }
 
-    info!("spawned colliders");
+    *counter += 1;
+
+    if *counter < 2 {
+        return;
+    }
+
+    *counter = 0;
 
     for entity in q_tiled_entities {
         commands.entity(entity).insert(TiledCollidersSpawned);

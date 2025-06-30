@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5331pt" height="3449pt" viewBox="0.00 0.00 5331.40 3449.01">
-<g id="graph0" class="graph" transform="translate(-3725.0195181033387,7872.749577365027) scale(5.278031643091592)" data-name="">
+<g id="graph0" class="graph" transform="translate(-1289.443607243341,4947.549642509155) scale(4.000000000000011)" data-name="">
 <polygon fill="#0d1117" stroke="none" points="-4,4 -4,-3445.01 5327.4,-3445.01 5327.4,4 -4,4" style=""/>
 <g id="clust1" class="cluster" data-name="clusternode_Set(13)">
 
 <g id="a_clust1"><a xlink:title="LevelSystems" style="">
-<path fill="#ffffff" fill-opacity="0.266667" stroke="#ffffff" stroke-width="2" stroke-opacity="0.313725" d="M1484.99,-1370.01C1484.99,-1370.01 1563.59,-1370.01 1563.59,-1370.01 1569.59,-1370.01 1575.59,-1376.01 1575.59,-1382.01 1575.59,-1382.01 1575.59,-1403.01 1575.59,-1403.01 1575.59,-1409.01 1569.59,-1415.01 1563.59,-1415.01 1563.59,-1415.01 1484.99,-1415.01 1484.99,-1415.01 1478.99,-1415.01 1472.99,-1409.01 1472.99,-1403.01 1472.99,-1403.01 1472.99,-1382.01 1472.99,-1382.01 1472.99,-1376.01 1478.99,-1370.01 1484.99,-1370.01" style=""/>
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1484.99,-1370.01C1484.99,-1370.01 1563.59,-1370.01 1563.59,-1370.01 1569.59,-1370.01 1575.59,-1376.01 1575.59,-1382.01 1575.59,-1382.01 1575.59,-1403.01 1575.59,-1403.01 1575.59,-1409.01 1569.59,-1415.01 1563.59,-1415.01 1563.59,-1415.01 1484.99,-1415.01 1484.99,-1415.01 1478.99,-1415.01 1472.99,-1409.01 1472.99,-1403.01 1472.99,-1403.01 1472.99,-1382.01 1472.99,-1382.01 1472.99,-1376.01 1478.99,-1370.01 1484.99,-1370.01" style=""/>
 <text text-anchor="middle" x="1524.29" y="-1398.41" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">LevelSystems</text>
 </a>
 </g>
@@ -926,7 +926,7 @@
 <g id="node74" class="node" pointer-events="visible" data-name="node_System(13)">
 
 <g id="a_node74"><a xlink:title="spirit_hotel::game::level::load_level_from_activated_trigger" style="">
-<polygon fill="lightgrey" stroke="black" points="1299.71,-1374.61 849.82,-1374.61 849.82,-1333.41 1299.71,-1333.41 1299.71,-1374.61" style=""/>
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="1299.71,-1374.61 849.82,-1374.61 849.82,-1333.41 1299.71,-1333.41 1299.71,-1374.61" style=""/>
 <text text-anchor="middle" x="1074.77" y="-1358.21" font-family="Times,serif" font-size="14.00" style="">load_level_from_activated_trigger</text>
 <text text-anchor="middle" x="1074.77" y="-1341.41" font-family="Times,serif" font-size="14.00" style="">In multiple sets, LevelSystems, Update, GameplaySystems, PausableSystems</text>
 </a>
@@ -935,22 +935,22 @@
 <!-- node_System(13)&#45;&gt;set_marker_node_Set(13) -->
 <g id="edge1" class="edge" data-name="node_System(13)-&gt;set_marker_node_Set(13)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M1299.93,-1367.05C1365.07,-1370.84 1430.13,-1374.62 1472.99,-1377.11" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1299.93,-1367.05C1365.07,-1370.84 1430.13,-1374.62 1472.99,-1377.11" style=""/>
 </g>
 <!-- node_System(13)&#45;&gt;set_marker_node_Set(15) -->
 <g id="edge2" class="edge" data-name="node_System(13)-&gt;set_marker_node_Set(15)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M1293.4,-1333.05C1295.58,-1331.13 1297.7,-1329.12 1299.74,-1327.01 1364.39,-1260.14 1303.5,-997.25 1335.74,-910.01 1370.97,-814.66 1450.91,-722.73 1493.99,-677.72" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1293.4,-1333.05C1295.58,-1331.13 1297.7,-1329.12 1299.74,-1327.01 1364.39,-1260.14 1303.5,-997.25 1335.74,-910.01 1370.97,-814.66 1450.91,-722.73 1493.99,-677.72" style=""/>
 </g>
 <!-- node_System(13)&#45;&gt;set_marker_node_Set(16) -->
 <g id="edge3" class="edge" data-name="node_System(13)-&gt;set_marker_node_Set(16)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M1292.74,-1333.2C1295.14,-1331.24 1297.48,-1329.18 1299.74,-1327.01 1372.14,-1257.46 1289.42,-1193.08 1335.74,-1104.01 1367.66,-1042.62 1428.06,-989.71 1471.6,-957.01" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1292.74,-1333.2C1295.14,-1331.24 1297.48,-1329.18 1299.74,-1327.01 1372.14,-1257.46 1289.42,-1193.08 1335.74,-1104.01 1367.66,-1042.62 1428.06,-989.71 1471.6,-957.01" style=""/>
 </g>
 <!-- node_System(13)&#45;&gt;set_marker_node_Set(17) -->
 <g id="edge4" class="edge" data-name="node_System(13)-&gt;set_marker_node_Set(17)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M1285.88,-1332.95C1290.59,-1331.11 1295.22,-1329.13 1299.74,-1327.01 1385.99,-1286.53 1460.53,-1199.72 1497.67,-1151.01" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1285.88,-1332.95C1290.59,-1331.11 1295.22,-1329.13 1299.74,-1327.01 1385.99,-1286.53 1460.53,-1199.72 1497.67,-1151.01" style=""/>
 </g>
 <!-- node_System(14) -->
 <g id="node75" class="node" pointer-events="visible" data-name="node_System(14)">
@@ -1651,17 +1651,17 @@
 <!-- node_System(63)&#45;&gt;set_marker_node_Set(15) -->
 <g id="edge76" class="edge" data-name="node_System(63)-&gt;set_marker_node_Set(15)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M649.65,-806.17C694.28,-775.09 774.4,-712.13 813.79,-637.01 859,-550.82 775.53,-483.92 849.79,-421.01 887.94,-388.69 1253.66,-401.62 1299.74,-421.01 1411.49,-468.02 1495.24,-601.38 1517.14,-639.01" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M649.65,-806.17C694.28,-775.09 774.4,-712.13 813.79,-637.01 859,-550.82 775.53,-483.92 849.79,-421.01 887.94,-388.69 1253.66,-401.62 1299.74,-421.01 1411.49,-468.02 1495.24,-601.38 1517.14,-639.01" style=""/>
 </g>
 <!-- node_System(63)&#45;&gt;set_marker_node_Set(16) -->
 <g id="edge77" class="edge" data-name="node_System(63)-&gt;set_marker_node_Set(16)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M799.3,-833.07C984.6,-839.61 1251.72,-850.14 1299.74,-858.01 1372.07,-869.86 1454.24,-897.19 1495.74,-912.01" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M799.3,-833.07C984.6,-839.61 1251.72,-850.14 1299.74,-858.01 1372.07,-869.86 1454.24,-897.19 1495.74,-912.01" style=""/>
 </g>
 <!-- node_System(63)&#45;&gt;set_marker_node_Set(17) -->
 <g id="edge78" class="edge" data-name="node_System(63)-&gt;set_marker_node_Set(17)">
 
-<path fill="none" stroke="blue" stroke-width="2" d="M672.19,-848.08C718.49,-869.16 782.35,-906.35 813.79,-961.01 868.46,-1056.03 769.5,-1378.37 849.79,-1453.01 886.41,-1487.05 1258.06,-1480.62 1299.74,-1453.01 1333.94,-1430.35 1315.37,-1403.62 1335.74,-1368.01 1383.04,-1285.32 1452.97,-1198.04 1492.56,-1151.01" style=""/>
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M672.19,-848.08C718.49,-869.16 782.35,-906.35 813.79,-961.01 868.46,-1056.03 769.5,-1378.37 849.79,-1453.01 886.41,-1487.05 1258.06,-1480.62 1299.74,-1453.01 1333.94,-1430.35 1315.37,-1403.62 1335.74,-1368.01 1383.04,-1285.32 1452.97,-1198.04 1492.56,-1151.01" style=""/>
 </g>
 <!-- node_System(64) -->
 <g id="node103" class="node" pointer-events="visible" data-name="node_System(64)">

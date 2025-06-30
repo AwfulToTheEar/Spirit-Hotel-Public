@@ -174,8 +174,6 @@ fn compute_grid_collision(
         return;
     }
 
-    info!("computed grid");
-
     let (grid, tile_size, anchor) = s_grid.deref_mut();
 
     let offset = anchor.as_offset(
