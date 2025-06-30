@@ -1,42 +1,46 @@
 use std::ops::DerefMut;
 
-use avian2d::{collision::collider::contact_query, prelude::{Collider, ColliderDisabled, RigidBody}};
+use avian2d::{collision::collider::contact_query, prelude::{Collider, RigidBody}};
 use bevy::prelude::*;
 use bevy_ecs_tiled::{map::TiledMapHandle, prelude::{TiledMap, TiledMapCreated, TiledMapTileLayer, TiledWorld, TilemapAnchor}, world::TiledWorldHandle};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
-use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 use bevy_northstar::prelude::*;
 
-use crate::{game::{level::InsideMap, movement::{remove_move_to_location, CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::{InsideMap, LevelSystems}, movement::{remove_move_to_location, CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
         .add_plugins(NorthstarPlugin::<CardinalNeighborhood>::default())
-        .add_plugins(FilterQueryInspectorPlugin::<(With<Path>, With<GridPos>, With<Pathfind>)>::default())
 
         .register_type::<PathNode>()
         .register_type::<FollowPath>()
 
+        .add_systems(PreUpdate,
+            build_world_path_finding_grid
+                .in_set(GameplaySystems)
+                .after(LevelSystems)
+        )
+
         .add_systems(Update,
             (
-                build_world_path_finding_grid,
-                compute_grid_collision,
+                set_grid_pos_from_transform,
+                apply_goal_from_path_node,
                 (
-                    set_grid_pos_from_transform,
-                    apply_goal_from_path_node,
-                    (
-                        remove_next_pos,
-                        apply_intent_from_next_pos
-                    )
-                        .chain()
-                        .after(remove_move_to_location)
+                    remove_next_pos,
+                    apply_intent_from_next_pos
                 )
-                    .in_set(PausableSystems)
             )
+                .chain()
+                .in_set(PausableSystems)
                 .in_set(AppSystems::Update)
                 .in_set(GameplaySystems)
-        );
+        )
 
+        .add_systems(PostUpdate,
+            compute_grid_collision
+                .in_set(GameplaySystems)
+                .after(LevelSystems)
+        );
 }
 
 #[derive(Component, Default, Debug, Reflect)]
@@ -89,8 +93,8 @@ pub fn build_world_path_finding_grid(
 
     let grid_size = tiled_world.rect.max / tile_size as Vec2;
 
-    let mut chunk_size = 1;
-    for count in 0..19 {
+    let mut chunk_size = 10;
+    for count in 0..10 {
         let grid_size_scale = (grid_size.x * grid_size.y) as u32;
         let divider = 20 - count as u32;
 
@@ -145,7 +149,7 @@ pub fn build_world_path_finding_grid(
                     tile_width: tile_size.x as u32,
                     tile_height: tile_size.y as u32,
                     map_type: DebugMapType::Square,
-                    draw_chunks: false,
+                    draw_chunks: true,
                     draw_points: true,
                     draw_entrances: false,
                     draw_cached_paths: false,
@@ -164,11 +168,13 @@ fn compute_grid_collision(
     mut commands: Commands,
     mut s_grid: Single<(&mut Grid<CardinalNeighborhood>, &GridTileSize, &TilemapAnchor)>,
     s_scan_collider: Single<&Collider, With<ScanCollider>>,
-    q_colliders: Query<(Entity, &GlobalTransform, &Collider, &RigidBody), (Without<GridCollisionCalculated>, Without<TriggerCollider>, Without<ColliderDisabled>)>,
+    q_colliders: Query<(Entity, &GlobalTransform, &Collider, &RigidBody), (Without<GridCollisionCalculated>, Without<TriggerCollider>)>,
 ) {
-    if q_colliders.iter().count() == 0 {
+    if q_colliders.is_empty() {
         return;
     }
+
+    info!("computed grid");
 
     let (grid, tile_size, anchor) = s_grid.deref_mut();
 
@@ -231,17 +237,18 @@ pub fn set_grid_pos_from_transform(
     );
 
     for (entity, transform, grid_pos_option) in q_grid_items.iter_mut() {
-        let grid_pos_vec = ((transform.translation().truncate() - offset + tile_size.0 / 2.) / tile_size.0);
+        let grid_pos_vec = (transform.translation().truncate() - offset + tile_size.0 / 2.) / tile_size.0;
+        let grid_pos_uvec = UVec3::new(grid_pos_vec.x.round() as u32, grid_pos_vec.y.round() as u32, 0);
 
         let Some(mut grid_pos) = grid_pos_option else {
             commands.entity(entity).insert(
-                GridPos(UVec3::new(grid_pos_vec.x as u32, grid_pos_vec.y as u32, 0))
+                GridPos(grid_pos_uvec)
             );
 
             continue;
         };
 
-        grid_pos.0 = UVec3::new(grid_pos_vec.x as u32, grid_pos_vec.y as u32, 0)
+        grid_pos.0 = grid_pos_uvec
     }
 }
 
@@ -260,8 +267,6 @@ pub fn apply_goal_from_path_node(
         };
 
         goal.0 = next.0;
-
-        info!("{} to {}", start_pos.0, goal_pos.0);
 
         commands.entity(entity).insert((
             Pathfind {
@@ -296,7 +301,8 @@ pub fn remove_next_pos(
 ) {
     for (entity, grid_pos, next_pos) in q_next_positions.iter() {
         if grid_pos.0 != next_pos.0 {
-            warn!("movement unsuccessful");
+            //TODO: do something when position can't be reached
+            warn!("position not reached");
             continue;
         }
 

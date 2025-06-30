@@ -8,6 +8,7 @@ use bevy::{
 use bevy_ecs_tiled::debug::TiledDebugPluginGroup;
 use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
 use bevy_northstar::{debug::NorthstarDebugPlugin, prelude::CardinalNeighborhood};
+use bevy_mod_debugdump::CommandLineArgs;
 
 use crate::screens::Screen;
 
@@ -17,7 +18,8 @@ pub(super) fn plugin(app: &mut App) {
         WorldInspectorPlugin::new(),
         //TiledDebugPluginGroup,
         NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
-        //PhysicsDebugPlugin::default()
+        //PhysicsDebugPlugin::default(),
+        CommandLineArgs
     ));
     // Log `Screen` state transitions.
     app.add_systems(Update, log_transitions::<Screen>);

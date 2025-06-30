@@ -71,6 +71,15 @@ impl Plugin for AppPlugin {
                 .chain(),
         );
 
+        app.configure_sets(
+            FixedUpdate,
+            (
+                AppSystems::TickTimers,
+                AppSystems::Update,
+            )
+                .chain(),
+        );
+
         // Set up the `Pause` state.
         app.init_state::<Pause>();
         app.configure_sets(

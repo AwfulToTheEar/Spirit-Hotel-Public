@@ -3,14 +3,14 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "assets/tiled/maps/map2.tmx",
+    "activeFile": "assets/tiled/maps/map1.tmx",
     "expandedProjectPaths": [
-        "assets/tiled/worlds",
-        "assets/tiled/maps",
-        ".",
+        "assets",
         "assets/tiled",
+        ".",
         "assets/tiled/tilesets",
-        "assets"
+        "assets/tiled/worlds",
+        "assets/tiled/maps"
     ],
     "fileStates": {
         "assets/tiled/maps/chunk.tmx": {
@@ -25,8 +25,8 @@
             "scale": 1.6268749999999998,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 148.44410295812523,
-                "y": 195.77410679984638
+                "x": -17.518248175182464,
+                "y": 271.3791778716866
             }
         },
         "assets/tiled/maps/chunk2.tmx": {
@@ -50,7 +50,7 @@
                 7
             ],
             "scale": 1.6268749999999998,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
                 "x": 302.72762197464465,
                 "y": 271.3791778716866
@@ -99,16 +99,20 @@
     "openFiles": [
         "assets/tiled/tilesets/orthogonal_1.tsx",
         "assets/tiled/tilesets/player.tsx",
-        "assets/tiled/maps/map2.tmx"
+        "assets/tiled/maps/map2.tmx",
+        "assets/tiled/maps/map1.tmx",
+        "assets/tiled/maps/chunk1.tmx",
+        "assets/tiled/maps/chunk3.tmx",
+        "assets/tiled/maps/chunk2.tmx"
     ],
     "project": "spirit_hotel.tiled-project",
-    "property.type": "spirit_hotel::game::path_finding::FollowPath",
+    "property.type": "spirit_hotel::game::scene::StartingGameScene",
     "recentFiles": [
         "assets/tiled/tilesets/orthogonal_1.tsx",
         "assets/tiled/tilesets/player.tsx",
         "assets/tiled/maps/map2.tmx",
-        "assets/tiled/maps/chunk3.tmx",
         "assets/tiled/maps/chunk2.tmx",
+        "assets/tiled/maps/chunk3.tmx",
         "assets/tiled/maps/chunk1.tmx",
         "assets/tiled/maps/map1.tmx",
         "assets/tiled/maps/chunk.tmx"

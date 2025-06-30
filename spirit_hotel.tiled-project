@@ -189,6 +189,40 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 22,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel::game::path_finding::FollowPath",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 23,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel::game::path_finding::PathNode",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 6,
             "members": [
             ],
@@ -308,15 +342,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 22,
+            "id": 25,
             "members": [
                 {
                     "name": "0",
-                    "type": "object",
-                    "value": 0
+                    "type": "string",
+                    "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::path_finding::FollowPath",
+            "name": "spirit_hotel::game::scene::InGameScene",
             "type": "class",
             "useAs": [
                 "property"
@@ -325,15 +359,69 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 23,
+            "id": 27,
+            "members": [
+                {
+                    "name": "action",
+                    "propertyType": "spirit_hotel::game::scene::ChangeGameSceneAction",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "scene",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel::game::scene::ChangeGameScene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 28,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
+                    "type": "string",
+                    "value": "Toggle"
+                }
+            ],
+            "name": "spirit_hotel::game::scene::ChangeGameSceneAction",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 29,
+            "name": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Toggle",
+                "Add",
+                "Remove"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 30,
             "members": [
                 {
                     "name": "0",
-                    "type": "object",
-                    "value": 0
+                    "type": "string",
+                    "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::path_finding::PathNode",
+            "name": "spirit_hotel::game::scene::StartingGameScene",
             "type": "class",
             "useAs": [
                 "property"

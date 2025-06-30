@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="22">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="25">
+ <properties>
+  <property name="in_scene" type="class" propertytype="spirit_hotel::game::scene::InGameScene">
+   <properties>
+    <property name="0" value="test"/>
+   </properties>
+  </property>
+  <property name="starting_scene" type="class" propertytype="spirit_hotel::game::scene::StartingGameScene">
+   <properties>
+    <property name="0" value="test"/>
+   </properties>
+  </property>
+ </properties>
  <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
  <tileset firstgid="8" source="../tilesets/player.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="10">
@@ -28,5 +40,15 @@
    </properties>
   </object>
   <object id="18" template="../templates/player.tx" x="262" y="256"/>
+  <object id="22" x="288" y="128" width="32" height="64">
+   <properties>
+    <property name="change_scene" type="class" propertytype="spirit_hotel::game::scene::ChangeGameScene">
+     <properties>
+      <property name="scene" value="bla"/>
+     </properties>
+    </property>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::IsTrigger"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

@@ -18,6 +18,7 @@ mod player;
 mod animation;
 mod dialogue;
 mod path_finding;
+mod scene;
 
 pub(super) fn plugin(app: &mut App) {
     app
@@ -30,7 +31,8 @@ pub(super) fn plugin(app: &mut App) {
             player::plugin,
             animation::plugin,
             dialogue::plugin,
-            path_finding::plugin
+            path_finding::plugin,
+            scene::plugin
         ))
 
         .configure_sets(PreUpdate,

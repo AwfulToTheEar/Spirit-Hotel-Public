@@ -1,0 +1,2186 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4968pt" height="4364pt" viewBox="0.00 0.00 4967.51 4363.69">
+<g id="graph0" class="graph" transform="translate(-6783.717970060661,8651.325597027706) scale(2.6390158215458044)" data-name="">
+<polygon fill="#0d1117" stroke="none" points="-4,4 -4,-4359.69 4963.51,-4359.69 4963.51,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusternode_Set(1)">
+
+<g id="a_clust1"><a xlink:title="TransformPropagate" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2033.57,-2020.69C2033.57,-2020.69 3420.68,-2020.69 3420.68,-2020.69 3426.68,-2020.69 3432.68,-2026.69 3432.68,-2032.69 3432.68,-2032.69 3432.68,-2100.69 3432.68,-2100.69 3432.68,-2106.69 3426.68,-2112.69 3420.68,-2112.69 3420.68,-2112.69 2033.57,-2112.69 2033.57,-2112.69 2027.57,-2112.69 2021.57,-2106.69 2021.57,-2100.69 2021.57,-2100.69 2021.57,-2032.69 2021.57,-2032.69 2021.57,-2026.69 2027.57,-2020.69 2033.57,-2020.69" style=""/>
+<text text-anchor="middle" x="2727.12" y="-2096.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">TransformPropagate</text>
+</a>
+</g>
+</g>
+<g id="clust2" class="cluster" data-name="clusternode_Set(6)">
+
+<g id="a_clust2"><a xlink:title="AssetEvents" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2367.06,-180.69C2367.06,-180.69 2920.56,-180.69 2920.56,-180.69 2926.56,-180.69 2932.56,-186.69 2932.56,-192.69 2932.56,-192.69 2932.56,-1764.69 2932.56,-1764.69 2932.56,-1770.69 2926.56,-1776.69 2920.56,-1776.69 2920.56,-1776.69 2367.06,-1776.69 2367.06,-1776.69 2361.06,-1776.69 2355.06,-1770.69 2355.06,-1764.69 2355.06,-1764.69 2355.06,-192.69 2355.06,-192.69 2355.06,-186.69 2361.06,-180.69 2367.06,-180.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1760.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">AssetEvents</text>
+</a>
+</g>
+</g>
+<g id="clust3" class="cluster" data-name="clusternode_Set(12)">
+
+<g id="a_clust3"><a xlink:title="Update" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M88.1,-3188.69C88.1,-3188.69 509.61,-3188.69 509.61,-3188.69 515.61,-3188.69 521.61,-3194.69 521.61,-3200.69 521.61,-3200.69 521.61,-3300.69 521.61,-3300.69 521.61,-3306.69 515.61,-3312.69 509.61,-3312.69 509.61,-3312.69 88.1,-3312.69 88.1,-3312.69 82.1,-3312.69 76.1,-3306.69 76.1,-3300.69 76.1,-3300.69 76.1,-3200.69 76.1,-3200.69 76.1,-3194.69 82.1,-3188.69 88.1,-3188.69" style=""/>
+<text text-anchor="middle" x="298.86" y="-3296.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Update</text>
+</a>
+</g>
+</g>
+<g id="clust4" class="cluster" data-name="clusternode_Set(18)">
+
+<g id="a_clust4"><a xlink:title="CameraUpdateSystem" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M598.21,-1806.69C598.21,-1806.69 731.02,-1806.69 731.02,-1806.69 737.02,-1806.69 743.02,-1812.69 743.02,-1818.69 743.02,-1818.69 743.02,-1886.69 743.02,-1886.69 743.02,-1892.69 737.02,-1898.69 731.02,-1898.69 731.02,-1898.69 598.21,-1898.69 598.21,-1898.69 592.21,-1898.69 586.21,-1892.69 586.21,-1886.69 586.21,-1886.69 586.21,-1818.69 586.21,-1818.69 586.21,-1812.69 592.21,-1806.69 598.21,-1806.69" style=""/>
+<text text-anchor="middle" x="664.61" y="-1882.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">CameraUpdateSystem</text>
+</a>
+</g>
+</g>
+<g id="clust5" class="cluster" data-name="clusternode_Set(20)">
+
+<g id="a_clust5"><a xlink:title="UpdateFrusta" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2597,-2741.69C2597,-2741.69 2690.62,-2741.69 2690.62,-2741.69 2696.62,-2741.69 2702.62,-2747.69 2702.62,-2753.69 2702.62,-2753.69 2702.62,-2821.69 2702.62,-2821.69 2702.62,-2827.69 2696.62,-2833.69 2690.62,-2833.69 2690.62,-2833.69 2597,-2833.69 2597,-2833.69 2591,-2833.69 2585,-2827.69 2585,-2821.69 2585,-2821.69 2585,-2753.69 2585,-2753.69 2585,-2747.69 2591,-2741.69 2597,-2741.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2817.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">UpdateFrusta</text>
+</a>
+</g>
+</g>
+<g id="clust6" class="cluster" data-name="clusternode_Set(21)">
+
+<g id="a_clust6"><a xlink:title="CalculateBounds" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2573.65,-2841.69C2573.65,-2841.69 2713.98,-2841.69 2713.98,-2841.69 2719.98,-2841.69 2725.98,-2847.69 2725.98,-2853.69 2725.98,-2853.69 2725.98,-2968.69 2725.98,-2968.69 2725.98,-2974.69 2719.98,-2980.69 2713.98,-2980.69 2713.98,-2980.69 2573.65,-2980.69 2573.65,-2980.69 2567.65,-2980.69 2561.65,-2974.69 2561.65,-2968.69 2561.65,-2968.69 2561.65,-2853.69 2561.65,-2853.69 2561.65,-2847.69 2567.65,-2841.69 2573.65,-2841.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2964.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">CalculateBounds</text>
+</a>
+</g>
+</g>
+<g id="clust7" class="cluster" data-name="clusternode_Set(22)">
+
+<g id="a_clust7"><a xlink:title="CheckVisibility" style="">
+<path fill="#ffffff" fill-opacity="0.266667" stroke="#ffffff" stroke-width="2" stroke-opacity="0.313725" d="M3265.62,-2458.69C3265.62,-2458.69 3923.18,-2458.69 3923.18,-2458.69 3929.18,-2458.69 3935.18,-2464.69 3935.18,-2470.69 3935.18,-2470.69 3935.18,-2538.69 3935.18,-2538.69 3935.18,-2544.69 3929.18,-2550.69 3923.18,-2550.69 3923.18,-2550.69 3265.62,-2550.69 3265.62,-2550.69 3259.62,-2550.69 3253.62,-2544.69 3253.62,-2538.69 3253.62,-2538.69 3253.62,-2470.69 3253.62,-2470.69 3253.62,-2464.69 3259.62,-2458.69 3265.62,-2458.69" style=""/>
+<text text-anchor="middle" x="3594.4" y="-2534.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">CheckVisibility</text>
+</a>
+</g>
+</g>
+<g id="clust8" class="cluster" data-name="clusternode_Set(23)">
+
+<g id="a_clust8"><a xlink:title="VisibilityPropagate" style="">
+<path fill="#ffffff" fill-opacity="0.266667" stroke="#ffffff" stroke-width="2" stroke-opacity="0.313725" d="M2554.22,-2594.69C2554.22,-2594.69 2733.41,-2594.69 2733.41,-2594.69 2739.41,-2594.69 2745.41,-2600.69 2745.41,-2606.69 2745.41,-2606.69 2745.41,-2721.69 2745.41,-2721.69 2745.41,-2727.69 2739.41,-2733.69 2733.41,-2733.69 2733.41,-2733.69 2554.22,-2733.69 2554.22,-2733.69 2548.22,-2733.69 2542.22,-2727.69 2542.22,-2721.69 2542.22,-2721.69 2542.22,-2606.69 2542.22,-2606.69 2542.22,-2600.69 2548.22,-2594.69 2554.22,-2594.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2717.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">VisibilityPropagate</text>
+</a>
+</g>
+</g>
+<g id="clust9" class="cluster" data-name="clusternode_Set(24)">
+
+<g id="a_clust9"><a xlink:title="MarkNewlyHiddenEntitiesInvisible" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M4697.26,-2237.69C4697.26,-2237.69 4939.51,-2237.69 4939.51,-2237.69 4945.51,-2237.69 4951.51,-2243.69 4951.51,-2249.69 4951.51,-2249.69 4951.51,-2317.69 4951.51,-2317.69 4951.51,-2323.69 4945.51,-2329.69 4939.51,-2329.69 4939.51,-2329.69 4697.26,-2329.69 4697.26,-2329.69 4691.26,-2329.69 4685.26,-2323.69 4685.26,-2317.69 4685.26,-2317.69 4685.26,-2249.69 4685.26,-2249.69 4685.26,-2243.69 4691.26,-2237.69 4697.26,-2237.69" style=""/>
+<text text-anchor="middle" x="4818.38" y="-2313.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">MarkNewlyHiddenEntitiesInvisible</text>
+</a>
+</g>
+</g>
+<g id="clust10" class="cluster" data-name="clusternode_Set(42)">
+
+<g id="a_clust10"><a xlink:title="ComputeSlices" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1977.9,-1641.69C1977.9,-1641.69 2201.49,-1641.69 2201.49,-1641.69 2207.49,-1641.69 2213.49,-1647.69 2213.49,-1653.69 2213.49,-1653.69 2213.49,-1768.69 2213.49,-1768.69 2213.49,-1774.69 2207.49,-1780.69 2201.49,-1780.69 2201.49,-1780.69 1977.9,-1780.69 1977.9,-1780.69 1971.9,-1780.69 1965.9,-1774.69 1965.9,-1768.69 1965.9,-1768.69 1965.9,-1653.69 1965.9,-1653.69 1965.9,-1647.69 1971.9,-1641.69 1977.9,-1641.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-1764.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">ComputeSlices</text>
+</a>
+</g>
+</g>
+<g id="clust11" class="cluster" data-name="clusternode_Set(46)">
+
+<g id="a_clust11"><a xlink:title="Update2dText" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1669.99,-2988.69C1669.99,-2988.69 2714.76,-2988.69 2714.76,-2988.69 2720.76,-2988.69 2726.76,-2994.69 2726.76,-3000.69 2726.76,-3000.69 2726.76,-3068.69 2726.76,-3068.69 2726.76,-3074.69 2720.76,-3080.69 2714.76,-3080.69 2714.76,-3080.69 1669.99,-3080.69 1669.99,-3080.69 1663.99,-3080.69 1657.99,-3074.69 1657.99,-3068.69 1657.99,-3068.69 1657.99,-3000.69 1657.99,-3000.69 1657.99,-2994.69 1663.99,-2988.69 1669.99,-2988.69" style=""/>
+<text text-anchor="middle" x="2192.37" y="-3064.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Update2dText</text>
+</a>
+</g>
+</g>
+<g id="clust12" class="cluster" data-name="clusternode_Set(47)">
+
+<g id="a_clust12"><a xlink:title="Animation" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M56.19,-3088.69C56.19,-3088.69 1872.95,-3088.69 1872.95,-3088.69 1878.95,-3088.69 1884.95,-3094.69 1884.95,-3100.69 1884.95,-3100.69 1884.95,-3168.69 1884.95,-3168.69 1884.95,-3174.69 1878.95,-3180.69 1872.95,-3180.69 1872.95,-3180.69 56.19,-3180.69 56.19,-3180.69 50.19,-3180.69 44.19,-3174.69 44.19,-3168.69 44.19,-3168.69 44.19,-3100.69 44.19,-3100.69 44.19,-3094.69 50.19,-3088.69 56.19,-3088.69" style=""/>
+<text text-anchor="middle" x="964.57" y="-3164.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Animation</text>
+</a>
+</g>
+</g>
+<g id="clust13" class="cluster" data-name="clusternode_Set(51)">
+
+<g id="a_clust13"><a xlink:title="Prepare" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M986.76,-2148.69C986.76,-2148.69 1161.31,-2148.69 1161.31,-2148.69 1167.31,-2148.69 1173.31,-2154.69 1173.31,-2160.69 1173.31,-2160.69 1173.31,-2228.69 1173.31,-2228.69 1173.31,-2234.69 1167.31,-2240.69 1161.31,-2240.69 1161.31,-2240.69 986.76,-2240.69 986.76,-2240.69 980.76,-2240.69 974.76,-2234.69 974.76,-2228.69 974.76,-2228.69 974.76,-2160.69 974.76,-2160.69 974.76,-2154.69 980.76,-2148.69 986.76,-2148.69" style=""/>
+<text text-anchor="middle" x="1074.03" y="-2224.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Prepare</text>
+</a>
+</g>
+</g>
+<g id="clust14" class="cluster" data-name="clusternode_Set(52)">
+
+<g id="a_clust14"><a xlink:title="Content" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1392.67,-2148.69C1392.67,-2148.69 1850.37,-2148.69 1850.37,-2148.69 1856.37,-2148.69 1862.37,-2154.69 1862.37,-2160.69 1862.37,-2160.69 1862.37,-2228.69 1862.37,-2228.69 1862.37,-2234.69 1856.37,-2240.69 1850.37,-2240.69 1850.37,-2240.69 1392.67,-2240.69 1392.67,-2240.69 1386.67,-2240.69 1380.67,-2234.69 1380.67,-2228.69 1380.67,-2228.69 1380.67,-2160.69 1380.67,-2160.69 1380.67,-2154.69 1386.67,-2148.69 1392.67,-2148.69" style=""/>
+<text text-anchor="middle" x="1621.52" y="-2224.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Content</text>
+</a>
+</g>
+</g>
+<g id="clust15" class="cluster" data-name="clusternode_Set(53)">
+
+<g id="a_clust15"><a xlink:title="Layout" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1719.81,-2028.69C1719.81,-2028.69 1835.98,-2028.69 1835.98,-2028.69 1841.98,-2028.69 1847.98,-2034.69 1847.98,-2040.69 1847.98,-2040.69 1847.98,-2108.69 1847.98,-2108.69 1847.98,-2114.69 1841.98,-2120.69 1835.98,-2120.69 1835.98,-2120.69 1719.81,-2120.69 1719.81,-2120.69 1713.81,-2120.69 1707.81,-2114.69 1707.81,-2108.69 1707.81,-2108.69 1707.81,-2040.69 1707.81,-2040.69 1707.81,-2034.69 1713.81,-2028.69 1719.81,-2028.69" style=""/>
+<text text-anchor="middle" x="1777.9" y="-2104.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Layout</text>
+</a>
+</g>
+</g>
+<g id="clust16" class="cluster" data-name="clusternode_Set(54)">
+
+<g id="a_clust16"><a xlink:title="PostLayout" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2048.35,-1900.69C2048.35,-1900.69 2131.04,-1900.69 2131.04,-1900.69 2137.04,-1900.69 2143.04,-1906.69 2143.04,-1912.69 2143.04,-1912.69 2143.04,-1980.69 2143.04,-1980.69 2143.04,-1986.69 2137.04,-1992.69 2131.04,-1992.69 2131.04,-1992.69 2048.35,-1992.69 2048.35,-1992.69 2042.35,-1992.69 2036.35,-1986.69 2036.35,-1980.69 2036.35,-1980.69 2036.35,-1912.69 2036.35,-1912.69 2036.35,-1906.69 2042.35,-1900.69 2048.35,-1900.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-1976.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">PostLayout</text>
+</a>
+</g>
+</g>
+<g id="clust17" class="cluster" data-name="clusternode_Set(58)">
+
+<g id="a_clust17"><a xlink:title="Stack" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1493.22,-1969.69C1493.22,-1969.69 1519.82,-1969.69 1519.82,-1969.69 1525.82,-1969.69 1531.82,-1975.69 1531.82,-1981.69 1531.82,-1981.69 1531.82,-2002.69 1531.82,-2002.69 1531.82,-2008.69 1525.82,-2014.69 1519.82,-2014.69 1519.82,-2014.69 1493.22,-2014.69 1493.22,-2014.69 1487.22,-2014.69 1481.22,-2008.69 1481.22,-2002.69 1481.22,-2002.69 1481.22,-1981.69 1481.22,-1981.69 1481.22,-1975.69 1487.22,-1969.69 1493.22,-1969.69" style=""/>
+<text text-anchor="middle" x="1506.52" y="-1998.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">Stack</text>
+</a>
+</g>
+</g>
+<g id="clust18" class="cluster" data-name="clusternode_Set(59)">
+
+<g id="a_clust18"><a xlink:title="AmbiguousWithTextSystem" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1424.22,-2022.69C1424.22,-2022.69 1587.82,-2022.69 1587.82,-2022.69 1593.82,-2022.69 1599.82,-2028.69 1599.82,-2034.69 1599.82,-2034.69 1599.82,-2055.69 1599.82,-2055.69 1599.82,-2061.69 1593.82,-2067.69 1587.82,-2067.69 1587.82,-2067.69 1424.22,-2067.69 1424.22,-2067.69 1418.22,-2067.69 1412.22,-2061.69 1412.22,-2055.69 1412.22,-2055.69 1412.22,-2034.69 1412.22,-2034.69 1412.22,-2028.69 1418.22,-2022.69 1424.22,-2022.69" style=""/>
+<text text-anchor="middle" x="1506.02" y="-2051.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">AmbiguousWithTextSystem</text>
+</a>
+</g>
+</g>
+<g id="clust19" class="cluster" data-name="clusternode_Set(62)">
+
+<g id="a_clust19"><a xlink:title="AmbiguousWithUpdateText2DLayout" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M1395.22,-2075.69C1395.22,-2075.69 1616.82,-2075.69 1616.82,-2075.69 1622.82,-2075.69 1628.82,-2081.69 1628.82,-2087.69 1628.82,-2087.69 1628.82,-2108.69 1628.82,-2108.69 1628.82,-2114.69 1622.82,-2120.69 1616.82,-2120.69 1616.82,-2120.69 1395.22,-2120.69 1395.22,-2120.69 1389.22,-2120.69 1383.22,-2114.69 1383.22,-2108.69 1383.22,-2108.69 1383.22,-2087.69 1383.22,-2087.69 1383.22,-2081.69 1389.22,-2075.69 1395.22,-2075.69" style=""/>
+<text text-anchor="middle" x="1506.02" y="-2104.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">AmbiguousWithUpdateText2DLayout</text>
+</a>
+</g>
+</g>
+<g id="clust20" class="cluster" data-name="clusternode_Set(77)">
+
+<g id="a_clust20"><a xlink:title="UpdateDirectionalLightCascades" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2538.64,-1920.69C2538.64,-1920.69 3446,-1920.69 3446,-1920.69 3452,-1920.69 3458,-1926.69 3458,-1932.69 3458,-1932.69 3458,-2000.69 3458,-2000.69 3458,-2006.69 3452,-2012.69 3446,-2012.69 3446,-2012.69 2538.64,-2012.69 2538.64,-2012.69 2532.64,-2012.69 2526.64,-2006.69 2526.64,-2000.69 2526.64,-2000.69 2526.64,-1932.69 2526.64,-1932.69 2526.64,-1926.69 2532.64,-1920.69 2538.64,-1920.69" style=""/>
+<text text-anchor="middle" x="2992.32" y="-1996.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">UpdateDirectionalLightCascades</text>
+</a>
+</g>
+</g>
+<g id="clust21" class="cluster" data-name="clusternode_Set(82)">
+
+<g id="a_clust21"><a xlink:title="AddClusters" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M3297.52,-1753.69C3297.52,-1753.69 3384.9,-1753.69 3384.9,-1753.69 3390.9,-1753.69 3396.9,-1759.69 3396.9,-1765.69 3396.9,-1765.69 3396.9,-1833.69 3396.9,-1833.69 3396.9,-1839.69 3390.9,-1845.69 3384.9,-1845.69 3384.9,-1845.69 3297.52,-1845.69 3297.52,-1845.69 3291.52,-1845.69 3285.52,-1839.69 3285.52,-1833.69 3285.52,-1833.69 3285.52,-1765.69 3285.52,-1765.69 3285.52,-1759.69 3291.52,-1753.69 3297.52,-1753.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-1829.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">AddClusters</text>
+</a>
+</g>
+</g>
+<g id="clust22" class="cluster" data-name="clusternode_Set(83)">
+
+<g id="a_clust22"><a xlink:title="AssignLightsToClusters" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M3784.84,-1900.69C3784.84,-1900.69 3960.94,-1900.69 3960.94,-1900.69 3966.94,-1900.69 3972.94,-1906.69 3972.94,-1912.69 3972.94,-1912.69 3972.94,-1980.69 3972.94,-1980.69 3972.94,-1986.69 3966.94,-1992.69 3960.94,-1992.69 3960.94,-1992.69 3784.84,-1992.69 3784.84,-1992.69 3778.84,-1992.69 3772.84,-1986.69 3772.84,-1980.69 3772.84,-1980.69 3772.84,-1912.69 3772.84,-1912.69 3772.84,-1906.69 3778.84,-1900.69 3784.84,-1900.69" style=""/>
+<text text-anchor="middle" x="3872.89" y="-1976.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">AssignLightsToClusters</text>
+</a>
+</g>
+</g>
+<g id="clust23" class="cluster" data-name="clusternode_Set(84)">
+
+<g id="a_clust23"><a xlink:title="CheckLightVisibility" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M4439.04,-2245.69C4439.04,-2245.69 4653.26,-2245.69 4653.26,-2245.69 4659.26,-2245.69 4665.26,-2251.69 4665.26,-2257.69 4665.26,-2257.69 4665.26,-2372.69 4665.26,-2372.69 4665.26,-2378.69 4659.26,-2384.69 4653.26,-2384.69 4653.26,-2384.69 4439.04,-2384.69 4439.04,-2384.69 4433.04,-2384.69 4427.04,-2378.69 4427.04,-2372.69 4427.04,-2372.69 4427.04,-2257.69 4427.04,-2257.69 4427.04,-2251.69 4433.04,-2245.69 4439.04,-2245.69" style=""/>
+<text text-anchor="middle" x="4546.15" y="-2368.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">CheckLightVisibility</text>
+</a>
+</g>
+</g>
+<g id="clust24" class="cluster" data-name="clusternode_Set(88)">
+
+<g id="a_clust24"><a xlink:title="UpdateLightFrusta" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M4148.87,-2040.69C4148.87,-2040.69 4347.56,-2040.69 4347.56,-2040.69 4353.56,-2040.69 4359.56,-2046.69 4359.56,-2052.69 4359.56,-2052.69 4359.56,-2214.69 4359.56,-2214.69 4359.56,-2220.69 4353.56,-2226.69 4347.56,-2226.69 4347.56,-2226.69 4148.87,-2226.69 4148.87,-2226.69 4142.87,-2226.69 4136.87,-2220.69 4136.87,-2214.69 4136.87,-2214.69 4136.87,-2052.69 4136.87,-2052.69 4136.87,-2046.69 4142.87,-2040.69 4148.87,-2040.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2210.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">UpdateLightFrusta</text>
+</a>
+</g>
+</g>
+<g id="clust25" class="cluster" data-name="clusternode_Set(99)">
+
+<g id="a_clust25"><a xlink:title="AudioPlaySet" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M2504.38,-2259.69C2504.38,-2259.69 2783.25,-2259.69 2783.25,-2259.69 2789.25,-2259.69 2795.25,-2265.69 2795.25,-2271.69 2795.25,-2271.69 2795.25,-2574.69 2795.25,-2574.69 2795.25,-2580.69 2789.25,-2586.69 2783.25,-2586.69 2783.25,-2586.69 2504.38,-2586.69 2504.38,-2586.69 2498.38,-2586.69 2492.38,-2580.69 2492.38,-2574.69 2492.38,-2574.69 2492.38,-2271.69 2492.38,-2271.69 2492.38,-2265.69 2498.38,-2259.69 2504.38,-2259.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2570.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">AudioPlaySet</text>
+</a>
+</g>
+</g>
+<g id="clust26" class="cluster" data-name="clusternode_Set(109)">
+
+<g id="a_clust26"><a xlink:title="RumbleSystem" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M80.72,-3343.69C80.72,-3343.69 198.43,-3343.69 198.43,-3343.69 204.43,-3343.69 210.43,-3349.69 210.43,-3355.69 210.43,-3355.69 210.43,-3423.69 210.43,-3423.69 210.43,-3429.69 204.43,-3435.69 198.43,-3435.69 198.43,-3435.69 80.72,-3435.69 80.72,-3435.69 74.72,-3435.69 68.72,-3429.69 68.72,-3423.69 68.72,-3423.69 68.72,-3355.69 68.72,-3355.69 68.72,-3349.69 74.72,-3343.69 80.72,-3343.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3419.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">RumbleSystem</text>
+</a>
+</g>
+</g>
+<g id="clust27" class="cluster" data-name="clusternode_Set(123)">
+
+<g id="a_clust27"><a xlink:title="EndPass" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M20,-3467.69C20,-3467.69 480.42,-3467.69 480.42,-3467.69 486.42,-3467.69 492.42,-3473.69 492.42,-3479.69 492.42,-3479.69 492.42,-3547.69 492.42,-3547.69 492.42,-3553.69 486.42,-3559.69 480.42,-3559.69 480.42,-3559.69 20,-3559.69 20,-3559.69 14,-3559.69 8,-3553.69 8,-3547.69 8,-3547.69 8,-3479.69 8,-3479.69 8,-3473.69 14,-3467.69 20,-3467.69" style=""/>
+<text text-anchor="middle" x="250.21" y="-3543.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">EndPass</text>
+</a>
+</g>
+</g>
+<g id="clust28" class="cluster" data-name="clusternode_Set(124)">
+
+<g id="a_clust28"><a xlink:title="ProcessOutput" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M316.78,-3320.69C316.78,-3320.69 523.22,-3320.69 523.22,-3320.69 529.22,-3320.69 535.22,-3326.69 535.22,-3332.69 535.22,-3332.69 535.22,-3447.69 535.22,-3447.69 535.22,-3453.69 529.22,-3459.69 523.22,-3459.69 523.22,-3459.69 316.78,-3459.69 316.78,-3459.69 310.78,-3459.69 304.78,-3453.69 304.78,-3447.69 304.78,-3447.69 304.78,-3332.69 304.78,-3332.69 304.78,-3326.69 310.78,-3320.69 316.78,-3320.69" style=""/>
+<text text-anchor="middle" x="420" y="-3443.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">ProcessOutput</text>
+</a>
+</g>
+</g>
+<g id="clust29" class="cluster" data-name="clusternode_Set(125)">
+
+<g id="a_clust29"><a xlink:title="PostProcessOutput" style="">
+<path fill="rgb(37,40,46)" fill-opacity="0.266667" stroke="rgb(37,40,46)" stroke-width="2" stroke-opacity="0.313725" d="M567.22,-3367.69C567.22,-3367.69 762.01,-3367.69 762.01,-3367.69 768.01,-3367.69 774.01,-3373.69 774.01,-3379.69 774.01,-3379.69 774.01,-3447.69 774.01,-3447.69 774.01,-3453.69 768.01,-3459.69 762.01,-3459.69 762.01,-3459.69 567.22,-3459.69 567.22,-3459.69 561.22,-3459.69 555.22,-3453.69 555.22,-3447.69 555.22,-3447.69 555.22,-3379.69 555.22,-3379.69 555.22,-3373.69 561.22,-3367.69 567.22,-3367.69" style=""/>
+<text text-anchor="middle" x="664.61" y="-3443.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">PostProcessOutput</text>
+</a>
+</g>
+</g>
+<g id="clust30" class="cluster" data-name="clusternode_Set(139)">
+
+<g id="a_clust30"><a xlink:title="LevelSystems" style="">
+<path fill="#ffffff" fill-opacity="0.266667" stroke="#ffffff" stroke-width="2" stroke-opacity="0.313725" d="M3758.36,-2568.69C3758.36,-2568.69 4395.04,-2568.69 4395.04,-2568.69 4401.04,-2568.69 4407.04,-2574.69 4407.04,-2580.69 4407.04,-2580.69 4407.04,-2695.69 4407.04,-2695.69 4407.04,-2701.69 4401.04,-2707.69 4395.04,-2707.69 4395.04,-2707.69 3758.36,-2707.69 3758.36,-2707.69 3752.36,-2707.69 3746.36,-2701.69 3746.36,-2695.69 3746.36,-2695.69 3746.36,-2580.69 3746.36,-2580.69 3746.36,-2574.69 3752.36,-2568.69 3758.36,-2568.69" style=""/>
+<text text-anchor="middle" x="4076.7" y="-2691.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">LevelSystems</text>
+</a>
+</g>
+</g>
+<g id="clust31" class="cluster" data-name="clusternode_Set(147)">
+
+<g id="a_clust31"><a xlink:title="GameplaySystems" style="">
+<path fill="#ffffff" fill-opacity="0.266667" stroke="#ffffff" stroke-width="2" stroke-opacity="0.313725" d="M4173.01,-2468.69C4173.01,-2468.69 4323.42,-2468.69 4323.42,-2468.69 4329.42,-2468.69 4335.42,-2474.69 4335.42,-2480.69 4335.42,-2480.69 4335.42,-2548.69 4335.42,-2548.69 4335.42,-2554.69 4329.42,-2560.69 4323.42,-2560.69 4323.42,-2560.69 4173.01,-2560.69 4173.01,-2560.69 4167.01,-2560.69 4161.01,-2554.69 4161.01,-2548.69 4161.01,-2548.69 4161.01,-2480.69 4161.01,-2480.69 4161.01,-2474.69 4167.01,-2468.69 4173.01,-2468.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2544.09" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#ffffff" style="">GameplaySystems</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1) -->
+<!-- set_marker_node_Set(20) -->
+<!-- set_marker_node_Set(1)&#45;&gt;set_marker_node_Set(20) -->
+<g id="edge19" class="edge" data-name="set_marker_node_Set(1)-&gt;set_marker_node_Set(20)">
+
+<g id="a_edge19"><a xlink:title="TransformPropagate → UpdateFrusta" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M2239.85,-2112.69C2244.87,-2116.86 2249.5,-2121.51 2253.59,-2126.69 2337.65,-2233.05 2193.07,-2640.49 2289.59,-2735.69 2309.19,-2755.02 2474.68,-2755.12 2572.03,-2753.45" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="2572.04,-2756.95 2581.98,-2753.26 2571.91,-2749.95 2572.04,-2756.95" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(15) -->
+<g id="node46" class="node" pointer-events="visible" data-name="node_System(15)">
+
+<g id="a_node46"><a xlink:title="bevy_render::view::visibility::update_frusta" style="">
+<polygon fill="rgb(22,33,45)" stroke="rgb(12,28,45)" points="2694.43,-2800.69 2593.19,-2800.69 2593.19,-2764.69 2694.43,-2764.69 2694.43,-2800.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2778.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">update_frusta</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(15) -->
+<g id="edge48" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(15)">
+
+<g id="a_edge48"><a xlink:title="TransformPropagate → update_frusta" style="">
+<path fill="none" stroke="rgb(21,20,36)" stroke-width="2" d="M2239.88,-2112.69C2244.89,-2116.86 2249.51,-2121.51 2253.59,-2126.69 2340.7,-2237.15 2190.67,-2658.68 2289.59,-2758.69 2364.88,-2834.81 2501.24,-2818.46 2580.7,-2800.23" style=""/>
+<polygon fill="rgb(21,20,36)" stroke="rgb(21,20,36)" stroke-width="2" points="2581.1,-2803.74 2590.01,-2798.01 2579.47,-2796.93 2581.1,-2803.74" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(21) -->
+<!-- set_marker_node_Set(1)&#45;&gt;set_marker_node_Set(21) -->
+<g id="edge74" class="edge" data-name="set_marker_node_Set(1)-&gt;set_marker_node_Set(21)">
+
+<g id="a_edge74"><a xlink:title="TransformPropagate → CalculateBounds" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M2093.23,-2112.69C2104.7,-2260.53 2157.12,-2831.17 2289.59,-2938.69 2361.45,-2997.01 2471.3,-2989.02 2549.4,-2972.62" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="2549.68,-2976.14 2558.69,-2970.58 2548.17,-2969.31 2549.68,-2976.14" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(23) -->
+<!-- set_marker_node_Set(1)&#45;&gt;set_marker_node_Set(23) -->
+<g id="edge76" class="edge" data-name="set_marker_node_Set(1)-&gt;set_marker_node_Set(23)">
+
+<g id="a_edge76"><a xlink:title="TransformPropagate → VisibilityPropagate" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M2239.79,-2112.69C2244.83,-2116.86 2249.48,-2121.51 2253.59,-2126.69 2331.83,-2225.22 2198.7,-2604.7 2289.59,-2691.69 2322.95,-2723.62 2439.26,-2720.41 2529.4,-2712.36" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="2529.57,-2715.85 2539.21,-2711.44 2528.92,-2708.88 2529.57,-2715.85" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(63) -->
+<g id="node86" class="node" pointer-events="visible" data-name="node_System(63)">
+
+<g id="a_node86"><a xlink:title="bevy_pbr::light::clear_directional_light_cascades" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="2753.16,-1964.69 2534.47,-1964.69 2534.47,-1928.69 2753.16,-1928.69 2753.16,-1964.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1942.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">clear_directional_light_cascades</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(63) -->
+<g id="edge12" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(63)">
+
+<g id="a_edge12"><a xlink:title="TransformPropagate → clear_directional_light_cascades" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M2271.72,-2020.7C2271.25,-2002.81 2270.8,-1984.88 2289.59,-1970.69 2361.74,-1916.24 2467.56,-1916.43 2544.56,-1926.45" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="2543.75,-1929.87 2554.14,-1927.79 2544.72,-1922.94 2543.75,-1929.87" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(65) -->
+<g id="node96" class="node" pointer-events="visible" data-name="node_System(65)">
+
+<g id="a_node96"><a xlink:title="bevy_pbr::light::update_point_light_frusta" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="4334.95,-2131.69 4161.48,-2131.69 4161.48,-2095.69 4334.95,-2095.69 4334.95,-2131.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2109.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">update_point_light_frusta</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(65) -->
+<g id="edge38" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(65)">
+
+<g id="a_edge38"><a xlink:title="TransformPropagate → update_point_light_frusta" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M3432.68,-2102.49C3748.68,-2107.23 4012.68,-2110.72 4148.52,-2112.45" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="4148.27,-2115.95 4158.32,-2112.58 4148.36,-2108.95 4148.27,-2115.95" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(66) -->
+<g id="node97" class="node" pointer-events="visible" data-name="node_System(66)">
+
+<g id="a_node97"><a xlink:title="bevy_pbr::light::update_spot_light_frusta" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="4333.05,-2084.69 4163.38,-2084.69 4163.38,-2048.69 4333.05,-2048.69 4333.05,-2084.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2062.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">update_spot_light_frusta</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(66) -->
+<g id="edge17" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(66)">
+
+<g id="a_edge17"><a xlink:title="TransformPropagate → update_spot_light_frusta" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M3432.68,-2071.85C3505.64,-2071.47 3577.91,-2071.09 3648.39,-2070.69 3825.25,-2069.7 4031.5,-2068.26 4149.97,-2067.41" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="4149.92,-2070.91 4159.9,-2067.34 4149.87,-2063.91 4149.92,-2070.91" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(99) -->
+<!-- set_marker_node_Set(1)&#45;&gt;set_marker_node_Set(99) -->
+<g id="edge42" class="edge" data-name="set_marker_node_Set(1)-&gt;set_marker_node_Set(99)">
+
+<g id="a_edge42"><a xlink:title="TransformPropagate → AudioPlaySet" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M2239.51,-2112.69C2244.65,-2116.86 2249.38,-2121.51 2253.59,-2126.69 2312.38,-2199.06 2221.52,-2480.98 2289.59,-2544.69 2317.32,-2570.65 2400.88,-2573.13 2479.77,-2568.77" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="2479.58,-2572.29 2489.36,-2568.2 2479.17,-2565.3 2479.58,-2572.29" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(42) -->
+<g id="node127" class="node" pointer-events="visible" data-name="node_System(42)">
+
+<g id="a_node127"><a xlink:title="bevy_ui::update::update_clipping_system" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2719.9,-2251.69 2567.72,-2251.69 2567.72,-2215.69 2719.9,-2215.69 2719.9,-2251.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2229.49" font-family="Times,serif" font-size="14.00" style="">update_clipping_system</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(42) -->
+<g id="edge26" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(42)">
+
+<g id="a_edge26"><a xlink:title="TransformPropagate → update_clipping_system" style="">
+<path fill="none" stroke="rgb(21,20,36)" stroke-width="2" d="M2234.7,-2112.69C2241.42,-2116.85 2247.77,-2121.49 2253.59,-2126.69 2283.88,-2153.75 2256.43,-2187.24 2289.59,-2210.69 2330.7,-2239.76 2463.91,-2241.04 2554.47,-2238.2" style=""/>
+<polygon fill="rgb(21,20,36)" stroke="rgb(21,20,36)" stroke-width="2" points="2554.32,-2241.7 2564.2,-2237.86 2554.08,-2234.71 2554.32,-2241.7" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(47) -->
+<g id="node128" class="node" pointer-events="visible" data-name="node_System(47)">
+
+<g id="a_node128"><a xlink:title="bevy_ui::accessibility::calc_bounds" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2686.79,-1907.69 2600.83,-1907.69 2600.83,-1871.69 2686.79,-1871.69 2686.79,-1907.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1885.49" font-family="Times,serif" font-size="14.00" style="">calc_bounds</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(47) -->
+<g id="edge35" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(47)">
+
+<g id="a_edge35"><a xlink:title="TransformPropagate → calc_bounds" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M2274.98,-2020.7C2273.62,-1985.99 2254.83,-1948.58 2289.59,-1918.69 2372.73,-1847.22 2511.27,-1861.2 2587.8,-1876.29" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="2586.97,-1879.7 2597.47,-1878.3 2588.39,-1872.84 2586.97,-1879.7" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(95) -->
+<g id="node142" class="node" pointer-events="visible" data-name="node_System(95)">
+
+<g id="a_node142"><a xlink:title="bevy_gizmos::light::draw_lights" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2684.92,-2204.69 2602.71,-2204.69 2602.71,-2168.69 2684.92,-2168.69 2684.92,-2204.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2182.49" font-family="Times,serif" font-size="14.00" style="">draw_lights</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(95) -->
+<g id="edge33" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(95)">
+
+<g id="a_edge33"><a xlink:title="TransformPropagate → draw_lights" style="">
+<path fill="none" stroke="rgb(28,21,29)" stroke-width="2" d="M2226.63,-2112.69C2236,-2116.88 2245.09,-2121.53 2253.59,-2126.69 2273.2,-2138.6 2268.76,-2154.09 2289.59,-2163.69 2387.83,-2208.99 2517.99,-2202.87 2589.72,-2194.62" style=""/>
+<polygon fill="rgb(28,21,29)" stroke="rgb(28,21,29)" stroke-width="2" points="2589.9,-2198.12 2599.4,-2193.44 2589.05,-2191.18 2589.9,-2198.12" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(96) -->
+<g id="node143" class="node" pointer-events="visible" data-name="node_System(96)">
+
+<g id="a_node143"><a xlink:title="bevy_gizmos::light::draw_all_lights" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2695.41,-2157.69 2592.21,-2157.69 2592.21,-2121.69 2695.41,-2121.69 2695.41,-2157.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2135.49" font-family="Times,serif" font-size="14.00" style="">draw_all_lights</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(1)&#45;&gt;node_System(96) -->
+<g id="edge79" class="edge" data-name="set_marker_node_Set(1)-&gt;node_System(96)">
+
+<g id="a_edge79"><a xlink:title="TransformPropagate → draw_all_lights" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M2274.73,-2112.69C2279.73,-2113.4 2284.69,-2114.07 2289.59,-2114.69 2390.34,-2127.59 2508.17,-2134.25 2579.07,-2137.36" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="2578.58,-2140.84 2588.72,-2137.77 2578.88,-2133.84 2578.58,-2140.84" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(0) -->
+<g id="node2" class="node" pointer-events="visible" data-name="node_System(0)">
+
+<g id="a_node2"><a xlink:title="bevy_transform::systems::mark_dirty_trees" style="">
+<polygon fill="rgb(37,38,39)" stroke="rgb(37,34,29)" points="2149.95,-2064.69 2029.44,-2064.69 2029.44,-2028.69 2149.95,-2028.69 2149.95,-2064.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-2042.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#322100" style="">mark_dirty_trees</text>
+</a>
+</g>
+</g>
+<!-- node_System(1) -->
+<g id="node3" class="node" pointer-events="visible" data-name="node_System(1)">
+
+<g id="a_node3"><a xlink:title="bevy_transform::systems::parallel::propagate_parent_transforms" style="">
+<polygon fill="rgb(37,38,39)" stroke="rgb(37,34,29)" points="2744.26,-2064.69 2543.36,-2064.69 2543.36,-2028.69 2744.26,-2028.69 2744.26,-2064.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2042.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#322100" style="">propagate_parent_transforms</text>
+</a>
+</g>
+</g>
+<!-- node_System(0)&#45;&gt;node_System(1) -->
+<g id="edge9" class="edge" data-name="node_System(0)-&gt;node_System(1)">
+
+<g id="a_edge9"><a xlink:title="mark_dirty_trees → propagate_parent_transforms" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M2150.31,-2046.69C2241.01,-2046.69 2415.27,-2046.69 2530.3,-2046.69" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="2529.95,-2050.19 2539.95,-2046.69 2529.95,-2043.19 2529.95,-2050.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(2) -->
+<g id="node4" class="node" pointer-events="visible" data-name="node_System(2)">
+
+<g id="a_node4"><a xlink:title="bevy_transform::systems::sync_simple_transforms" style="">
+<polygon fill="rgb(37,38,39)" stroke="rgb(37,34,29)" points="3424.65,-2064.69 3257.77,-2064.69 3257.77,-2028.69 3424.65,-2028.69 3424.65,-2064.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-2042.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#322100" style="">sync_simple_transforms</text>
+</a>
+</g>
+</g>
+<!-- node_System(1)&#45;&gt;node_System(2) -->
+<g id="edge77" class="edge" data-name="node_System(1)-&gt;node_System(2)">
+
+<g id="a_edge77"><a xlink:title="propagate_parent_transforms → sync_simple_transforms" style="">
+<path fill="none" stroke="rgb(28,21,29)" stroke-width="2" d="M2744.45,-2046.69C2877.92,-2046.69 3113.17,-2046.69 3244.58,-2046.69" style=""/>
+<polygon fill="rgb(28,21,29)" stroke="rgb(28,21,29)" stroke-width="2" points="3244.32,-2050.19 3254.32,-2046.69 3244.32,-2043.19 3244.32,-2050.19" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(6) -->
+<!-- node_System(30) -->
+<g id="node126" class="node" pointer-events="visible" data-name="node_System(30)">
+
+<g id="a_node126"><a xlink:title="bevy_sprite::mesh2d::material::check_entities_needing_specialization&lt;bevy_sprite::mesh2d::color_material::ColorMaterial&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="3504.67,-1745.69 3177.75,-1745.69 3177.75,-1709.69 3504.67,-1709.69 3504.67,-1745.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-1723.49" font-family="Times,serif" font-size="14.00" style="">check_entities_needing_specialization&lt;ColorMaterial&gt;</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(6)&#45;&gt;node_System(30) -->
+<g id="edge78" class="edge" data-name="set_marker_node_Set(6)-&gt;node_System(30)">
+
+<g id="a_edge78"><a xlink:title="AssetEvents → check_entities_needing_specialization&lt;ColorMaterial&gt;" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M2932.55,-1736.01C2954.71,-1735.56 2976.73,-1735.12 2998.03,-1734.69 3052.2,-1733.6 3111.2,-1732.4 3164.71,-1731.3" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="3164.52,-1734.81 3174.44,-1731.11 3164.37,-1727.81 3164.52,-1734.81" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(55) -->
+<g id="node135" class="node" pointer-events="visible" data-name="node_System(55)">
+
+<g id="a_node135"><a xlink:title="bevy_pbr::material::check_entities_needing_specialization&lt;bevy_pbr::pbr_material::StandardMaterial&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="3513.55,-474.69 3168.87,-474.69 3168.87,-438.69 3513.55,-438.69 3513.55,-474.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-452.49" font-family="Times,serif" font-size="14.00" style="">check_entities_needing_specialization&lt;StandardMaterial&gt;</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(6)&#45;&gt;node_System(55) -->
+<g id="edge59" class="edge" data-name="set_marker_node_Set(6)-&gt;node_System(55)">
+
+<g id="a_edge59"><a xlink:title="AssetEvents → check_entities_needing_specialization&lt;StandardMaterial&gt;" style="">
+<path fill="none" stroke="rgb(21,20,36)" stroke-width="2" d="M2932.55,-1772.55C2956.71,-1764.73 2979.09,-1752.59 2998.03,-1734.69 3036.02,-1698.8 3022.67,-1316.71 3034.03,-1265.69 3104.56,-949.12 3274,-590.91 3325.27,-486.63" style=""/>
+<polygon fill="rgb(21,20,36)" stroke="rgb(21,20,36)" stroke-width="2" points="3328.28,-488.42 3329.58,-477.9 3322.01,-485.32 3328.28,-488.42" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(60) -->
+<g id="node138" class="node" pointer-events="visible" data-name="node_System(60)">
+
+<g id="a_node138"><a xlink:title="bevy_pbr::material::check_entities_needing_specialization&lt;bevy_pbr::extended_material::ExtendedMaterial&lt;bevy_pbr::pbr_material::StandardMaterial, bevy_pbr::decal::forward::ForwardDecalMaterialExt&gt;&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="3648.57,-1306.69 3033.85,-1306.69 3033.85,-1270.69 3648.57,-1270.69 3648.57,-1306.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-1284.49" font-family="Times,serif" font-size="14.00" style="">check_entities_needing_specialization&lt;ExtendedMaterial&lt;StandardMaterial, ForwardDecalMaterialExt&gt;&gt;</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(6)&#45;&gt;node_System(60) -->
+<g id="edge75" class="edge" data-name="set_marker_node_Set(6)-&gt;node_System(60)">
+
+<g id="a_edge75"><a xlink:title="AssetEvents → check_entities_needing_specialization&lt;ExtendedMaterial&lt;StandardMaterial, ForwardDecalMaterialExt&gt;&gt;" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M2932.56,-1757.8C2955.35,-1752.58 2977.48,-1745.09 2998.03,-1734.69 3044.85,-1711.02 3254.4,-1412.5 3320.3,-1317.51" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="3323.06,-1319.67 3325.88,-1309.46 3317.31,-1315.69 3323.06,-1319.67" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(4) -->
+<g id="node6" class="node" pointer-events="visible" data-name="node_System(4)">
+
+<g id="a_node6"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_asset::folder::LoadedFolder&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2769.35,-1728.69 2518.27,-1728.69 2518.27,-1692.69 2769.35,-1692.69 2769.35,-1728.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1706.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;LoadedFolder&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(5) -->
+<g id="node7" class="node" pointer-events="visible" data-name="node_System(5)">
+
+<g id="a_node7"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_asset::assets::LoadedUntypedAsset&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2792.83,-1681.69 2494.8,-1681.69 2494.8,-1645.69 2792.83,-1645.69 2792.83,-1681.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1659.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;LoadedUntypedAsset&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(6) -->
+<g id="node8" class="node" pointer-events="visible" data-name="node_System(6)">
+
+<g id="a_node8"><a xlink:title="bevy_asset::assets::Assets&lt;()&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2730.78,-1634.69 2556.85,-1634.69 2556.85,-1598.69 2730.78,-1598.69 2730.78,-1634.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1612.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;()&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(7) -->
+<g id="node9" class="node" pointer-events="visible" data-name="node_System(7)">
+
+<g id="a_node9"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_scene::dynamic_scene::DynamicScene&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2773.1,-1587.69 2514.52,-1587.69 2514.52,-1551.69 2773.1,-1551.69 2773.1,-1587.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1565.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;DynamicScene&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(8) -->
+<g id="node10" class="node" pointer-events="visible" data-name="node_System(8)">
+
+<g id="a_node10"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_scene::scene::Scene&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2746.15,-1540.69 2541.47,-1540.69 2541.47,-1504.69 2746.15,-1504.69 2746.15,-1540.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1518.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Scene&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(12) -->
+<g id="node11" class="node" pointer-events="visible" data-name="node_System(12)">
+
+<g id="a_node11"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_image::texture_atlas::TextureAtlasLayout&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2786.57,-1493.69 2501.05,-1493.69 2501.05,-1457.69 2786.57,-1457.69 2786.57,-1493.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1471.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;TextureAtlasLayout&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(13) -->
+<g id="node12" class="node" pointer-events="visible" data-name="node_System(13)">
+
+<g id="a_node12"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_render::render_resource::shader::Shader&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2748.6,-1446.69 2539.03,-1446.69 2539.03,-1410.69 2748.6,-1410.69 2748.6,-1446.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1424.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Shader&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(22) -->
+<g id="node13" class="node" pointer-events="visible" data-name="node_System(22)">
+
+<g id="a_node13"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_mesh::mesh::Mesh&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2743.19,-1399.69 2544.44,-1399.69 2544.44,-1363.69 2743.19,-1363.69 2743.19,-1399.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1377.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Mesh&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(23) -->
+<g id="node14" class="node" pointer-events="visible" data-name="node_System(23)">
+
+<g id="a_node14"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_mesh::skinning::SkinnedMeshInverseBindposes&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2824.07,-1352.69 2463.55,-1352.69 2463.55,-1316.69 2824.07,-1316.69 2824.07,-1352.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1330.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;SkinnedMeshInverseBindposes&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(26) -->
+<g id="node15" class="node" pointer-events="visible" data-name="node_System(26)">
+
+<g id="a_node15"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_render::storage::ShaderStorageBuffer&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2791.98,-1305.69 2495.64,-1305.69 2495.64,-1269.69 2791.98,-1269.69 2791.98,-1305.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1283.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;ShaderStorageBuffer&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(27) -->
+<g id="node16" class="node" pointer-events="visible" data-name="node_System(27)">
+
+<g id="a_node16"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_image::image::Image&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2745.36,-1258.69 2542.26,-1258.69 2542.26,-1222.69 2745.36,-1222.69 2745.36,-1258.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1236.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Image&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(29) -->
+<g id="node17" class="node" pointer-events="visible" data-name="node_System(29)">
+
+<g id="a_node17"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_sprite::mesh2d::color_material::ColorMaterial&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2767.7,-1211.69 2519.92,-1211.69 2519.92,-1175.69 2767.7,-1175.69 2767.7,-1211.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1189.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;ColorMaterial&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(34) -->
+<g id="node18" class="node" pointer-events="visible" data-name="node_System(34)">
+
+<g id="a_node18"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_text::font::Font&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2739.97,-1164.69 2547.66,-1164.69 2547.66,-1128.69 2739.97,-1128.69 2739.97,-1164.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1142.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Font&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(53) -->
+<g id="node19" class="node" pointer-events="visible" data-name="node_System(53)">
+
+<g id="a_node19"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_pbr::pbr_material::StandardMaterial&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2779.57,-1117.69 2508.06,-1117.69 2508.06,-1081.69 2779.57,-1081.69 2779.57,-1117.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1095.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;StandardMaterial&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(58) -->
+<g id="node20" class="node" pointer-events="visible" data-name="node_System(58)">
+
+<g id="a_node20"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_pbr::extended_material::ExtendedMaterial&lt;bevy_pbr::pbr_material::StandardMaterial, bevy_pbr::decal::forward::ForwardDecalMaterialExt&gt;&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2924.81,-1070.69 2362.82,-1070.69 2362.82,-1034.69 2924.81,-1034.69 2924.81,-1070.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1048.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;ExtendedMaterial&lt;StandardMaterial, ForwardDecalMaterialExt&gt;&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(70) -->
+<g id="node21" class="node" pointer-events="visible" data-name="node_System(70)">
+
+<g id="a_node21"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_gltf::assets::Gltf&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2737.23,-1023.69 2550.39,-1023.69 2550.39,-987.69 2737.23,-987.69 2737.23,-1023.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-1001.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Gltf&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(71) -->
+<g id="node22" class="node" pointer-events="visible" data-name="node_System(71)">
+
+<g id="a_node22"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_gltf::assets::GltfNode&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2753.7,-976.69 2533.92,-976.69 2533.92,-940.69 2753.7,-940.69 2753.7,-976.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-954.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;GltfNode&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(72) -->
+<g id="node23" class="node" pointer-events="visible" data-name="node_System(72)">
+
+<g id="a_node23"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_gltf::assets::GltfPrimitive&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2763.9,-929.69 2523.72,-929.69 2523.72,-893.69 2763.9,-893.69 2763.9,-929.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-907.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;GltfPrimitive&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(73) -->
+<g id="node24" class="node" pointer-events="visible" data-name="node_System(73)">
+
+<g id="a_node24"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_gltf::assets::GltfMesh&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2753.97,-882.69 2533.66,-882.69 2533.66,-846.69 2753.97,-846.69 2753.97,-882.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-860.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;GltfMesh&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(74) -->
+<g id="node25" class="node" pointer-events="visible" data-name="node_System(74)">
+
+<g id="a_node25"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_gltf::assets::GltfSkin&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2750.47,-835.69 2537.16,-835.69 2537.16,-799.69 2750.47,-799.69 2750.47,-835.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-813.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;GltfSkin&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(77) -->
+<g id="node26" class="node" pointer-events="visible" data-name="node_System(77)">
+
+<g id="a_node26"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_audio::audio_source::AudioSource&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2766.12,-788.69 2521.51,-788.69 2521.51,-752.69 2766.12,-752.69 2766.12,-788.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-766.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;AudioSource&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(80) -->
+<g id="node27" class="node" pointer-events="visible" data-name="node_System(80)">
+
+<g id="a_node27"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_audio::pitch::Pitch&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2741.58,-741.69 2546.05,-741.69 2546.05,-705.69 2741.58,-705.69 2741.58,-741.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-719.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;Pitch&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(84) -->
+<g id="node28" class="node" pointer-events="visible" data-name="node_System(84)">
+
+<g id="a_node28"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_animation::AnimationClip&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2769.32,-694.69 2518.3,-694.69 2518.3,-658.69 2769.32,-658.69 2769.32,-694.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-672.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;AnimationClip&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(85) -->
+<g id="node29" class="node" pointer-events="visible" data-name="node_System(85)">
+
+<g id="a_node29"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_animation::graph::AnimationGraph&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2776.62,-647.69 2511.01,-647.69 2511.01,-611.69 2776.62,-611.69 2776.62,-647.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-625.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;AnimationGraph&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(92) -->
+<g id="node30" class="node" pointer-events="visible" data-name="node_System(92)">
+
+<g id="a_node30"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_gizmos::GizmoAsset&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2763.91,-600.69 2523.71,-600.69 2523.71,-564.69 2763.91,-564.69 2763.91,-600.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-578.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;GizmoAsset&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(102) -->
+<g id="node31" class="node" pointer-events="visible" data-name="node_System(102)">
+
+<g id="a_node31"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_ecs_tilemap::render::material::StandardTilemapMaterial&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2804.36,-553.69 2483.26,-553.69 2483.26,-517.69 2804.36,-517.69 2804.36,-553.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-531.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;StandardTilemapMaterial&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(103) -->
+<g id="node32" class="node" pointer-events="visible" data-name="node_System(103)">
+
+<g id="a_node32"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_ecs_tiled::map::asset::TiledMap&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2755.03,-506.69 2532.59,-506.69 2532.59,-470.69 2755.03,-470.69 2755.03,-506.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-484.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;TiledMap&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(105) -->
+<g id="node33" class="node" pointer-events="visible" data-name="node_System(105)">
+
+<g id="a_node33"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_ecs_tiled::world::asset::TiledWorld&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2759.36,-459.69 2528.27,-459.69 2528.27,-423.69 2759.36,-423.69 2759.36,-459.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-437.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;TiledWorld&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(109) -->
+<g id="node34" class="node" pointer-events="visible" data-name="node_System(109)">
+
+<g id="a_node34"><a xlink:title="bevy_asset::assets::Assets&lt;spirit_hotel::game::level::LevelAssets&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2763.93,-412.69 2523.69,-412.69 2523.69,-376.69 2763.93,-376.69 2763.93,-412.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-390.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;LevelAssets&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(114) -->
+<g id="node35" class="node" pointer-events="visible" data-name="node_System(114)">
+
+<g id="a_node35"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_yarnspinner::yarn_file_asset::YarnFile&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2752.08,-365.69 2535.54,-365.69 2535.54,-329.69 2752.08,-329.69 2752.08,-365.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-343.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;YarnFile&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(115) -->
+<g id="node36" class="node" pointer-events="visible" data-name="node_System(115)">
+
+<g id="a_node36"><a xlink:title="bevy_asset::assets::Assets&lt;bevy_yarnspinner::localization::strings_file::asset::StringsFile&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2759.08,-318.69 2528.54,-318.69 2528.54,-282.69 2759.08,-282.69 2759.08,-318.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-296.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;StringsFile&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(117) -->
+<g id="node37" class="node" pointer-events="visible" data-name="node_System(117)">
+
+<g id="a_node37"><a xlink:title="bevy_asset::assets::Assets&lt;spirit_hotel::menus::credits::CreditsAssets&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2769.31,-271.69 2518.31,-271.69 2518.31,-235.69 2769.31,-235.69 2769.31,-271.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-249.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;CreditsAssets&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(118) -->
+<g id="node38" class="node" pointer-events="visible" data-name="node_System(118)">
+
+<g id="a_node38"><a xlink:title="bevy_asset::assets::Assets&lt;spirit_hotel::theme::interaction::InteractionAssets&gt;::asset_events" style="">
+<polygon fill="rgb(32,35,40)" stroke="rgb(28,30,34)" points="2779.84,-224.69 2507.79,-224.69 2507.79,-188.69 2779.84,-188.69 2779.84,-224.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-202.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#1c1916" style="">Assets&lt;InteractionAssets&gt;::asset_events</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(12) -->
+<!-- node_System(9) -->
+<g id="node40" class="node" pointer-events="visible" data-name="node_System(9)">
+
+<g id="a_node40"><a xlink:title="bevy_winit::accessibility::poll_receivers" style="">
+<polygon fill="rgb(21,23,32)" stroke="rgb(27,28,37)" points="471.37,-3232.69 368.63,-3232.69 368.63,-3196.69 471.37,-3196.69 471.37,-3232.69" style=""/>
+<text text-anchor="middle" x="420" y="-3210.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#e6e0ea" style="">poll_receivers</text>
+</a>
+</g>
+</g>
+<!-- node_System(10) -->
+<g id="node41" class="node" pointer-events="visible" data-name="node_System(10)">
+
+<g id="a_node41"><a xlink:title="bevy_winit::accessibility::update_accessibility_nodes" style="">
+<polygon fill="rgb(21,23,32)" stroke="rgb(27,28,37)" points="513.73,-3279.69 326.27,-3279.69 326.27,-3243.69 513.73,-3243.69 513.73,-3279.69" style=""/>
+<text text-anchor="middle" x="420" y="-3257.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#e6e0ea" style="">update_accessibility_nodes</text>
+</a>
+</g>
+</g>
+<!-- node_System(11) -->
+<g id="node42" class="node" pointer-events="visible" data-name="node_System(11)">
+
+<g id="a_node42"><a xlink:title="bevy_winit::accessibility::window_closed" style="">
+<polygon fill="rgb(21,23,32)" stroke="rgb(27,28,37)" points="195.02,-3240.69 84.13,-3240.69 84.13,-3204.69 195.02,-3204.69 195.02,-3240.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3218.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#e6e0ea" style="">window_closed</text>
+</a>
+</g>
+</g>
+<!-- node_System(11)&#45;&gt;node_System(9) -->
+<g id="edge18" class="edge" data-name="node_System(11)-&gt;node_System(9)">
+
+<g id="a_edge18"><a xlink:title="window_closed → SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::change_detection::Res&lt;bevy_winit::accessibility::WinitActionRequestHandlers&gt;, bevy_ecs::event::writer::EventWriter&lt;bevy_a11y::ActionRequest&gt;), bevy_winit::accessibility::poll_receivers&gt;())" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M195.25,-3221.12C241.24,-3219.8 307.03,-3217.91 355.37,-3216.52" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="355.28,-3220.03 365.18,-3216.24 355.08,-3213.03 355.28,-3220.03" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(11)&#45;&gt;node_System(10) -->
+<g id="edge53" class="edge" data-name="node_System(11)-&gt;node_System(10)">
+
+<g id="a_edge53"><a xlink:title="window_closed → SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::change_detection::NonSendMut&lt;bevy_winit::accessibility::AccessKitAdapters&gt;, core::option::Option&lt;bevy_ecs::change_detection::Res&lt;bevy_input_focus::InputFocus&gt;&gt;, bevy_ecs::system::query::Query&lt;(bevy_ecs::entity::Entity, &amp;bevy_window::window::Window), bevy_ecs::query::filter::With&lt;bevy_window::window::PrimaryWindow&gt;&gt;, bevy_ecs::system::query::Query&lt;(bevy_ecs::entity::Entity, &amp;bevy_a11y::AccessibilityNode, core::option::Option&lt;&amp;bevy_ecs::hierarchy::Children&gt;, core::option::Option&lt;&amp;bevy_ecs::hierarchy::ChildOf&gt;)&gt;, bevy_ecs::system::query::Query&lt;bevy_ecs::entity::Entity, bevy_ecs::query::filter::With&lt;bevy_a11y::AccessibilityNode&gt;&gt;), bevy_winit::accessibility::update_accessibility_nodes&gt;())" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M195.25,-3230.35C228.76,-3235.05 272.79,-3241.21 312.92,-3246.83" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="312.41,-3250.3 322.8,-3248.22 313.38,-3243.36 312.41,-3250.3" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(18) -->
+<!-- set_marker_node_Set(51) -->
+<!-- set_marker_node_Set(18)&#45;&gt;set_marker_node_Set(51) -->
+<g id="edge55" class="edge" data-name="set_marker_node_Set(18)-&gt;set_marker_node_Set(51)">
+
+<g id="a_edge55"><a xlink:title="CameraUpdateSystem → Prepare" style="">
+<path fill="none" stroke="rgb(28,21,29)" stroke-width="2" d="M667.89,-1898.69C674.59,-1969.44 700.75,-2128.68 802.01,-2198.69 847.81,-2230.36 909.15,-2234.26 961.9,-2229.28" style=""/>
+<polygon fill="rgb(28,21,29)" stroke="rgb(28,21,29)" stroke-width="2" points="962.19,-2232.77 971.75,-2228.21 961.43,-2225.81 962.19,-2232.77" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(18)&#45;&gt;node_System(63) -->
+<g id="edge14" class="edge" data-name="set_marker_node_Set(18)-&gt;node_System(63)">
+
+<g id="a_edge14"><a xlink:title="CameraUpdateSystem → clear_directional_light_cascades" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M743.02,-1868.74C762.28,-1869.85 782.89,-1870.93 802.01,-1871.69 1114.28,-1884.18 1192.5,-1886.69 1505.02,-1886.69 1505.02,-1886.69 1505.02,-1886.69 1778.9,-1886.69 1884.42,-1886.69 2150.39,-1876.69 2253.59,-1898.69 2270.54,-1902.31 2272.77,-1909.51 2289.59,-1913.69 2365.41,-1932.57 2452.82,-1940.84 2521.72,-1944.38" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="2521.18,-1947.86 2531.33,-1944.84 2521.51,-1940.87 2521.18,-1947.86" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(61) -->
+<g id="node88" class="node" pointer-events="visible" data-name="node_System(61)">
+
+<g id="a_node88"><a xlink:title="bevy_pbr::cluster::add_clusters" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="3389.09,-1797.69 3293.33,-1797.69 3293.33,-1761.69 3389.09,-1761.69 3389.09,-1797.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-1775.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">add_clusters</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(18)&#45;&gt;node_System(61) -->
+<g id="edge10" class="edge" data-name="set_marker_node_Set(18)-&gt;node_System(61)">
+
+<g id="a_edge10"><a xlink:title="CameraUpdateSystem → add_clusters" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M743.02,-1864.81C753.68,-1863.22 764.29,-1860.65 774.01,-1856.69 789.19,-1850.51 786.7,-1838.54 802.01,-1832.69 874.99,-1804.81 1426.89,-1817.69 1505.02,-1817.69 1505.02,-1817.69 1505.02,-1817.69 2090.69,-1817.69 2548.3,-1817.69 3099.74,-1791.92 3280.02,-1782.82" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="3280.01,-1786.33 3289.82,-1782.33 3279.66,-1779.34 3280.01,-1786.33" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(62) -->
+<g id="node90" class="node" pointer-events="visible" data-name="node_System(62)">
+
+<g id="a_node90"><a xlink:title="bevy_pbr::cluster::assign::assign_objects_to_clusters" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="3964.99,-1959.69 3780.79,-1959.69 3780.79,-1923.69 3964.99,-1923.69 3964.99,-1959.69" style=""/>
+<text text-anchor="middle" x="3872.89" y="-1937.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">assign_objects_to_clusters</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(18)&#45;&gt;node_System(62) -->
+<g id="edge54" class="edge" data-name="set_marker_node_Set(18)-&gt;node_System(62)">
+
+<g id="a_edge54"><a xlink:title="CameraUpdateSystem → assign_objects_to_clusters" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M743.02,-1860.15C891,-1853.7 1224.31,-1840.69 1505.02,-1840.69 1505.02,-1840.69 1505.02,-1840.69 1778.9,-1840.69 2610.5,-1840.69 2820.23,-1842.98 3648.39,-1918.69 3687.39,-1922.26 3730.18,-1926.57 3767.78,-1930.48" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="3767,-1933.92 3777.31,-1931.48 3767.73,-1926.96 3767,-1933.92" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(18)&#45;&gt;node_System(47) -->
+<g id="edge23" class="edge" data-name="set_marker_node_Set(18)-&gt;node_System(47)">
+
+<g id="a_edge23"><a xlink:title="CameraUpdateSystem → calc_bounds" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M743.02,-1863.69C891.02,-1863.69 1224.41,-1863.69 1505.02,-1863.69 1505.02,-1863.69 1505.02,-1863.69 1778.9,-1863.69 2084.58,-1863.69 2450.83,-1880.16 2587.68,-1886.88" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="2587.39,-1890.37 2597.55,-1887.37 2587.74,-1883.38 2587.39,-1890.37" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(14) -->
+<g id="node44" class="node" pointer-events="visible" data-name="node_System(14)">
+
+<g id="a_node44"><a xlink:title="bevy_render::camera::camera::camera_system" style="">
+<polygon fill="rgb(22,33,45)" stroke="rgb(12,28,45)" points="721.92,-1850.69 607.31,-1850.69 607.31,-1814.69 721.92,-1814.69 721.92,-1850.69" style=""/>
+<text text-anchor="middle" x="664.61" y="-1828.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">camera_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(14)&#45;&gt;set_marker_node_Set(6) -->
+<g id="edge65" class="edge" data-name="node_System(14)-&gt;set_marker_node_Set(6)">
+
+<g id="a_edge65"><a xlink:title="camera_system → AssetEvents" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M722.11,-1821.27C746.57,-1816.82 775.59,-1812.19 802.01,-1809.69 1113.14,-1780.3 1192.5,-1794.69 1505.02,-1794.69 1505.02,-1794.69 1505.02,-1794.69 1778.9,-1794.69 1989.94,-1794.69 2043,-1796.43 2253.59,-1782.69 2282.38,-1780.82 2312.32,-1778.43 2342.25,-1775.77" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="2342.41,-1779.27 2352.05,-1774.88 2341.78,-1772.29 2342.41,-1779.27" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(14)&#45;&gt;node_System(15) -->
+<g id="edge68" class="edge" data-name="node_System(14)-&gt;node_System(15)">
+
+<g id="a_edge68"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::event::reader::EventReader&lt;bevy_window::event::WindowResized&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_window::event::WindowCreated&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_window::event::WindowScaleFactorChanged&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_asset::event::AssetEvent&lt;bevy_image::image::Image&gt;&gt;, bevy_ecs::system::query::Query&lt;bevy_ecs::entity::Entity, bevy_ecs::query::filter::With&lt;bevy_window::window::PrimaryWindow&gt;&gt;, bevy_ecs::system::query::Query&lt;(bevy_ecs::entity::Entity, &amp;bevy_window::window::Window)&gt;, bevy_ecs::change_detection::Res&lt;bevy_asset::assets::Assets&lt;bevy_image::image::Image&gt;&gt;, bevy_ecs::change_detection::Res&lt;bevy_render::camera::manual_texture_view::ManualTextureViews&gt;, bevy_ecs::system::query::Query&lt;(&amp;mut bevy_render::camera::camera::Camera, &amp;mut bevy_render::camera::projection::Projection)&gt;), bevy_render::camera::camera::camera_system&gt;()) → update_frusta" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M722.41,-1832.5C741.4,-1835.41 761.01,-1842.2 774.01,-1856.69 812.07,-1899.13 760.18,-2072.96 802.01,-2111.69 859.35,-2164.8 1426.87,-2134.69 1505.02,-2134.69 1505.02,-2134.69 1505.02,-2134.69 1778.9,-2134.69 1828.47,-2134.69 1847.53,-2120.78 1889.8,-2146.69 2166.79,-2316.5 2009.27,-2594.45 2289.59,-2758.69 2379.52,-2811.38 2505.29,-2804.8 2579.96,-2794.35" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="2580.47,-2797.81 2589.85,-2792.88 2579.44,-2790.89 2580.47,-2797.81" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(22) -->
+<!-- set_marker_node_Set(20)&#45;&gt;set_marker_node_Set(22) -->
+<g id="edge34" class="edge" data-name="set_marker_node_Set(20)-&gt;set_marker_node_Set(22)">
+
+<g id="a_edge34"><a xlink:title="UpdateFrusta → CheckVisibility" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M2702.62,-2753.03C2797.22,-2754.65 2976.77,-2755.07 2998.03,-2735.69 3083.93,-2657.42 2947.38,-2554.14 3034.03,-2476.69 3107.31,-2411.19 3234.4,-2436.11 3299.38,-2455.02" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="3298.03,-2458.27 3308.62,-2457.82 3300.06,-2451.57 3298.03,-2458.27" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(21)&#45;&gt;set_marker_node_Set(22) -->
+<g id="edge24" class="edge" data-name="set_marker_node_Set(21)-&gt;set_marker_node_Set(22)">
+
+<g id="a_edge24"><a xlink:title="CalculateBounds → CheckVisibility" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M2725.97,-2956.1C2818.03,-2965.89 2960.28,-2974.32 2998.03,-2938.69 3072.93,-2868.02 2959.36,-2547.61 3034.03,-2476.69 3105.76,-2408.58 3234.9,-2435.23 3300.15,-2454.89" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="3298.84,-2458.14 3309.43,-2457.79 3300.93,-2451.46 3298.84,-2458.14" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(93) -->
+<g id="node140" class="node" pointer-events="visible" data-name="node_System(93)">
+
+<g id="a_node140"><a xlink:title="bevy_gizmos::aabb::draw_aabbs" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="3382.57,-2986.69 3299.85,-2986.69 3299.85,-2950.69 3382.57,-2950.69 3382.57,-2986.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-2964.49" font-family="Times,serif" font-size="14.00" style="">draw_aabbs</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(21)&#45;&gt;node_System(93) -->
+<g id="edge43" class="edge" data-name="set_marker_node_Set(21)-&gt;node_System(93)">
+
+<g id="a_edge43"><a xlink:title="CalculateBounds → draw_aabbs" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M2725.98,-2948.38C2869.91,-2953.14 3166.09,-2962.93 3287.01,-2966.93" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="3286.48,-2970.42 3296.59,-2967.25 3286.71,-2963.42 3286.48,-2970.42" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(94) -->
+<g id="node141" class="node" pointer-events="visible" data-name="node_System(94)">
+
+<g id="a_node141"><a xlink:title="bevy_gizmos::aabb::draw_all_aabbs" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="3393.07,-2939.69 3289.35,-2939.69 3289.35,-2903.69 3393.07,-2903.69 3393.07,-2939.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-2917.49" font-family="Times,serif" font-size="14.00" style="">draw_all_aabbs</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(21)&#45;&gt;node_System(94) -->
+<g id="edge81" class="edge" data-name="set_marker_node_Set(21)-&gt;node_System(94)">
+
+<g id="a_edge81"><a xlink:title="CalculateBounds → draw_all_aabbs" style="">
+<path fill="none" stroke="rgb(21,20,36)" stroke-width="2" d="M2725.97,-2944.77C2797.58,-2943.79 2904.76,-2941.93 2998.03,-2938.69 3095.06,-2935.32 3207.47,-2929.34 3276.2,-2925.44" style=""/>
+<polygon fill="rgb(21,20,36)" stroke="rgb(21,20,36)" stroke-width="2" points="3276.12,-2928.95 3285.9,-2924.89 3275.72,-2921.97 3276.12,-2928.95" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(16) -->
+<g id="node48" class="node" pointer-events="visible" data-name="node_System(16)">
+
+<g id="a_node48"><a xlink:title="bevy_render::view::visibility::calculate_bounds" style="">
+<polygon fill="rgb(22,33,45)" stroke="rgb(12,28,45)" points="2706.28,-2932.69 2581.34,-2932.69 2581.34,-2896.69 2706.28,-2896.69 2706.28,-2932.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2910.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">calculate_bounds</text>
+</a>
+</g>
+</g>
+<!-- node_System(31) -->
+<g id="node49" class="node" pointer-events="visible" data-name="node_System(31)">
+
+<g id="a_node49"><a xlink:title="bevy_sprite::calculate_bounds_2d" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="2718.14,-2885.69 2569.48,-2885.69 2569.48,-2849.69 2718.14,-2849.69 2718.14,-2885.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2863.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">calculate_bounds_2d</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(22)&#45;&gt;node_System(62) -->
+<g id="edge39" class="edge" data-name="set_marker_node_Set(22)-&gt;node_System(62)">
+
+<g id="a_edge39"><a xlink:title="CheckVisibility → assign_objects_to_clusters" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M3352.26,-2458.7C3414.34,-2396.93 3746.29,-2066.66 3844.5,-1968.94" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="3846.81,-1971.58 3851.43,-1962.05 3841.88,-1966.62 3846.81,-1971.58" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(67) -->
+<g id="node92" class="node" pointer-events="visible" data-name="node_System(67)">
+
+<g id="a_node92"><a xlink:title="bevy_pbr::light::check_dir_light_mesh_visibility" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="4650.07,-2336.69 4442.23,-2336.69 4442.23,-2300.69 4650.07,-2300.69 4650.07,-2336.69" style=""/>
+<text text-anchor="middle" x="4546.15" y="-2314.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">check_dir_light_mesh_visibility</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(22)&#45;&gt;node_System(67) -->
+<g id="edge22" class="edge" data-name="set_marker_node_Set(22)-&gt;node_System(67)">
+
+<g id="a_edge22"><a xlink:title="CheckVisibility → check_dir_light_mesh_visibility" style="">
+<path fill="none" stroke="rgb(28,21,29)" stroke-width="2" d="M3453.79,-2458.7C3648.09,-2440.65 4060.89,-2399.44 4407.04,-2345.69 4418.87,-2343.86 4431.22,-2341.73 4443.47,-2339.5" style=""/>
+<polygon fill="rgb(28,21,29)" stroke="rgb(28,21,29)" stroke-width="2" points="4444.01,-2342.96 4453.2,-2337.7 4442.73,-2336.08 4444.01,-2342.96" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(68) -->
+<g id="node93" class="node" pointer-events="visible" data-name="node_System(68)">
+
+<g id="a_node93"><a xlink:title="bevy_pbr::light::check_point_light_mesh_visibility" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="4657.37,-2289.69 4434.93,-2289.69 4434.93,-2253.69 4657.37,-2253.69 4657.37,-2289.69" style=""/>
+<text text-anchor="middle" x="4546.15" y="-2267.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">check_point_light_mesh_visibility</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(22)&#45;&gt;node_System(68) -->
+<g id="edge16" class="edge" data-name="set_marker_node_Set(22)-&gt;node_System(68)">
+
+<g id="a_edge16"><a xlink:title="CheckVisibility → check_point_light_mesh_visibility" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M3381.66,-2458.7C3445.12,-2442.87 3573.94,-2411.78 3684.39,-2391.69 3945.53,-2344.19 4254.23,-2305.31 4421.82,-2285.63" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="4422.09,-2289.12 4431.62,-2284.48 4421.28,-2282.17 4422.09,-2289.12" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(64) -->
+<g id="node95" class="node" pointer-events="visible" data-name="node_System(64)">
+
+<g id="a_node95"><a xlink:title="bevy_pbr::light::update_directional_light_frusta" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="4351.41,-2178.69 4145.03,-2178.69 4145.03,-2142.69 4351.41,-2142.69 4351.41,-2178.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2156.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">update_directional_light_frusta</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(22)&#45;&gt;node_System(64) -->
+<g id="edge41" class="edge" data-name="set_marker_node_Set(22)-&gt;node_System(64)">
+
+<g id="a_edge41"><a xlink:title="CheckVisibility → update_directional_light_frusta" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M3363.42,-2458.69C3451.37,-2417.67 3796.81,-2260.88 4097.39,-2184.69 4108.55,-2181.86 4120.26,-2179.3 4132.02,-2177" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="4132.61,-2180.45 4141.79,-2175.16 4131.32,-2173.57 4132.61,-2180.45" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(111) -->
+<g id="node117" class="node" pointer-events="visible" data-name="node_System(111)">
+
+<g id="a_node117"><a xlink:title="spirit_hotel::game::level::disable_tiled_entities_when_hidden" style="">
+<polygon fill="#eff1f3" stroke="#b4bec7" points="3991.45,-2627.69 3754.33,-2627.69 3754.33,-2591.69 3991.45,-2591.69 3991.45,-2627.69" style=""/>
+<text text-anchor="middle" x="3872.89" y="-2605.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">disable_tiled_entities_when_hidden</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(22)&#45;&gt;node_System(111) -->
+<g id="edge88" class="edge" data-name="set_marker_node_Set(22)-&gt;node_System(111)">
+
+<g id="a_edge88"><a xlink:title="CheckVisibility → disable_tiled_entities_when_hidden" style="">
+<path fill="none" stroke="#aa3a55" stroke-width="2" d="M3666.72,-2550.69C3667.63,-2563.13 3671.58,-2575.13 3684.39,-2585.69 3700.71,-2599.16 3720.71,-2607.36 3741.5,-2612.1" style=""/>
+<polygon fill="#aa3a55" stroke="#aa3a55" stroke-width="2" points="3740.7,-2615.51 3751.19,-2613.98 3742.04,-2608.64 3740.7,-2615.51" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(19) -->
+<g id="node51" class="node" pointer-events="visible" data-name="node_System(19)">
+
+<g id="a_node51"><a xlink:title="bevy_render::view::visibility::check_visibility" style="">
+<polygon fill="#70b9fc" stroke="#0c88f9" points="3926.98,-2517.69 3818.8,-2517.69 3818.8,-2481.69 3926.98,-2481.69 3926.98,-2517.69" style=""/>
+<text text-anchor="middle" x="3872.89" y="-2495.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">check_visibility</text>
+</a>
+</g>
+</g>
+<!-- node_System(21) -->
+<g id="node52" class="node" pointer-events="visible" data-name="node_System(21)">
+
+<g id="a_node52"><a xlink:title="bevy_render::view::visibility::range::check_visibility_ranges" style="">
+<polygon fill="#70b9fc" stroke="#0c88f9" points="3420.89,-2517.69 3261.53,-2517.69 3261.53,-2481.69 3420.89,-2481.69 3420.89,-2517.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-2495.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">check_visibility_ranges</text>
+</a>
+</g>
+</g>
+<!-- node_System(21)&#45;&gt;node_System(19) -->
+<g id="edge52" class="edge" data-name="node_System(21)-&gt;node_System(19)">
+
+<g id="a_edge52"><a xlink:title="check_visibility_ranges → SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::system_param::Local&lt;bevy_utils::parallel_queue::Parallel&lt;bevy_platform::collections::hash_map::HashMap&lt;core::any::TypeId, alloc::vec::Vec&lt;bevy_ecs::entity::Entity&gt;, bevy_platform::hash::NoOpHash&gt;&gt;&gt;, bevy_ecs::system::query::Query&lt;(bevy_ecs::entity::Entity, &amp;mut bevy_render::view::visibility::VisibleEntities, &amp;bevy_render::primitives::Frustum, core::option::Option&lt;&amp;bevy_render::view::visibility::render_layers::RenderLayers&gt;, &amp;bevy_render::camera::camera::Camera, bevy_ecs::query::fetch::Has&lt;bevy_render::view::NoCpuCulling&gt;)&gt;, bevy_ecs::system::query::Query&lt;(bevy_ecs::entity::Entity, &amp;bevy_render::view::visibility::InheritedVisibility, &amp;mut bevy_render::view::visibility::ViewVisibility, &amp;bevy_render::view::visibility::VisibilityClass, core::option::Option&lt;&amp;bevy_render::view::visibility::render_layers::RenderLayers&gt;, core::option::Option&lt;&amp;bevy_render::primitives::Aabb&gt;, &amp;bevy_transform::components::global_transform::GlobalTransform, bevy_ecs::query::fetch::Has&lt;bevy_render::view::visibility::NoFrustumCulling&gt;, bevy_ecs::query::fetch::Has&lt;bevy_render::view::visibility::range::VisibilityRange&gt;)&gt;, core::option::Option&lt;bevy_ecs::change_detection::Res&lt;bevy_render::view::visibility::range::VisibleEntityRanges&gt;&gt;, bevy_ecs::change_detection::ResMut&lt;bevy_render::view::visibility::PreviousVisibleEntities&gt;), bevy_render::view::visibility::check_visibility&gt;())" style="">
+<path fill="none" stroke="#eede00" stroke-width="2" d="M3421.22,-2499.69C3525.72,-2499.69 3708.03,-2499.69 3805.67,-2499.69" style=""/>
+<polygon fill="#eede00" stroke="#eede00" stroke-width="2" points="3805.56,-2503.19 3815.56,-2499.69 3805.56,-2496.19 3805.56,-2503.19" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(23)&#45;&gt;set_marker_node_Set(22) -->
+<g id="edge13" class="edge" data-name="set_marker_node_Set(23)-&gt;set_marker_node_Set(22)">
+
+<g id="a_edge13"><a xlink:title="VisibilityPropagate → CheckVisibility" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M2745.41,-2728.04C2823.58,-2744.19 2929.83,-2750.59 2998.03,-2691.69 3071.36,-2628.37 2960.91,-2540.25 3034.03,-2476.69 3107.98,-2412.42 3234.1,-2436.53 3298.98,-2455.08" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="3297.62,-2458.33 3308.2,-2457.83 3299.62,-2451.62 3297.62,-2458.33" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(17) -->
+<g id="node54" class="node" pointer-events="visible" data-name="node_System(17)">
+
+<g id="a_node54"><a xlink:title="bevy_render::view::visibility::visibility_propagate_system" style="">
+<polygon fill="#70b9fc" stroke="#0c88f9" points="2737.5,-2685.69 2550.12,-2685.69 2550.12,-2649.69 2737.5,-2649.69 2737.5,-2685.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2663.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">visibility_propagate_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(18) -->
+<g id="node55" class="node" pointer-events="visible" data-name="node_System(18)">
+
+<g id="a_node55"><a xlink:title="bevy_render::view::visibility::reset_view_visibility" style="">
+<polygon fill="#70b9fc" stroke="#0c88f9" points="2713.24,-2638.69 2574.38,-2638.69 2574.38,-2602.69 2713.24,-2602.69 2713.24,-2638.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2616.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">reset_view_visibility</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(24) -->
+<!-- node_System(20) -->
+<g id="node57" class="node" pointer-events="visible" data-name="node_System(20)">
+
+<g id="a_node57"><a xlink:title="bevy_render::view::visibility::mark_newly_hidden_entities_invisible" style="">
+<polygon fill="rgb(22,33,45)" stroke="rgb(12,28,45)" points="4943.63,-2281.69 4693.14,-2281.69 4693.14,-2245.69 4943.63,-2245.69 4943.63,-2281.69" style=""/>
+<text text-anchor="middle" x="4818.38" y="-2259.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">mark_newly_hidden_entities_invisible</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(42) -->
+<!-- node_System(32) -->
+<g id="node59" class="node" pointer-events="visible" data-name="node_System(32)">
+
+<g id="a_node59"><a xlink:title="bevy_sprite::texture_slice::computed_slices::compute_slices_on_asset_event" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="2199.32,-1732.69 1980.06,-1732.69 1980.06,-1696.69 2199.32,-1696.69 2199.32,-1732.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-1710.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">compute_slices_on_asset_event</text>
+</a>
+</g>
+</g>
+<!-- node_System(32)&#45;&gt;set_marker_node_Set(6) -->
+<g id="edge31" class="edge" data-name="node_System(32)-&gt;set_marker_node_Set(6)">
+
+<g id="a_edge31"><a xlink:title="compute_slices_on_asset_event → AssetEvents" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M2199.73,-1727.25C2228.89,-1730.17 2260.41,-1732.94 2289.59,-1734.69 2306.72,-1735.72 2324.33,-1736.61 2342.1,-1737.38" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="2341.91,-1740.87 2352.04,-1737.79 2342.2,-1733.88 2341.91,-1740.87" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(33) -->
+<g id="node60" class="node" pointer-events="visible" data-name="node_System(33)">
+
+<g id="a_node60"><a xlink:title="bevy_sprite::texture_slice::computed_slices::compute_slices_on_sprite_change" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="2205.28,-1685.69 1974.11,-1685.69 1974.11,-1649.69 2205.28,-1649.69 2205.28,-1685.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-1663.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">compute_slices_on_sprite_change</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(46) -->
+<!-- node_System(35) -->
+<g id="node62" class="node" pointer-events="visible" data-name="node_System(35)">
+
+<g id="a_node62"><a xlink:title="bevy_text::font_atlas_set::remove_dropped_font_atlas_sets" style="">
+<polygon fill="rgb(35,34,46)" stroke="rgb(31,23,46)" points="1889.7,-3032.69 1666.09,-3032.69 1666.09,-2996.69 1889.7,-2996.69 1889.7,-3032.69" style=""/>
+<text text-anchor="middle" x="1777.9" y="-3010.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#220032" style="">remove_dropped_font_atlas_sets</text>
+</a>
+</g>
+</g>
+<!-- node_System(35)&#45;&gt;set_marker_node_Set(6) -->
+<g id="edge20" class="edge" data-name="node_System(35)-&gt;set_marker_node_Set(6)">
+
+<g id="a_edge20"><a xlink:title="remove_dropped_font_atlas_sets → AssetEvents" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M1781.54,-2996.21C1800.98,-2860.48 1921.09,-2023.07 1925.8,-2018.69 1979.3,-1968.98 2197.02,-2040.89 2253.59,-1994.69 2299.36,-1957.31 2249.21,-1909.84 2289.59,-1866.69 2327.12,-1826.61 2378.3,-1799.37 2430.05,-1780.86" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="2430.97,-1784.24 2439.29,-1777.68 2428.69,-1777.62 2430.97,-1784.24" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(36) -->
+<g id="node63" class="node" pointer-events="visible" data-name="node_System(36)">
+
+<g id="a_node63"><a xlink:title="bevy_text::text::detect_text_needs_rerender&lt;bevy_text::text2d::Text2d&gt;" style="">
+<polygon fill="rgb(35,34,46)" stroke="rgb(31,23,46)" points="2214.97,-3032.69 1964.42,-3032.69 1964.42,-2996.69 2214.97,-2996.69 2214.97,-3032.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-3010.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#220032" style="">detect_text_needs_rerender&lt;Text2d&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(35)&#45;&gt;node_System(36) -->
+<g id="edge87" class="edge" data-name="node_System(35)-&gt;node_System(36)">
+
+<g id="a_edge87"><a xlink:title="remove_dropped_font_atlas_sets → detect_text_needs_rerender&lt;Text2d&gt;" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M1889.86,-3014.69C1909.68,-3014.69 1930.55,-3014.69 1951.01,-3014.69" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="1951,-3018.19 1961,-3014.69 1951,-3011.19 1951,-3018.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(46) -->
+<g id="node80" class="node" pointer-events="visible" data-name="node_System(46)">
+
+<g id="a_node80"><a xlink:title="bevy_ui::widget::text::text_system" style="">
+<polygon fill="rgb(37,33,43)" stroke="rgb(37,22,40)" points="2134.88,-1959.69 2044.5,-1959.69 2044.5,-1923.69 2134.88,-1923.69 2134.88,-1959.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-1937.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320021" style="">text_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(35)&#45;&gt;node_System(46) -->
+<g id="edge82" class="edge" data-name="node_System(35)-&gt;node_System(46)">
+
+<g id="a_edge82"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::change_detection::ResMut&lt;bevy_text::font_atlas_set::FontAtlasSets&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_asset::event::AssetEvent&lt;bevy_text::font::Font&gt;&gt;), bevy_text::font_atlas_set::remove_dropped_font_atlas_sets&gt;()) → text_system" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M1781.55,-2996.22C1801.31,-2858.69 1924.76,-1999.96 1925.8,-1998.69 1951.58,-1967.38 1995.65,-1953.25 2031.45,-1946.88" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="2031.9,-1950.35 2041.23,-1945.34 2030.81,-1943.44 2031.9,-1950.35" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(37) -->
+<g id="node64" class="node" pointer-events="visible" data-name="node_System(37)">
+
+<g id="a_node64"><a xlink:title="bevy_text::text2d::update_text2d_layout" style="">
+<polygon fill="rgb(35,34,46)" stroke="rgb(31,23,46)" points="2718.7,-3032.69 2568.92,-3032.69 2568.92,-2996.69 2718.7,-2996.69 2718.7,-3032.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-3010.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#220032" style="">update_text2d_layout</text>
+</a>
+</g>
+</g>
+<!-- node_System(36)&#45;&gt;node_System(37) -->
+<g id="edge58" class="edge" data-name="node_System(36)-&gt;node_System(37)">
+
+<g id="a_edge58"><a xlink:title="detect_text_needs_rerender&lt;Text2d&gt; → update_text2d_layout" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M2215.29,-3014.69C2319.07,-3014.69 2464.21,-3014.69 2555.85,-3014.69" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="2555.66,-3018.19 2565.66,-3014.69 2555.66,-3011.19 2555.66,-3018.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(38) -->
+<g id="node154" class="node" pointer-events="visible" data-name="node_System(38)">
+
+<g id="a_node154"><a xlink:title="bevy_text::text2d::calculate_bounds_text2d" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2235.75,-2980.29 1943.64,-2980.29 1943.64,-2939.09 2235.75,-2939.09 2235.75,-2980.29" style=""/>
+<text text-anchor="middle" x="2089.69" y="-2963.89" font-family="Times,serif" font-size="14.00" style="">calculate_bounds_text2d</text>
+<text text-anchor="middle" x="2089.69" y="-2947.09" font-family="Times,serif" font-size="14.00" style="">In multiple sets, CalculateBounds, Update2dText</text>
+</a>
+</g>
+</g>
+<!-- node_System(37)&#45;&gt;node_System(38) -->
+<g id="edge21" class="edge" data-name="node_System(37)-&gt;node_System(38)">
+
+<g id="a_edge21"><a xlink:title="update_text2d_layout → calculate_bounds_text2d" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M2568.68,-3008.51C2497.17,-3002.43 2385.91,-2992.62 2289.59,-2982.69 2276.36,-2981.33 2262.63,-2979.86 2248.86,-2978.34" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="2249.54,-2974.9 2239.22,-2977.27 2248.77,-2981.85 2249.54,-2974.9" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(47) -->
+<!-- set_marker_node_Set(47)&#45;&gt;node_System(35) -->
+<g id="edge66" class="edge" data-name="set_marker_node_Set(47)-&gt;node_System(35)">
+
+<g id="a_edge66"><a xlink:title="Animation → remove_dropped_font_atlas_sets" style="">
+<path fill="none" stroke="rgb(28,21,29)" stroke-width="2" d="M309.06,-3088.7C439,-2998.46 502.8,-3020.69 663.61,-3020.69 663.61,-3020.69 663.61,-3020.69 1075.03,-3020.69 1277.39,-3020.69 1512.56,-3018.17 1652.82,-3016.39" style=""/>
+<polygon fill="rgb(28,21,29)" stroke="rgb(28,21,29)" stroke-width="2" points="1652.69,-3019.9 1662.64,-3016.27 1652.6,-3012.9 1652.69,-3019.9" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(47)&#45;&gt;set_marker_node_Set(51) -->
+<g id="edge29" class="edge" data-name="set_marker_node_Set(47)-&gt;set_marker_node_Set(51)">
+
+<g id="a_edge29"><a xlink:title="Animation → Prepare" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M297.66,-3088.7C296.56,-3065.96 289.54,-3041.29 304.78,-3012.69 490.83,-2663.67 869.75,-2357.39 1014.78,-2248.21" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="1016.48,-2251.3 1022.39,-2242.51 1012.29,-2245.7 1016.48,-2251.3" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(86) -->
+<g id="node66" class="node" pointer-events="visible" data-name="node_System(86)">
+
+<g id="a_node66"><a xlink:title="bevy_animation::graph::thread_animation_graphs" style="">
+<polygon fill="rgb(37,34,39)" stroke="rgb(37,24,29)" points="226.85,-3132.69 52.3,-3132.69 52.3,-3096.69 226.85,-3096.69 226.85,-3132.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3110.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320200" style="">thread_animation_graphs</text>
+</a>
+</g>
+</g>
+<!-- node_System(86)&#45;&gt;set_marker_node_Set(6) -->
+<g id="edge37" class="edge" data-name="node_System(86)-&gt;set_marker_node_Set(6)">
+
+<g id="a_edge37"><a xlink:title="thread_animation_graphs → AssetEvents" style="">
+<path fill="none" stroke="rgb(21,20,36)" stroke-width="2" d="M142.8,-3096.43C163.94,-2926.47 336.24,-1627.69 663.61,-1627.69 663.61,-1627.69 663.61,-1627.69 1778.9,-1627.69 1989.94,-1627.69 2081.45,-1517.6 2253.59,-1639.69 2290.42,-1665.81 2252.69,-1708.67 2289.59,-1734.69 2306,-1746.26 2323.98,-1754.99 2342.87,-1761.4" style=""/>
+<polygon fill="rgb(21,20,36)" stroke="rgb(21,20,36)" stroke-width="2" points="2341.59,-1764.67 2352.18,-1764.3 2343.67,-1757.99 2341.59,-1764.67" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(87) -->
+<g id="node67" class="node" pointer-events="visible" data-name="node_System(87)">
+
+<g id="a_node67"><a xlink:title="bevy_animation::transition::advance_transitions" style="">
+<polygon fill="rgb(37,34,39)" stroke="rgb(37,24,29)" points="490.03,-3132.69 349.98,-3132.69 349.98,-3096.69 490.03,-3096.69 490.03,-3132.69" style=""/>
+<text text-anchor="middle" x="420" y="-3110.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320200" style="">advance_transitions</text>
+</a>
+</g>
+</g>
+<!-- node_System(86)&#45;&gt;node_System(87) -->
+<g id="edge27" class="edge" data-name="node_System(86)-&gt;node_System(87)">
+
+<g id="a_edge27"><a xlink:title="thread_animation_graphs → advance_transitions" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M227.14,-3114.69C262.11,-3114.69 302.27,-3114.69 336.78,-3114.69" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="336.68,-3118.19 346.68,-3114.69 336.68,-3111.19 336.68,-3118.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(88) -->
+<g id="node68" class="node" pointer-events="visible" data-name="node_System(88)">
+
+<g id="a_node68"><a xlink:title="bevy_animation::advance_animations" style="">
+<polygon fill="rgb(37,34,39)" stroke="rgb(37,24,29)" points="737.03,-3132.69 592.19,-3132.69 592.19,-3096.69 737.03,-3096.69 737.03,-3132.69" style=""/>
+<text text-anchor="middle" x="664.61" y="-3110.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320200" style="">advance_animations</text>
+</a>
+</g>
+</g>
+<!-- node_System(87)&#45;&gt;node_System(88) -->
+<g id="edge80" class="edge" data-name="node_System(87)-&gt;node_System(88)">
+
+<g id="a_edge80"><a xlink:title="advance_transitions → advance_animations" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M490.2,-3114.69C517.89,-3114.69 550.06,-3114.69 579.12,-3114.69" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="578.76,-3118.19 588.76,-3114.69 578.76,-3111.19 578.76,-3118.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(89) -->
+<g id="node69" class="node" pointer-events="visible" data-name="node_System(89)">
+
+<g id="a_node69"><a xlink:title="bevy_animation::animate_targets" style="">
+<polygon fill="rgb(37,34,39)" stroke="rgb(37,24,29)" points="1132.42,-3132.69 1015.64,-3132.69 1015.64,-3096.69 1132.42,-3096.69 1132.42,-3132.69" style=""/>
+<text text-anchor="middle" x="1074.03" y="-3110.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320200" style="">animate_targets</text>
+</a>
+</g>
+</g>
+<!-- node_System(88)&#45;&gt;node_System(89) -->
+<g id="edge25" class="edge" data-name="node_System(88)-&gt;node_System(89)">
+
+<g id="a_edge25"><a xlink:title="advance_animations → animate_targets" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M737.51,-3114.69C812.19,-3114.69 928.27,-3114.69 1002.45,-3114.69" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="1002.31,-3118.19 1012.31,-3114.69 1002.31,-3111.19 1002.31,-3118.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(90) -->
+<g id="node70" class="node" pointer-events="visible" data-name="node_System(90)">
+
+<g id="a_node70"><a xlink:title="bevy_animation::trigger_untargeted_animation_events" style="">
+<polygon fill="rgb(37,34,39)" stroke="rgb(37,24,29)" points="1629.96,-3132.69 1382.09,-3132.69 1382.09,-3096.69 1629.96,-3096.69 1629.96,-3132.69" style=""/>
+<text text-anchor="middle" x="1506.02" y="-3110.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320200" style="">trigger_untargeted_animation_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(89)&#45;&gt;node_System(90) -->
+<g id="edge32" class="edge" data-name="node_System(89)-&gt;node_System(90)">
+
+<g id="a_edge32"><a xlink:title="animate_targets → trigger_untargeted_animation_events" style="">
+<path fill="none" stroke="rgb(11,32,41)" stroke-width="2" d="M1132.58,-3114.69C1192.75,-3114.69 1289.34,-3114.69 1369.08,-3114.69" style=""/>
+<polygon fill="rgb(11,32,41)" stroke="rgb(11,32,41)" stroke-width="2" points="1368.7,-3118.19 1378.7,-3114.69 1368.7,-3111.19 1368.7,-3118.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(25) -->
+<g id="node124" class="node" pointer-events="visible" data-name="node_System(25)">
+
+<g id="a_node124"><a xlink:title="bevy_render::mesh::inherit_weights" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="1557.62,-3080.69 1454.43,-3080.69 1454.43,-3044.69 1557.62,-3044.69 1557.62,-3080.69" style=""/>
+<text text-anchor="middle" x="1506.02" y="-3058.49" font-family="Times,serif" font-size="14.00" style="">inherit_weights</text>
+</a>
+</g>
+</g>
+<!-- node_System(89)&#45;&gt;node_System(25) -->
+<g id="edge61" class="edge" data-name="node_System(89)-&gt;node_System(25)">
+
+<g id="a_edge61"><a xlink:title="animate_targets → SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;(&amp;bevy_ecs::hierarchy::Children, &amp;bevy_mesh::morph::MorphWeights), (bevy_ecs::query::filter::Without&lt;bevy_render::mesh::components::Mesh3d&gt;, bevy_ecs::query::filter::Changed&lt;bevy_mesh::morph::MorphWeights&gt;)&gt;, bevy_ecs::system::query::Query&lt;&amp;mut bevy_mesh::morph::MeshMorphWeights, bevy_ecs::query::filter::With&lt;bevy_render::mesh::components::Mesh3d&gt;&gt;), bevy_render::mesh::inherit_weights&gt;())" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M1132.58,-3107.73C1212.84,-3098.03 1357.92,-3080.48 1441.34,-3070.39" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="1441.67,-3073.88 1451.18,-3069.2 1440.83,-3066.93 1441.67,-3073.88" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(91) -->
+<g id="node71" class="node" pointer-events="visible" data-name="node_System(91)">
+
+<g id="a_node71"><a xlink:title="bevy_animation::transition::expire_completed_transitions" style="">
+<polygon fill="rgb(37,34,39)" stroke="rgb(37,24,29)" points="1877,-3132.69 1678.79,-3132.69 1678.79,-3096.69 1877,-3096.69 1877,-3132.69" style=""/>
+<text text-anchor="middle" x="1777.9" y="-3110.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320200" style="">expire_completed_transitions</text>
+</a>
+</g>
+</g>
+<!-- node_System(90)&#45;&gt;node_System(91) -->
+<g id="edge36" class="edge" data-name="node_System(90)-&gt;node_System(91)">
+
+<g id="a_edge36"><a xlink:title="trigger_untargeted_animation_events → expire_completed_transitions" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M1630.11,-3114.69C1642.06,-3114.69 1654.13,-3114.69 1665.94,-3114.69" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="1665.62,-3118.19 1675.62,-3114.69 1665.62,-3111.19 1665.62,-3118.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(91)&#45;&gt;set_marker_node_Set(1) -->
+<g id="edge47" class="edge" data-name="node_System(91)-&gt;set_marker_node_Set(1)">
+
+<g id="a_edge47"><a xlink:title="expire_completed_transitions → TransformPropagate" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M1872.77,-3096.34C1879.06,-3092.58 1884.85,-3088.08 1889.8,-3082.69 1906.48,-3064.52 2043.71,-2322.59 2079.95,-2125.41" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="2083.37,-2126.14 2081.74,-2115.67 2076.49,-2124.87 2083.37,-2126.14" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(52) -->
+<!-- set_marker_node_Set(51)&#45;&gt;set_marker_node_Set(52) -->
+<g id="edge67" class="edge" data-name="set_marker_node_Set(51)-&gt;set_marker_node_Set(52)">
+
+<g id="a_edge67"><a xlink:title="Prepare → Content" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M1173.3,-2219.52C1226.33,-2223.01 1291.83,-2220.73 1346.06,-2198.69 1360.77,-2192.72 1362,-2182.16 1370.12,-2173.81" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="1371.83,-2176.88 1378.16,-2168.39 1367.91,-2171.07 1371.83,-2176.88" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(39) -->
+<g id="node73" class="node" pointer-events="visible" data-name="node_System(39)">
+
+<g id="a_node73"><a xlink:title="bevy_ui::update::update_ui_context_system" style="">
+<polygon fill="rgb(37,33,43)" stroke="rgb(37,22,40)" points="1165.08,-2192.69 982.98,-2192.69 982.98,-2156.69 1165.08,-2156.69 1165.08,-2192.69" style=""/>
+<text text-anchor="middle" x="1074.03" y="-2170.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320021" style="">update_ui_context_system</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(53) -->
+<!-- set_marker_node_Set(52)&#45;&gt;set_marker_node_Set(53) -->
+<g id="edge85" class="edge" data-name="set_marker_node_Set(52)-&gt;set_marker_node_Set(53)">
+
+<g id="a_edge85"><a xlink:title="Content → Layout" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M1581.65,-2148.7C1599.19,-2143.34 1616.64,-2135.17 1629.99,-2122.69 1656.3,-2098.12 1629.17,-2068.26 1657.99,-2046.69 1668.73,-2038.65 1681.66,-2034.17 1694.99,-2031.97" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="1695.27,-2035.46 1704.81,-2030.85 1694.48,-2028.5 1695.27,-2035.46" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(44) -->
+<g id="node75" class="node" pointer-events="visible" data-name="node_System(44)">
+
+<g id="a_node75"><a xlink:title="bevy_text::text::detect_text_needs_rerender&lt;bevy_ui::widget::text::Text&gt;" style="">
+<polygon fill="rgb(35,34,46)" stroke="rgb(31,23,46)" points="1623.23,-2207.69 1388.82,-2207.69 1388.82,-2171.69 1623.23,-2171.69 1623.23,-2207.69" style=""/>
+<text text-anchor="middle" x="1506.02" y="-2185.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#220032" style="">detect_text_needs_rerender&lt;Text&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(45) -->
+<g id="node76" class="node" pointer-events="visible" data-name="node_System(45)">
+
+<g id="a_node76"><a xlink:title="bevy_ui::widget::text::measure_text_system" style="">
+<polygon fill="rgb(37,33,43)" stroke="rgb(37,22,40)" points="1854.34,-2207.69 1701.45,-2207.69 1701.45,-2171.69 1854.34,-2171.69 1854.34,-2207.69" style=""/>
+<text text-anchor="middle" x="1777.9" y="-2185.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320021" style="">measure_text_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(44)&#45;&gt;node_System(45) -->
+<g id="edge56" class="edge" data-name="node_System(44)-&gt;node_System(45)">
+
+<g id="a_edge56"><a xlink:title="detect_text_needs_rerender&lt;Text&gt; → measure_text_system" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M1623.43,-2189.69C1645.07,-2189.69 1667.35,-2189.69 1688,-2189.69" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="1687.94,-2193.19 1697.94,-2189.69 1687.94,-2186.19 1687.94,-2193.19" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(54) -->
+<!-- set_marker_node_Set(53)&#45;&gt;set_marker_node_Set(54) -->
+<g id="edge69" class="edge" data-name="set_marker_node_Set(53)-&gt;set_marker_node_Set(54)">
+
+<g id="a_edge69"><a xlink:title="Layout → PostLayout" style="">
+<path fill="none" stroke="rgb(35,31,27)" stroke-width="2" d="M1786.97,-2028.7C1807.25,-2004.45 1863.21,-1942.75 1925.8,-1918.69 1956.55,-1906.87 1993.01,-1904.14 2023.62,-1904.68" style=""/>
+<polygon fill="rgb(35,31,27)" stroke="rgb(35,31,27)" stroke-width="2" points="2023.22,-1908.17 2033.33,-1905 2023.45,-1901.18 2023.22,-1908.17" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(40) -->
+<g id="node78" class="node" pointer-events="visible" data-name="node_System(40)">
+
+<g id="a_node78"><a xlink:title="bevy_ui::layout::ui_layout_system" style="">
+<polygon fill="rgb(37,33,43)" stroke="rgb(37,22,40)" points="1840.06,-2087.69 1715.73,-2087.69 1715.73,-2051.69 1840.06,-2051.69 1840.06,-2087.69" style=""/>
+<text text-anchor="middle" x="1777.9" y="-2065.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#320021" style="">ui_layout_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(40)&#45;&gt;set_marker_node_Set(1) -->
+<g id="edge11" class="edge" data-name="node_System(40)-&gt;set_marker_node_Set(1)">
+
+<g id="a_edge11"><a xlink:title="ui_layout_system → TransformPropagate" style="">
+<path fill="none" stroke="rgb(28,21,29)" stroke-width="2" d="M1840.47,-2071.28C1888.7,-2072.53 1956.16,-2074.27 2008.59,-2075.62" style=""/>
+<polygon fill="rgb(28,21,29)" stroke="rgb(28,21,29)" stroke-width="2" points="2008.46,-2079.12 2018.55,-2075.88 2008.64,-2072.12 2008.46,-2079.12" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(46)&#45;&gt;set_marker_node_Set(6) -->
+<g id="edge50" class="edge" data-name="node_System(46)-&gt;set_marker_node_Set(6)">
+
+<g id="a_edge50"><a xlink:title="text_system → AssetEvents" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M2135.38,-1944.31C2170.05,-1944.28 2218.04,-1939.55 2253.59,-1917.69 2277.23,-1903.16 2267.47,-1883.44 2289.59,-1866.69 2341.54,-1827.35 2406.92,-1799.66 2467.27,-1780.52" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="2468.25,-1783.88 2476.77,-1777.58 2466.18,-1777.2 2468.25,-1783.88" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(58) -->
+<!-- set_marker_node_Set(59) -->
+<!-- set_marker_node_Set(62) -->
+<!-- set_marker_node_Set(77) -->
+<!-- set_marker_node_Set(77)&#45;&gt;node_System(64) -->
+<g id="edge73" class="edge" data-name="set_marker_node_Set(77)-&gt;node_System(64)">
+
+<g id="a_edge73"><a xlink:title="UpdateDirectionalLightCascades → update_directional_light_frusta" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M3457.99,-1995.81C3522.58,-2001.85 3586.66,-2009.37 3648.39,-2018.69 3852.52,-2049.53 3895.3,-2095.53 4097.39,-2137.69 4108.56,-2140.02 4120.23,-2142.22 4131.93,-2144.27" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="4131.17,-2147.69 4141.62,-2145.92 4132.35,-2140.79 4131.17,-2147.69" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(57) -->
+<g id="node85" class="node" pointer-events="visible" data-name="node_System(57)">
+
+<g id="a_node85"><a xlink:title="bevy_pbr::light::build_directional_light_cascades" style="">
+<polygon fill="rgb(28,36,45)" stroke="rgb(18,31,45)" points="3449.79,-1964.69 3232.63,-1964.69 3232.63,-1928.69 3449.79,-1928.69 3449.79,-1964.69" style=""/>
+<text text-anchor="middle" x="3341.21" y="-1942.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#011a31" style="">build_directional_light_cascades</text>
+</a>
+</g>
+</g>
+<!-- node_System(63)&#45;&gt;node_System(57) -->
+<g id="edge60" class="edge" data-name="node_System(63)-&gt;node_System(57)">
+
+<g id="a_edge60"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;(&amp;bevy_pbr::light::directional_light::DirectionalLight, &amp;mut bevy_pbr::light::Cascades)&gt;), bevy_pbr::light::clear_directional_light_cascades&gt;()) → build_directional_light_cascades" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M2753.47,-1946.69C2879.9,-1946.69 3088.06,-1946.69 3219.45,-1946.69" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="3219.29,-1950.19 3229.29,-1946.69 3219.29,-1943.19 3219.29,-1950.19" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(82) -->
+<!-- set_marker_node_Set(83) -->
+<!-- set_marker_node_Set(82)&#45;&gt;set_marker_node_Set(83) -->
+<g id="edge51" class="edge" data-name="set_marker_node_Set(82)-&gt;set_marker_node_Set(83)">
+
+<g id="a_edge51"><a xlink:title="AddClusters → AssignLightsToClusters" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M3396.9,-1815.93C3458.41,-1822.31 3561.13,-1834.4 3648.39,-1851.69 3711.04,-1864.11 3782.17,-1883.89 3827.03,-1897.08" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="3825.75,-1900.35 3836.33,-1899.84 3827.74,-1893.64 3825.75,-1900.35" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(83)&#45;&gt;node_System(65) -->
+<g id="edge28" class="edge" data-name="set_marker_node_Set(83)-&gt;node_System(65)">
+
+<g id="a_edge28"><a xlink:title="AssignLightsToClusters → update_point_light_frusta" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M3908.71,-1900.7C3950.17,-1891.11 4019.11,-1882.82 4061.39,-1918.69 4120.95,-1969.22 4040.7,-2036.98 4097.39,-2090.69 4111.35,-2103.92 4129.55,-2111.47 4148.43,-2115.5" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="4147.79,-2118.94 4158.24,-2117.2 4148.98,-2112.05 4147.79,-2118.94" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(83)&#45;&gt;node_System(66) -->
+<g id="edge30" class="edge" data-name="set_marker_node_Set(83)-&gt;node_System(66)">
+
+<g id="a_edge30"><a xlink:title="AssignLightsToClusters → update_spot_light_frusta" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M3972.94,-1903.46C4002.18,-1904.34 4033.74,-1908.36 4061.39,-1918.69 4128.84,-1943.9 4190.72,-2003.56 4223.25,-2038.96" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="4220.31,-2040.92 4229.61,-2046 4225.51,-2036.23 4220.31,-2040.92" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(84) -->
+<!-- node_System(67)&#45;&gt;set_marker_node_Set(24) -->
+<g id="edge40" class="edge" data-name="node_System(67)-&gt;set_marker_node_Set(24)">
+
+<g id="a_edge40"><a xlink:title="check_dir_light_mesh_visibility → MarkNewlyHiddenEntitiesInvisible" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M4650.47,-2309.52C4657.68,-2308.88 4665.02,-2308.22 4672.4,-2307.57" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="4672.59,-2311.07 4682.25,-2306.69 4671.97,-2304.09 4672.59,-2311.07" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(68)&#45;&gt;set_marker_node_Set(24) -->
+<g id="edge71" class="edge" data-name="node_System(68)-&gt;set_marker_node_Set(24)">
+
+<g id="a_edge71"><a xlink:title="check_point_light_mesh_visibility → MarkNewlyHiddenEntitiesInvisible" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M4657.53,-2285.1C4662.51,-2285.61 4667.48,-2286.09 4672.39,-2286.55" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="4671.97,-2290.03 4682.24,-2287.42 4672.59,-2283.05 4671.97,-2290.03" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(88) -->
+<!-- set_marker_node_Set(88)&#45;&gt;node_System(67) -->
+<g id="edge62" class="edge" data-name="set_marker_node_Set(88)-&gt;node_System(67)">
+
+<g id="a_edge62"><a xlink:title="UpdateLightFrusta → check_dir_light_mesh_visibility" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M4298.57,-2226.69C4333.05,-2249.56 4380.98,-2278.32 4427.04,-2295.69 4427.94,-2296.03 4428.84,-2296.37 4429.75,-2296.7" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="4428.36,-2299.92 4438.95,-2299.76 4430.57,-2293.28 4428.36,-2299.92" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(88)&#45;&gt;node_System(68) -->
+<g id="edge49" class="edge" data-name="set_marker_node_Set(88)-&gt;node_System(68)">
+
+<g id="a_edge49"><a xlink:title="UpdateLightFrusta → check_point_light_mesh_visibility" style="">
+<path fill="none" stroke="rgb(16,25,39)" stroke-width="2" d="M4359.56,-2221.52C4394.29,-2230.91 4431.99,-2241.1 4464.28,-2249.83" style=""/>
+<polygon fill="rgb(16,25,39)" stroke="rgb(16,25,39)" stroke-width="2" points="4463.26,-2253.18 4473.83,-2252.41 4465.09,-2246.42 4463.26,-2253.18" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(75) -->
+<g id="node99" class="node" pointer-events="visible" data-name="node_System(75)">
+
+<g id="a_node99"><a xlink:title="bevy_audio::audio_output::update_emitter_positions" style="">
+<polygon fill="rgb(26,39,41)" stroke="rgb(17,38,37)" points="2730.25,-2538.69 2557.38,-2538.69 2557.38,-2502.69 2730.25,-2502.69 2730.25,-2538.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2516.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#062c1e" style="">update_emitter_positions</text>
+</a>
+</g>
+</g>
+<!-- node_System(76) -->
+<g id="node100" class="node" pointer-events="visible" data-name="node_System(76)">
+
+<g id="a_node100"><a xlink:title="bevy_audio::audio_output::update_listener_positions" style="">
+<polygon fill="rgb(26,39,41)" stroke="rgb(17,38,37)" points="2731.09,-2491.69 2556.53,-2491.69 2556.53,-2455.69 2731.09,-2455.69 2731.09,-2491.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2469.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#062c1e" style="">update_listener_positions</text>
+</a>
+</g>
+</g>
+<!-- node_System(78) -->
+<g id="node101" class="node" pointer-events="visible" data-name="node_System(78)">
+
+<g id="a_node101"><a xlink:title="bevy_audio::audio_output::play_queued_audio_system&lt;bevy_audio::audio_source::AudioSource&gt;" style="">
+<polygon fill="rgb(26,39,41)" stroke="rgb(17,38,37)" points="2787.18,-2444.69 2500.44,-2444.69 2500.44,-2408.69 2787.18,-2408.69 2787.18,-2444.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2422.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#062c1e" style="">play_queued_audio_system&lt;AudioSource&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(79) -->
+<g id="node102" class="node" pointer-events="visible" data-name="node_System(79)">
+
+<g id="a_node102"><a xlink:title="bevy_audio::audio_output::cleanup_finished_audio&lt;bevy_audio::audio_source::AudioSource&gt;" style="">
+<polygon fill="rgb(26,39,41)" stroke="rgb(17,38,37)" points="2773.45,-2397.69 2514.17,-2397.69 2514.17,-2361.69 2773.45,-2361.69 2773.45,-2397.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2375.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#062c1e" style="">cleanup_finished_audio&lt;AudioSource&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(81) -->
+<g id="node103" class="node" pointer-events="visible" data-name="node_System(81)">
+
+<g id="a_node103"><a xlink:title="bevy_audio::audio_output::play_queued_audio_system&lt;bevy_audio::pitch::Pitch&gt;" style="">
+<polygon fill="rgb(26,39,41)" stroke="rgb(17,38,37)" points="2762.64,-2350.69 2524.99,-2350.69 2524.99,-2314.69 2762.64,-2314.69 2762.64,-2350.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2328.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#062c1e" style="">play_queued_audio_system&lt;Pitch&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(82) -->
+<g id="node104" class="node" pointer-events="visible" data-name="node_System(82)">
+
+<g id="a_node104"><a xlink:title="bevy_audio::audio_output::cleanup_finished_audio&lt;bevy_audio::pitch::Pitch&gt;" style="">
+<polygon fill="rgb(26,39,41)" stroke="rgb(17,38,37)" points="2748.91,-2303.69 2538.71,-2303.69 2538.71,-2267.69 2748.91,-2267.69 2748.91,-2303.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-2281.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#062c1e" style="">cleanup_finished_audio&lt;Pitch&gt;</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(109) -->
+<!-- node_System(83) -->
+<g id="node106" class="node" pointer-events="visible" data-name="node_System(83)">
+
+<g id="a_node106"><a xlink:title="bevy_gilrs::rumble::play_gilrs_rumble" style="">
+<polygon fill="rgb(26,21,32)" stroke="rgb(31,26,37)" points="202.29,-3387.69 76.86,-3387.69 76.86,-3351.69 202.29,-3351.69 202.29,-3387.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3365.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#f1d9e9" style="">play_gilrs_rumble</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(123) -->
+<!-- set_marker_node_Set(124) -->
+<!-- set_marker_node_Set(123)&#45;&gt;set_marker_node_Set(124) -->
+<g id="edge46" class="edge" data-name="set_marker_node_Set(123)-&gt;set_marker_node_Set(124)">
+
+<g id="a_edge46"><a xlink:title="EndPass → ProcessOutput" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M193.1,-3467.69C221.23,-3462.34 257.21,-3455.49 292.14,-3448.84" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="292.64,-3452.31 301.81,-3447 291.33,-3445.43 292.64,-3452.31" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(97) -->
+<g id="node108" class="node" pointer-events="visible" data-name="node_System(97)">
+
+<g id="a_node108"><a xlink:title="bevy_egui::run_egui_context_pass_loop_system" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="263.23,-3526.69 15.92,-3526.69 15.92,-3490.69 263.23,-3490.69 263.23,-3526.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3504.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">run_egui_context_pass_loop_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(98) -->
+<g id="node109" class="node" pointer-events="visible" data-name="node_System(98)">
+
+<g id="a_node109"><a xlink:title="bevy_egui::end_pass_system" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="484.34,-3526.69 355.66,-3526.69 355.66,-3490.69 484.34,-3490.69 484.34,-3526.69" style=""/>
+<text text-anchor="middle" x="420" y="-3504.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">end_pass_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(97)&#45;&gt;node_System(98) -->
+<g id="edge63" class="edge" data-name="node_System(97)-&gt;node_System(98)">
+
+<g id="a_edge63"><a xlink:title="run_egui_context_pass_loop_system → end_pass_system" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M263.51,-3508.69C290.43,-3508.69 318.17,-3508.69 342.64,-3508.69" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="342.46,-3512.19 352.46,-3508.69 342.46,-3505.19 342.46,-3512.19" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(125) -->
+<!-- set_marker_node_Set(124)&#45;&gt;set_marker_node_Set(125) -->
+<g id="edge83" class="edge" data-name="set_marker_node_Set(124)-&gt;set_marker_node_Set(125)">
+
+<g id="a_edge83"><a xlink:title="ProcessOutput → PostProcessOutput" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M535.22,-3424.69C537.66,-3424.69 540.1,-3424.69 542.54,-3424.69" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="542.2,-3428.19 552.2,-3424.69 542.2,-3421.19 542.2,-3428.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(99) -->
+<g id="node111" class="node" pointer-events="visible" data-name="node_System(99)">
+
+<g id="a_node111"><a xlink:title="bevy_egui::output::process_output_system" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="501.86,-3411.69 338.15,-3411.69 338.15,-3375.69 501.86,-3375.69 501.86,-3411.69" style=""/>
+<text text-anchor="middle" x="420" y="-3389.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">process_output_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(100) -->
+<g id="node112" class="node" pointer-events="visible" data-name="node_System(100)">
+
+<g id="a_node112"><a xlink:title="bevy_egui::input::write_egui_wants_input_system" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="527.44,-3364.69 312.56,-3364.69 312.56,-3328.69 527.44,-3328.69 527.44,-3364.69" style=""/>
+<text text-anchor="middle" x="420" y="-3342.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">write_egui_wants_input_system</text>
+</a>
+</g>
+</g>
+<!-- node_System(101) -->
+<g id="node114" class="node" pointer-events="visible" data-name="node_System(101)">
+
+<g id="a_node114"><a xlink:title="bevy_egui::update_egui_textures_system" style="">
+<polygon fill="rgb(35,39,45)" stroke="rgb(29,34,40)" points="765.9,-3411.69 563.33,-3411.69 563.33,-3375.69 765.9,-3375.69 765.9,-3411.69" style=""/>
+<text text-anchor="middle" x="664.61" y="-3389.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">update_egui_textures_system</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(139) -->
+<!-- node_System(116) -->
+<g id="node121" class="node" pointer-events="visible" data-name="node_System(116)">
+
+<g id="a_node121"><a xlink:title="spirit_hotel::game::path_finding::compute_grid_collision" style="">
+<polygon fill="#eff1f3" stroke="#b4bec7" points="4327.63,-2512.69 4168.8,-2512.69 4168.8,-2476.69 4327.63,-2476.69 4327.63,-2512.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2490.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">compute_grid_collision</text>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(139)&#45;&gt;node_System(116) -->
+<g id="edge15" class="edge" data-name="set_marker_node_Set(139)-&gt;node_System(116)">
+
+<g id="a_edge15"><a xlink:title="LevelSystems → compute_grid_collision" style="">
+<path fill="none" stroke="#663699" stroke-width="2" d="M4015.56,-2568.7C4031.45,-2564.77 4047.06,-2559.57 4061.39,-2552.69 4081.24,-2543.17 4077.65,-2528.42 4097.39,-2518.69 4115.41,-2509.82 4135.98,-2504.1 4155.99,-2500.44" style=""/>
+<polygon fill="#663699" stroke="#663699" stroke-width="2" points="4156.39,-2503.93 4165.7,-2498.86 4155.27,-2497.02 4156.39,-2503.93" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(110) -->
+<g id="node116" class="node" pointer-events="visible" data-name="node_System(110)">
+
+<g id="a_node116"><a xlink:title="spirit_hotel::game::level::enable_tiled_entities" style="">
+<polygon fill="#eff1f3" stroke="#b4bec7" points="3944.55,-2674.69 3801.24,-2674.69 3801.24,-2638.69 3944.55,-2638.69 3944.55,-2674.69" style=""/>
+<text text-anchor="middle" x="3872.89" y="-2652.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">enable_tiled_entities</text>
+</a>
+</g>
+</g>
+<!-- node_System(110)&#45;&gt;set_marker_node_Set(23) -->
+<g id="edge44" class="edge" data-name="node_System(110)-&gt;set_marker_node_Set(23)">
+
+<g id="a_edge44"><a xlink:title="enable_tiled_entities → VisibilityPropagate" style="">
+<path fill="none" stroke="#aa3a55" stroke-width="2" d="M3800.83,-2660.03C3651.97,-2666.9 3296.44,-2682.76 2998.03,-2691.69 2917.84,-2694.09 2827.39,-2695.87 2758.09,-2697.03" style=""/>
+<polygon fill="#aa3a55" stroke="#aa3a55" stroke-width="2" points="2758.37,-2693.52 2748.43,-2697.19 2758.49,-2700.52 2758.37,-2693.52" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(112) -->
+<g id="node118" class="node" pointer-events="visible" data-name="node_System(112)">
+
+<g id="a_node118"><a xlink:title="spirit_hotel::game::level::disable_tiled_colliders_when_parent_disabled" style="">
+<polygon fill="#eff1f3" stroke="#b4bec7" points="4398.86,-2619.69 4097.57,-2619.69 4097.57,-2583.69 4398.86,-2583.69 4398.86,-2619.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2597.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">disable_tiled_colliders_when_parent_disabled</text>
+</a>
+</g>
+</g>
+<!-- node_System(111)&#45;&gt;node_System(112) -->
+<g id="edge64" class="edge" data-name="node_System(111)-&gt;node_System(112)">
+
+<g id="a_edge64"><a xlink:title="disable_tiled_entities_when_hidden → disable_tiled_colliders_when_parent_disabled" style="">
+<path fill="none" stroke="#881877" stroke-width="2" d="M3991.76,-2607.17C4021.15,-2606.54 4053.18,-2605.85 4084.32,-2605.18" style=""/>
+<polygon fill="#881877" stroke="#881877" stroke-width="2" points="4084.18,-2608.69 4094.11,-2604.97 4084.03,-2601.69 4084.18,-2608.69" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(113) -->
+<g id="node119" class="node" pointer-events="visible" data-name="node_System(113)">
+
+<g id="a_node119"><a xlink:title="spirit_hotel::game::level::enable_tiled_colliders_when_parent_enabled" style="">
+<polygon fill="#eff1f3" stroke="#b4bec7" points="4396.71,-2666.69 4099.72,-2666.69 4099.72,-2630.69 4396.71,-2630.69 4396.71,-2666.69" style=""/>
+<text text-anchor="middle" x="4248.22" y="-2644.49" font-family="Helvetica,sans-Serif" font-size="14.00" fill="#15191d" style="">enable_tiled_colliders_when_parent_enabled</text>
+</a>
+</g>
+</g>
+<!-- node_System(111)&#45;&gt;node_System(113) -->
+<g id="edge89" class="edge" data-name="node_System(111)-&gt;node_System(113)">
+
+<g id="a_edge89"><a xlink:title="disable_tiled_entities_when_hidden → enable_tiled_colliders_when_parent_enabled" style="">
+<path fill="none" stroke="#44d488" stroke-width="2" d="M3991.76,-2622.01C4021.94,-2625.16 4054.91,-2628.6 4086.83,-2631.94" style=""/>
+<polygon fill="#44d488" stroke="#44d488" stroke-width="2" points="4086.16,-2635.39 4096.47,-2632.95 4086.89,-2628.43 4086.16,-2635.39" style=""/>
+</a>
+</g>
+</g>
+<!-- set_marker_node_Set(147) -->
+<!-- node_System(3) -->
+<g id="node122" class="node" pointer-events="visible" data-name="node_System(3)">
+
+<g id="a_node122"><a xlink:title="bevy_window::system::exit_on_all_closed" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="200.33,-3603.69 78.82,-3603.69 78.82,-3567.69 200.33,-3567.69 200.33,-3603.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3581.49" font-family="Times,serif" font-size="14.00" style="">exit_on_all_closed</text>
+</a>
+</g>
+</g>
+<!-- node_System(24) -->
+<g id="node123" class="node" pointer-events="visible" data-name="node_System(24)">
+
+<g id="a_node123"><a xlink:title="bevy_render::mesh::components::mark_3d_meshes_as_changed_if_their_assets_changed" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2253.49,-125.69 1925.9,-125.69 1925.9,-89.69 2253.49,-89.69 2253.49,-125.69" style=""/>
+<text text-anchor="middle" x="2089.69" y="-103.49" font-family="Times,serif" font-size="14.00" style="">mark_3d_meshes_as_changed_if_their_assets_changed</text>
+</a>
+</g>
+</g>
+<!-- node_System(24)&#45;&gt;set_marker_node_Set(6) -->
+<g id="edge45" class="edge" data-name="node_System(24)-&gt;set_marker_node_Set(6)">
+
+<g id="a_edge45"><a xlink:title="mark_3d_meshes_as_changed_if_their_assets_changed → AssetEvents" style="">
+<path fill="none" stroke="rgb(18,36,34)" stroke-width="2" d="M2092.26,-126.11C2107.23,-301.87 2226.33,-1677.57 2289.59,-1734.69 2305.42,-1748.99 2323.47,-1759.53 2342.84,-1767.07" style=""/>
+<polygon fill="rgb(18,36,34)" stroke="rgb(18,36,34)" stroke-width="2" points="2341.62,-1770.35 2352.21,-1770.38 2343.95,-1763.75 2341.62,-1770.35" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(54) -->
+<g id="node134" class="node" pointer-events="visible" data-name="node_System(54)">
+
+<g id="a_node134"><a xlink:title="bevy_pbr::material::mark_meshes_as_changed_if_their_materials_changed&lt;bevy_pbr::pbr_material::StandardMaterial&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2863.23,-172.69 2424.39,-172.69 2424.39,-136.69 2863.23,-136.69 2863.23,-172.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-150.49" font-family="Times,serif" font-size="14.00" style="">mark_meshes_as_changed_if_their_materials_changed&lt;StandardMaterial&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(24)&#45;&gt;node_System(54) -->
+<g id="edge70" class="edge" data-name="node_System(24)-&gt;node_System(54)">
+
+<g id="a_edge70"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;&amp;mut bevy_render::mesh::components::Mesh3d&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_asset::event::AssetEvent&lt;bevy_mesh::mesh::Mesh&gt;&gt;), bevy_render::mesh::components::mark_3d_meshes_as_changed_if_their_assets_changed&gt;()) → mark_meshes_as_changed_if_their_materials_changed&lt;StandardMaterial&gt;" style="">
+<path fill="none" stroke="rgb(21,20,36)" stroke-width="2" d="M2236.16,-126.18C2254.14,-128.19 2272.28,-130.09 2289.59,-131.69 2328.88,-135.34 2370.68,-138.6 2411.26,-141.45" style=""/>
+<polygon fill="rgb(21,20,36)" stroke="rgb(21,20,36)" stroke-width="2" points="2410.86,-144.93 2421.07,-142.13 2411.34,-137.95 2410.86,-144.93" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(24)&#45;&gt;node_System(55) -->
+<g id="edge72" class="edge" data-name="node_System(24)-&gt;node_System(55)">
+
+<g id="a_edge72"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;&amp;mut bevy_render::mesh::components::Mesh3d&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_asset::event::AssetEvent&lt;bevy_mesh::mesh::Mesh&gt;&gt;), bevy_render::mesh::components::mark_3d_meshes_as_changed_if_their_assets_changed&gt;()) → check_entities_needing_specialization&lt;StandardMaterial&gt;" style="">
+<path fill="none" stroke="rgb(15,34,39)" stroke-width="2" d="M2143.45,-89.24C2288.06,-41.91 2699.77,70.86 2998.03,-64.69 3167.82,-141.86 3286.3,-349.51 3325.8,-427" style=""/>
+<polygon fill="rgb(15,34,39)" stroke="rgb(15,34,39)" stroke-width="2" points="3322.49,-428.2 3330.1,-435.57 3328.74,-425.06 3322.49,-428.2" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(59) -->
+<g id="node137" class="node" pointer-events="visible" data-name="node_System(59)">
+
+<g id="a_node137"><a xlink:title="bevy_pbr::material::mark_meshes_as_changed_if_their_materials_changed&lt;bevy_pbr::extended_material::ExtendedMaterial&lt;bevy_pbr::pbr_material::StandardMaterial, bevy_pbr::decal::forward::ForwardDecalMaterialExt&gt;&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="2998.25,-125.69 2289.37,-125.69 2289.37,-89.69 2998.25,-89.69 2998.25,-125.69" style=""/>
+<text text-anchor="middle" x="2643.81" y="-103.49" font-family="Times,serif" font-size="14.00" style="">mark_meshes_as_changed_if_their_materials_changed&lt;ExtendedMaterial&lt;StandardMaterial, ForwardDecalMaterialExt&gt;&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(24)&#45;&gt;node_System(59) -->
+<g id="edge8" class="edge" data-name="node_System(24)-&gt;node_System(59)">
+
+<g id="a_edge8"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;&amp;mut bevy_render::mesh::components::Mesh3d&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_asset::event::AssetEvent&lt;bevy_mesh::mesh::Mesh&gt;&gt;), bevy_render::mesh::components::mark_3d_meshes_as_changed_if_their_assets_changed&gt;()) → mark_meshes_as_changed_if_their_materials_changed&lt;ExtendedMaterial&lt;StandardMaterial, ForwardDecalMaterialExt&gt;&gt;" style="">
+<path fill="none" stroke="rgb(35,37,20)" stroke-width="2" d="M2253.73,-107.69C2261.07,-107.69 2268.53,-107.69 2276.1,-107.69" style=""/>
+<polygon fill="rgb(35,37,20)" stroke="rgb(35,37,20)" stroke-width="2" points="2275.89,-111.19 2285.89,-107.69 2275.89,-104.19 2275.89,-111.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(24)&#45;&gt;node_System(60) -->
+<g id="edge84" class="edge" data-name="node_System(24)-&gt;node_System(60)">
+
+<g id="a_edge84"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;&amp;mut bevy_render::mesh::components::Mesh3d&gt;, bevy_ecs::event::reader::EventReader&lt;bevy_asset::event::AssetEvent&lt;bevy_mesh::mesh::Mesh&gt;&gt;), bevy_render::mesh::components::mark_3d_meshes_as_changed_if_their_assets_changed&gt;()) → check_entities_needing_specialization&lt;ExtendedMaterial&lt;StandardMaterial, ForwardDecalMaterialExt&gt;&gt;" style="">
+<path fill="none" stroke="rgb(27,37,29)" stroke-width="2" d="M2225.57,-89.2C2246.95,-86.91 2268.85,-84.94 2289.59,-83.69 2368.17,-78.97 2939.91,-30.61 2998.03,-83.69 3063.44,-143.44 3014.15,-394.37 3034.03,-480.69 3106.73,-796.41 3274.68,-1154.5 3325.43,-1258.76" style=""/>
+<polygon fill="rgb(27,37,29)" stroke="rgb(27,37,29)" stroke-width="2" points="3322.15,-1260.03 3329.69,-1267.48 3328.44,-1256.96 3322.15,-1260.03" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(28) -->
+<g id="node125" class="node" pointer-events="visible" data-name="node_System(28)">
+
+<g id="a_node125"><a xlink:title="bevy_core_pipeline::core_3d::check_msaa" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="181.98,-3650.69 97.17,-3650.69 97.17,-3614.69 181.98,-3614.69 181.98,-3650.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3628.49" font-family="Times,serif" font-size="14.00" style="">check_msaa</text>
+</a>
+</g>
+</g>
+<!-- node_System(48) -->
+<g id="node129" class="node" pointer-events="visible" data-name="node_System(48)">
+
+<g id="a_node129"><a xlink:title="bevy_ui::accessibility::button_changed" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="192.5,-3697.69 86.65,-3697.69 86.65,-3661.69 192.5,-3661.69 192.5,-3697.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3675.49" font-family="Times,serif" font-size="14.00" style="">button_changed</text>
+</a>
+</g>
+</g>
+<!-- node_System(49) -->
+<g id="node130" class="node" pointer-events="visible" data-name="node_System(49)">
+
+<g id="a_node130"><a xlink:title="bevy_ui::accessibility::image_changed" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="191.42,-3744.69 87.73,-3744.69 87.73,-3708.69 191.42,-3708.69 191.42,-3744.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3722.49" font-family="Times,serif" font-size="14.00" style="">image_changed</text>
+</a>
+</g>
+</g>
+<!-- node_System(50) -->
+<g id="node131" class="node" pointer-events="visible" data-name="node_System(50)">
+
+<g id="a_node131"><a xlink:title="bevy_ui::accessibility::label_changed" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="187.92,-3791.69 91.23,-3791.69 91.23,-3755.69 187.92,-3755.69 187.92,-3791.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3769.49" font-family="Times,serif" font-size="14.00" style="">label_changed</text>
+</a>
+</g>
+</g>
+<!-- node_System(51) -->
+<g id="node132" class="node" pointer-events="visible" data-name="node_System(51)">
+
+<g id="a_node132"><a xlink:title="bevy_pbr::render::skin::no_automatic_skin_batching" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="228.32,-3838.69 50.83,-3838.69 50.83,-3802.69 228.32,-3802.69 228.32,-3838.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3816.49" font-family="Times,serif" font-size="14.00" style="">no_automatic_skin_batching</text>
+</a>
+</g>
+</g>
+<!-- node_System(52) -->
+<g id="node133" class="node" pointer-events="visible" data-name="node_System(52)">
+
+<g id="a_node133"><a xlink:title="bevy_pbr::render::morph::no_automatic_morph_batching" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="235.03,-3885.69 44.12,-3885.69 44.12,-3849.69 235.03,-3849.69 235.03,-3885.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3863.49" font-family="Times,serif" font-size="14.00" style="">no_automatic_morph_batching</text>
+</a>
+</g>
+</g>
+<!-- node_System(56) -->
+<g id="node136" class="node" pointer-events="visible" data-name="node_System(56)">
+
+<g id="a_node136"><a xlink:title="bevy_pbr::render::light::check_light_entities_needing_specialization&lt;bevy_pbr::pbr_material::StandardMaterial&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="4061.4,-474.69 3684.38,-474.69 3684.38,-438.69 4061.4,-438.69 4061.4,-474.69" style=""/>
+<text text-anchor="middle" x="3872.89" y="-452.49" font-family="Times,serif" font-size="14.00" style="">check_light_entities_needing_specialization&lt;StandardMaterial&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(55)&#45;&gt;node_System(56) -->
+<g id="edge57" class="edge" data-name="node_System(55)-&gt;node_System(56)">
+
+<g id="a_edge57"><a xlink:title="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem&lt;fn(bevy_ecs::system::query::Query&lt;bevy_ecs::entity::Entity, (bevy_ecs::query::filter::Or&lt;(bevy_ecs::query::filter::Changed&lt;bevy_render::mesh::components::Mesh3d&gt;, bevy_asset::asset_changed::AssetChanged&lt;bevy_render::mesh::components::Mesh3d&gt;, bevy_ecs::query::filter::Changed&lt;bevy_pbr::mesh_material::MeshMaterial3d&lt;bevy_pbr::pbr_material::StandardMaterial&gt;&gt;, bevy_asset::asset_changed::AssetChanged&lt;bevy_pbr::mesh_material::MeshMaterial3d&lt;bevy_pbr::pbr_material::StandardMaterial&gt;&gt;)&gt;, bevy_ecs::query::filter::With&lt;bevy_pbr::mesh_material::MeshMaterial3d&lt;bevy_pbr::pbr_material::StandardMaterial&gt;&gt;)&gt;, bevy_ecs::system::system_param::Local&lt;bevy_utils::parallel_queue::Parallel&lt;alloc::vec::Vec&lt;bevy_ecs::entity::Entity&gt;&gt;&gt;, bevy_ecs::change_detection::ResMut&lt;bevy_pbr::material::EntitiesNeedingSpecialization&lt;bevy_pbr::pbr_material::StandardMaterial&gt;&gt;), bevy_pbr::material::check_entities_needing_specialization&lt;bevy_pbr::pbr_material::StandardMaterial&gt;&gt;()) → check_light_entities_needing_specialization&lt;StandardMaterial&gt;" style="">
+<path fill="none" stroke="rgb(11,29,41)" stroke-width="2" d="M3513.82,-456.69C3564.06,-456.69 3619.44,-456.69 3671.32,-456.69" style=""/>
+<polygon fill="rgb(11,29,41)" stroke="rgb(11,29,41)" stroke-width="2" points="3671.05,-460.19 3681.05,-456.69 3671.05,-453.19 3671.05,-460.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(69) -->
+<g id="node139" class="node" pointer-events="visible" data-name="node_System(69)">
+
+<g id="a_node139"><a xlink:title="bevy_pbr::deferred::insert_deferred_lighting_pass_id_component" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="274.57,-3932.69 4.58,-3932.69 4.58,-3896.69 274.57,-3896.69 274.57,-3932.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3910.49" font-family="Times,serif" font-size="14.00" style="">insert_deferred_lighting_pass_id_component</text>
+</a>
+</g>
+</g>
+<!-- node_System(104) -->
+<g id="node144" class="node" pointer-events="visible" data-name="node_System(104)">
+
+<g id="a_node144"><a xlink:title="bevy_ecs_tiled::map::handle_map_events" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="203.26,-3979.69 75.89,-3979.69 75.89,-3943.69 203.26,-3943.69 203.26,-3979.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-3957.49" font-family="Times,serif" font-size="14.00" style="">handle_map_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(106) -->
+<g id="node145" class="node" pointer-events="visible" data-name="node_System(106)">
+
+<g id="a_node145"><a xlink:title="bevy_ecs_tiled::world::handle_world_events" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="207.32,-4026.69 71.83,-4026.69 71.83,-3990.69 207.32,-3990.69 207.32,-4026.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4004.49" font-family="Times,serif" font-size="14.00" style="">handle_world_events</text>
+</a>
+</g>
+</g>
+<!-- node_System(107) -->
+<g id="node146" class="node" pointer-events="visible" data-name="node_System(107)">
+
+<g id="a_node146"><a xlink:title="bevy_ecs_tiled::world::world_chunking" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="473.77,-4026.69 366.24,-4026.69 366.24,-3990.69 473.77,-3990.69 473.77,-4026.69" style=""/>
+<text text-anchor="middle" x="420" y="-4004.49" font-family="Times,serif" font-size="14.00" style="">world_chunking</text>
+</a>
+</g>
+</g>
+<!-- node_System(106)&#45;&gt;node_System(107) -->
+<g id="edge86" class="edge" data-name="node_System(106)-&gt;node_System(107)">
+
+<g id="a_edge86"><a xlink:title="handle_world_events → world_chunking" style="">
+<path fill="none" stroke="rgb(25,17,32)" stroke-width="2" d="M207.62,-4008.69C251.75,-4008.69 309.26,-4008.69 353.15,-4008.69" style=""/>
+<polygon fill="rgb(25,17,32)" stroke="rgb(25,17,32)" stroke-width="2" points="352.99,-4012.19 362.99,-4008.69 352.99,-4005.19 352.99,-4012.19" style=""/>
+</a>
+</g>
+</g>
+<!-- node_System(108) -->
+<g id="node147" class="node" pointer-events="visible" data-name="node_System(108)">
+
+<g id="a_node147"><a xlink:title="bevy_ecs_tiled::physics::update_settings&lt;bevy_ecs_tiled::physics::avian::TiledPhysicsAvianBackend&gt;" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="276.99,-4073.69 2.16,-4073.69 2.16,-4037.69 276.99,-4037.69 276.99,-4073.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4051.49" font-family="Times,serif" font-size="14.00" style="">update_settings&lt;TiledPhysicsAvianBackend&gt;</text>
+</a>
+</g>
+</g>
+<!-- node_System(119) -->
+<g id="node148" class="node" pointer-events="visible" data-name="node_System(119)">
+
+<g id="a_node148"><a xlink:title="bevy_ecs::apply_deferred" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="189.81,-4120.69 89.34,-4120.69 89.34,-4084.69 189.81,-4084.69 189.81,-4120.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4098.49" font-family="Times,serif" font-size="14.00" style="">apply_deferred</text>
+</a>
+</g>
+</g>
+<!-- node_System(120) -->
+<g id="node149" class="node" pointer-events="visible" data-name="node_System(120)">
+
+<g id="a_node149"><a xlink:title="bevy_ecs::apply_deferred" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="189.81,-4167.69 89.34,-4167.69 89.34,-4131.69 189.81,-4131.69 189.81,-4167.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4145.49" font-family="Times,serif" font-size="14.00" style="">apply_deferred</text>
+</a>
+</g>
+</g>
+<!-- node_System(121) -->
+<g id="node150" class="node" pointer-events="visible" data-name="node_System(121)">
+
+<g id="a_node150"><a xlink:title="bevy_ecs::apply_deferred" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="189.81,-4214.69 89.34,-4214.69 89.34,-4178.69 189.81,-4178.69 189.81,-4214.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4192.49" font-family="Times,serif" font-size="14.00" style="">apply_deferred</text>
+</a>
+</g>
+</g>
+<!-- node_System(122) -->
+<g id="node151" class="node" pointer-events="visible" data-name="node_System(122)">
+
+<g id="a_node151"><a xlink:title="bevy_ecs::apply_deferred" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="189.81,-4261.69 89.34,-4261.69 89.34,-4225.69 189.81,-4225.69 189.81,-4261.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4239.49" font-family="Times,serif" font-size="14.00" style="">apply_deferred</text>
+</a>
+</g>
+</g>
+<!-- node_System(123) -->
+<g id="node152" class="node" pointer-events="visible" data-name="node_System(123)">
+
+<g id="a_node152"><a xlink:title="bevy_ecs::apply_deferred" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="189.81,-4308.69 89.34,-4308.69 89.34,-4272.69 189.81,-4272.69 189.81,-4308.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4286.49" font-family="Times,serif" font-size="14.00" style="">apply_deferred</text>
+</a>
+</g>
+</g>
+<!-- node_System(124) -->
+<g id="node153" class="node" pointer-events="visible" data-name="node_System(124)">
+
+<g id="a_node153"><a xlink:title="bevy_ecs::apply_deferred" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="189.81,-4355.69 89.34,-4355.69 89.34,-4319.69 189.81,-4319.69 189.81,-4355.69" style=""/>
+<text text-anchor="middle" x="139.58" y="-4333.49" font-family="Times,serif" font-size="14.00" style="">apply_deferred</text>
+</a>
+</g>
+</g>
+<!-- node_System(38)&#45;&gt;set_marker_node_Set(21) -->
+<g id="edge1" class="edge" data-name="node_System(38)-&gt;set_marker_node_Set(21)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M2236.12,-2956.01C2340.12,-2953.37 2476.27,-2949.92 2561.65,-2947.75" style=""/>
+</g>
+<!-- node_System(38)&#45;&gt;set_marker_node_Set(46) -->
+<g id="edge2" class="edge" data-name="node_System(38)-&gt;set_marker_node_Set(46)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1943.35,-2977.31C1937.25,-2980.05 1931.37,-2983.16 1925.8,-2986.69 1924.77,-2987.35 1923.8,-2988.01 1922.9,-2988.7" style=""/>
+</g>
+<!-- node_System(41) -->
+<g id="node155" class="node" pointer-events="visible" data-name="node_System(41)">
+
+<g id="a_node155"><a xlink:title="bevy_ui::stack::ui_stack_system" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="1227.67,-2027.29 920.39,-2027.29 920.39,-1986.09 1227.67,-1986.09 1227.67,-2027.29" style=""/>
+<text text-anchor="middle" x="1074.03" y="-2010.89" font-family="Times,serif" font-size="14.00" style="">ui_stack_system</text>
+<text text-anchor="middle" x="1074.03" y="-1994.09" font-family="Times,serif" font-size="14.00" style="">In multiple sets, Stack, AmbiguousWithTextSystem</text>
+</a>
+</g>
+</g>
+<!-- node_System(41)&#45;&gt;set_marker_node_Set(58) -->
+<g id="edge3" class="edge" data-name="node_System(41)-&gt;set_marker_node_Set(58)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1228.14,-1997.08C1322.14,-1991.18 1433.4,-1984.19 1481.23,-1981.19" style=""/>
+</g>
+<!-- node_System(41)&#45;&gt;set_marker_node_Set(59) -->
+<g id="edge4" class="edge" data-name="node_System(41)-&gt;set_marker_node_Set(59)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1228.14,-2015.95C1289.65,-2019.67 1358.55,-2023.84 1412.23,-2027.08" style=""/>
+</g>
+<!-- node_System(43) -->
+<g id="node156" class="node" pointer-events="visible" data-name="node_System(43)">
+
+<g id="a_node156"><a xlink:title="bevy_ui::widget::image::update_image_content_size_system" style="">
+<polygon fill="rgb(37,40,46)" stroke="rgb(11,15,20)" points="1346.08,-2106.29 801.98,-2106.29 801.98,-2065.09 1346.08,-2065.09 1346.08,-2106.29" style=""/>
+<text text-anchor="middle" x="1074.03" y="-2089.89" font-family="Times,serif" font-size="14.00" style="">update_image_content_size_system</text>
+<text text-anchor="middle" x="1074.03" y="-2073.09" font-family="Times,serif" font-size="14.00" style="">In multiple sets, Content, AmbiguousWithTextSystem, AmbiguousWithUpdateText2DLayout</text>
+</a>
+</g>
+</g>
+<!-- node_System(43)&#45;&gt;set_marker_node_Set(52) -->
+<g id="edge5" class="edge" data-name="node_System(43)-&gt;set_marker_node_Set(52)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1199.11,-2106.76C1280.36,-2120.55 1382.84,-2137.95 1446.14,-2148.7" style=""/>
+</g>
+<!-- node_System(43)&#45;&gt;set_marker_node_Set(59) -->
+<g id="edge6" class="edge" data-name="node_System(43)-&gt;set_marker_node_Set(59)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1245.9,-2064.63C1302.64,-2057.64 1363.66,-2050.12 1412.23,-2044.13" style=""/>
+</g>
+<!-- node_System(43)&#45;&gt;set_marker_node_Set(62) -->
+<g id="edge7" class="edge" data-name="node_System(43)-&gt;set_marker_node_Set(62)">
+
+<path fill="none" stroke="rgb(11,15,46)" stroke-width="2" d="M1346.44,-2085.69C1359.04,-2085.69 1371.37,-2085.69 1383.23,-2085.69" style=""/>
+</g>
+</g>
+</svg>

@@ -1,4 +1,4 @@
-use avian2d::{collision::collider::contact_query, prelude::{Collider, ColliderDisabled}};
+use avian2d::{collision::collider::contact_query, prelude::{Collider}};
 use bevy::prelude::*;
 use bevy_ecs_tiled::{map::{self, TiledMapHandle}, prelude::TiledMap};
 
@@ -20,9 +20,13 @@ pub(super) fn plugin(app: &mut App) {
         ))
 
         .add_systems(FixedUpdate, (
-            tick_move_to_location,
-            apply_move_to_location,
-            remove_move_to_location
+            tick_move_to_location.in_set(AppSystems::TickTimers),
+            (
+                apply_move_to_location,
+                remove_move_to_location
+            )
+                .chain()
+                .in_set(AppSystems::Update)
         )
             .chain()
             .in_set(GameplaySystems)
@@ -68,7 +72,7 @@ pub struct MovementStepSize(Vec2);
 pub fn apply_intent(
     mut commands: Commands,
     q_entities_with_intent: Query<(Entity, &MovementIntent, &MovementDuration, &MovementStepSize, &Transform, &Children), (With<CanMove>, Without<MoveToLocation>)>,
-    q_colliders: Query<(Entity, &Collider, &GlobalTransform), (Without<TriggerCollider>, Without<ColliderDisabled>, Without<ScanCollider>)>,
+    q_colliders: Query<(Entity, &Collider, &GlobalTransform), (Without<TriggerCollider>, Without<ScanCollider>)>,
 ) {
     for (entity, intent, duration,  step_size, transform, children) in q_entities_with_intent.iter() {
         let step = (intent.0 * step_size.0).extend(0.);

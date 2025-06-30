@@ -1,0 +1,403 @@
+digraph "" {
+	"compound"="true";
+	"splines"="spline";
+	"rankdir"="LR";
+	"bgcolor"="#0d1117";
+	"fontname"="Helvetica";
+	"nodesep"="0.15";
+	edge ["penwidth"="2"];
+	node ["shape"="box", "style"="filled"];
+	subgraph "clusternode_Set(1)" {
+		"style"="rounded,filled";
+		"label"="InputSystem";
+		"tooltip"="InputSystem";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(1)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(0)" ["label"="keyboard_input_system", "tooltip"="bevy_input::keyboard::keyboard_input_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+		"node_System(1)" ["label"="mouse_button_input_system", "tooltip"="bevy_input::mouse::mouse_button_input_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+		"node_System(2)" ["label"="accumulate_mouse_motion_system", "tooltip"="bevy_input::mouse::accumulate_mouse_motion_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+		"node_System(3)" ["label"="accumulate_mouse_scroll_system", "tooltip"="bevy_input::mouse::accumulate_mouse_scroll_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+		"node_System(4)" ["label"="gamepad_connection_system", "tooltip"="bevy_input::gamepad::gamepad_connection_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+		"node_System(5)" ["label"="gamepad_event_processing_system", "tooltip"="bevy_input::gamepad::gamepad_event_processing_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+		"node_System(6)" ["label"="touch_screen_input_system", "tooltip"="bevy_input::touch::touch_screen_input_system", "fillcolor"="#d36aaf", "fontname"="Helvetica", "fontcolor"="#270b1d", "color"="#a5317d", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(9)" {
+		"style"="rounded,filled";
+		"label"="TrackAssets";
+		"tooltip"="TrackAssets";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(9)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(7)" ["label"="Assets<LoadedFolder>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_asset::folder::LoadedFolder>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(8)" ["label"="Assets<LoadedUntypedAsset>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_asset::assets::LoadedUntypedAsset>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(9)" ["label"="Assets<()>::track_assets", "tooltip"="bevy_asset::assets::Assets<()>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(11)" ["label"="Assets<DynamicScene>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_scene::dynamic_scene::DynamicScene>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(12)" ["label"="Assets<Scene>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_scene::scene::Scene>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(13)" ["label"="Assets<TextureAtlasLayout>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_image::texture_atlas::TextureAtlasLayout>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(14)" ["label"="Assets<Shader>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_render::render_resource::shader::Shader>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(15)" ["label"="Assets<Mesh>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_mesh::mesh::Mesh>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(16)" ["label"="Assets<SkinnedMeshInverseBindposes>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_mesh::skinning::SkinnedMeshInverseBindposes>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(17)" ["label"="Assets<ShaderStorageBuffer>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_render::storage::ShaderStorageBuffer>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(18)" ["label"="Assets<Image>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_image::image::Image>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(19)" ["label"="Assets<ColorMaterial>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_sprite::mesh2d::color_material::ColorMaterial>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(21)" ["label"="Assets<Font>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_text::font::Font>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(24)" ["label"="Assets<StandardMaterial>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_pbr::pbr_material::StandardMaterial>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(27)" ["label"="Assets<ExtendedMaterial<StandardMaterial, ForwardDecalMaterialExt>>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_pbr::extended_material::ExtendedMaterial<bevy_pbr::pbr_material::StandardMaterial, bevy_pbr::decal::forward::ForwardDecalMaterialExt>>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(28)" ["label"="Assets<Gltf>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_gltf::assets::Gltf>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(29)" ["label"="Assets<GltfNode>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_gltf::assets::GltfNode>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(30)" ["label"="Assets<GltfPrimitive>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_gltf::assets::GltfPrimitive>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(31)" ["label"="Assets<GltfMesh>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_gltf::assets::GltfMesh>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(32)" ["label"="Assets<GltfSkin>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_gltf::assets::GltfSkin>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(33)" ["label"="Assets<AudioSource>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_audio::audio_source::AudioSource>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(34)" ["label"="Assets<Pitch>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_audio::pitch::Pitch>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(36)" ["label"="Assets<AnimationClip>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_animation::AnimationClip>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(37)" ["label"="Assets<AnimationGraph>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_animation::graph::AnimationGraph>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(38)" ["label"="Assets<GizmoAsset>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_gizmos::GizmoAsset>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(63)" ["label"="Assets<StandardTilemapMaterial>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_ecs_tilemap::render::material::StandardTilemapMaterial>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(64)" ["label"="Assets<TiledMap>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_ecs_tiled::map::asset::TiledMap>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(66)" ["label"="Assets<TiledWorld>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_ecs_tiled::world::asset::TiledWorld>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(72)" ["label"="Assets<LevelAssets>::track_assets", "tooltip"="bevy_asset::assets::Assets<spirit_hotel::game::level::LevelAssets>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(79)" ["label"="Assets<YarnFile>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_yarnspinner::yarn_file_asset::YarnFile>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(80)" ["label"="Assets<StringsFile>::track_assets", "tooltip"="bevy_asset::assets::Assets<bevy_yarnspinner::localization::strings_file::asset::StringsFile>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(83)" ["label"="Assets<CreditsAssets>::track_assets", "tooltip"="bevy_asset::assets::Assets<spirit_hotel::menus::credits::CreditsAssets>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+		"node_System(84)" ["label"="Assets<InteractionAssets>::track_assets", "tooltip"="bevy_asset::assets::Assets<spirit_hotel::theme::interaction::InteractionAssets>::track_assets", "fillcolor"="#d1cbc5", "fontname"="Helvetica", "fontcolor"="#1c1916", "color"="#a3988c", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(23)" {
+		"style"="rounded,filled";
+		"label"="Backend";
+		"tooltip"="Backend";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(23)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(20)" ["label"="sprite_picking", "tooltip"="bevy_sprite::picking_backend::sprite_picking", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(23)" ["label"="ui_picking", "tooltip"="bevy_ui::picking_backend::ui_picking", "fillcolor"="#ffb1e5", "fontname"="Helvetica", "fontcolor"="#320021", "color"="#ff4bc2", "penwidth"="1"]
+		"node_System(42)" ["label"="update_window_hits", "tooltip"="bevy_picking::window::update_window_hits", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(26)" {
+		"style"="rounded,filled";
+		"label"="Focus";
+		"tooltip"="Focus";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(26)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(22)" ["label"="ui_focus_system", "tooltip"="bevy_ui::focus::ui_focus_system", "fillcolor"="#ffb1e5", "fontname"="Helvetica", "fontcolor"="#320021", "color"="#ff4bc2", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(44)" {
+		"style"="rounded,filled";
+		"label"="ProcessInput";
+		"tooltip"="ProcessInput";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(44)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(39)" ["label"="update_pointer_map", "tooltip"="bevy_picking::pointer::update_pointer_map", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(40)" ["label"="PointerInput::receive", "tooltip"="bevy_picking::pointer::PointerInput::receive", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(41)" ["label"="RayMap::repopulate", "tooltip"="bevy_picking::backend::ray::RayMap::repopulate", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(48)" {
+		"style"="rounded,filled";
+		"label"="Hover";
+		"tooltip"="Hover";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(48)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(43)" ["label"="generate_hovermap", "tooltip"="bevy_picking::hover::generate_hovermap", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(44)" ["label"="update_interactions", "tooltip"="bevy_picking::hover::update_interactions", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(45)" ["label"="pointer_events", "tooltip"="bevy_picking::events::pointer_events", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(49)" {
+		"style"="rounded,filled";
+		"label"="PostHover";
+		"tooltip"="PostHover";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(49)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(50)" {
+		"style"="rounded,filled";
+		"label"="Last";
+		"tooltip"="Last";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(50)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(55)" {
+		"style"="rounded,filled";
+		"label"="InitContexts";
+		"tooltip"="InitContexts";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(55)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(47)" ["label"="setup_new_windows_system", "tooltip"="bevy_egui::setup_new_windows_system", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(48)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred", "fillcolor"="#b0d34a", "fontname"="Helvetica", "fontcolor"="#edf5d5", "color"="#d3e69c", "penwidth"="1"]
+		"node_System(49)" ["label"="update_ui_size_and_scale_system", "tooltip"="bevy_egui::update_ui_size_and_scale_system", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(56)" {
+		"style"="rounded,filled";
+		"label"="ProcessInput";
+		"tooltip"="ProcessInput";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(56)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(57)" {
+		"style"="rounded,filled";
+		"label"="BeginPass";
+		"tooltip"="BeginPass";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(57)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(62)" ["label"="begin_pass_system", "tooltip"="bevy_egui::begin_pass_system", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(58)" {
+		"style"="rounded,filled";
+		"label"="InitReading";
+		"tooltip"="InitReading";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(58)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(59)" {
+		"style"="rounded,filled";
+		"label"="FocusContext";
+		"tooltip"="FocusContext";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(59)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(60)" {
+		"style"="rounded,filled";
+		"label"="ReadBevyEvents";
+		"tooltip"="ReadBevyEvents";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(60)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(61)" {
+		"style"="rounded,filled";
+		"label"="WriteEguiEvents";
+		"tooltip"="WriteEguiEvents";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(61)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(88)" {
+		"style"="rounded,filled";
+		"label"="LevelSystems";
+		"tooltip"="LevelSystems";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(88)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(90)" {
+		"style"="rounded,filled";
+		"label"="GameplaySystems";
+		"tooltip"="GameplaySystems";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(90)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(81)" ["label"="build_world_path_finding_grid", "tooltip"="spirit_hotel::game::path_finding::build_world_path_finding_grid", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(82)" ["label"="set_starting_scene", "tooltip"="spirit_hotel::game::scene::set_starting_scene", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(102)" {
+		"style"="rounded,filled";
+		"label"="PausableSystems";
+		"tooltip"="PausableSystems";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(102)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	"node_System(10)" ["label"="handle_internal_asset_events", "tooltip"="bevy_asset::server::handle_internal_asset_events"]
+	"node_System(25)" ["label"="update_mesh_previous_global_transforms", "tooltip"="bevy_pbr::prepass::update_mesh_previous_global_transforms"]
+	"node_System(26)" ["label"="update_previous_view_data", "tooltip"="bevy_pbr::prepass::update_previous_view_data"]
+	"node_System(35)" ["label"="gilrs_event_system", "tooltip"="bevy_gilrs::gilrs_system::gilrs_event_system"]
+	"node_System(46)" ["label"="load_resource_assets", "tooltip"="spirit_hotel::asset_tracking::load_resource_assets"]
+	"node_System(65)" ["label"="process_loaded_maps", "tooltip"="bevy_ecs_tiled::map::process_loaded_maps"]
+	"node_System(67)" ["label"="process_loaded_worlds", "tooltip"="bevy_ecs_tiled::world::process_loaded_worlds"]
+	"node_System(68)" ["label"="initialize_settings_for_worlds<TiledPhysicsAvianBackend>", "tooltip"="bevy_ecs_tiled::physics::initialize_settings_for_worlds<bevy_ecs_tiled::physics::avian::TiledPhysicsAvianBackend>"]
+	"node_System(69)" ["label"="initialize_settings_for_maps<TiledPhysicsAvianBackend>", "tooltip"="bevy_ecs_tiled::physics::initialize_settings_for_maps<bevy_ecs_tiled::physics::avian::TiledPhysicsAvianBackend>"]
+	"node_System(70)" ["label"="collider_from_tiles_layer<TiledPhysicsAvianBackend>", "tooltip"="bevy_ecs_tiled::physics::collider_from_tiles_layer<bevy_ecs_tiled::physics::avian::TiledPhysicsAvianBackend>"]
+	"node_System(71)" ["label"="collider_from_object<TiledPhysicsAvianBackend>", "tooltip"="bevy_ecs_tiled::physics::collider_from_object<bevy_ecs_tiled::physics::avian::TiledPhysicsAvianBackend>"]
+	"node_System(85)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(86)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(87)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(50)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(50)" -> "set_marker_node_Set(58)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(58)"]
+	"node_System(50)" ["label"="write_modifiers_keys_state_system
+In multiple sets, ProcessInput, InitReading", "tooltip"="bevy_egui::input::write_modifiers_keys_state_system"]
+	"node_System(51)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(51)" -> "set_marker_node_Set(58)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(58)"]
+	"node_System(51)" ["label"="write_window_pointer_moved_events_system
+In multiple sets, ProcessInput, InitReading", "tooltip"="bevy_egui::input::write_window_pointer_moved_events_system"]
+	"node_System(52)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(52)" -> "set_marker_node_Set(59)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(59)"]
+	"node_System(52)" ["label"="write_pointer_button_events_system
+In multiple sets, ProcessInput, FocusContext", "tooltip"="bevy_egui::input::write_pointer_button_events_system"]
+	"node_System(53)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(53)" -> "set_marker_node_Set(59)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(59)"]
+	"node_System(53)" ["label"="write_window_touch_events_system
+In multiple sets, ProcessInput, FocusContext", "tooltip"="bevy_egui::input::write_window_touch_events_system"]
+	"node_System(54)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(54)" -> "set_marker_node_Set(60)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(60)"]
+	"node_System(54)" ["label"="write_non_window_pointer_moved_events_system
+In multiple sets, ProcessInput, ReadBevyEvents", "tooltip"="bevy_egui::input::write_non_window_pointer_moved_events_system"]
+	"node_System(55)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(55)" -> "set_marker_node_Set(60)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(60)"]
+	"node_System(55)" ["label"="write_non_window_touch_events_system
+In multiple sets, ProcessInput, ReadBevyEvents", "tooltip"="bevy_egui::input::write_non_window_touch_events_system"]
+	"node_System(56)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(56)" -> "set_marker_node_Set(60)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(60)"]
+	"node_System(56)" ["label"="write_mouse_wheel_events_system
+In multiple sets, ProcessInput, ReadBevyEvents", "tooltip"="bevy_egui::input::write_mouse_wheel_events_system"]
+	"node_System(57)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(57)" -> "set_marker_node_Set(60)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(60)"]
+	"node_System(57)" ["label"="write_keyboard_input_events_system
+In multiple sets, ProcessInput, ReadBevyEvents", "tooltip"="bevy_egui::input::write_keyboard_input_events_system"]
+	"node_System(58)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(58)" -> "set_marker_node_Set(60)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(60)"]
+	"node_System(58)" ["label"="write_ime_events_system
+In multiple sets, ProcessInput, ReadBevyEvents", "tooltip"="bevy_egui::input::write_ime_events_system"]
+	"node_System(59)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(59)" -> "set_marker_node_Set(60)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(60)"]
+	"node_System(59)" ["label"="write_file_dnd_events_system
+In multiple sets, ProcessInput, ReadBevyEvents", "tooltip"="bevy_egui::input::write_file_dnd_events_system"]
+	"node_System(60)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(60)" -> "set_marker_node_Set(61)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(61)"]
+	"node_System(60)" ["label"="write_egui_input_system
+In multiple sets, ProcessInput, WriteEguiEvents", "tooltip"="bevy_egui::input::write_egui_input_system"]
+	"node_System(61)" -> "set_marker_node_Set(56)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(56)"]
+	"node_System(61)" -> "set_marker_node_Set(61)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(61)"]
+	"node_System(61)" ["label"="absorb_bevy_input_system
+In multiple sets, ProcessInput, WriteEguiEvents", "tooltip"="bevy_egui::input::absorb_bevy_input_system"]
+	"node_System(73)" -> "set_marker_node_Set(88)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(88)"]
+	"node_System(73)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(73)" ["label"="handle_object_animation_path
+In multiple sets, LevelSystems, GameplaySystems", "tooltip"="spirit_hotel::game::level::handle_object_animation_path"]
+	"node_System(74)" -> "set_marker_node_Set(88)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(88)"]
+	"node_System(74)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(74)" ["label"="handle_object_is_trigger
+In multiple sets, LevelSystems, GameplaySystems", "tooltip"="spirit_hotel::game::level::handle_object_is_trigger"]
+	"node_System(75)" -> "set_marker_node_Set(88)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(88)"]
+	"node_System(75)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(75)" ["label"="handle_object_path_node
+In multiple sets, LevelSystems, GameplaySystems", "tooltip"="spirit_hotel::game::level::handle_object_path_node"]
+	"node_System(76)" -> "set_marker_node_Set(88)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(88)"]
+	"node_System(76)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(76)" ["label"="handle_collider_static
+In multiple sets, LevelSystems, GameplaySystems", "tooltip"="spirit_hotel::game::level::handle_collider_static"]
+	"node_System(77)" -> "set_marker_node_Set(88)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(88)"]
+	"node_System(77)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(77)" ["label"="handle_colliders_spawned
+In multiple sets, LevelSystems, GameplaySystems", "tooltip"="spirit_hotel::game::level::handle_colliders_spawned"]
+	"node_System(78)" -> "set_marker_node_Set(88)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(88)"]
+	"node_System(78)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(78)" ["label"="reparent_player_to_world
+In multiple sets, LevelSystems, GameplaySystems", "tooltip"="spirit_hotel::game::level::reparent_player_to_world"]
+	"node_System(65)" -> "node_System(68)" ["lhead"="", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::change_detection::Res<bevy_asset::server::AssetServer>, bevy_ecs::system::commands::Commands, bevy_ecs::change_detection::Res<bevy_asset::assets::Assets<bevy_ecs_tiled::map::asset::TiledMap>>, bevy_ecs::system::query::Query<(bevy_ecs::entity::Entity, &bevy_ecs_tiled::map::TiledMapHandle, &mut bevy_ecs_tiled::map::components::TiledMapStorage, &bevy_ecs_tilemap::map::TilemapRenderSettings, &bevy_ecs_tilemap::anchor::TilemapAnchor, &bevy_ecs_tiled::map::components::TiledMapLayerZOffset), bevy_ecs::query::filter::Or<(bevy_ecs::query::filter::Changed<bevy_ecs_tiled::map::TiledMapHandle>, bevy_ecs::query::filter::Changed<bevy_ecs_tilemap::anchor::TilemapAnchor>, bevy_ecs::query::filter::Changed<bevy_ecs_tiled::map::components::TiledMapLayerZOffset>, bevy_ecs::query::filter::Changed<bevy_ecs_tilemap::map::TilemapRenderSettings>, bevy_ecs::query::filter::With<bevy_ecs_tiled::map::components::RespawnTiledMap>)>>, bevy_ecs_tiled::map::events::TiledMapEventWriters), bevy_ecs_tiled::map::process_loaded_maps>()) → initialize_settings_for_worlds<TiledPhysicsAvianBackend>", "color"="#eede00"]
+	"node_System(53)" -> "node_System(58)" ["lhead"="", "ltail"="", "tooltip"="write_window_touch_events_system → write_ime_events_system", "color"="#881877"]
+	"node_System(52)" -> "node_System(56)" ["lhead"="", "ltail"="", "tooltip"="write_pointer_button_events_system → write_mouse_wheel_events_system", "color"="#00b0cc"]
+	"node_System(52)" -> "node_System(55)" ["lhead"="", "ltail"="", "tooltip"="write_pointer_button_events_system → write_non_window_touch_events_system", "color"="#aa3a55"]
+	"node_System(52)" -> "node_System(58)" ["lhead"="", "ltail"="", "tooltip"="write_pointer_button_events_system → write_ime_events_system", "color"="#44d488"]
+	"set_marker_node_Set(23)" -> "set_marker_node_Set(48)" ["lhead"="clusternode_Set(48)", "ltail"="clusternode_Set(23)", "tooltip"="Backend → Hover", "color"="#0090cc"]
+	"node_System(69)" -> "node_System(70)" ["lhead"="", "ltail"="", "tooltip"="initialize_settings_for_maps<TiledPhysicsAvianBackend> → collider_from_tiles_layer<TiledPhysicsAvianBackend>", "color"="#ee9e44"]
+	"set_marker_node_Set(44)" -> "set_marker_node_Set(23)" ["lhead"="clusternode_Set(23)", "ltail"="clusternode_Set(44)", "tooltip"="ProcessInput → Backend", "color"="#663699"]
+	"node_System(70)" -> "node_System(71)" ["lhead"="", "ltail"="", "tooltip"="collider_from_tiles_layer<TiledPhysicsAvianBackend> → collider_from_object<TiledPhysicsAvianBackend>", "color"="#3363bb"]
+	"node_System(50)" -> "node_System(52)" ["lhead"="", "ltail"="", "tooltip"="write_modifiers_keys_state_system → write_pointer_button_events_system", "color"="#22c2bb"]
+	"set_marker_node_Set(88)" -> "node_System(81)" ["lhead"="", "ltail"="clusternode_Set(88)", "tooltip"="LevelSystems → build_world_path_finding_grid", "color"="#99d955"]
+	"set_marker_node_Set(56)" -> "set_marker_node_Set(57)" ["lhead"="clusternode_Set(57)", "ltail"="clusternode_Set(56)", "tooltip"="ProcessInput → BeginPass", "color"="#eede00"]
+	"node_System(58)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="write_ime_events_system → write_egui_input_system", "color"="#881877"]
+	"node_System(50)" -> "node_System(53)" ["lhead"="", "ltail"="", "tooltip"="write_modifiers_keys_state_system → write_window_touch_events_system", "color"="#00b0cc"]
+	"node_System(58)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="write_ime_events_system → absorb_bevy_input_system", "color"="#aa3a55"]
+	"node_System(43)" -> "node_System(44)" ["lhead"="", "ltail"="", "tooltip"="generate_hovermap → update_interactions", "color"="#44d488"]
+	"node_System(68)" -> "node_System(69)" ["lhead"="", "ltail"="", "tooltip"="initialize_settings_for_worlds<TiledPhysicsAvianBackend> → initialize_settings_for_maps<TiledPhysicsAvianBackend>", "color"="#0090cc"]
+	"set_marker_node_Set(1)" -> "node_System(22)" ["lhead"="", "ltail"="clusternode_Set(1)", "tooltip"="InputSystem → ui_focus_system", "color"="#ee9e44"]
+	"node_System(53)" -> "node_System(59)" ["lhead"="", "ltail"="", "tooltip"="write_window_touch_events_system → write_file_dnd_events_system", "color"="#663699"]
+	"node_System(52)" -> "node_System(57)" ["lhead"="", "ltail"="", "tooltip"="write_pointer_button_events_system → write_keyboard_input_events_system", "color"="#3363bb"]
+	"node_System(48)" -> "node_System(49)" ["lhead"="", "ltail"="", "tooltip"="apply_deferred → update_ui_size_and_scale_system", "color"="#22c2bb"]
+	"node_System(51)" -> "node_System(53)" ["lhead"="", "ltail"="", "tooltip"="write_window_pointer_moved_events_system → write_window_touch_events_system", "color"="#99d955"]
+	"set_marker_node_Set(60)" -> "set_marker_node_Set(61)" ["lhead"="clusternode_Set(61)", "ltail"="clusternode_Set(60)", "tooltip"="ReadBevyEvents → WriteEguiEvents", "color"="#eede00"]
+	"node_System(55)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="write_non_window_touch_events_system → absorb_bevy_input_system", "color"="#881877"]
+	"node_System(44)" -> "node_System(45)" ["lhead"="", "ltail"="", "tooltip"="update_interactions → pointer_events", "color"="#00b0cc"]
+	"node_System(4)" -> "node_System(5)" ["lhead"="", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::system::commands::Commands, bevy_ecs::event::reader::EventReader<bevy_input::gamepad::GamepadConnectionEvent>), bevy_input::gamepad::gamepad_connection_system>()) → gamepad_event_processing_system", "color"="#aa3a55"]
+	"set_marker_node_Set(55)" -> "set_marker_node_Set(56)" ["lhead"="clusternode_Set(56)", "ltail"="clusternode_Set(55)", "tooltip"="InitContexts → ProcessInput", "color"="#44d488"]
+	"node_System(56)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="write_mouse_wheel_events_system → absorb_bevy_input_system", "color"="#0090cc"]
+	"node_System(52)" -> "node_System(54)" ["lhead"="", "ltail"="", "tooltip"="write_pointer_button_events_system → write_non_window_pointer_moved_events_system", "color"="#ee9e44"]
+	"node_System(52)" -> "node_System(59)" ["lhead"="", "ltail"="", "tooltip"="write_pointer_button_events_system → write_file_dnd_events_system", "color"="#663699"]
+	"node_System(40)" -> "node_System(41)" ["lhead"="", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::event::reader::EventReader<bevy_picking::pointer::PointerInput>, bevy_ecs::system::query::Query<(&bevy_picking::pointer::PointerId, &mut bevy_picking::pointer::PointerLocation, &mut bevy_picking::pointer::PointerPress)>), bevy_picking::pointer::PointerInput::receive>()) → RayMap::repopulate", "color"="#3363bb"]
+	"node_System(59)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="write_file_dnd_events_system → write_egui_input_system", "color"="#22c2bb"]
+	"node_System(35)" -> "set_marker_node_Set(1)" ["lhead"="clusternode_Set(1)", "ltail"="", "tooltip"="gilrs_event_system → InputSystem", "color"="#99d955"]
+	"node_System(10)" -> "set_marker_node_Set(9)" ["lhead"="clusternode_Set(9)", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::exclusive_function_system::ExclusiveFunctionSystem<fn(), bevy_asset::server::handle_internal_asset_events>()) → TrackAssets", "color"="#eede00"]
+	"set_marker_node_Set(1)" -> "set_marker_node_Set(56)" ["lhead"="clusternode_Set(56)", "ltail"="clusternode_Set(1)", "tooltip"="InputSystem → ProcessInput", "color"="#881877"]
+	"node_System(57)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="write_keyboard_input_events_system → absorb_bevy_input_system", "color"="#00b0cc"]
+	"node_System(47)" -> "node_System(48)" ["lhead"="", "ltail"="", "tooltip"="setup_new_windows_system → apply_deferred", "color"="#aa3a55"]
+	"node_System(57)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="write_keyboard_input_events_system → write_egui_input_system", "color"="#44d488"]
+	"node_System(51)" -> "node_System(52)" ["lhead"="", "ltail"="", "tooltip"="write_window_pointer_moved_events_system → write_pointer_button_events_system", "color"="#0090cc"]
+	"node_System(53)" -> "node_System(54)" ["lhead"="", "ltail"="", "tooltip"="write_window_touch_events_system → write_non_window_pointer_moved_events_system", "color"="#ee9e44"]
+	"node_System(54)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="write_non_window_pointer_moved_events_system → absorb_bevy_input_system", "color"="#663699"]
+	"node_System(65)" -> "node_System(67)" ["lhead"="", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::change_detection::Res<bevy_asset::server::AssetServer>, bevy_ecs::system::commands::Commands, bevy_ecs::change_detection::Res<bevy_asset::assets::Assets<bevy_ecs_tiled::map::asset::TiledMap>>, bevy_ecs::system::query::Query<(bevy_ecs::entity::Entity, &bevy_ecs_tiled::map::TiledMapHandle, &mut bevy_ecs_tiled::map::components::TiledMapStorage, &bevy_ecs_tilemap::map::TilemapRenderSettings, &bevy_ecs_tilemap::anchor::TilemapAnchor, &bevy_ecs_tiled::map::components::TiledMapLayerZOffset), bevy_ecs::query::filter::Or<(bevy_ecs::query::filter::Changed<bevy_ecs_tiled::map::TiledMapHandle>, bevy_ecs::query::filter::Changed<bevy_ecs_tilemap::anchor::TilemapAnchor>, bevy_ecs::query::filter::Changed<bevy_ecs_tiled::map::components::TiledMapLayerZOffset>, bevy_ecs::query::filter::Changed<bevy_ecs_tilemap::map::TilemapRenderSettings>, bevy_ecs::query::filter::With<bevy_ecs_tiled::map::components::RespawnTiledMap>)>>, bevy_ecs_tiled::map::events::TiledMapEventWriters), bevy_ecs_tiled::map::process_loaded_maps>()) → process_loaded_worlds", "color"="#3363bb"]
+	"set_marker_node_Set(59)" -> "set_marker_node_Set(60)" ["lhead"="clusternode_Set(60)", "ltail"="clusternode_Set(59)", "tooltip"="FocusContext → ReadBevyEvents", "color"="#22c2bb"]
+	"node_System(53)" -> "node_System(56)" ["lhead"="", "ltail"="", "tooltip"="write_window_touch_events_system → write_mouse_wheel_events_system", "color"="#99d955"]
+	"node_System(53)" -> "node_System(57)" ["lhead"="", "ltail"="", "tooltip"="write_window_touch_events_system → write_keyboard_input_events_system", "color"="#eede00"]
+	"node_System(54)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="write_non_window_pointer_moved_events_system → write_egui_input_system", "color"="#881877"]
+	"node_System(55)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="write_non_window_touch_events_system → write_egui_input_system", "color"="#00b0cc"]
+	"set_marker_node_Set(49)" -> "set_marker_node_Set(50)" ["lhead"="clusternode_Set(50)", "ltail"="clusternode_Set(49)", "tooltip"="PostHover → Last", "color"="#aa3a55"]
+	"node_System(53)" -> "node_System(55)" ["lhead"="", "ltail"="", "tooltip"="write_window_touch_events_system → write_non_window_touch_events_system", "color"="#44d488"]
+	"set_marker_node_Set(48)" -> "set_marker_node_Set(49)" ["lhead"="clusternode_Set(49)", "ltail"="clusternode_Set(48)", "tooltip"="Hover → PostHover", "color"="#0090cc"]
+	"node_System(56)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="write_mouse_wheel_events_system → write_egui_input_system", "color"="#ee9e44"]
+	"node_System(59)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="write_file_dnd_events_system → absorb_bevy_input_system", "color"="#663699"]
+	"set_marker_node_Set(58)" -> "set_marker_node_Set(59)" ["lhead"="clusternode_Set(59)", "ltail"="clusternode_Set(58)", "tooltip"="InitReading → FocusContext", "color"="#3363bb"]
+}

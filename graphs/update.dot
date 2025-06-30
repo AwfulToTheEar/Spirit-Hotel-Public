@@ -1,0 +1,486 @@
+digraph "" {
+	"compound"="true";
+	"splines"="spline";
+	"rankdir"="LR";
+	"bgcolor"="#0d1117";
+	"fontname"="Helvetica";
+	"nodesep"="0.15";
+	edge ["penwidth"="2"];
+	node ["shape"="box", "style"="filled"];
+	subgraph "clusternode_Set(13)" {
+		"style"="rounded,filled";
+		"label"="LevelSystems";
+		"tooltip"="LevelSystems";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(13)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(15)" {
+		"style"="rounded,filled";
+		"label"="Update";
+		"tooltip"="Update";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(15)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(16)" {
+		"style"="rounded,filled";
+		"label"="GameplaySystems";
+		"tooltip"="GameplaySystems";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(16)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(17)" {
+		"style"="rounded,filled";
+		"label"="PausableSystems";
+		"tooltip"="PausableSystems";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(17)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(26)" {
+		"style"="rounded,filled";
+		"label"="RecordInput";
+		"tooltip"="RecordInput";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(26)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(33)" {
+		"style"="rounded,filled";
+		"label"="LineIdUpdateSystemSet";
+		"tooltip"="LineIdUpdateSystemSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(33)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(34)" {
+		"style"="rounded,filled";
+		"label"="YarnSpinnerSystemSet";
+		"tooltip"="YarnSpinnerSystemSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(34)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(28)" ["label"="Pipe(update_all_strings_files_for_string_table, panic_on_err)", "tooltip"="Pipe(bevy_yarnspinner::localization::strings_file::updating::update_all_strings_files_for_string_table, bevy_yarnspinner::utils::panic_on_err)", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(37)" ["label"="update_wait", "tooltip"="bevy_yarnspinner::commands::command_registry::wait::update_wait", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(38)" ["label"="execute_commands", "tooltip"="bevy_yarnspinner::commands::execution::execute_commands", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(38)" {
+		"style"="rounded,filled";
+		"label"="DialogueExecutionSystemSet";
+		"tooltip"="DialogueExecutionSystemSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(38)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(39)" {
+		"style"="rounded,filled";
+		"label"="LineProviderSystemSet";
+		"tooltip"="LineProviderSystemSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(39)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(44)" {
+		"style"="rounded,filled";
+		"label"="CompilationSystemSet";
+		"tooltip"="CompilationSystemSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(44)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(52)" {
+		"style"="rounded,filled";
+		"label"="ExampleYarnSpinnerDialogueViewSystemSet";
+		"tooltip"="ExampleYarnSpinnerDialogueViewSystemSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(52)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(39)" ["label"="hide_dialog", "tooltip"="bevy_yarnspinner_example_dialogue_view::updating::hide_dialog", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(40)" ["label"="show_dialog", "tooltip"="bevy_yarnspinner_example_dialogue_view::updating::show_dialog", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(41)" ["label"="present_line", "tooltip"="bevy_yarnspinner_example_dialogue_view::updating::present_line", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(42)" ["label"="present_options", "tooltip"="bevy_yarnspinner_example_dialogue_view::updating::present_options", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(43)" ["label"="continue_dialogue", "tooltip"="bevy_yarnspinner_example_dialogue_view::updating::continue_dialogue", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(44)" ["label"="send_finished_event", "tooltip"="bevy_yarnspinner_example_dialogue_view::typewriter::send_finished_event", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(45)" ["label"="despawn", "tooltip"="bevy_yarnspinner_example_dialogue_view::typewriter::despawn", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(46)" ["label"="spawn", "tooltip"="bevy_yarnspinner_example_dialogue_view::typewriter::spawn", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(47)" ["label"="write_text", "tooltip"="bevy_yarnspinner_example_dialogue_view::typewriter::write_text", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(48)" ["label"="show_continue", "tooltip"="bevy_yarnspinner_example_dialogue_view::typewriter::show_continue", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(49)" ["label"="bob_continue", "tooltip"="bevy_yarnspinner_example_dialogue_view::typewriter::bob_continue", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(50)" ["label"="create_options", "tooltip"="bevy_yarnspinner_example_dialogue_view::option_selection::create_options", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(51)" ["label"="show_options", "tooltip"="bevy_yarnspinner_example_dialogue_view::option_selection::show_options", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(52)" ["label"="select_option", "tooltip"="bevy_yarnspinner_example_dialogue_view::option_selection::select_option", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(53)" ["label"="despawn_options", "tooltip"="bevy_yarnspinner_example_dialogue_view::option_selection::despawn_options", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(69)" {
+		"style"="rounded,filled";
+		"label"="PathingSet";
+		"tooltip"="PathingSet";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(69)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(55)" ["label"="update_blocking_map", "tooltip"="bevy_northstar::plugin::update_blocking_map", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(56)" ["label"="pathfind<CardinalNeighborhood>", "tooltip"="bevy_northstar::plugin::pathfind<bevy_northstar::neighbor::CardinalNeighborhood>", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(57)" ["label"="next_position<CardinalNeighborhood>", "tooltip"="bevy_northstar::plugin::next_position<bevy_northstar::neighbor::CardinalNeighborhood>", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(58)" ["label"="reroute_path<CardinalNeighborhood>", "tooltip"="bevy_northstar::plugin::reroute_path<bevy_northstar::neighbor::CardinalNeighborhood>", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(84)" {
+		"style"="rounded,filled";
+		"label"="AnonymousSet(0)";
+		"tooltip"="AnonymousSet(0)";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(84)" ["style"="invis", "label"="", "shape"="point"]
+		"node_System(70)" ["label"="pause", "tooltip"="spirit_hotel::screens::gameplay::pause", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(71)" ["label"="spawn_pause_overlay", "tooltip"="spirit_hotel::screens::gameplay::spawn_pause_overlay", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+		"node_System(72)" ["label"="open_pause_menu", "tooltip"="spirit_hotel::screens::gameplay::open_pause_menu", "fillcolor"="#eff1f3", "fontname"="Helvetica", "fontcolor"="#15191d", "color"="#b4bec7", "penwidth"="1"]
+	}
+	
+	subgraph "clusternode_Set(90)" {
+		"style"="rounded,filled";
+		"label"="AnonymousSet(1)";
+		"tooltip"="AnonymousSet(1)";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(90)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(92)" {
+		"style"="rounded,filled";
+		"label"="TickTimers";
+		"tooltip"="TickTimers";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(92)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(94)" {
+		"style"="rounded,filled";
+		"label"="AnonymousSet(2)";
+		"tooltip"="AnonymousSet(2)";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(94)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(98)" {
+		"style"="rounded,filled";
+		"label"="AnonymousSet(3)";
+		"tooltip"="AnonymousSet(3)";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(98)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	subgraph "clusternode_Set(102)" {
+		"style"="rounded,filled";
+		"label"="AnonymousSet(4)";
+		"tooltip"="AnonymousSet(4)";
+		"fillcolor"="#ffffff44";
+		"fontcolor"="#ffffff";
+		"color"="#ffffff50";
+		"penwidth"="2";
+		"set_marker_node_Set(102)" ["style"="invis", "label"="", "shape"="point"]
+	}
+	
+	"node_System(0)" ["label"="close_when_requested", "tooltip"="bevy_window::system::close_when_requested"]
+	"node_System(1)" ["label"="TerminalCtrlCHandlerPlugin::exit_on_flag", "tooltip"="bevy_app::terminal_ctrl_c_handler::TerminalCtrlCHandlerPlugin::exit_on_flag"]
+	"node_System(2)" ["label"="check_msaa", "tooltip"="bevy_core_pipeline::oit::check_msaa"]
+	"node_System(3)" ["label"="apply_global_volume", "tooltip"="spirit_hotel::audio::apply_global_volume"]
+	"node_System(4)" ["label"="draw_debug_map<CardinalNeighborhood>", "tooltip"="bevy_northstar::debug::draw_debug_map<bevy_northstar::neighbor::CardinalNeighborhood>"]
+	"node_System(5)" ["label"="draw_debug_paths", "tooltip"="bevy_northstar::debug::draw_debug_paths"]
+	"node_System(6)" ["label"="log_transitions<Screen>", "tooltip"="bevy_dev_tools::states::log_transitions<spirit_hotel::screens::Screen>"]
+	"node_System(7)" ["label"="toggle_debug_ui", "tooltip"="spirit_hotel::dev_tools::toggle_debug_ui"]
+	"node_System(8)" ["label"="init_collider_constructors", "tooltip"="avian2d::collision::collider::backend::init_collider_constructors"]
+	"node_System(9)" ["label"="init_collider_constructor_hierarchies", "tooltip"="avian2d::collision::collider::backend::init_collider_constructor_hierarchies"]
+	"node_System(10)" ["label"="set_texture_to_copy_src", "tooltip"="bevy_ecs_tilemap::render::set_texture_to_copy_src"]
+	"node_System(11)" ["label"="collect_modified_image_asset_events", "tooltip"="bevy_ecs_tilemap::render::collect_modified_image_asset_events"]
+	"node_System(12)" ["label"="animate_tiled_sprites", "tooltip"="bevy_ecs_tiled::map::animate_tiled_sprites"]
+	"node_System(66)" ["label"="go_back", "tooltip"="spirit_hotel::menus::credits::go_back"]
+	"node_System(67)" ["label"="go_back", "tooltip"="spirit_hotel::menus::settings::go_back"]
+	"node_System(68)" ["label"="update_global_volume_label", "tooltip"="spirit_hotel::menus::settings::update_global_volume_label"]
+	"node_System(69)" ["label"="go_back", "tooltip"="spirit_hotel::menus::pause::go_back"]
+	"node_System(73)" ["label"="close_menu", "tooltip"="spirit_hotel::screens::gameplay::close_menu"]
+	"node_System(74)" ["label"="enter_gameplay_screen", "tooltip"="spirit_hotel::screens::loading::enter_gameplay_screen"]
+	"node_System(79)" ["label"="enter_title_screen", "tooltip"="spirit_hotel::screens::splash::enter_title_screen"]
+	"node_System(86)" ["label"="apply_interaction_palette", "tooltip"="spirit_hotel::theme::interaction::apply_interaction_palette"]
+	"node_System(87)" ["label"="trigger_screenshots", "tooltip"="bevy_render::view::window::screenshot::trigger_screenshots"]
+	"node_System(88)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(89)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(90)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(91)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(92)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(93)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(94)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(95)" ["label"="apply_deferred", "tooltip"="bevy_ecs::apply_deferred"]
+	"node_System(13)" -> "set_marker_node_Set(13)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(13)"]
+	"node_System(13)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(13)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(13)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(13)" ["label"="load_level_from_activated_trigger
+In multiple sets, LevelSystems, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::level::load_level_from_activated_trigger"]
+	"node_System(14)" -> "set_marker_node_Set(13)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(13)"]
+	"node_System(14)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(14)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(14)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(14)" ["label"="mark_objects_inside_map
+In multiple sets, LevelSystems, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::level::mark_objects_inside_map"]
+	"node_System(15)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(15)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(15)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(15)" ["label"="check_trigger_overlap
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::trigger::check_trigger_overlap"]
+	"node_System(16)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(16)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(16)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(16)" ["label"="debug_trigger_events
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::trigger::debug_trigger_events"]
+	"node_System(17)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(17)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(17)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(17)" ["label"="activate_instant_triggers
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::trigger::activate_instant_triggers"]
+	"node_System(18)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(18)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(18)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(18)" ["label"="activate_interact_triggers
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::trigger::activate_interact_triggers"]
+	"node_System(19)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(19)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(19)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(19)" ["label"="find_step_size
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::movement::find_step_size"]
+	"node_System(20)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(20)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(20)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(20)" ["label"="apply_intent
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::movement::apply_intent"]
+	"node_System(21)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(21)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(21)" -> "set_marker_node_Set(26)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(26)"]
+	"node_System(21)" ["label"="record_player_input
+In multiple sets, GameplaySystems, PausableSystems, RecordInput", "tooltip"="spirit_hotel::game::player::record_player_input"]
+	"node_System(22)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(22)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(22)" ["label"="apply_player_translate_to_camera
+In multiple sets, Update, GameplaySystems", "tooltip"="spirit_hotel::game::player::apply_player_translate_to_camera"]
+	"node_System(23)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(23)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(23)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(23)" ["label"="start_animation_movement
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::animation::start_animation_movement"]
+	"node_System(24)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(24)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(24)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(24)" ["label"="stop_animation_movement
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::animation::stop_animation_movement"]
+	"node_System(25)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(25)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(25)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(25)" ["label"="start_animation_idle
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::animation::start_animation_idle"]
+	"node_System(26)" -> "set_marker_node_Set(33)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(33)"]
+	"node_System(26)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(26)" ["label"="Pipe(handle_yarn_file_events, panic_on_err)
+In multiple sets, LineIdUpdateSystemSet, YarnSpinnerSystemSet", "tooltip"="Pipe(bevy_yarnspinner::localization::line_id_generation::handle_yarn_file_events, bevy_yarnspinner::utils::panic_on_err)"]
+	"node_System(27)" -> "set_marker_node_Set(33)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(33)"]
+	"node_System(27)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(27)" ["label"="handle_yarn_file_events_outside_development
+In multiple sets, LineIdUpdateSystemSet, YarnSpinnerSystemSet", "tooltip"="bevy_yarnspinner::localization::line_id_generation::handle_yarn_file_events_outside_development"]
+	"node_System(29)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(29)" -> "set_marker_node_Set(38)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(38)"]
+	"node_System(29)" ["label"="Pipe(continue_runtime, panic_on_err)
+In multiple sets, YarnSpinnerSystemSet, DialogueExecutionSystemSet", "tooltip"="Pipe(bevy_yarnspinner::dialogue_runner::runtime_interaction::continue_runtime, bevy_yarnspinner::utils::panic_on_err)"]
+	"node_System(30)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(30)" -> "set_marker_node_Set(38)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(38)"]
+	"node_System(30)" ["label"="accept_line_hints
+In multiple sets, YarnSpinnerSystemSet, DialogueExecutionSystemSet", "tooltip"="bevy_yarnspinner::dialogue_runner::runtime_interaction::accept_line_hints"]
+	"node_System(31)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(31)" -> "set_marker_node_Set(39)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(39)"]
+	"node_System(31)" ["label"="fetch_resources
+In multiple sets, YarnSpinnerSystemSet, LineProviderSystemSet", "tooltip"="bevy_yarnspinner::line_provider::text_provider::fetch_resources"]
+	"node_System(32)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(32)" -> "set_marker_node_Set(44)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(44)"]
+	"node_System(32)" ["label"="Pipe(load_project, panic_on_err)
+In multiple sets, YarnSpinnerSystemSet, CompilationSystemSet", "tooltip"="Pipe(bevy_yarnspinner::project::compilation::load_project, bevy_yarnspinner::utils::panic_on_err)"]
+	"node_System(33)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(33)" -> "set_marker_node_Set(44)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(44)"]
+	"node_System(33)" ["label"="Pipe(add_yarn_files_to_load_queue, panic_on_err)
+In multiple sets, YarnSpinnerSystemSet, CompilationSystemSet", "tooltip"="Pipe(bevy_yarnspinner::project::compilation::add_yarn_files_to_load_queue, bevy_yarnspinner::utils::panic_on_err)"]
+	"node_System(34)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(34)" -> "set_marker_node_Set(44)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(44)"]
+	"node_System(34)" ["label"="Pipe(compile_loaded_yarn_files, panic_on_err)
+In multiple sets, YarnSpinnerSystemSet, CompilationSystemSet", "tooltip"="Pipe(bevy_yarnspinner::project::compilation::compile_loaded_yarn_files, bevy_yarnspinner::utils::panic_on_err)"]
+	"node_System(35)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(35)" -> "set_marker_node_Set(44)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(44)"]
+	"node_System(35)" ["label"="Pipe(recompile_loaded_yarn_files, log_error)
+In multiple sets, YarnSpinnerSystemSet, CompilationSystemSet", "tooltip"="Pipe(bevy_yarnspinner::project::compilation::recompile_loaded_yarn_files, bevy_yarnspinner::utils::log_error)"]
+	"node_System(36)" -> "set_marker_node_Set(34)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(34)"]
+	"node_System(36)" -> "set_marker_node_Set(44)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(44)"]
+	"node_System(36)" ["label"="clear_temp_yarn_project
+In multiple sets, YarnSpinnerSystemSet, CompilationSystemSet", "tooltip"="bevy_yarnspinner::project::compilation::clear_temp_yarn_project"]
+	"node_System(54)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(54)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(54)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(54)" ["label"="start_conversation_from_activated_trigger
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::dialogue::start_conversation_from_activated_trigger"]
+	"node_System(59)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(59)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(59)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(59)" ["label"="set_grid_pos_from_transform
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::path_finding::set_grid_pos_from_transform"]
+	"node_System(60)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(60)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(60)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(60)" ["label"="apply_goal_from_path_node
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::path_finding::apply_goal_from_path_node"]
+	"node_System(61)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(61)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(61)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(61)" ["label"="remove_next_pos
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::path_finding::remove_next_pos"]
+	"node_System(62)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(62)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(62)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(62)" ["label"="apply_intent_from_next_pos
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::path_finding::apply_intent_from_next_pos"]
+	"node_System(63)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(63)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(63)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(63)" ["label"="hide_non_current_scene_entities
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::scene::hide_non_current_scene_entities"]
+	"node_System(64)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(64)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(64)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(64)" ["label"="show_current_scene_entities
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::scene::show_current_scene_entities"]
+	"node_System(65)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(65)" -> "set_marker_node_Set(16)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(16)"]
+	"node_System(65)" -> "set_marker_node_Set(17)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(17)"]
+	"node_System(65)" ["label"="change_scene_from_activated_trigger
+In multiple sets, Update, GameplaySystems, PausableSystems", "tooltip"="spirit_hotel::game::scene::change_scene_from_activated_trigger"]
+	"node_System(75)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(75)" -> "set_marker_node_Set(92)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(92)"]
+	"node_System(75)" ["label"="tick_fade_in_out
+In multiple sets, AnonymousSet(1), TickTimers", "tooltip"="spirit_hotel::screens::splash::tick_fade_in_out"]
+	"node_System(76)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(76)" -> "set_marker_node_Set(90)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(90)"]
+	"node_System(76)" ["label"="apply_fade_in_out
+In multiple sets, Update, AnonymousSet(1)", "tooltip"="spirit_hotel::screens::splash::apply_fade_in_out"]
+	"node_System(77)" -> "set_marker_node_Set(92)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(92)"]
+	"node_System(77)" -> "set_marker_node_Set(94)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(94)"]
+	"node_System(77)" ["label"="tick_splash_timer
+In multiple sets, TickTimers, AnonymousSet(2)", "tooltip"="spirit_hotel::screens::splash::tick_splash_timer"]
+	"node_System(78)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(78)" -> "set_marker_node_Set(94)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(94)"]
+	"node_System(78)" ["label"="check_splash_timer
+In multiple sets, Update, AnonymousSet(2)", "tooltip"="spirit_hotel::screens::splash::check_splash_timer"]
+	"node_System(80)" -> "set_marker_node_Set(92)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(92)"]
+	"node_System(80)" -> "set_marker_node_Set(98)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(98)"]
+	"node_System(80)" ["label"="tick_fade_in
+In multiple sets, TickTimers, AnonymousSet(3)", "tooltip"="spirit_hotel::fades::fade_in::tick_fade_in"]
+	"node_System(81)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(81)" -> "set_marker_node_Set(98)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(98)"]
+	"node_System(81)" ["label"="apply_fade_in
+In multiple sets, Update, AnonymousSet(3)", "tooltip"="spirit_hotel::fades::fade_in::apply_fade_in"]
+	"node_System(82)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(82)" -> "set_marker_node_Set(98)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(98)"]
+	"node_System(82)" ["label"="check_fade_in_timer
+In multiple sets, Update, AnonymousSet(3)", "tooltip"="spirit_hotel::fades::fade_in::check_fade_in_timer"]
+	"node_System(83)" -> "set_marker_node_Set(92)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(92)"]
+	"node_System(83)" -> "set_marker_node_Set(102)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(102)"]
+	"node_System(83)" ["label"="tick_fade_out
+In multiple sets, TickTimers, AnonymousSet(4)", "tooltip"="spirit_hotel::fades::fade_out::tick_fade_out"]
+	"node_System(84)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(84)" -> "set_marker_node_Set(102)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(102)"]
+	"node_System(84)" ["label"="apply_fade_out
+In multiple sets, Update, AnonymousSet(4)", "tooltip"="spirit_hotel::fades::fade_out::apply_fade_out"]
+	"node_System(85)" -> "set_marker_node_Set(15)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(15)"]
+	"node_System(85)" -> "set_marker_node_Set(102)" ["dir"="none", "color"="blue", "lhead"="clusternode_Set(102)"]
+	"node_System(85)" ["label"="check_fade_out_timer
+In multiple sets, Update, AnonymousSet(4)", "tooltip"="spirit_hotel::fades::fade_out::check_fade_out_timer"]
+	"node_System(57)" -> "node_System(58)" ["lhead"="", "ltail"="", "tooltip"="next_position<CardinalNeighborhood> → reroute_path<CardinalNeighborhood>", "color"="#eede00"]
+	"node_System(60)" -> "node_System(61)" ["lhead"="", "ltail"="", "tooltip"="apply_goal_from_path_node → remove_next_pos", "color"="#881877"]
+	"node_System(26)" -> "node_System(27)" ["lhead"="", "ltail"="", "tooltip"="Pipe(handle_yarn_file_events, panic_on_err) → handle_yarn_file_events_outside_development", "color"="#00b0cc"]
+	"node_System(33)" -> "node_System(34)" ["lhead"="", "ltail"="", "tooltip"="Pipe(add_yarn_files_to_load_queue, panic_on_err) → Pipe(compile_loaded_yarn_files, panic_on_err)", "color"="#aa3a55"]
+	"node_System(52)" -> "node_System(45)" ["lhead"="", "ltail"="", "tooltip"="select_option → SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::system::commands::Commands), bevy_yarnspinner_example_dialogue_view::typewriter::despawn>())", "color"="#44d488"]
+	"set_marker_node_Set(34)" -> "node_System(44)" ["lhead"="", "ltail"="clusternode_Set(34)", "tooltip"="YarnSpinnerSystemSet → send_finished_event", "color"="#0090cc"]
+	"node_System(52)" -> "node_System(53)" ["lhead"="", "ltail"="", "tooltip"="select_option → despawn_options", "color"="#ee9e44"]
+	"set_marker_node_Set(34)" -> "node_System(39)" ["lhead"="", "ltail"="clusternode_Set(34)", "tooltip"="YarnSpinnerSystemSet → hide_dialog", "color"="#663699"]
+	"node_System(40)" -> "node_System(41)" ["lhead"="", "ltail"="", "tooltip"="show_dialog → present_line", "color"="#3363bb"]
+	"node_System(56)" -> "node_System(57)" ["lhead"="", "ltail"="", "tooltip"="pathfind<CardinalNeighborhood> → next_position<CardinalNeighborhood>", "color"="#22c2bb"]
+	"node_System(60)" -> "node_System(62)" ["lhead"="", "ltail"="", "tooltip"="apply_goal_from_path_node → apply_intent_from_next_pos", "color"="#99d955"]
+	"node_System(34)" -> "node_System(35)" ["lhead"="", "ltail"="", "tooltip"="Pipe(compile_loaded_yarn_files, panic_on_err) → Pipe(recompile_loaded_yarn_files, log_error)", "color"="#eede00"]
+	"node_System(46)" -> "node_System(47)" ["lhead"="", "ltail"="", "tooltip"="spawn → write_text", "color"="#881877"]
+	"node_System(48)" -> "node_System(49)" ["lhead"="", "ltail"="", "tooltip"="show_continue → bob_continue", "color"="#00b0cc"]
+	"node_System(46)" -> "node_System(39)" ["lhead"="", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::system::commands::Commands), bevy_yarnspinner_example_dialogue_view::typewriter::spawn>()) → hide_dialog", "color"="#aa3a55"]
+	"node_System(39)" -> "node_System(40)" ["lhead"="", "ltail"="", "tooltip"="hide_dialog → show_dialog", "color"="#44d488"]
+	"node_System(41)" -> "node_System(42)" ["lhead"="", "ltail"="", "tooltip"="present_line → present_options", "color"="#0090cc"]
+	"node_System(42)" -> "node_System(43)" ["lhead"="", "ltail"="", "tooltip"="present_options → continue_dialogue", "color"="#ee9e44"]
+	"node_System(44)" -> "node_System(45)" ["lhead"="", "ltail"="", "tooltip"="send_finished_event → despawn", "color"="#663699"]
+	"set_marker_node_Set(33)" -> "node_System(28)" ["lhead"="", "ltail"="clusternode_Set(33)", "tooltip"="LineIdUpdateSystemSet → Pipe(update_all_strings_files_for_string_table, panic_on_err)", "color"="#3363bb"]
+	"set_marker_node_Set(26)" -> "set_marker_node_Set(15)" ["lhead"="clusternode_Set(15)", "ltail"="clusternode_Set(26)", "tooltip"="RecordInput → Update", "color"="#22c2bb"]
+	"node_System(59)" -> "node_System(60)" ["lhead"="", "ltail"="", "tooltip"="set_grid_pos_from_transform → apply_goal_from_path_node", "color"="#99d955"]
+	"node_System(50)" -> "node_System(51)" ["lhead"="", "ltail"="", "tooltip"="create_options → show_options", "color"="#eede00"]
+	"set_marker_node_Set(39)" -> "node_System(29)" ["lhead"="", "ltail"="clusternode_Set(39)", "tooltip"="LineProviderSystemSet → Pipe(continue_runtime, panic_on_err)", "color"="#881877"]
+	"node_System(29)" -> "node_System(30)" ["lhead"="", "ltail"="", "tooltip"="Pipe(continue_runtime, panic_on_err) → accept_line_hints", "color"="#00b0cc"]
+	"node_System(63)" -> "node_System(64)" ["lhead"="", "ltail"="", "tooltip"="hide_non_current_scene_entities → show_current_scene_entities", "color"="#aa3a55"]
+	"node_System(47)" -> "node_System(48)" ["lhead"="", "ltail"="", "tooltip"="write_text → show_continue", "color"="#44d488"]
+	"node_System(37)" -> "node_System(29)" ["lhead"="", "ltail"="", "tooltip"="SystemTypeSet(fn bevy_ecs::system::function_system::FunctionSystem<fn(bevy_ecs::change_detection::Res<bevy_time::time::Time>, bevy_ecs::change_detection::ResMut<bevy_yarnspinner::commands::command_registry::wait::Wait>), bevy_yarnspinner::commands::command_registry::wait::update_wait>()) → Pipe(continue_runtime, panic_on_err)", "color"="#0090cc"]
+	"node_System(32)" -> "node_System(33)" ["lhead"="", "ltail"="", "tooltip"="Pipe(load_project, panic_on_err) → Pipe(add_yarn_files_to_load_queue, panic_on_err)", "color"="#ee9e44"]
+	"node_System(51)" -> "node_System(52)" ["lhead"="", "ltail"="", "tooltip"="show_options → select_option", "color"="#663699"]
+	"set_marker_node_Set(38)" -> "node_System(38)" ["lhead"="", "ltail"="clusternode_Set(38)", "tooltip"="DialogueExecutionSystemSet → execute_commands", "color"="#3363bb"]
+	"set_marker_node_Set(92)" -> "set_marker_node_Set(26)" ["lhead"="clusternode_Set(26)", "ltail"="clusternode_Set(92)", "tooltip"="TickTimers → RecordInput", "color"="#22c2bb"]
+	"set_marker_node_Set(34)" -> "node_System(50)" ["lhead"="", "ltail"="clusternode_Set(34)", "tooltip"="YarnSpinnerSystemSet → create_options", "color"="#99d955"]
+	"node_System(55)" -> "node_System(56)" ["lhead"="", "ltail"="", "tooltip"="update_blocking_map → pathfind<CardinalNeighborhood>", "color"="#eede00"]
+	"set_marker_node_Set(33)" -> "node_System(32)" ["lhead"="", "ltail"="clusternode_Set(33)", "tooltip"="LineIdUpdateSystemSet → Pipe(load_project, panic_on_err)", "color"="#881877"]
+	"node_System(35)" -> "node_System(36)" ["lhead"="", "ltail"="", "tooltip"="Pipe(recompile_loaded_yarn_files, log_error) → clear_temp_yarn_project", "color"="#00b0cc"]
+	"node_System(45)" -> "node_System(46)" ["lhead"="", "ltail"="", "tooltip"="despawn → spawn", "color"="#aa3a55"]
+}
