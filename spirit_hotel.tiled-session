@@ -106,7 +106,7 @@
         "assets/tiled/maps/chunk2.tmx"
     ],
     "project": "spirit_hotel.tiled-project",
-    "property.type": "spirit_hotel::game::scene::ShowInGameScene",
+    "property.type": "spirit_hotel::game::animation::AnimationPath",
     "recentFiles": [
         "assets/tiled/tilesets/orthogonal_1.tsx",
         "assets/tiled/tilesets/player.tsx",
