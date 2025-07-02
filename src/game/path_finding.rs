@@ -2,11 +2,11 @@ use std::ops::DerefMut;
 
 use avian2d::{collision::collider::contact_query, prelude::{Collider, RigidBody}};
 use bevy::{ecs::entity_disabling::Disabled, prelude::*};
-use bevy_ecs_tiled::{map::TiledMapHandle, prelude::{TiledMap, TiledWorld, TilemapAnchor}, world::TiledWorldHandle};
+use bevy_ecs_tiled::{prelude::{TiledMap, TiledWorld, TilemapAnchor}, world::TiledWorldHandle};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
 use bevy_northstar::prelude::*;
 
-use crate::{game::{level::{InsideMap, LevelSystems}, movement::{CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::{LevelSystems}, movement::{CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app

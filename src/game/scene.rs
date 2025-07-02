@@ -1,14 +1,9 @@
 use bevy::{ecs::entity_disabling::Disabled, platform::collections::HashSet, prelude::*};
-use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
 use crate::{game::{level::DisabledByVisibility, trigger::{IsTrigger, TriggerActivatedEvent}, GameplaySystems}, AppSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
-        .add_plugins(
-            FilterQueryInspectorPlugin::<With<GameSceneObject>>::default()
-        )
-
         .register_type::<ShowInGameScene>()
         .register_type::<HideInGameScene>()
         .register_type::<ChangeGameScene>()
@@ -73,7 +68,7 @@ pub enum ChangeGameSceneAction {
 
 pub fn hide_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(Entity, Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), With<GameSceneObject>>
+    mut q_scenes: Query<(Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), With<GameSceneObject>>
 ) {
     for (entity, hide_in_scene, show_in_scene, mut visibility) in q_scenes.iter_mut() {
         if
@@ -83,15 +78,13 @@ pub fn hide_scene_entities(
             continue;
         }
 
-        info!("entity hidden: {}", entity);
-
         *visibility = Visibility::Hidden;
     }
 }
 
 pub fn show_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(Entity, Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>, With<GameSceneObject>)>
+    mut q_scenes: Query<(Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>, With<GameSceneObject>)>
 ) {
     for (entity, hide_in_scene, show_in_scene, mut visibility) in q_scenes.iter_mut() {
         if
@@ -100,8 +93,6 @@ pub fn show_scene_entities(
         {
             continue;
         }
-
-        info!("entity shown: {}", entity);
 
         *visibility = Visibility::Inherited
     }
