@@ -1,12 +1,12 @@
 use std::ops::DerefMut;
 
 use avian2d::{collision::collider::contact_query, prelude::{Collider, RigidBody}};
-use bevy::prelude::*;
-use bevy_ecs_tiled::{map::TiledMapHandle, prelude::{TiledMap, TiledMapCreated, TiledMapTileLayer, TiledWorld, TilemapAnchor}, world::TiledWorldHandle};
+use bevy::{ecs::entity_disabling::Disabled, prelude::*};
+use bevy_ecs_tiled::{map::TiledMapHandle, prelude::{TiledMap, TiledWorld, TilemapAnchor}, world::TiledWorldHandle};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
 use bevy_northstar::prelude::*;
 
-use crate::{game::{level::{InsideMap, LevelSystems}, movement::{remove_move_to_location, CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::{InsideMap, LevelSystems}, movement::{CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
@@ -36,8 +36,11 @@ pub(super) fn plugin(app: &mut App) {
                 .in_set(GameplaySystems)
         )
 
-        .add_systems(PostUpdate,
-            compute_grid_collision
+        .add_systems(PostUpdate,(
+                clear_map_for_recompution_when_collider_disabled,
+                compute_grid_collision
+            )
+                .chain()
                 .in_set(GameplaySystems)
                 .after(LevelSystems)
         );
@@ -220,6 +223,34 @@ fn compute_grid_collision(
 
 }
 
+//very inefficient
+fn clear_map_for_recompution_when_collider_disabled(
+    mut commands: Commands,
+    mut s_grid: Single<&mut Grid<CardinalNeighborhood>>,
+    q_disabled_colliders: Query<Entity, (Added<Disabled>, With<GridCollisionCalculated>)>,
+    q_colliders: Query<Entity, With<GridCollisionCalculated>>
+) {
+    if q_disabled_colliders.is_empty() {
+        return;
+    }
+
+    for entity in q_disabled_colliders.iter() {
+        commands.entity(entity).remove::<GridCollisionCalculated>();
+    }
+
+    for entity in q_colliders.iter() {
+        commands.entity(entity).remove::<GridCollisionCalculated>();
+    }
+
+    let grid = s_grid.deref_mut();
+
+    for x in 0..grid.width() {
+        for y in 0..grid.height() {
+            grid.set_point(UVec3::new(x, y, 0), Point::new(1, false));
+        }
+    }
+}
+
 pub fn set_grid_pos_from_transform(
     mut commands: Commands,
     mut s_grid: Single<(&mut Grid<CardinalNeighborhood>, &GridTileSize, &TilemapAnchor)>,
@@ -252,10 +283,10 @@ pub fn set_grid_pos_from_transform(
 
 pub fn apply_goal_from_path_node(
     mut commands: Commands,
-    mut q_movables: Query<(Entity, &mut FollowPath, &GridPos), (With<GridPos>, With<CanMove>, Without<Pathfind>, Without<Path>, Without<MoveToLocation>)>,
+    mut q_movables: Query<(Entity, &mut FollowPath), (With<GridPos>, With<CanMove>, Without<Pathfind>, Without<Path>, Without<MoveToLocation>)>,
     q_path_nodes: Query<(&GridPos, &PathNode), Without<CanMove>>
 ) {
-    for (entity,  mut goal, start_pos) in q_movables.iter_mut() {
+    for (entity,  mut goal) in q_movables.iter_mut() {
         let Some(goal_entity) = goal.0 else {
             continue;
         };

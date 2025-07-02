@@ -1,8 +1,7 @@
 use avian2d::{collision::collider::contact_query, prelude::{Collider}};
 use bevy::prelude::*;
-use bevy_ecs_tiled::{map::{self, TiledMapHandle}, prelude::TiledMap};
 
-use crate::{game::{level::{InsideMap, LevelAssets}, path_finding::{GridTileSize, ScanCollider}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{path_finding::{GridTileSize, ScanCollider}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app

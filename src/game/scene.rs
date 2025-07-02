@@ -1,10 +1,16 @@
 use bevy::{ecs::entity_disabling::Disabled, platform::collections::HashSet, prelude::*};
+use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
-use crate::{game::{level::DisabledByVisibility, trigger::{IsTrigger, TriggerActivatedEvent}, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{level::DisabledByVisibility, trigger::{IsTrigger, TriggerActivatedEvent}, GameplaySystems}, AppSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app
-        .register_type::<InGameScene>()
+        .add_plugins(
+            FilterQueryInspectorPlugin::<With<GameSceneObject>>::default()
+        )
+
+        .register_type::<ShowInGameScene>()
+        .register_type::<HideInGameScene>()
         .register_type::<ChangeGameScene>()
         .register_type::<StartingGameScene>()
         .register_type::<CurrentGameScenes>()
@@ -18,8 +24,8 @@ pub(super) fn plugin(app: &mut App) {
         )
         .add_systems(Update,(
                 change_scene_from_activated_trigger,
-                hide_non_current_scene_entities,
-                show_current_scene_entities
+                hide_scene_entities,
+                show_scene_entities
             )
                 .in_set(GameplaySystems)
                 .in_set(AppSystems::Update)
@@ -37,7 +43,17 @@ pub struct StartingGameScene(pub String);
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
-pub struct InGameScene(pub String);
+pub struct GameSceneObject;
+
+#[derive(Component, Default, Debug, Reflect)]
+#[reflect(Component, Default)]
+#[require(GameSceneObject)]
+pub struct ShowInGameScene(pub String);
+
+#[derive(Component, Default, Debug, Reflect)]
+#[reflect(Component, Default)]
+#[require(GameSceneObject)]
+pub struct HideInGameScene(pub String);
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
@@ -55,27 +71,37 @@ pub enum ChangeGameSceneAction {
     Remove
 }
 
-pub fn hide_non_current_scene_entities(
+pub fn hide_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(Entity, &InGameScene, &mut Visibility)>
+    mut q_scenes: Query<(Entity, Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), With<GameSceneObject>>
 ) {
-    for (entity, in_scene, mut visibility) in q_scenes.iter_mut() {
-        if current_scenes.0.contains(&in_scene.0) {
+    for (entity, hide_in_scene, show_in_scene, mut visibility) in q_scenes.iter_mut() {
+        if
+            (hide_in_scene.is_none() || !current_scenes.0.contains(&hide_in_scene.unwrap().0)) &&
+            (show_in_scene.is_none() || current_scenes.0.contains(&show_in_scene.unwrap().0))
+        {
             continue;
         }
+
+        info!("entity hidden: {}", entity);
 
         *visibility = Visibility::Hidden;
     }
 }
 
-pub fn show_current_scene_entities(
+pub fn show_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(Entity, &InGameScene, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>)>
+    mut q_scenes: Query<(Entity, Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>, With<GameSceneObject>)>
 ) {
-    for (entity, in_scene, mut visibility) in q_scenes.iter_mut() {
-        if !current_scenes.0.contains(&in_scene.0) {
+    for (entity, hide_in_scene, show_in_scene, mut visibility) in q_scenes.iter_mut() {
+        if
+            (hide_in_scene.is_some() && current_scenes.0.contains(&hide_in_scene.unwrap().0)) ||
+            (show_in_scene.is_some() && !current_scenes.0.contains(&show_in_scene.unwrap().0))
+        {
             continue;
         }
+
+        info!("entity shown: {}", entity);
 
         *visibility = Visibility::Inherited
     }

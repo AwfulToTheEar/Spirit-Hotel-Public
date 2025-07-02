@@ -25,24 +25,24 @@
             "scale": 1.6268749999999998,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": -17.518248175182464,
-                "y": 271.3791778716866
+                "x": 160.12293507491358,
+                "y": 160.12293507491358
             }
         },
         "assets/tiled/maps/chunk2.tmx": {
             "scale": 1.6268749999999998,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": -17.518248175182464,
-                "y": -48.86669227814059
+                "x": 160.12293507491358,
+                "y": 160.12293507491358
             }
         },
         "assets/tiled/maps/chunk3.tmx": {
             "scale": 1.6268749999999998,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 302.72762197464465,
-                "y": -48.86669227814059
+                "x": 160.12293507491358,
+                "y": 160.12293507491358
             }
         },
         "assets/tiled/maps/map1.tmx": {
@@ -63,8 +63,8 @@
             "scale": 1.6268749999999998,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 160.12293507491356,
-                "y": 177.94852093737998
+                "x": 160.12293507491358,
+                "y": 160.12293507491358
             }
         },
         "assets/tiled/tiles/orthogonal_1.tsx": {
@@ -106,7 +106,7 @@
         "assets/tiled/maps/chunk2.tmx"
     ],
     "project": "spirit_hotel.tiled-project",
-    "property.type": "spirit_hotel::game::scene::StartingGameScene",
+    "property.type": "spirit_hotel::game::scene::ShowInGameScene",
     "recentFiles": [
         "assets/tiled/tilesets/orthogonal_1.tsx",
         "assets/tiled/tilesets/player.tsx",

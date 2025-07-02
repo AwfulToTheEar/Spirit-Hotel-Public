@@ -68,7 +68,7 @@ pub fn stop_animation_movement(
 }
 
 pub fn start_animation_idle(
-    mut q_animateable_entities: Query<&mut AseAnimation>
+    q_animateable_entities: Query<&mut AseAnimation>
 ) {
     for mut ase_animation in q_animateable_entities {
         if !ase_animation.animation.playing {
@@ -79,7 +79,7 @@ pub fn start_animation_idle(
 
 pub fn pause_animation(
     mut commands: Commands,
-    mut q_animateable_entities: Query<(Entity, &mut AseAnimation)>
+    q_animateable_entities: Query<(Entity, &mut AseAnimation)>
 ) {
     for (entity,  mut ase_animation) in q_animateable_entities {
         if ase_animation.animation.playing {
@@ -91,7 +91,7 @@ pub fn pause_animation(
 
 pub fn unpause_animation(
     mut commands: Commands,
-    mut q_animateable_entities: Query<(Entity, &mut AseAnimation), With<PausedByState>>
+    q_animateable_entities: Query<(Entity, &mut AseAnimation), With<PausedByState>>
 ) {
     for (entity, mut ase_animation) in q_animateable_entities {
         if ase_animation.animation.playing {

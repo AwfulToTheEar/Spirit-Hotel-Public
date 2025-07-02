@@ -1,14 +1,14 @@
 //! Spawn the main level.
 
-use std::{ops::DerefMut, path::PathBuf};
+use std::path::PathBuf;
 
-use avian2d::prelude::{Collider, ColliderDisabled, RigidBody};
+use avian2d::prelude::{Collider, RigidBody};
 use bevy::{ecs::entity_disabling::Disabled, prelude::*, render::view::VisibilitySystems};
 use bevy_aseprite_ultra::prelude::AseAnimation;
 use bevy_ecs_tiled::prelude::*;
 
 use crate::{
-    asset_tracking::LoadResource, audio::music, game::{animation::AnimationPath, movement::CanMove, path_finding::PathNode, player::Player, scene::CurrentGameScenes, trigger::{IsTrigger, TriggerActivatedEvent, TriggerCollider}, GameplaySystems}, screens::Screen, AppSystems, PausableSystems
+    asset_tracking::LoadResource, game::{animation::AnimationPath, movement::CanMove, path_finding::PathNode, player::Player, trigger::{IsTrigger, TriggerActivatedEvent, TriggerCollider}, GameplaySystems}, screens::Screen, AppSystems
 };
 
 pub(super) fn plugin(app: &mut App) {

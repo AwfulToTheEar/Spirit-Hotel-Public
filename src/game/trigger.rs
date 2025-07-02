@@ -1,7 +1,7 @@
 use avian2d::{collision::collider::contact_query, prelude::Collider};
 use bevy::prelude::*;
 
-use crate::{game::{movement::{CanMove, MoveToLocation}, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{game::{movement::{CanMove, MoveToLocation}, GameplaySystems}, AppSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app

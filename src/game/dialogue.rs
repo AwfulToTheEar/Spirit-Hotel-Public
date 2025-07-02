@@ -2,7 +2,7 @@ use bevy::prelude::*;
 use bevy_yarnspinner::prelude::{DialogueRunner, YarnProject, YarnSpinnerPlugin};
 use bevy_yarnspinner_example_dialogue_view::ExampleYarnSpinnerDialogueViewPlugin;
 
-use crate::{game::{trigger::{IsTrigger, TriggerActivatedEvent}, GameplaySystems}, screens::Screen, AppSystems, PausableSystems};
+use crate::{game::{trigger::{IsTrigger, TriggerActivatedEvent}, GameplaySystems}, screens::Screen, AppSystems};
 
 pub(super) fn plugin(app: &mut App) {
     app

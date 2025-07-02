@@ -235,6 +235,77 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 27,
+            "members": [
+                {
+                    "name": "action",
+                    "propertyType": "spirit_hotel::game::scene::ChangeGameSceneAction",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "scene",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel::game::scene::ChangeGameScene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 28,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
+                    "type": "string",
+                    "value": "Toggle"
+                }
+            ],
+            "name": "spirit_hotel::game::scene::ChangeGameSceneAction",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 29,
+            "name": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Toggle",
+                "Add",
+                "Remove"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 30,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel::game::scene::StartingGameScene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 7,
             "members": [
                 {
@@ -342,7 +413,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 25,
+            "id": 31,
             "members": [
                 {
                     "name": "0",
@@ -350,7 +421,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::scene::InGameScene",
+            "name": "spirit_hotel::game::scene::ShowInGameScene",
             "type": "class",
             "useAs": [
                 "property"
@@ -359,61 +430,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 27,
-            "members": [
-                {
-                    "name": "action",
-                    "propertyType": "spirit_hotel::game::scene::ChangeGameSceneAction",
-                    "type": "class",
-                    "value": {
-                    }
-                },
-                {
-                    "name": "scene",
-                    "type": "string",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel::game::scene::ChangeGameScene",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 28,
-            "members": [
-                {
-                    "name": ":variant",
-                    "propertyType": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
-                    "type": "string",
-                    "value": "Toggle"
-                }
-            ],
-            "name": "spirit_hotel::game::scene::ChangeGameSceneAction",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "id": 29,
-            "name": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "Toggle",
-                "Add",
-                "Remove"
-            ],
-            "valuesAsFlags": false
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 30,
+            "id": 32,
             "members": [
                 {
                     "name": "0",
@@ -421,7 +438,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::scene::StartingGameScene",
+            "name": "spirit_hotel::game::scene::HideInGameScene",
             "type": "class",
             "useAs": [
                 "property"
