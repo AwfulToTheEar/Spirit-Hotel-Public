@@ -70,7 +70,7 @@ pub fn apply_intent(
     let grid_tile_size = s_grid_tile_size.into_inner();
 
     for (entity, intent, duration,  transform, children) in q_entities_with_intent.iter() {
-        let step = (intent.0 * grid_tile_size.0).extend(0.);
+        let step = (intent.0 * grid_tile_size.0.as_vec2()).extend(0.);
 
         let mut collider_found = false;
         for child in children.iter() {

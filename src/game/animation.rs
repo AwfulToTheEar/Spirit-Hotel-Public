@@ -1,13 +1,27 @@
 use std::path::PathBuf;
 
-use bevy::prelude::*;
-use bevy_aseprite_ultra::prelude::AseAnimation;
+use bevy::{platform::collections::HashMap, prelude::*};
+use bevy_aseprite_ultra::prelude::*;
+use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
-use crate::{game::{movement::{CanMove, MoveToLocation, MovementIntent}, GameplaySystems}, AppSystems, PausableSystems, Pause};
+use crate::{asset_tracking::LoadResource, game::{level::LevelSystems, movement::{CanMove, MoveToLocation, MovementIntent}, GameplaySystems}, AppSystems, PausableSystems, Pause};
 
 pub(super) fn plugin(app: &mut App) {
     app
+        .add_plugins((
+            AsepriteUltraPlugin,
+            FilterQueryInspectorPlugin::<With<Animatable>>::default()
+        ))
+
         .register_type::<AnimationPath>()
+
+        .load_resource::<AnimationAssets>()
+
+        .add_systems(PreUpdate,
+            init_animatable_entities
+                .after(LevelSystems)
+                .in_set(GameplaySystems)
+        )
 
         .add_systems(Update,
             (
@@ -24,13 +38,45 @@ pub(super) fn plugin(app: &mut App) {
 
 }
 
+#[derive(Resource, Asset, Clone, Reflect)]
+#[reflect(Resource)]
+pub struct AnimationAssets(pub HashMap<Entity, Handle<Aseprite>>);
+
+impl FromWorld for AnimationAssets {
+    fn from_world(_world: &mut World) -> Self {
+        Self(HashMap::<Entity, Handle<Aseprite>>::default())
+    }
+}
+
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
 pub struct PausedByState;
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
+pub struct Animatable;
+
+#[derive(Component, Default, Debug, Reflect)]
+#[reflect(Component, Default)]
+#[require(Animatable)]
 pub struct AnimationPath(pub PathBuf);
+
+pub fn init_animatable_entities(
+    mut commands: Commands,
+    animation_assets: Res<AnimationAssets>,
+    q_animatables: Query<Entity, (With<Animatable>, Without<AseAnimation>)>,
+) {
+    for entity in q_animatables.iter() {
+        let Some(animation_handle) = animation_assets.0.get(&entity) else {
+            continue;
+        };
+
+        commands.entity(entity).insert(AseAnimation {
+            aseprite: animation_handle.clone(),
+            ..default()
+        });
+    }
+}
 
 pub fn start_animation_movement(
     mut q_moving_entities: Query<(&MovementIntent, &mut AseAnimation, &CanMove), Added<MoveToLocation>>,
@@ -60,10 +106,10 @@ pub fn stop_animation_movement(
 ) {
     for entity in removed.read() {
         let Ok(mut ase_animation) = q_animateable_entities.get_mut(entity) else {
-            return;
+            continue;
         };
 
-        ase_animation.animation.clear_queue();
+        ase_animation.animation.stop();
     }
 }
 
@@ -71,9 +117,11 @@ pub fn start_animation_idle(
     q_animateable_entities: Query<&mut AseAnimation>
 ) {
     for mut ase_animation in q_animateable_entities {
-        if !ase_animation.animation.playing {
-            ase_animation.animation.play_loop("idle");
+        if ase_animation.animation.playing {
+            continue;
         }
+
+        ase_animation.animation.play_loop("idle");
     }
 }
 
@@ -84,7 +132,7 @@ pub fn pause_animation(
     for (entity,  mut ase_animation) in q_animateable_entities {
         if ase_animation.animation.playing {
             commands.entity(entity).insert(PausedByState);
-            ase_animation.animation.playing = false;
+            ase_animation.animation.pause();
         }
     }
 }
@@ -96,7 +144,7 @@ pub fn unpause_animation(
     for (entity, mut ase_animation) in q_animateable_entities {
         if ase_animation.animation.playing {
             commands.entity(entity).remove::<PausedByState>();
-            ase_animation.animation.playing = true;
+            ase_animation.animation.start();
         }
     }
 }

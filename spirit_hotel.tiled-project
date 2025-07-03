@@ -289,6 +289,40 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 32,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel::game::scene::HideInGameScene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 31,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel::game::scene::ShowInGameScene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 30,
             "members": [
                 {
@@ -413,32 +447,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 31,
+            "id": 33,
             "members": [
-                {
-                    "name": "0",
-                    "type": "string",
-                    "value": ""
-                }
             ],
-            "name": "spirit_hotel::game::scene::ShowInGameScene",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 32,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "string",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel::game::scene::HideInGameScene",
+            "name": "spirit_hotel::game::path_finding::InWorldGrid",
             "type": "class",
             "useAs": [
                 "property"

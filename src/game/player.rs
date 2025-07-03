@@ -24,7 +24,7 @@ pub struct Player;
 pub fn record_player_input(
     mut commands: Commands,
     keyboard_input: Res<ButtonInput<KeyCode>>,
-    mut q_player: Query<Entity, (With<Player>, Without<MoveToLocation>)>,
+    mut q_player: Query<Entity, (With<Player>, Without<MovementIntent>, Without<MoveToLocation>)>,
 ) {
     let Ok(entity) = q_player.single_mut() else {
         return;

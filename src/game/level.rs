@@ -4,11 +4,10 @@ use std::path::PathBuf;
 
 use avian2d::prelude::{Collider, RigidBody};
 use bevy::{ecs::entity_disabling::Disabled, prelude::*, render::view::VisibilitySystems};
-use bevy_aseprite_ultra::prelude::AseAnimation;
 use bevy_ecs_tiled::prelude::*;
 
 use crate::{
-    asset_tracking::LoadResource, game::{animation::AnimationPath, movement::CanMove, path_finding::PathNode, player::Player, trigger::{IsTrigger, TriggerActivatedEvent, TriggerCollider}, GameplaySystems}, screens::Screen, AppSystems
+    asset_tracking::LoadResource, game::{animation::{AnimationAssets, AnimationPath}, movement::CanMove, path_finding::PathNode, player::Player, trigger::{IsTrigger, TriggerActivatedEvent, TriggerCollider}, GameplaySystems}, screens::Screen, AppSystems
 };
 
 pub(super) fn plugin(app: &mut App) {
@@ -278,13 +277,13 @@ pub fn enable_tiled_colliders_when_parent_enabled(
 }
 
 pub fn handle_object_animation_path(
-    mut commands: Commands,
     asset_server: Res<AssetServer>,
+    mut animation_assets: ResMut<AnimationAssets>,
     mut e_object_created: EventReader<TiledObjectCreated>,
-    q_animations: Query<(Entity, &AnimationPath)>,
+    q_animation_paths: Query<(Entity, &AnimationPath)>,
 ) {
     for e in e_object_created.read() {
-        let Ok((entity, animation_path)) = q_animations.get(e.entity) else {
+        let Ok((entity, animation_path)) = q_animation_paths.get(e.entity) else {
             continue;
         };
 
@@ -292,10 +291,7 @@ pub fn handle_object_animation_path(
         path.push("worlds");
         path.push(animation_path.0.clone());
 
-        commands.entity(entity).insert(AseAnimation {
-            aseprite: asset_server.load(path),
-            ..default()
-        });
+        animation_assets.0.insert(entity, asset_server.load(path));
     }
 }
 

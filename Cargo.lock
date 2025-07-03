@@ -622,8 +622,6 @@ dependencies = [
 [[package]]
 name = "bevy_aseprite_ultra"
 version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5ee3c8aff69a34387a78fdad5aef5da4977b8642ba62b7b7af5b57471a9b8104"
 dependencies = [
  "aseprite-loader",
  "bevy",
@@ -1230,13 +1228,16 @@ dependencies = [
 
 [[package]]
 name = "bevy_northstar"
-version = "0.2.0"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "55530520252381f1d42ce755279466c47928c895fc06259b1deb38715e4b1b36"
 dependencies = [
  "bevy",
  "indexmap",
  "ndarray",
  "rustc-hash 2.1.1",
  "slab",
+ "smallvec",
  "strum 0.27.1",
  "thiserror 2.0.12",
 ]
@@ -3272,9 +3273,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "2.9.0"
+version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cea70ddb795996207ad57735b50c5982d8844f38ba9ee5f1aedcfb708a2aa11e"
+checksum = "fe4cd85333e22411419a0bcae1297d25e58c9443848b11dc6a86fefe8c78a661"
 dependencies = [
  "equivalent",
  "hashbrown",
@@ -5300,12 +5301,9 @@ dependencies = [
 
 [[package]]
 name = "slab"
-version = "0.4.9"
+version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f92a496fb766b417c996b9c5e57daf2f7ad3b0bebe1ccfca4856390e3d3bb67"
-dependencies = [
- "autocfg",
-]
+checksum = "04dc19736151f35336d325007ac991178d504a119863a2fcb3758cdb5e52c50d"
 
 [[package]]
 name = "slotmap"
@@ -5318,9 +5316,9 @@ dependencies = [
 
 [[package]]
 name = "smallvec"
-version = "1.15.0"
+version = "1.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8917285742e9f3e1683f0a9c4e6b57960b7314d0b08d30d1ecd426713ee2eee9"
+checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 dependencies = [
  "serde",
 ]

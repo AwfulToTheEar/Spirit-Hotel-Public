@@ -47,6 +47,7 @@
  <objectgroup id="8" name="paths">
   <object id="39" template="../templates/path_node.tx" x="64" y="160">
    <properties>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::InWorldGrid"/>
     <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::PathNode">
      <properties>
       <property name="0" type="object" value="40"/>
@@ -56,6 +57,7 @@
   </object>
   <object id="40" template="../templates/path_node.tx" x="160" y="224">
    <properties>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::InWorldGrid"/>
     <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::PathNode">
      <properties>
       <property name="0" type="object" value="41"/>
@@ -65,6 +67,7 @@
   </object>
   <object id="41" template="../templates/path_node.tx" x="192" y="128">
    <properties>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::InWorldGrid"/>
     <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::PathNode">
      <properties>
       <property name="0" type="object" value="39"/>
@@ -80,6 +83,7 @@
       <property name="0" type="object" value="40"/>
      </properties>
     </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::InWorldGrid"/>
    </properties>
   </object>
  </objectgroup>
