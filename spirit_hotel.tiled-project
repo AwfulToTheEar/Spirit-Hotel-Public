@@ -206,6 +206,18 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 33,
+            "members": [
+            ],
+            "name": "spirit_hotel::game::path_finding::InWorldGrid",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 23,
             "members": [
                 {
@@ -447,10 +459,79 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 33,
+            "id": 34,
             "members": [
+                {
+                    "name": "repeat",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "tag",
+                    "type": "string",
+                    "value": ""
+                }
             ],
-            "name": "spirit_hotel::game::path_finding::InWorldGrid",
+            "name": "spirit_hotel::game::animation::InitAnimation",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 36,
+            "members": [
+                {
+                    "name": "brightness",
+                    "type": "float",
+                    "value": 1
+                },
+                {
+                    "name": "color",
+                    "type": "color",
+                    "value": "#ffffffff"
+                }
+            ],
+            "name": "bevy_light_2d::light::AmbientLight2d",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 37,
+            "members": [
+                {
+                    "name": "cast_shadows",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "color",
+                    "type": "color",
+                    "value": "#ffffffff"
+                },
+                {
+                    "name": "falloff",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "intensity",
+                    "type": "float",
+                    "value": 1
+                },
+                {
+                    "name": "radius",
+                    "type": "float",
+                    "value": 0.5
+                }
+            ],
+            "name": "bevy_light_2d::light::PointLight2d",
             "type": "class",
             "useAs": [
                 "property"

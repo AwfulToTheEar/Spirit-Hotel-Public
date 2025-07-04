@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="25">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="26">
  <properties>
   <property name="starting_scene" type="class" propertytype="spirit_hotel::game::scene::StartingGameScene">
    <properties>
@@ -44,6 +44,18 @@
     </property>
     <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::IsTrigger"/>
    </properties>
+  </object>
+  <object id="25" x="160" y="224">
+   <properties>
+    <property name="light" type="class" propertytype="bevy_light_2d::light::PointLight2d">
+     <properties>
+      <property name="color" type="color" value="#fffcff40"/>
+      <property name="intensity" type="float" value="3"/>
+      <property name="radius" type="float" value="100"/>
+     </properties>
+    </property>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
 </map>

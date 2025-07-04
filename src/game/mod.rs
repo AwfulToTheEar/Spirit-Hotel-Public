@@ -11,19 +11,18 @@ use bevy_ecs_tiled::map;
 
 use crate::screens::Screen;
 
-pub mod level;
-mod trigger;
-mod movement;
-mod player;
 mod animation;
 mod dialogue;
+pub mod level;
+mod lighting;
+mod movement;
 mod path_finding;
+mod player;
 mod scene;
+mod trigger;
 
 pub(super) fn plugin(app: &mut App) {
-    app
-        .add_plugins(PhysicsPlugins::default().with_length_unit(100.0))
-
+    app.add_plugins(PhysicsPlugins::default().with_length_unit(100.0))
         .add_plugins((
             level::plugin,
             trigger::plugin,
@@ -32,41 +31,37 @@ pub(super) fn plugin(app: &mut App) {
             animation::plugin,
             dialogue::plugin,
             path_finding::plugin,
-            scene::plugin
+            scene::plugin,
+            lighting::plugin,
         ))
-
-        .configure_sets(PreUpdate,
-            GameplaySystems
-                .run_if(in_state(Screen::Gameplay))
+        .configure_sets(
+            PreUpdate,
+            GameplaySystems.run_if(in_state(Screen::Gameplay)),
         )
-        .configure_sets(Update,
-            GameplaySystems
-                .run_if(in_state(Screen::Gameplay))
+        .configure_sets(Update, GameplaySystems.run_if(in_state(Screen::Gameplay)))
+        .configure_sets(
+            FixedUpdate,
+            GameplaySystems.run_if(in_state(Screen::Gameplay)),
         )
-        .configure_sets(FixedUpdate,
-            GameplaySystems
-                .run_if(in_state(Screen::Gameplay))
-        )
+        .add_systems(Startup, |reg: Res<AppTypeRegistry>| {
+            let mut path = env::current_dir().unwrap();
+            path.push("tiled_types_filtered_export.json");
 
-        .add_systems(Startup,
-            |reg: Res<AppTypeRegistry>| {
-                let mut path = env::current_dir().unwrap();
-                path.push("tiled_types_filtered_export.json");
-
-                info!("Export Tiled types to '{:?}'", &path);
-                map::export_types(&reg, path, |name| {
-                    if name.contains("spirit_hotel::") {
+            info!("Export Tiled types to '{:?}'", &path);
+            map::export_types(&reg, path, |name| {
+                for crate_name in [
+                    "spirit_hotel::",
+                    "bevy_render::view::visibility::Visibility",
+                    "bevy_light_2d::",
+                ] {
+                    if name.contains(crate_name) {
                         return true;
                     }
+                }
 
-                    if name.contains("bevy_render::view::visibility::Visibility") {
-                        return true;
-                    }
-
-                    return false;
-                });
-            },
-        );
+                return false;
+            });
+        });
 }
 
 #[derive(SystemSet, Debug, Clone, Copy, Eq, PartialEq, Hash, PartialOrd, Ord)]

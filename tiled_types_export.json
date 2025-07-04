@@ -1,6 +1,6 @@
 [
   {
-    "id": 475,
+    "id": 484,
     "name": "(u16, u16)",
     "type": "class",
     "useAs": [
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "id": 725,
+    "id": 728,
     "name": "(u8, u8)",
     "type": "class",
     "useAs": [
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 40,
     "name": "avian2d::collision::collider::ColliderAabb",
     "type": "class",
     "useAs": [
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "id": 228,
+    "id": 231,
     "name": "avian2d::collision::collider::CollisionMargin",
     "type": "class",
     "useAs": [
@@ -85,7 +85,7 @@
     ]
   },
   {
-    "id": 260,
+    "id": 262,
     "name": "avian2d::collision::collider::Sensor",
     "type": "class",
     "useAs": [
@@ -96,7 +96,7 @@
     "members": []
   },
   {
-    "id": 79,
+    "id": 81,
     "name": "avian2d::collision::collider::collider_hierarchy::ColliderOf",
     "type": "class",
     "useAs": [
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "id": 227,
+    "id": 230,
     "name": "avian2d::collision::collider::collider_transform::ColliderTransform",
     "type": "class",
     "useAs": [
@@ -143,7 +143,7 @@
     ]
   },
   {
-    "id": 193,
+    "id": 195,
     "name": "avian2d::collision::collider::layers::CollisionLayers",
     "type": "class",
     "useAs": [
@@ -167,7 +167,7 @@
     ]
   },
   {
-    "id": 560,
+    "id": 578,
     "name": "avian2d::collision::collider::layers::LayerMask",
     "type": "class",
     "useAs": [
@@ -184,7 +184,7 @@
     ]
   },
   {
-    "id": 315,
+    "id": 319,
     "name": "avian2d::collision::collision_events::CollisionEventsEnabled",
     "type": "class",
     "useAs": [
@@ -195,7 +195,7 @@
     "members": []
   },
   {
-    "id": 319,
+    "id": 324,
     "name": "avian2d::collision::narrow_phase::NarrowPhaseConfig",
     "type": "class",
     "useAs": [
@@ -222,7 +222,7 @@
     ]
   },
   {
-    "id": 206,
+    "id": 210,
     "name": "avian2d::dynamics::ccd::SpeculativeMargin",
     "type": "class",
     "useAs": [
@@ -239,7 +239,7 @@
     ]
   },
   {
-    "id": 449,
+    "id": 446,
     "name": "avian2d::dynamics::ccd::SweepMode",
     "type": "class",
     "useAs": [
@@ -257,7 +257,7 @@
     ]
   },
   {
-    "id": 448,
+    "id": 445,
     "name": "avian2d::dynamics::ccd::SweepMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -268,7 +268,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 93,
+    "id": 94,
     "name": "avian2d::dynamics::ccd::SweptCcd",
     "type": "class",
     "useAs": [
@@ -301,7 +301,7 @@
     ]
   },
   {
-    "id": 61,
+    "id": 64,
     "name": "avian2d::dynamics::integrator::Gravity",
     "type": "class",
     "useAs": [
@@ -319,7 +319,7 @@
     ]
   },
   {
-    "id": 70,
+    "id": 72,
     "name": "avian2d::dynamics::rigid_body::AccumulatedTranslation",
     "type": "class",
     "useAs": [
@@ -340,7 +340,7 @@
     ]
   },
   {
-    "id": 84,
+    "id": 86,
     "name": "avian2d::dynamics::rigid_body::AngularDamping",
     "type": "class",
     "useAs": [
@@ -357,7 +357,7 @@
     ]
   },
   {
-    "id": 345,
+    "id": 350,
     "name": "avian2d::dynamics::rigid_body::AngularVelocity",
     "type": "class",
     "useAs": [
@@ -374,7 +374,7 @@
     ]
   },
   {
-    "id": 125,
+    "id": 128,
     "name": "avian2d::dynamics::rigid_body::Dominance",
     "type": "class",
     "useAs": [
@@ -391,7 +391,7 @@
     ]
   },
   {
-    "id": 81,
+    "id": 83,
     "name": "avian2d::dynamics::rigid_body::GravityScale",
     "type": "class",
     "useAs": [
@@ -408,7 +408,7 @@
     ]
   },
   {
-    "id": 226,
+    "id": 229,
     "name": "avian2d::dynamics::rigid_body::LinearDamping",
     "type": "class",
     "useAs": [
@@ -425,7 +425,7 @@
     ]
   },
   {
-    "id": 282,
+    "id": 285,
     "name": "avian2d::dynamics::rigid_body::LinearVelocity",
     "type": "class",
     "useAs": [
@@ -446,7 +446,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": 36,
     "name": "avian2d::dynamics::rigid_body::MaxAngularSpeed",
     "type": "class",
     "useAs": [
@@ -463,7 +463,7 @@
     ]
   },
   {
-    "id": 157,
+    "id": 160,
     "name": "avian2d::dynamics::rigid_body::MaxLinearSpeed",
     "type": "class",
     "useAs": [
@@ -480,7 +480,7 @@
     ]
   },
   {
-    "id": 56,
+    "id": 59,
     "name": "avian2d::dynamics::rigid_body::PreSolveAngularVelocity",
     "type": "class",
     "useAs": [
@@ -497,7 +497,7 @@
     ]
   },
   {
-    "id": 150,
+    "id": 153,
     "name": "avian2d::dynamics::rigid_body::PreSolveLinearVelocity",
     "type": "class",
     "useAs": [
@@ -515,7 +515,7 @@
     ]
   },
   {
-    "id": 127,
+    "id": 130,
     "name": "avian2d::dynamics::rigid_body::RigidBody",
     "type": "class",
     "useAs": [
@@ -533,7 +533,7 @@
     ]
   },
   {
-    "id": 126,
+    "id": 129,
     "name": "avian2d::dynamics::rigid_body::RigidBody:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -545,7 +545,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 69,
+    "id": 71,
     "name": "avian2d::dynamics::rigid_body::RigidBodyDisabled",
     "type": "class",
     "useAs": [
@@ -556,7 +556,7 @@
     "members": []
   },
   {
-    "id": 288,
+    "id": 291,
     "name": "avian2d::dynamics::rigid_body::Sleeping",
     "type": "class",
     "useAs": [
@@ -567,7 +567,7 @@
     "members": []
   },
   {
-    "id": 131,
+    "id": 134,
     "name": "avian2d::dynamics::rigid_body::SleepingDisabled",
     "type": "class",
     "useAs": [
@@ -578,7 +578,7 @@
     "members": []
   },
   {
-    "id": 191,
+    "id": 193,
     "name": "avian2d::dynamics::rigid_body::TimeSleeping",
     "type": "class",
     "useAs": [
@@ -617,7 +617,7 @@
     ]
   },
   {
-    "id": 65,
+    "id": 68,
     "name": "avian2d::dynamics::rigid_body::forces::ExternalForce",
     "type": "class",
     "useAs": [
@@ -645,7 +645,7 @@
     ]
   },
   {
-    "id": 266,
+    "id": 269,
     "name": "avian2d::dynamics::rigid_body::forces::ExternalImpulse",
     "type": "class",
     "useAs": [
@@ -673,7 +673,7 @@
     ]
   },
   {
-    "id": 302,
+    "id": 305,
     "name": "avian2d::dynamics::rigid_body::forces::ExternalTorque",
     "type": "class",
     "useAs": [
@@ -695,7 +695,7 @@
     ]
   },
   {
-    "id": 100,
+    "id": 103,
     "name": "avian2d::dynamics::rigid_body::locked_axes::LockedAxes",
     "type": "class",
     "useAs": [
@@ -712,7 +712,7 @@
     ]
   },
   {
-    "id": 57,
+    "id": 60,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::AngularInertia",
     "type": "class",
     "useAs": [
@@ -729,7 +729,7 @@
     ]
   },
   {
-    "id": 256,
+    "id": 257,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::CenterOfMass",
     "type": "class",
     "useAs": [
@@ -750,7 +750,7 @@
     ]
   },
   {
-    "id": 128,
+    "id": 131,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::Mass",
     "type": "class",
     "useAs": [
@@ -767,7 +767,7 @@
     ]
   },
   {
-    "id": 46,
+    "id": 49,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::NoAutoAngularInertia",
     "type": "class",
     "useAs": [
@@ -778,7 +778,7 @@
     "members": []
   },
   {
-    "id": 284,
+    "id": 287,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::NoAutoCenterOfMass",
     "type": "class",
     "useAs": [
@@ -789,7 +789,7 @@
     "members": []
   },
   {
-    "id": 47,
+    "id": 50,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::NoAutoMass",
     "type": "class",
     "useAs": [
@@ -800,7 +800,7 @@
     "members": []
   },
   {
-    "id": 270,
+    "id": 272,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::collider::ColliderDensity",
     "type": "class",
     "useAs": [
@@ -817,7 +817,7 @@
     ]
   },
   {
-    "id": 285,
+    "id": 288,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::collider::ColliderMassProperties",
     "type": "class",
     "useAs": [
@@ -835,7 +835,7 @@
     ]
   },
   {
-    "id": 246,
+    "id": 248,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::computed::ComputedAngularInertia",
     "type": "class",
     "useAs": [
@@ -852,7 +852,7 @@
     ]
   },
   {
-    "id": 209,
+    "id": 213,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::computed::ComputedCenterOfMass",
     "type": "class",
     "useAs": [
@@ -873,7 +873,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 48,
     "name": "avian2d::dynamics::rigid_body::mass_properties::components::computed::ComputedMass",
     "type": "class",
     "useAs": [
@@ -890,7 +890,7 @@
     ]
   },
   {
-    "id": 460,
+    "id": 469,
     "name": "avian2d::dynamics::rigid_body::physics_material::CoefficientCombine",
     "type": "class",
     "useAs": [
@@ -908,7 +908,7 @@
     ]
   },
   {
-    "id": 459,
+    "id": 468,
     "name": "avian2d::dynamics::rigid_body::physics_material::CoefficientCombine:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -922,7 +922,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 113,
+    "id": 118,
     "name": "avian2d::dynamics::rigid_body::physics_material::Friction",
     "type": "class",
     "useAs": [
@@ -950,7 +950,7 @@
     ]
   },
   {
-    "id": 107,
+    "id": 111,
     "name": "avian2d::dynamics::rigid_body::physics_material::Restitution",
     "type": "class",
     "useAs": [
@@ -973,7 +973,7 @@
     ]
   },
   {
-    "id": 103,
+    "id": 107,
     "name": "avian2d::dynamics::sleeping::SleepingThreshold",
     "type": "class",
     "useAs": [
@@ -995,7 +995,7 @@
     ]
   },
   {
-    "id": 220,
+    "id": 224,
     "name": "avian2d::dynamics::solver::SolverConfig",
     "type": "class",
     "useAs": [
@@ -1037,7 +1037,7 @@
     ]
   },
   {
-    "id": 366,
+    "id": 369,
     "name": "avian2d::dynamics::solver::joints::AngleLimit",
     "type": "class",
     "useAs": [
@@ -1059,7 +1059,7 @@
     ]
   },
   {
-    "id": 411,
+    "id": 412,
     "name": "avian2d::dynamics::solver::joints::DistanceLimit",
     "type": "class",
     "useAs": [
@@ -1081,7 +1081,7 @@
     ]
   },
   {
-    "id": 51,
+    "id": 54,
     "name": "avian2d::dynamics::solver::joints::distance::DistanceJoint",
     "type": "class",
     "useAs": [
@@ -1152,7 +1152,7 @@
     ]
   },
   {
-    "id": 98,
+    "id": 101,
     "name": "avian2d::dynamics::solver::joints::fixed::FixedJoint",
     "type": "class",
     "useAs": [
@@ -1222,7 +1222,7 @@
     ]
   },
   {
-    "id": 231,
+    "id": 235,
     "name": "avian2d::dynamics::solver::joints::prismatic::PrismaticJoint",
     "type": "class",
     "useAs": [
@@ -1396,7 +1396,7 @@
     ]
   },
   {
-    "id": 54,
+    "id": 57,
     "name": "avian2d::dynamics::solver::schedule::SubstepCount",
     "type": "class",
     "useAs": [
@@ -1413,7 +1413,7 @@
     ]
   },
   {
-    "id": 333,
+    "id": 338,
     "name": "avian2d::position::Position",
     "type": "class",
     "useAs": [
@@ -1434,7 +1434,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 35,
     "name": "avian2d::position::PreSolveAccumulatedTranslation",
     "type": "class",
     "useAs": [
@@ -1476,7 +1476,7 @@
     ]
   },
   {
-    "id": 187,
+    "id": 189,
     "name": "avian2d::position::PreviousRotation",
     "type": "class",
     "useAs": [
@@ -1497,7 +1497,7 @@
     ]
   },
   {
-    "id": 204,
+    "id": 208,
     "name": "avian2d::position::Rotation",
     "type": "class",
     "useAs": [
@@ -1519,7 +1519,7 @@
     ]
   },
   {
-    "id": 184,
+    "id": 187,
     "name": "avian2d::prepare::PrepareConfig",
     "type": "class",
     "useAs": [
@@ -1541,7 +1541,7 @@
     ]
   },
   {
-    "id": 316,
+    "id": 321,
     "name": "avian2d::sync::PreviousGlobalTransform",
     "type": "class",
     "useAs": [
@@ -1559,7 +1559,7 @@
     ]
   },
   {
-    "id": 198,
+    "id": 202,
     "name": "avian2d::sync::SyncConfig",
     "type": "class",
     "useAs": [
@@ -1597,7 +1597,7 @@
     "members": []
   },
   {
-    "id": 26,
+    "id": 27,
     "name": "avian2d::sync::ancestor_marker::AncestorMarker<avian2d::dynamics::rigid_body::RigidBody>",
     "type": "class",
     "useAs": [
@@ -1608,7 +1608,7 @@
     "members": []
   },
   {
-    "id": 247,
+    "id": 249,
     "name": "bevy_animation::graph::AnimationGraphHandle",
     "type": "class",
     "useAs": [
@@ -1625,7 +1625,7 @@
     ]
   },
   {
-    "id": 360,
+    "id": 363,
     "name": "bevy_asset::assets::AssetIndex",
     "type": "class",
     "useAs": [
@@ -1647,7 +1647,7 @@
     ]
   },
   {
-    "id": 136,
+    "id": 139,
     "name": "bevy_audio::audio::DefaultSpatialScale",
     "type": "class",
     "useAs": [
@@ -1671,7 +1671,7 @@
     ]
   },
   {
-    "id": 565,
+    "id": 583,
     "name": "bevy_audio::audio::PlaybackMode",
     "type": "class",
     "useAs": [
@@ -1689,7 +1689,7 @@
     ]
   },
   {
-    "id": 564,
+    "id": 582,
     "name": "bevy_audio::audio::PlaybackMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1702,7 +1702,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 200,
+    "id": 205,
     "name": "bevy_audio::audio::PlaybackSettings",
     "type": "class",
     "useAs": [
@@ -1752,7 +1752,7 @@
     ]
   },
   {
-    "id": 299,
+    "id": 303,
     "name": "bevy_audio::audio::SpatialListener",
     "type": "class",
     "useAs": [
@@ -1784,7 +1784,7 @@
     ]
   },
   {
-    "id": 525,
+    "id": 539,
     "name": "bevy_audio::audio::SpatialScale",
     "type": "class",
     "useAs": [
@@ -1806,7 +1806,7 @@
     ]
   },
   {
-    "id": 146,
+    "id": 150,
     "name": "bevy_audio::volume::GlobalVolume",
     "type": "class",
     "useAs": [
@@ -1824,7 +1824,7 @@
     ]
   },
   {
-    "id": 532,
+    "id": 550,
     "name": "bevy_audio::volume::Volume",
     "type": "class",
     "useAs": [
@@ -1854,7 +1854,7 @@
     ]
   },
   {
-    "id": 529,
+    "id": 547,
     "name": "bevy_audio::volume::Volume:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1865,7 +1865,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 531,
+    "id": 549,
     "name": "bevy_audio::volume::Volume::Decibels",
     "type": "class",
     "useAs": [
@@ -1882,7 +1882,7 @@
     ]
   },
   {
-    "id": 530,
+    "id": 548,
     "name": "bevy_audio::volume::Volume::Linear",
     "type": "class",
     "useAs": [
@@ -1899,7 +1899,7 @@
     ]
   },
   {
-    "id": 387,
+    "id": 390,
     "name": "bevy_color::color::Color",
     "type": "class",
     "useAs": [
@@ -1977,7 +1977,7 @@
     ]
   },
   {
-    "id": 376,
+    "id": 379,
     "name": "bevy_color::color::Color:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1996,7 +1996,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 379,
+    "id": 382,
     "name": "bevy_color::color::Color::Hsla",
     "type": "class",
     "useAs": [
@@ -2014,7 +2014,7 @@
     ]
   },
   {
-    "id": 380,
+    "id": 383,
     "name": "bevy_color::color::Color::Hsva",
     "type": "class",
     "useAs": [
@@ -2032,7 +2032,7 @@
     ]
   },
   {
-    "id": 381,
+    "id": 384,
     "name": "bevy_color::color::Color::Hwba",
     "type": "class",
     "useAs": [
@@ -2050,7 +2050,7 @@
     ]
   },
   {
-    "id": 382,
+    "id": 385,
     "name": "bevy_color::color::Color::Laba",
     "type": "class",
     "useAs": [
@@ -2068,7 +2068,7 @@
     ]
   },
   {
-    "id": 383,
+    "id": 386,
     "name": "bevy_color::color::Color::Lcha",
     "type": "class",
     "useAs": [
@@ -2086,7 +2086,7 @@
     ]
   },
   {
-    "id": 378,
+    "id": 381,
     "name": "bevy_color::color::Color::LinearRgba",
     "type": "class",
     "useAs": [
@@ -2104,7 +2104,7 @@
     ]
   },
   {
-    "id": 384,
+    "id": 387,
     "name": "bevy_color::color::Color::Oklaba",
     "type": "class",
     "useAs": [
@@ -2122,7 +2122,7 @@
     ]
   },
   {
-    "id": 385,
+    "id": 388,
     "name": "bevy_color::color::Color::Oklcha",
     "type": "class",
     "useAs": [
@@ -2140,7 +2140,7 @@
     ]
   },
   {
-    "id": 377,
+    "id": 380,
     "name": "bevy_color::color::Color::Srgba",
     "type": "class",
     "useAs": [
@@ -2158,7 +2158,7 @@
     ]
   },
   {
-    "id": 386,
+    "id": 389,
     "name": "bevy_color::color::Color::Xyza",
     "type": "class",
     "useAs": [
@@ -2176,7 +2176,7 @@
     ]
   },
   {
-    "id": 390,
+    "id": 393,
     "name": "bevy_color::hsla::Hsla",
     "type": "class",
     "useAs": [
@@ -2208,7 +2208,7 @@
     ]
   },
   {
-    "id": 391,
+    "id": 394,
     "name": "bevy_color::hsva::Hsva",
     "type": "class",
     "useAs": [
@@ -2240,7 +2240,7 @@
     ]
   },
   {
-    "id": 392,
+    "id": 395,
     "name": "bevy_color::hwba::Hwba",
     "type": "class",
     "useAs": [
@@ -2272,7 +2272,7 @@
     ]
   },
   {
-    "id": 393,
+    "id": 396,
     "name": "bevy_color::laba::Laba",
     "type": "class",
     "useAs": [
@@ -2304,7 +2304,7 @@
     ]
   },
   {
-    "id": 394,
+    "id": 397,
     "name": "bevy_color::lcha::Lcha",
     "type": "class",
     "useAs": [
@@ -2336,7 +2336,7 @@
     ]
   },
   {
-    "id": 389,
+    "id": 392,
     "name": "bevy_color::linear_rgba::LinearRgba",
     "type": "class",
     "useAs": [
@@ -2368,7 +2368,7 @@
     ]
   },
   {
-    "id": 395,
+    "id": 398,
     "name": "bevy_color::oklaba::Oklaba",
     "type": "class",
     "useAs": [
@@ -2400,7 +2400,7 @@
     ]
   },
   {
-    "id": 396,
+    "id": 399,
     "name": "bevy_color::oklcha::Oklcha",
     "type": "class",
     "useAs": [
@@ -2432,7 +2432,7 @@
     ]
   },
   {
-    "id": 388,
+    "id": 391,
     "name": "bevy_color::srgba::Srgba",
     "type": "class",
     "useAs": [
@@ -2464,7 +2464,7 @@
     ]
   },
   {
-    "id": 397,
+    "id": 400,
     "name": "bevy_color::xyza::Xyza",
     "type": "class",
     "useAs": [
@@ -2496,7 +2496,7 @@
     ]
   },
   {
-    "id": 119,
+    "id": 123,
     "name": "bevy_core_pipeline::bloom::settings::Bloom",
     "type": "class",
     "useAs": [
@@ -2557,7 +2557,7 @@
     ]
   },
   {
-    "id": 489,
+    "id": 503,
     "name": "bevy_core_pipeline::bloom::settings::BloomCompositeMode",
     "type": "class",
     "useAs": [
@@ -2575,7 +2575,7 @@
     ]
   },
   {
-    "id": 488,
+    "id": 502,
     "name": "bevy_core_pipeline::bloom::settings::BloomCompositeMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -2586,7 +2586,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 487,
+    "id": 501,
     "name": "bevy_core_pipeline::bloom::settings::BloomPrefilter",
     "type": "class",
     "useAs": [
@@ -2608,7 +2608,7 @@
     ]
   },
   {
-    "id": 344,
+    "id": 349,
     "name": "bevy_core_pipeline::contrast_adaptive_sharpening::ContrastAdaptiveSharpening",
     "type": "class",
     "useAs": [
@@ -2635,7 +2635,7 @@
     ]
   },
   {
-    "id": 97,
+    "id": 100,
     "name": "bevy_core_pipeline::core_2d::camera_2d::Camera2d",
     "type": "class",
     "useAs": [
@@ -2683,7 +2683,7 @@
     ]
   },
   {
-    "id": 374,
+    "id": 377,
     "name": "bevy_core_pipeline::core_3d::camera_3d::Camera3dDepthLoadOp",
     "type": "class",
     "useAs": [
@@ -2707,7 +2707,7 @@
     ]
   },
   {
-    "id": 372,
+    "id": 375,
     "name": "bevy_core_pipeline::core_3d::camera_3d::Camera3dDepthLoadOp:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -2718,7 +2718,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 373,
+    "id": 376,
     "name": "bevy_core_pipeline::core_3d::camera_3d::Camera3dDepthLoadOp::Clear",
     "type": "class",
     "useAs": [
@@ -2735,7 +2735,7 @@
     ]
   },
   {
-    "id": 375,
+    "id": 378,
     "name": "bevy_core_pipeline::core_3d::camera_3d::Camera3dDepthTextureUsage",
     "type": "class",
     "useAs": [
@@ -2752,7 +2752,7 @@
     ]
   },
   {
-    "id": 265,
+    "id": 266,
     "name": "bevy_core_pipeline::core_3d::camera_3d::ScreenSpaceTransmissionQuality",
     "type": "class",
     "useAs": [
@@ -2770,7 +2770,7 @@
     ]
   },
   {
-    "id": 264,
+    "id": 265,
     "name": "bevy_core_pipeline::core_3d::camera_3d::ScreenSpaceTransmissionQuality:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -2783,7 +2783,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 335,
+    "id": 340,
     "name": "bevy_core_pipeline::dof::DepthOfField",
     "type": "class",
     "useAs": [
@@ -2826,7 +2826,7 @@
     ]
   },
   {
-    "id": 778,
+    "id": 781,
     "name": "bevy_core_pipeline::dof::DepthOfFieldMode",
     "type": "class",
     "useAs": [
@@ -2844,7 +2844,7 @@
     ]
   },
   {
-    "id": 777,
+    "id": 780,
     "name": "bevy_core_pipeline::dof::DepthOfFieldMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -2855,7 +2855,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 182,
+    "id": 185,
     "name": "bevy_core_pipeline::fxaa::Fxaa",
     "type": "class",
     "useAs": [
@@ -2884,7 +2884,7 @@
     ]
   },
   {
-    "id": 546,
+    "id": 564,
     "name": "bevy_core_pipeline::fxaa::Sensitivity",
     "type": "class",
     "useAs": [
@@ -2902,7 +2902,7 @@
     ]
   },
   {
-    "id": 545,
+    "id": 563,
     "name": "bevy_core_pipeline::fxaa::Sensitivity:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -2943,7 +2943,7 @@
     ]
   },
   {
-    "id": 219,
+    "id": 223,
     "name": "bevy_core_pipeline::prepass::DeferredPrepass",
     "type": "class",
     "useAs": [
@@ -2954,7 +2954,7 @@
     "members": []
   },
   {
-    "id": 27,
+    "id": 28,
     "name": "bevy_core_pipeline::prepass::DepthPrepass",
     "type": "class",
     "useAs": [
@@ -2965,7 +2965,7 @@
     "members": []
   },
   {
-    "id": 353,
+    "id": 356,
     "name": "bevy_core_pipeline::prepass::MotionVectorPrepass",
     "type": "class",
     "useAs": [
@@ -2976,7 +2976,7 @@
     "members": []
   },
   {
-    "id": 63,
+    "id": 66,
     "name": "bevy_core_pipeline::prepass::NormalPrepass",
     "type": "class",
     "useAs": [
@@ -2987,7 +2987,7 @@
     "members": []
   },
   {
-    "id": 52,
+    "id": 55,
     "name": "bevy_core_pipeline::skybox::Skybox",
     "type": "class",
     "useAs": [
@@ -3020,7 +3020,7 @@
     ]
   },
   {
-    "id": 325,
+    "id": 330,
     "name": "bevy_core_pipeline::smaa::Smaa",
     "type": "class",
     "useAs": [
@@ -3038,7 +3038,7 @@
     ]
   },
   {
-    "id": 773,
+    "id": 776,
     "name": "bevy_core_pipeline::smaa::SmaaPreset",
     "type": "class",
     "useAs": [
@@ -3056,7 +3056,7 @@
     ]
   },
   {
-    "id": 772,
+    "id": 775,
     "name": "bevy_core_pipeline::smaa::SmaaPreset:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3069,7 +3069,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 140,
+    "id": 144,
     "name": "bevy_core_pipeline::tonemapping::DebandDither",
     "type": "class",
     "useAs": [
@@ -3087,7 +3087,7 @@
     ]
   },
   {
-    "id": 139,
+    "id": 143,
     "name": "bevy_core_pipeline::tonemapping::DebandDither:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3098,7 +3098,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 42,
+    "id": 45,
     "name": "bevy_core_pipeline::tonemapping::Tonemapping",
     "type": "class",
     "useAs": [
@@ -3116,7 +3116,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 44,
     "name": "bevy_core_pipeline::tonemapping::Tonemapping:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3172,7 +3172,7 @@
     ]
   },
   {
-    "id": 189,
+    "id": 191,
     "name": "bevy_ecs_tiled::TiledMapPluginConfig",
     "type": "class",
     "useAs": [
@@ -3190,7 +3190,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 33,
     "name": "bevy_ecs_tiled::map::TiledMapHandle",
     "type": "class",
     "useAs": [
@@ -3218,7 +3218,7 @@
     "members": []
   },
   {
-    "id": 258,
+    "id": 259,
     "name": "bevy_ecs_tiled::map::components::TiledMapImage",
     "type": "class",
     "useAs": [
@@ -3251,7 +3251,7 @@
     "members": []
   },
   {
-    "id": 116,
+    "id": 121,
     "name": "bevy_ecs_tiled::map::components::TiledMapLayerZOffset",
     "type": "class",
     "useAs": [
@@ -3268,7 +3268,7 @@
     ]
   },
   {
-    "id": 64,
+    "id": 67,
     "name": "bevy_ecs_tiled::map::components::TiledMapMarker",
     "type": "class",
     "useAs": [
@@ -3279,7 +3279,7 @@
     "members": []
   },
   {
-    "id": 80,
+    "id": 82,
     "name": "bevy_ecs_tiled::map::components::TiledMapObject",
     "type": "class",
     "useAs": [
@@ -3290,7 +3290,7 @@
     "members": []
   },
   {
-    "id": 78,
+    "id": 80,
     "name": "bevy_ecs_tiled::map::components::TiledMapObjectLayer",
     "type": "class",
     "useAs": [
@@ -3301,7 +3301,7 @@
     "members": []
   },
   {
-    "id": 252,
+    "id": 253,
     "name": "bevy_ecs_tiled::map::components::TiledMapTile",
     "type": "class",
     "useAs": [
@@ -3312,7 +3312,7 @@
     "members": []
   },
   {
-    "id": 185,
+    "id": 188,
     "name": "bevy_ecs_tiled::map::components::TiledMapTileLayer",
     "type": "class",
     "useAs": [
@@ -3323,7 +3323,7 @@
     "members": []
   },
   {
-    "id": 161,
+    "id": 163,
     "name": "bevy_ecs_tiled::map::components::TiledMapTileLayerForTileset",
     "type": "class",
     "useAs": [
@@ -3334,7 +3334,7 @@
     "members": []
   },
   {
-    "id": 58,
+    "id": 61,
     "name": "bevy_ecs_tiled::physics::collider::TiledColliderCreated",
     "type": "class",
     "useAs": [
@@ -3351,7 +3351,7 @@
     ]
   },
   {
-    "id": 263,
+    "id": 264,
     "name": "bevy_ecs_tiled::physics::collider::TiledColliderMarker",
     "type": "class",
     "useAs": [
@@ -3362,7 +3362,7 @@
     "members": []
   },
   {
-    "id": 300,
+    "id": 304,
     "name": "bevy_ecs_tiled::world::TiledWorldHandle",
     "type": "class",
     "useAs": [
@@ -3379,7 +3379,7 @@
     ]
   },
   {
-    "id": 329,
+    "id": 334,
     "name": "bevy_ecs_tiled::world::components::RespawnTiledWorld",
     "type": "class",
     "useAs": [
@@ -3390,7 +3390,7 @@
     "members": []
   },
   {
-    "id": 114,
+    "id": 119,
     "name": "bevy_ecs_tiled::world::components::TiledWorldChunking",
     "type": "class",
     "useAs": [
@@ -3408,7 +3408,7 @@
     ]
   },
   {
-    "id": 324,
+    "id": 329,
     "name": "bevy_ecs_tiled::world::components::TiledWorldMarker",
     "type": "class",
     "useAs": [
@@ -3419,7 +3419,7 @@
     "members": []
   },
   {
-    "id": 283,
+    "id": 286,
     "name": "bevy_ecs_tilemap::FrustumCulling",
     "type": "class",
     "useAs": [
@@ -3436,7 +3436,7 @@
     ]
   },
   {
-    "id": 77,
+    "id": 79,
     "name": "bevy_ecs_tilemap::anchor::TilemapAnchor",
     "type": "class",
     "useAs": [
@@ -3460,7 +3460,7 @@
     ]
   },
   {
-    "id": 75,
+    "id": 77,
     "name": "bevy_ecs_tilemap::anchor::TilemapAnchor:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3480,7 +3480,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 76,
+    "id": 78,
     "name": "bevy_ecs_tilemap::anchor::TilemapAnchor::Custom",
     "type": "class",
     "useAs": [
@@ -3498,7 +3498,7 @@
     ]
   },
   {
-    "id": 781,
+    "id": 784,
     "name": "bevy_ecs_tilemap::map::HexCoordSystem",
     "type": "class",
     "useAs": [
@@ -3516,7 +3516,7 @@
     ]
   },
   {
-    "id": 780,
+    "id": 783,
     "name": "bevy_ecs_tilemap::map::HexCoordSystem:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3531,7 +3531,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 783,
+    "id": 786,
     "name": "bevy_ecs_tilemap::map::IsoCoordSystem",
     "type": "class",
     "useAs": [
@@ -3549,7 +3549,7 @@
     ]
   },
   {
-    "id": 782,
+    "id": 785,
     "name": "bevy_ecs_tilemap::map::IsoCoordSystem:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3560,7 +3560,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 85,
+    "id": 87,
     "name": "bevy_ecs_tilemap::map::TilemapGridSize",
     "type": "class",
     "useAs": [
@@ -3582,7 +3582,7 @@
     ]
   },
   {
-    "id": 49,
+    "id": 52,
     "name": "bevy_ecs_tilemap::map::TilemapId",
     "type": "class",
     "useAs": [
@@ -3599,7 +3599,7 @@
     ]
   },
   {
-    "id": 229,
+    "id": 232,
     "name": "bevy_ecs_tilemap::map::TilemapSize",
     "type": "class",
     "useAs": [
@@ -3621,7 +3621,7 @@
     ]
   },
   {
-    "id": 188,
+    "id": 190,
     "name": "bevy_ecs_tilemap::map::TilemapSpacing",
     "type": "class",
     "useAs": [
@@ -3643,7 +3643,7 @@
     ]
   },
   {
-    "id": 215,
+    "id": 219,
     "name": "bevy_ecs_tilemap::map::TilemapTextureSize",
     "type": "class",
     "useAs": [
@@ -3665,7 +3665,7 @@
     ]
   },
   {
-    "id": 268,
+    "id": 270,
     "name": "bevy_ecs_tilemap::map::TilemapTileSize",
     "type": "class",
     "useAs": [
@@ -3687,7 +3687,7 @@
     ]
   },
   {
-    "id": 352,
+    "id": 355,
     "name": "bevy_ecs_tilemap::map::TilemapType",
     "type": "class",
     "useAs": [
@@ -3717,7 +3717,7 @@
     ]
   },
   {
-    "id": 349,
+    "id": 352,
     "name": "bevy_ecs_tilemap::map::TilemapType:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -3729,7 +3729,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 350,
+    "id": 353,
     "name": "bevy_ecs_tilemap::map::TilemapType::Hexagon",
     "type": "class",
     "useAs": [
@@ -3747,7 +3747,7 @@
     ]
   },
   {
-    "id": 351,
+    "id": 354,
     "name": "bevy_ecs_tilemap::map::TilemapType::Isometric",
     "type": "class",
     "useAs": [
@@ -3765,7 +3765,7 @@
     ]
   },
   {
-    "id": 207,
+    "id": 211,
     "name": "bevy_ecs_tilemap::tiles::TileColor",
     "type": "class",
     "useAs": [
@@ -3782,7 +3782,7 @@
     ]
   },
   {
-    "id": 149,
+    "id": 152,
     "name": "bevy_ecs_tilemap::tiles::TileFlip",
     "type": "class",
     "useAs": [
@@ -3831,7 +3831,7 @@
     ]
   },
   {
-    "id": 145,
+    "id": 149,
     "name": "bevy_ecs_tilemap::tiles::TilePosOld",
     "type": "class",
     "useAs": [
@@ -3849,7 +3849,7 @@
     ]
   },
   {
-    "id": 296,
+    "id": 300,
     "name": "bevy_ecs_tilemap::tiles::TileTextureIndex",
     "type": "class",
     "useAs": [
@@ -3866,7 +3866,7 @@
     ]
   },
   {
-    "id": 336,
+    "id": 341,
     "name": "bevy_ecs_tilemap::tiles::TileVisible",
     "type": "class",
     "useAs": [
@@ -3883,7 +3883,7 @@
     ]
   },
   {
-    "id": 257,
+    "id": 258,
     "name": "bevy_gizmos::config::GizmoConfigStore",
     "type": "class",
     "useAs": [
@@ -3894,7 +3894,7 @@
     "members": []
   },
   {
-    "id": 225,
+    "id": 228,
     "name": "bevy_gltf::assets::GltfExtras",
     "type": "class",
     "useAs": [
@@ -3911,7 +3911,7 @@
     ]
   },
   {
-    "id": 343,
+    "id": 348,
     "name": "bevy_gltf::assets::GltfMaterialExtras",
     "type": "class",
     "useAs": [
@@ -3928,7 +3928,7 @@
     ]
   },
   {
-    "id": 74,
+    "id": 76,
     "name": "bevy_gltf::assets::GltfMaterialName",
     "type": "class",
     "useAs": [
@@ -3945,7 +3945,7 @@
     ]
   },
   {
-    "id": 134,
+    "id": 137,
     "name": "bevy_gltf::assets::GltfMeshExtras",
     "type": "class",
     "useAs": [
@@ -3962,7 +3962,7 @@
     ]
   },
   {
-    "id": 44,
+    "id": 47,
     "name": "bevy_gltf::assets::GltfSceneExtras",
     "type": "class",
     "useAs": [
@@ -3979,7 +3979,7 @@
     ]
   },
   {
-    "id": 736,
+    "id": 739,
     "name": "bevy_heavy::dim2::MassProperties2d",
     "type": "class",
     "useAs": [
@@ -4007,7 +4007,7 @@
     ]
   },
   {
-    "id": 479,
+    "id": 488,
     "name": "bevy_image::texture_atlas::TextureAtlas",
     "type": "class",
     "useAs": [
@@ -4029,7 +4029,7 @@
     ]
   },
   {
-    "id": 342,
+    "id": 347,
     "name": "bevy_input::mouse::AccumulatedMouseMotion",
     "type": "class",
     "useAs": [
@@ -4050,7 +4050,7 @@
     ]
   },
   {
-    "id": 67,
+    "id": 70,
     "name": "bevy_input::mouse::AccumulatedMouseScroll",
     "type": "class",
     "useAs": [
@@ -4077,7 +4077,7 @@
     ]
   },
   {
-    "id": 419,
+    "id": 420,
     "name": "bevy_input::mouse::MouseScrollUnit",
     "type": "class",
     "useAs": [
@@ -4095,7 +4095,7 @@
     ]
   },
   {
-    "id": 418,
+    "id": 419,
     "name": "bevy_input::mouse::MouseScrollUnit:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -4106,7 +4106,66 @@
     "valuesAsFlags": false
   },
   {
-    "id": 721,
+    "id": 25,
+    "name": "bevy_light_2d::light::AmbientLight2d",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "color",
+        "type": "color",
+        "value": "#ffffffff"
+      },
+      {
+        "name": "brightness",
+        "type": "float",
+        "value": 1.0
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "bevy_light_2d::light::PointLight2d",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "color",
+        "type": "color",
+        "value": "#ffffffff"
+      },
+      {
+        "name": "intensity",
+        "type": "float",
+        "value": 1.0
+      },
+      {
+        "name": "radius",
+        "type": "float",
+        "value": 0.5
+      },
+      {
+        "name": "falloff",
+        "type": "float",
+        "value": 0.0
+      },
+      {
+        "name": "cast_shadows",
+        "type": "bool",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": 724,
     "name": "bevy_math::compass::CompassOctant",
     "type": "class",
     "useAs": [
@@ -4124,7 +4183,7 @@
     ]
   },
   {
-    "id": 720,
+    "id": 723,
     "name": "bevy_math::compass::CompassOctant:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -4141,7 +4200,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 435,
+    "id": 432,
     "name": "bevy_math::float_ord::FloatOrd",
     "type": "class",
     "useAs": [
@@ -4158,7 +4217,7 @@
     ]
   },
   {
-    "id": 439,
+    "id": 436,
     "name": "bevy_math::rects::rect::Rect",
     "type": "class",
     "useAs": [
@@ -4188,7 +4247,7 @@
     ]
   },
   {
-    "id": 485,
+    "id": 494,
     "name": "bevy_math::rects::urect::URect",
     "type": "class",
     "useAs": [
@@ -4218,7 +4277,7 @@
     ]
   },
   {
-    "id": 281,
+    "id": 284,
     "name": "bevy_pbr::cluster::ClusterConfig",
     "type": "class",
     "useAs": [
@@ -4248,7 +4307,7 @@
     ]
   },
   {
-    "id": 278,
+    "id": 281,
     "name": "bevy_pbr::cluster::ClusterConfig:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -4261,7 +4320,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 280,
+    "id": 283,
     "name": "bevy_pbr::cluster::ClusterConfig::FixedZ",
     "type": "class",
     "useAs": [
@@ -4294,7 +4353,7 @@
     ]
   },
   {
-    "id": 279,
+    "id": 282,
     "name": "bevy_pbr::cluster::ClusterConfig::XYZ",
     "type": "class",
     "useAs": [
@@ -4323,7 +4382,7 @@
     ]
   },
   {
-    "id": 735,
+    "id": 738,
     "name": "bevy_pbr::cluster::ClusterFarZMode",
     "type": "class",
     "useAs": [
@@ -4347,7 +4406,7 @@
     ]
   },
   {
-    "id": 733,
+    "id": 736,
     "name": "bevy_pbr::cluster::ClusterFarZMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -4358,7 +4417,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 734,
+    "id": 737,
     "name": "bevy_pbr::cluster::ClusterFarZMode::Constant",
     "type": "class",
     "useAs": [
@@ -4375,7 +4434,7 @@
     ]
   },
   {
-    "id": 732,
+    "id": 735,
     "name": "bevy_pbr::cluster::ClusterZConfig",
     "type": "class",
     "useAs": [
@@ -4409,7 +4468,7 @@
     "members": []
   },
   {
-    "id": 92,
+    "id": 93,
     "name": "bevy_pbr::components::CubemapVisibleEntities",
     "type": "class",
     "useAs": [
@@ -4431,7 +4490,7 @@
     "members": []
   },
   {
-    "id": 192,
+    "id": 194,
     "name": "bevy_pbr::decal::clustered::ClusteredDecal",
     "type": "class",
     "useAs": [
@@ -4453,7 +4512,7 @@
     ]
   },
   {
-    "id": 354,
+    "id": 357,
     "name": "bevy_pbr::fog::DistanceFog",
     "type": "class",
     "useAs": [
@@ -4486,7 +4545,7 @@
     ]
   },
   {
-    "id": 789,
+    "id": 792,
     "name": "bevy_pbr::fog::FogFalloff",
     "type": "class",
     "useAs": [
@@ -4528,7 +4587,7 @@
     ]
   },
   {
-    "id": 784,
+    "id": 787,
     "name": "bevy_pbr::fog::FogFalloff:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -4541,7 +4600,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 788,
+    "id": 791,
     "name": "bevy_pbr::fog::FogFalloff::Atmospheric",
     "type": "class",
     "useAs": [
@@ -4565,7 +4624,7 @@
     ]
   },
   {
-    "id": 786,
+    "id": 789,
     "name": "bevy_pbr::fog::FogFalloff::Exponential",
     "type": "class",
     "useAs": [
@@ -4582,7 +4641,7 @@
     ]
   },
   {
-    "id": 787,
+    "id": 790,
     "name": "bevy_pbr::fog::FogFalloff::ExponentialSquared",
     "type": "class",
     "useAs": [
@@ -4599,7 +4658,7 @@
     ]
   },
   {
-    "id": 785,
+    "id": 788,
     "name": "bevy_pbr::fog::FogFalloff::Linear",
     "type": "class",
     "useAs": [
@@ -4621,7 +4680,7 @@
     ]
   },
   {
-    "id": 248,
+    "id": 250,
     "name": "bevy_pbr::light::DirectionalLightShadowMap",
     "type": "class",
     "useAs": [
@@ -4638,7 +4697,7 @@
     ]
   },
   {
-    "id": 222,
+    "id": 226,
     "name": "bevy_pbr::light::NotShadowCaster",
     "type": "class",
     "useAs": [
@@ -4649,7 +4708,7 @@
     "members": []
   },
   {
-    "id": 317,
+    "id": 322,
     "name": "bevy_pbr::light::NotShadowReceiver",
     "type": "class",
     "useAs": [
@@ -4677,7 +4736,7 @@
     ]
   },
   {
-    "id": 121,
+    "id": 125,
     "name": "bevy_pbr::light::ShadowFilteringMethod",
     "type": "class",
     "useAs": [
@@ -4695,7 +4754,7 @@
     ]
   },
   {
-    "id": 120,
+    "id": 124,
     "name": "bevy_pbr::light::ShadowFilteringMethod:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -4707,7 +4766,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 99,
+    "id": 102,
     "name": "bevy_pbr::light::ambient_light::AmbientLight",
     "type": "class",
     "useAs": [
@@ -4734,7 +4793,7 @@
     ]
   },
   {
-    "id": 331,
+    "id": 336,
     "name": "bevy_pbr::light::directional_light::DirectionalLight",
     "type": "class",
     "useAs": [
@@ -4776,7 +4835,7 @@
     ]
   },
   {
-    "id": 290,
+    "id": 294,
     "name": "bevy_pbr::light::point_light::PointLight",
     "type": "class",
     "useAs": [
@@ -4833,7 +4892,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 30,
     "name": "bevy_pbr::light::spot_light::SpotLight",
     "type": "class",
     "useAs": [
@@ -4900,7 +4959,7 @@
     ]
   },
   {
-    "id": 104,
+    "id": 108,
     "name": "bevy_pbr::light_probe::LightProbe",
     "type": "class",
     "useAs": [
@@ -4911,7 +4970,7 @@
     "members": []
   },
   {
-    "id": 132,
+    "id": 135,
     "name": "bevy_pbr::light_probe::environment_map::EnvironmentMapLight",
     "type": "class",
     "useAs": [
@@ -4954,7 +5013,7 @@
     ]
   },
   {
-    "id": 214,
+    "id": 218,
     "name": "bevy_pbr::light_probe::irradiance_volume::IrradianceVolume",
     "type": "class",
     "useAs": [
@@ -4981,7 +5040,7 @@
     ]
   },
   {
-    "id": 88,
+    "id": 89,
     "name": "bevy_pbr::material::DefaultOpaqueRendererMethod",
     "type": "class",
     "useAs": [
@@ -4999,7 +5058,7 @@
     ]
   },
   {
-    "id": 447,
+    "id": 444,
     "name": "bevy_pbr::material::OpaqueRendererMethod",
     "type": "class",
     "useAs": [
@@ -5017,7 +5076,7 @@
     ]
   },
   {
-    "id": 446,
+    "id": 443,
     "name": "bevy_pbr::material::OpaqueRendererMethod:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5046,7 +5105,7 @@
     ]
   },
   {
-    "id": 205,
+    "id": 209,
     "name": "bevy_pbr::mesh_material::MeshMaterial3d<bevy_pbr::pbr_material::StandardMaterial>",
     "type": "class",
     "useAs": [
@@ -5063,7 +5122,7 @@
     ]
   },
   {
-    "id": 261,
+    "id": 263,
     "name": "bevy_pbr::ssao::ScreenSpaceAmbientOcclusion",
     "type": "class",
     "useAs": [
@@ -5086,7 +5145,7 @@
     ]
   },
   {
-    "id": 650,
+    "id": 653,
     "name": "bevy_pbr::ssao::ScreenSpaceAmbientOcclusionQualityLevel",
     "type": "class",
     "useAs": [
@@ -5110,7 +5169,7 @@
     ]
   },
   {
-    "id": 648,
+    "id": 651,
     "name": "bevy_pbr::ssao::ScreenSpaceAmbientOcclusionQualityLevel:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5124,7 +5183,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 649,
+    "id": 652,
     "name": "bevy_pbr::ssao::ScreenSpaceAmbientOcclusionQualityLevel::Custom",
     "type": "class",
     "useAs": [
@@ -5146,7 +5205,7 @@
     ]
   },
   {
-    "id": 326,
+    "id": 331,
     "name": "bevy_pbr::ssr::ScreenSpaceReflections",
     "type": "class",
     "useAs": [
@@ -5188,7 +5247,7 @@
     ]
   },
   {
-    "id": 196,
+    "id": 199,
     "name": "bevy_pbr::volumetric_fog::VolumetricFog",
     "type": "class",
     "useAs": [
@@ -5220,7 +5279,7 @@
     ]
   },
   {
-    "id": 289,
+    "id": 292,
     "name": "bevy_pbr::volumetric_fog::VolumetricLight",
     "type": "class",
     "useAs": [
@@ -5231,7 +5290,7 @@
     "members": []
   },
   {
-    "id": 212,
+    "id": 216,
     "name": "bevy_picking::Pickable",
     "type": "class",
     "useAs": [
@@ -5253,7 +5312,7 @@
     ]
   },
   {
-    "id": 211,
+    "id": 215,
     "name": "bevy_picking::PickingPlugin",
     "type": "class",
     "useAs": [
@@ -5285,7 +5344,7 @@
     ]
   },
   {
-    "id": 340,
+    "id": 345,
     "name": "bevy_picking::hover::PickingInteraction",
     "type": "class",
     "useAs": [
@@ -5303,7 +5362,7 @@
     ]
   },
   {
-    "id": 339,
+    "id": 344,
     "name": "bevy_picking::hover::PickingInteraction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5315,7 +5374,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 48,
+    "id": 51,
     "name": "bevy_picking::input::PointerInputPlugin",
     "type": "class",
     "useAs": [
@@ -5337,7 +5396,7 @@
     ]
   },
   {
-    "id": 135,
+    "id": 138,
     "name": "bevy_picking::pointer::PointerLocation",
     "type": "class",
     "useAs": [
@@ -5348,7 +5407,7 @@
     "members": []
   },
   {
-    "id": 181,
+    "id": 184,
     "name": "bevy_picking::pointer::PointerPress",
     "type": "class",
     "useAs": [
@@ -5375,7 +5434,7 @@
     ]
   },
   {
-    "id": 271,
+    "id": 273,
     "name": "bevy_render::camera::camera::Camera",
     "type": "class",
     "useAs": [
@@ -5431,7 +5490,7 @@
     ]
   },
   {
-    "id": 432,
+    "id": 429,
     "name": "bevy_render::camera::camera::ImageRenderTarget",
     "type": "class",
     "useAs": [
@@ -5454,7 +5513,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": 29,
     "name": "bevy_render::camera::camera::MipBias",
     "type": "class",
     "useAs": [
@@ -5471,7 +5530,7 @@
     ]
   },
   {
-    "id": 428,
+    "id": 425,
     "name": "bevy_render::camera::camera::RenderTarget",
     "type": "class",
     "useAs": [
@@ -5507,7 +5566,7 @@
     ]
   },
   {
-    "id": 424,
+    "id": 421,
     "name": "bevy_render::camera::camera::RenderTarget:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5519,7 +5578,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 426,
+    "id": 423,
     "name": "bevy_render::camera::camera::RenderTarget::Image",
     "type": "class",
     "useAs": [
@@ -5537,7 +5596,7 @@
     ]
   },
   {
-    "id": 427,
+    "id": 424,
     "name": "bevy_render::camera::camera::RenderTarget::TextureView",
     "type": "class",
     "useAs": [
@@ -5555,7 +5614,7 @@
     ]
   },
   {
-    "id": 425,
+    "id": 422,
     "name": "bevy_render::camera::camera::RenderTarget::Window",
     "type": "class",
     "useAs": [
@@ -5573,7 +5632,7 @@
     ]
   },
   {
-    "id": 666,
+    "id": 669,
     "name": "bevy_render::camera::camera::SubCameraView",
     "type": "class",
     "useAs": [
@@ -5633,7 +5692,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": 31,
     "name": "bevy_render::camera::clear_color::ClearColor",
     "type": "class",
     "useAs": [
@@ -5650,7 +5709,7 @@
     ]
   },
   {
-    "id": 656,
+    "id": 659,
     "name": "bevy_render::camera::clear_color::ClearColorConfig",
     "type": "class",
     "useAs": [
@@ -5674,7 +5733,7 @@
     ]
   },
   {
-    "id": 654,
+    "id": 657,
     "name": "bevy_render::camera::clear_color::ClearColorConfig:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5686,7 +5745,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 655,
+    "id": 658,
     "name": "bevy_render::camera::clear_color::ClearColorConfig::Custom",
     "type": "class",
     "useAs": [
@@ -5703,7 +5762,7 @@
     ]
   },
   {
-    "id": 89,
+    "id": 90,
     "name": "bevy_render::camera::manual_texture_view::ManualTextureViewHandle",
     "type": "class",
     "useAs": [
@@ -5720,7 +5779,7 @@
     ]
   },
   {
-    "id": 617,
+    "id": 632,
     "name": "bevy_render::camera::projection::CustomProjection",
     "type": "class",
     "useAs": [
@@ -5731,7 +5790,7 @@
     "members": []
   },
   {
-    "id": 616,
+    "id": 631,
     "name": "bevy_render::camera::projection::OrthographicProjection",
     "type": "class",
     "useAs": [
@@ -5776,7 +5835,7 @@
     ]
   },
   {
-    "id": 615,
+    "id": 630,
     "name": "bevy_render::camera::projection::PerspectiveProjection",
     "type": "class",
     "useAs": [
@@ -5808,7 +5867,7 @@
     ]
   },
   {
-    "id": 239,
+    "id": 243,
     "name": "bevy_render::camera::projection::Projection",
     "type": "class",
     "useAs": [
@@ -5844,7 +5903,7 @@
     ]
   },
   {
-    "id": 235,
+    "id": 239,
     "name": "bevy_render::camera::projection::Projection:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5856,7 +5915,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 238,
+    "id": 242,
     "name": "bevy_render::camera::projection::Projection::Custom",
     "type": "class",
     "useAs": [
@@ -5874,7 +5933,7 @@
     ]
   },
   {
-    "id": 237,
+    "id": 241,
     "name": "bevy_render::camera::projection::Projection::Orthographic",
     "type": "class",
     "useAs": [
@@ -5892,7 +5951,7 @@
     ]
   },
   {
-    "id": 236,
+    "id": 240,
     "name": "bevy_render::camera::projection::Projection::Perspective",
     "type": "class",
     "useAs": [
@@ -5910,7 +5969,7 @@
     ]
   },
   {
-    "id": 624,
+    "id": 639,
     "name": "bevy_render::camera::projection::ScalingMode",
     "type": "class",
     "useAs": [
@@ -5958,7 +6017,7 @@
     ]
   },
   {
-    "id": 618,
+    "id": 633,
     "name": "bevy_render::camera::projection::ScalingMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -5973,7 +6032,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 621,
+    "id": 636,
     "name": "bevy_render::camera::projection::ScalingMode::AutoMax",
     "type": "class",
     "useAs": [
@@ -5995,7 +6054,7 @@
     ]
   },
   {
-    "id": 620,
+    "id": 635,
     "name": "bevy_render::camera::projection::ScalingMode::AutoMin",
     "type": "class",
     "useAs": [
@@ -6017,7 +6076,7 @@
     ]
   },
   {
-    "id": 619,
+    "id": 634,
     "name": "bevy_render::camera::projection::ScalingMode::Fixed",
     "type": "class",
     "useAs": [
@@ -6039,7 +6098,7 @@
     ]
   },
   {
-    "id": 623,
+    "id": 638,
     "name": "bevy_render::camera::projection::ScalingMode::FixedHorizontal",
     "type": "class",
     "useAs": [
@@ -6056,7 +6115,7 @@
     ]
   },
   {
-    "id": 622,
+    "id": 637,
     "name": "bevy_render::camera::projection::ScalingMode::FixedVertical",
     "type": "class",
     "useAs": [
@@ -6073,7 +6132,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "bevy_render::experimental::occlusion_culling::OcclusionCulling",
     "type": "class",
     "useAs": [
@@ -6084,7 +6143,7 @@
     "members": []
   },
   {
-    "id": 162,
+    "id": 164,
     "name": "bevy_render::globals::GlobalsUniform",
     "type": "class",
     "useAs": [
@@ -6111,7 +6170,7 @@
     ]
   },
   {
-    "id": 101,
+    "id": 105,
     "name": "bevy_render::mesh::components::Mesh2d",
     "type": "class",
     "useAs": [
@@ -6128,7 +6187,7 @@
     ]
   },
   {
-    "id": 190,
+    "id": 192,
     "name": "bevy_render::mesh::components::Mesh3d",
     "type": "class",
     "useAs": [
@@ -6145,7 +6204,7 @@
     ]
   },
   {
-    "id": 305,
+    "id": 310,
     "name": "bevy_render::primitives::Aabb",
     "type": "class",
     "useAs": [
@@ -6177,7 +6236,7 @@
     ]
   },
   {
-    "id": 201,
+    "id": 206,
     "name": "bevy_render::primitives::CascadesFrusta",
     "type": "class",
     "useAs": [
@@ -6188,7 +6247,7 @@
     "members": []
   },
   {
-    "id": 66,
+    "id": 69,
     "name": "bevy_render::primitives::CubemapFrusta",
     "type": "class",
     "useAs": [
@@ -6210,7 +6269,7 @@
     "members": []
   },
   {
-    "id": 291,
+    "id": 295,
     "name": "bevy_render::sync_world::SyncToRenderWorld",
     "type": "class",
     "useAs": [
@@ -6221,7 +6280,7 @@
     "members": []
   },
   {
-    "id": 539,
+    "id": 557,
     "name": "bevy_render::view::ColorGradingSection",
     "type": "class",
     "useAs": [
@@ -6258,7 +6317,7 @@
     ]
   },
   {
-    "id": 138,
+    "id": 141,
     "name": "bevy_render::view::Msaa",
     "type": "class",
     "useAs": [
@@ -6276,7 +6335,7 @@
     ]
   },
   {
-    "id": 137,
+    "id": 140,
     "name": "bevy_render::view::Msaa:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6289,7 +6348,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 82,
+    "id": 84,
     "name": "bevy_render::view::visibility::InheritedVisibility",
     "type": "class",
     "useAs": [
@@ -6306,7 +6365,7 @@
     ]
   },
   {
-    "id": 255,
+    "id": 256,
     "name": "bevy_render::view::visibility::NoFrustumCulling",
     "type": "class",
     "useAs": [
@@ -6317,7 +6376,7 @@
     "members": []
   },
   {
-    "id": 159,
+    "id": 161,
     "name": "bevy_render::view::visibility::ViewVisibility",
     "type": "class",
     "useAs": [
@@ -6334,7 +6393,7 @@
     ]
   },
   {
-    "id": 307,
+    "id": 312,
     "name": "bevy_render::view::visibility::Visibility",
     "type": "class",
     "useAs": [
@@ -6352,7 +6411,7 @@
     ]
   },
   {
-    "id": 306,
+    "id": 311,
     "name": "bevy_render::view::visibility::Visibility:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6364,7 +6423,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 259,
+    "id": 260,
     "name": "bevy_render::view::visibility::VisibleEntities",
     "type": "class",
     "useAs": [
@@ -6375,7 +6434,7 @@
     "members": []
   },
   {
-    "id": 72,
+    "id": 74,
     "name": "bevy_render::view::window::screenshot::Screenshot",
     "type": "class",
     "useAs": [
@@ -6393,7 +6452,7 @@
     ]
   },
   {
-    "id": 277,
+    "id": 280,
     "name": "bevy_scene::components::DynamicSceneRoot",
     "type": "class",
     "useAs": [
@@ -6410,7 +6469,7 @@
     ]
   },
   {
-    "id": 147,
+    "id": 151,
     "name": "bevy_scene::components::SceneRoot",
     "type": "class",
     "useAs": [
@@ -6427,7 +6486,7 @@
     ]
   },
   {
-    "id": 210,
+    "id": 214,
     "name": "bevy_sprite::mesh2d::material::MeshMaterial2d<bevy_sprite::mesh2d::color_material::ColorMaterial>",
     "type": "class",
     "useAs": [
@@ -6444,7 +6503,7 @@
     ]
   },
   {
-    "id": 346,
+    "id": 351,
     "name": "bevy_sprite::picking_backend::SpritePickingCamera",
     "type": "class",
     "useAs": [
@@ -6455,7 +6514,7 @@
     "members": []
   },
   {
-    "id": 776,
+    "id": 779,
     "name": "bevy_sprite::picking_backend::SpritePickingMode",
     "type": "class",
     "useAs": [
@@ -6479,7 +6538,7 @@
     ]
   },
   {
-    "id": 774,
+    "id": 777,
     "name": "bevy_sprite::picking_backend::SpritePickingMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6490,7 +6549,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 775,
+    "id": 778,
     "name": "bevy_sprite::picking_backend::SpritePickingMode::AlphaThreshold",
     "type": "class",
     "useAs": [
@@ -6507,7 +6566,7 @@
     ]
   },
   {
-    "id": 327,
+    "id": 332,
     "name": "bevy_sprite::picking_backend::SpritePickingSettings",
     "type": "class",
     "useAs": [
@@ -6530,7 +6589,7 @@
     ]
   },
   {
-    "id": 311,
+    "id": 316,
     "name": "bevy_sprite::sprite::Anchor",
     "type": "class",
     "useAs": [
@@ -6554,7 +6613,7 @@
     ]
   },
   {
-    "id": 309,
+    "id": 314,
     "name": "bevy_sprite::sprite::Anchor:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6573,7 +6632,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 310,
+    "id": 315,
     "name": "bevy_sprite::sprite::Anchor::Custom",
     "type": "class",
     "useAs": [
@@ -6591,7 +6650,7 @@
     ]
   },
   {
-    "id": 509,
+    "id": 523,
     "name": "bevy_sprite::sprite::ScalingMode",
     "type": "class",
     "useAs": [
@@ -6609,7 +6668,7 @@
     ]
   },
   {
-    "id": 508,
+    "id": 522,
     "name": "bevy_sprite::sprite::ScalingMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6624,7 +6683,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 123,
+    "id": 127,
     "name": "bevy_sprite::sprite::Sprite",
     "type": "class",
     "useAs": [
@@ -6686,7 +6745,7 @@
     ]
   },
   {
-    "id": 499,
+    "id": 513,
     "name": "bevy_sprite::sprite::SpriteImageMode",
     "type": "class",
     "useAs": [
@@ -6722,7 +6781,7 @@
     ]
   },
   {
-    "id": 495,
+    "id": 509,
     "name": "bevy_sprite::sprite::SpriteImageMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6735,7 +6794,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 496,
+    "id": 510,
     "name": "bevy_sprite::sprite::SpriteImageMode::Scale",
     "type": "class",
     "useAs": [
@@ -6753,7 +6812,7 @@
     ]
   },
   {
-    "id": 497,
+    "id": 511,
     "name": "bevy_sprite::sprite::SpriteImageMode::Sliced",
     "type": "class",
     "useAs": [
@@ -6771,7 +6830,7 @@
     ]
   },
   {
-    "id": 498,
+    "id": 512,
     "name": "bevy_sprite::sprite::SpriteImageMode::Tiled",
     "type": "class",
     "useAs": [
@@ -6798,7 +6857,7 @@
     ]
   },
   {
-    "id": 511,
+    "id": 525,
     "name": "bevy_sprite::texture_slice::border_rect::BorderRect",
     "type": "class",
     "useAs": [
@@ -6830,7 +6889,7 @@
     ]
   },
   {
-    "id": 514,
+    "id": 528,
     "name": "bevy_sprite::texture_slice::slicer::SliceScaleMode",
     "type": "class",
     "useAs": [
@@ -6854,7 +6913,7 @@
     ]
   },
   {
-    "id": 512,
+    "id": 526,
     "name": "bevy_sprite::texture_slice::slicer::SliceScaleMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6865,7 +6924,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 513,
+    "id": 527,
     "name": "bevy_sprite::texture_slice::slicer::SliceScaleMode::Tile",
     "type": "class",
     "useAs": [
@@ -6882,7 +6941,7 @@
     ]
   },
   {
-    "id": 510,
+    "id": 524,
     "name": "bevy_sprite::texture_slice::slicer::TextureSlicer",
     "type": "class",
     "useAs": [
@@ -6917,7 +6976,7 @@
     ]
   },
   {
-    "id": 83,
+    "id": 85,
     "name": "bevy_text::bounds::TextBounds",
     "type": "class",
     "useAs": [
@@ -6941,7 +7000,7 @@
     ]
   },
   {
-    "id": 133,
+    "id": 136,
     "name": "bevy_text::text2d::Text2d",
     "type": "class",
     "useAs": [
@@ -6958,7 +7017,7 @@
     ]
   },
   {
-    "id": 599,
+    "id": 617,
     "name": "bevy_text::text::FontSmoothing",
     "type": "class",
     "useAs": [
@@ -6976,7 +7035,7 @@
     ]
   },
   {
-    "id": 598,
+    "id": 616,
     "name": "bevy_text::text::FontSmoothing:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -6987,7 +7046,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 668,
+    "id": 671,
     "name": "bevy_text::text::JustifyText",
     "type": "class",
     "useAs": [
@@ -7005,7 +7064,7 @@
     ]
   },
   {
-    "id": 667,
+    "id": 670,
     "name": "bevy_text::text::JustifyText:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7018,7 +7077,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 670,
+    "id": 673,
     "name": "bevy_text::text::LineBreak",
     "type": "class",
     "useAs": [
@@ -7036,7 +7095,7 @@
     ]
   },
   {
-    "id": 669,
+    "id": 672,
     "name": "bevy_text::text::LineBreak:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7049,7 +7108,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 597,
+    "id": 615,
     "name": "bevy_text::text::LineHeight",
     "type": "class",
     "useAs": [
@@ -7079,7 +7138,7 @@
     ]
   },
   {
-    "id": 594,
+    "id": 612,
     "name": "bevy_text::text::LineHeight:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7090,7 +7149,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 595,
+    "id": 613,
     "name": "bevy_text::text::LineHeight::Px",
     "type": "class",
     "useAs": [
@@ -7107,7 +7166,7 @@
     ]
   },
   {
-    "id": 596,
+    "id": 614,
     "name": "bevy_text::text::LineHeight::RelativeToFont",
     "type": "class",
     "useAs": [
@@ -7124,7 +7183,7 @@
     ]
   },
   {
-    "id": 95,
+    "id": 97,
     "name": "bevy_text::text::TextColor",
     "type": "class",
     "useAs": [
@@ -7141,7 +7200,7 @@
     ]
   },
   {
-    "id": 218,
+    "id": 222,
     "name": "bevy_text::text::TextFont",
     "type": "class",
     "useAs": [
@@ -7175,7 +7234,7 @@
     ]
   },
   {
-    "id": 275,
+    "id": 276,
     "name": "bevy_text::text::TextLayout",
     "type": "class",
     "useAs": [
@@ -7199,7 +7258,7 @@
     ]
   },
   {
-    "id": 304,
+    "id": 307,
     "name": "bevy_text::text::TextSpan",
     "type": "class",
     "useAs": [
@@ -7216,7 +7275,7 @@
     ]
   },
   {
-    "id": 423,
+    "id": 543,
     "name": "bevy_time::timer::TimerMode",
     "type": "class",
     "useAs": [
@@ -7234,7 +7293,7 @@
     ]
   },
   {
-    "id": 422,
+    "id": 542,
     "name": "bevy_time::timer::TimerMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7245,7 +7304,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 178,
+    "id": 181,
     "name": "bevy_transform::components::global_transform::GlobalTransform",
     "type": "class",
     "useAs": [
@@ -7286,7 +7345,7 @@
     ]
   },
   {
-    "id": 208,
+    "id": 212,
     "name": "bevy_transform::components::transform::Transform",
     "type": "class",
     "useAs": [
@@ -7329,7 +7388,7 @@
     ]
   },
   {
-    "id": 180,
+    "id": 183,
     "name": "bevy_transform::components::transform::TransformTreeChanged",
     "type": "class",
     "useAs": [
@@ -7340,7 +7399,7 @@
     "members": []
   },
   {
-    "id": 244,
+    "id": 246,
     "name": "bevy_transform_interpolation::NoRotationEasing",
     "type": "class",
     "useAs": [
@@ -7351,7 +7410,7 @@
     "members": []
   },
   {
-    "id": 286,
+    "id": 289,
     "name": "bevy_transform_interpolation::NoScaleEasing",
     "type": "class",
     "useAs": [
@@ -7362,7 +7421,7 @@
     "members": []
   },
   {
-    "id": 141,
+    "id": 145,
     "name": "bevy_transform_interpolation::NoTranslationEasing",
     "type": "class",
     "useAs": [
@@ -7373,7 +7432,7 @@
     "members": []
   },
   {
-    "id": 195,
+    "id": 198,
     "name": "bevy_transform_interpolation::RotationEasingState",
     "type": "class",
     "useAs": [
@@ -7397,7 +7456,7 @@
     ]
   },
   {
-    "id": 144,
+    "id": 148,
     "name": "bevy_transform_interpolation::ScaleEasingState",
     "type": "class",
     "useAs": [
@@ -7421,7 +7480,7 @@
     ]
   },
   {
-    "id": 298,
+    "id": 302,
     "name": "bevy_transform_interpolation::TranslationEasingState",
     "type": "class",
     "useAs": [
@@ -7445,7 +7504,7 @@
     ]
   },
   {
-    "id": 308,
+    "id": 313,
     "name": "bevy_transform_interpolation::extrapolation::RotationExtrapolation",
     "type": "class",
     "useAs": [
@@ -7456,7 +7515,7 @@
     "members": []
   },
   {
-    "id": 313,
+    "id": 317,
     "name": "bevy_transform_interpolation::extrapolation::TransformExtrapolation",
     "type": "class",
     "useAs": [
@@ -7467,7 +7526,7 @@
     "members": []
   },
   {
-    "id": 341,
+    "id": 346,
     "name": "bevy_transform_interpolation::extrapolation::TranslationExtrapolation",
     "type": "class",
     "useAs": [
@@ -7489,7 +7548,7 @@
     "members": []
   },
   {
-    "id": 251,
+    "id": 252,
     "name": "bevy_transform_interpolation::hermite::TransformHermiteEasing",
     "type": "class",
     "useAs": [
@@ -7500,7 +7559,7 @@
     "members": []
   },
   {
-    "id": 62,
+    "id": 65,
     "name": "bevy_transform_interpolation::hermite::TranslationHermiteEasing",
     "type": "class",
     "useAs": [
@@ -7511,7 +7570,7 @@
     "members": []
   },
   {
-    "id": 142,
+    "id": 147,
     "name": "bevy_transform_interpolation::interpolation::RotationInterpolation",
     "type": "class",
     "useAs": [
@@ -7522,7 +7581,7 @@
     "members": []
   },
   {
-    "id": 243,
+    "id": 245,
     "name": "bevy_transform_interpolation::interpolation::ScaleInterpolation",
     "type": "class",
     "useAs": [
@@ -7533,7 +7592,7 @@
     "members": []
   },
   {
-    "id": 234,
+    "id": 238,
     "name": "bevy_transform_interpolation::interpolation::TranslationInterpolation",
     "type": "class",
     "useAs": [
@@ -7544,7 +7603,7 @@
     "members": []
   },
   {
-    "id": 217,
+    "id": 221,
     "name": "bevy_ui::UiScale",
     "type": "class",
     "useAs": [
@@ -7561,7 +7620,7 @@
     ]
   },
   {
-    "id": 294,
+    "id": 298,
     "name": "bevy_ui::focus::FocusPolicy",
     "type": "class",
     "useAs": [
@@ -7579,7 +7638,7 @@
     ]
   },
   {
-    "id": 293,
+    "id": 297,
     "name": "bevy_ui::focus::FocusPolicy:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7590,7 +7649,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 130,
+    "id": 133,
     "name": "bevy_ui::focus::Interaction",
     "type": "class",
     "useAs": [
@@ -7608,7 +7667,7 @@
     ]
   },
   {
-    "id": 129,
+    "id": 132,
     "name": "bevy_ui::focus::Interaction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7620,7 +7679,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 73,
+    "id": 75,
     "name": "bevy_ui::focus::RelativeCursorPosition",
     "type": "class",
     "useAs": [
@@ -7653,7 +7712,7 @@
     ]
   },
   {
-    "id": 591,
+    "id": 609,
     "name": "bevy_ui::geometry::Val",
     "type": "class",
     "useAs": [
@@ -7707,7 +7766,7 @@
     ]
   },
   {
-    "id": 584,
+    "id": 602,
     "name": "bevy_ui::geometry::Val:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -7723,7 +7782,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 586,
+    "id": 604,
     "name": "bevy_ui::geometry::Val::Percent",
     "type": "class",
     "useAs": [
@@ -7740,7 +7799,7 @@
     ]
   },
   {
-    "id": 585,
+    "id": 603,
     "name": "bevy_ui::geometry::Val::Px",
     "type": "class",
     "useAs": [
@@ -7757,7 +7816,7 @@
     ]
   },
   {
-    "id": 590,
+    "id": 608,
     "name": "bevy_ui::geometry::Val::VMax",
     "type": "class",
     "useAs": [
@@ -7774,7 +7833,7 @@
     ]
   },
   {
-    "id": 589,
+    "id": 607,
     "name": "bevy_ui::geometry::Val::VMin",
     "type": "class",
     "useAs": [
@@ -7791,7 +7850,7 @@
     ]
   },
   {
-    "id": 588,
+    "id": 606,
     "name": "bevy_ui::geometry::Val::Vh",
     "type": "class",
     "useAs": [
@@ -7808,7 +7867,7 @@
     ]
   },
   {
-    "id": 587,
+    "id": 605,
     "name": "bevy_ui::geometry::Val::Vw",
     "type": "class",
     "useAs": [
@@ -7825,7 +7884,7 @@
     ]
   },
   {
-    "id": 183,
+    "id": 186,
     "name": "bevy_ui::measurement::ContentSize",
     "type": "class",
     "useAs": [
@@ -7836,7 +7895,7 @@
     "members": []
   },
   {
-    "id": 314,
+    "id": 318,
     "name": "bevy_ui::picking_backend::UiPickingCamera",
     "type": "class",
     "useAs": [
@@ -7847,7 +7906,7 @@
     "members": []
   },
   {
-    "id": 330,
+    "id": 335,
     "name": "bevy_ui::picking_backend::UiPickingSettings",
     "type": "class",
     "useAs": [
@@ -7864,7 +7923,7 @@
     ]
   },
   {
-    "id": 153,
+    "id": 156,
     "name": "bevy_ui::ui_node::BackgroundColor",
     "type": "class",
     "useAs": [
@@ -7881,7 +7940,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 58,
     "name": "bevy_ui::ui_node::BorderColor",
     "type": "class",
     "useAs": [
@@ -7898,7 +7957,7 @@
     ]
   },
   {
-    "id": 221,
+    "id": 225,
     "name": "bevy_ui::ui_node::BorderRadius",
     "type": "class",
     "useAs": [
@@ -7934,7 +7993,7 @@
     ]
   },
   {
-    "id": 323,
+    "id": 328,
     "name": "bevy_ui::ui_node::BoxShadowSamples",
     "type": "class",
     "useAs": [
@@ -7951,7 +8010,7 @@
     ]
   },
   {
-    "id": 199,
+    "id": 204,
     "name": "bevy_ui::ui_node::CalculatedClip",
     "type": "class",
     "useAs": [
@@ -7978,7 +8037,7 @@
     ]
   },
   {
-    "id": 240,
+    "id": 244,
     "name": "bevy_ui::ui_node::ComputedNode",
     "type": "class",
     "useAs": [
@@ -8070,7 +8129,7 @@
     ]
   },
   {
-    "id": 297,
+    "id": 301,
     "name": "bevy_ui::ui_node::ComputedNodeTarget",
     "type": "class",
     "useAs": [
@@ -8101,7 +8160,7 @@
     ]
   },
   {
-    "id": 216,
+    "id": 220,
     "name": "bevy_ui::ui_node::Outline",
     "type": "class",
     "useAs": [
@@ -8130,7 +8189,7 @@
     ]
   },
   {
-    "id": 625,
+    "id": 640,
     "name": "bevy_ui::ui_node::ResolvedBorderRadius",
     "type": "class",
     "useAs": [
@@ -8162,7 +8221,7 @@
     ]
   },
   {
-    "id": 90,
+    "id": 91,
     "name": "bevy_ui::ui_node::ScrollPosition",
     "type": "class",
     "useAs": [
@@ -8184,7 +8243,7 @@
     ]
   },
   {
-    "id": 91,
+    "id": 92,
     "name": "bevy_ui::ui_node::TextShadow",
     "type": "class",
     "useAs": [
@@ -8239,7 +8298,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 179,
+    "id": 182,
     "name": "bevy_ui::ui_node::UiTargetCamera",
     "type": "class",
     "useAs": [
@@ -8256,7 +8315,7 @@
     ]
   },
   {
-    "id": 269,
+    "id": 271,
     "name": "bevy_ui::ui_node::ZIndex",
     "type": "class",
     "useAs": [
@@ -8273,7 +8332,7 @@
     ]
   },
   {
-    "id": 53,
+    "id": 56,
     "name": "bevy_ui::widget::button::Button",
     "type": "class",
     "useAs": [
@@ -8284,7 +8343,7 @@
     "members": []
   },
   {
-    "id": 320,
+    "id": 325,
     "name": "bevy_ui::widget::image::ImageNode",
     "type": "class",
     "useAs": [
@@ -8334,7 +8393,7 @@
     ]
   },
   {
-    "id": 163,
+    "id": 165,
     "name": "bevy_ui::widget::image::ImageNodeSize",
     "type": "class",
     "useAs": [
@@ -8355,7 +8414,7 @@
     ]
   },
   {
-    "id": 763,
+    "id": 766,
     "name": "bevy_ui::widget::image::NodeImageMode",
     "type": "class",
     "useAs": [
@@ -8385,7 +8444,7 @@
     ]
   },
   {
-    "id": 760,
+    "id": 763,
     "name": "bevy_ui::widget::image::NodeImageMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8398,7 +8457,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 761,
+    "id": 764,
     "name": "bevy_ui::widget::image::NodeImageMode::Sliced",
     "type": "class",
     "useAs": [
@@ -8416,7 +8475,7 @@
     ]
   },
   {
-    "id": 762,
+    "id": 765,
     "name": "bevy_ui::widget::image::NodeImageMode::Tiled",
     "type": "class",
     "useAs": [
@@ -8443,7 +8502,7 @@
     ]
   },
   {
-    "id": 287,
+    "id": 290,
     "name": "bevy_ui::widget::label::Label",
     "type": "class",
     "useAs": [
@@ -8454,7 +8513,7 @@
     "members": []
   },
   {
-    "id": 43,
+    "id": 46,
     "name": "bevy_ui::widget::text::Text",
     "type": "class",
     "useAs": [
@@ -8471,7 +8530,7 @@
     ]
   },
   {
-    "id": 249,
+    "id": 251,
     "name": "bevy_ui::widget::text::TextNodeFlags",
     "type": "class",
     "useAs": [
@@ -8493,7 +8552,7 @@
     ]
   },
   {
-    "id": 710,
+    "id": 713,
     "name": "bevy_window::monitor::VideoMode",
     "type": "class",
     "useAs": [
@@ -8521,7 +8580,7 @@
     ]
   },
   {
-    "id": 465,
+    "id": 474,
     "name": "bevy_window::system_cursor::SystemCursorIcon",
     "type": "class",
     "useAs": [
@@ -8539,7 +8598,7 @@
     ]
   },
   {
-    "id": 464,
+    "id": 473,
     "name": "bevy_window::system_cursor::SystemCursorIcon:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8582,7 +8641,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 687,
+    "id": 690,
     "name": "bevy_window::window::CompositeAlphaMode",
     "type": "class",
     "useAs": [
@@ -8600,7 +8659,7 @@
     ]
   },
   {
-    "id": 686,
+    "id": 689,
     "name": "bevy_window::window::CompositeAlphaMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8614,7 +8673,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 702,
+    "id": 705,
     "name": "bevy_window::window::CursorGrabMode",
     "type": "class",
     "useAs": [
@@ -8632,7 +8691,7 @@
     ]
   },
   {
-    "id": 701,
+    "id": 704,
     "name": "bevy_window::window::CursorGrabMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8644,7 +8703,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 671,
+    "id": 674,
     "name": "bevy_window::window::CursorOptions",
     "type": "class",
     "useAs": [
@@ -8672,7 +8731,7 @@
     ]
   },
   {
-    "id": 689,
+    "id": 692,
     "name": "bevy_window::window::EnabledButtons",
     "type": "class",
     "useAs": [
@@ -8699,7 +8758,7 @@
     ]
   },
   {
-    "id": 692,
+    "id": 695,
     "name": "bevy_window::window::InternalWindowState",
     "type": "class",
     "useAs": [
@@ -8740,7 +8799,7 @@
     ]
   },
   {
-    "id": 706,
+    "id": 709,
     "name": "bevy_window::window::MonitorSelection",
     "type": "class",
     "useAs": [
@@ -8770,7 +8829,7 @@
     ]
   },
   {
-    "id": 703,
+    "id": 706,
     "name": "bevy_window::window::MonitorSelection:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8783,7 +8842,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 705,
+    "id": 708,
     "name": "bevy_window::window::MonitorSelection::Entity",
     "type": "class",
     "useAs": [
@@ -8800,7 +8859,7 @@
     ]
   },
   {
-    "id": 704,
+    "id": 707,
     "name": "bevy_window::window::MonitorSelection::Index",
     "type": "class",
     "useAs": [
@@ -8817,7 +8876,7 @@
     ]
   },
   {
-    "id": 673,
+    "id": 676,
     "name": "bevy_window::window::PresentMode",
     "type": "class",
     "useAs": [
@@ -8835,7 +8894,7 @@
     ]
   },
   {
-    "id": 672,
+    "id": 675,
     "name": "bevy_window::window::PresentMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8850,7 +8909,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 160,
+    "id": 162,
     "name": "bevy_window::window::PrimaryWindow",
     "type": "class",
     "useAs": [
@@ -8861,7 +8920,7 @@
     "members": []
   },
   {
-    "id": 709,
+    "id": 712,
     "name": "bevy_window::window::VideoModeSelection",
     "type": "class",
     "useAs": [
@@ -8885,7 +8944,7 @@
     ]
   },
   {
-    "id": 707,
+    "id": 710,
     "name": "bevy_window::window::VideoModeSelection:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8896,7 +8955,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 708,
+    "id": 711,
     "name": "bevy_window::window::VideoModeSelection::Specific",
     "type": "class",
     "useAs": [
@@ -8914,7 +8973,7 @@
     ]
   },
   {
-    "id": 691,
+    "id": 694,
     "name": "bevy_window::window::WindowLevel",
     "type": "class",
     "useAs": [
@@ -8932,7 +8991,7 @@
     ]
   },
   {
-    "id": 690,
+    "id": 693,
     "name": "bevy_window::window::WindowLevel:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8944,7 +9003,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 677,
+    "id": 680,
     "name": "bevy_window::window::WindowMode",
     "type": "class",
     "useAs": [
@@ -8974,7 +9033,7 @@
     ]
   },
   {
-    "id": 674,
+    "id": 677,
     "name": "bevy_window::window::WindowMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -8986,7 +9045,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 675,
+    "id": 678,
     "name": "bevy_window::window::WindowMode::BorderlessFullscreen",
     "type": "class",
     "useAs": [
@@ -9004,7 +9063,7 @@
     ]
   },
   {
-    "id": 676,
+    "id": 679,
     "name": "bevy_window::window::WindowMode::Fullscreen",
     "type": "class",
     "useAs": [
@@ -9028,7 +9087,7 @@
     ]
   },
   {
-    "id": 681,
+    "id": 684,
     "name": "bevy_window::window::WindowPosition",
     "type": "class",
     "useAs": [
@@ -9058,7 +9117,7 @@
     ]
   },
   {
-    "id": 678,
+    "id": 681,
     "name": "bevy_window::window::WindowPosition:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9070,7 +9129,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 680,
+    "id": 683,
     "name": "bevy_window::window::WindowPosition::At",
     "type": "class",
     "useAs": [
@@ -9088,7 +9147,7 @@
     ]
   },
   {
-    "id": 679,
+    "id": 682,
     "name": "bevy_window::window::WindowPosition::Centered",
     "type": "class",
     "useAs": [
@@ -9106,7 +9165,7 @@
     ]
   },
   {
-    "id": 431,
+    "id": 428,
     "name": "bevy_window::window::WindowRef",
     "type": "class",
     "useAs": [
@@ -9130,7 +9189,7 @@
     ]
   },
   {
-    "id": 429,
+    "id": 426,
     "name": "bevy_window::window::WindowRef:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9141,7 +9200,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 430,
+    "id": 427,
     "name": "bevy_window::window::WindowRef::Entity",
     "type": "class",
     "useAs": [
@@ -9158,7 +9217,7 @@
     ]
   },
   {
-    "id": 688,
+    "id": 691,
     "name": "bevy_window::window::WindowResizeConstraints",
     "type": "class",
     "useAs": [
@@ -9190,7 +9249,7 @@
     ]
   },
   {
-    "id": 682,
+    "id": 685,
     "name": "bevy_window::window::WindowResolution",
     "type": "class",
     "useAs": [
@@ -9223,7 +9282,7 @@
     ]
   },
   {
-    "id": 724,
+    "id": 727,
     "name": "bevy_window::window::WindowTheme",
     "type": "class",
     "useAs": [
@@ -9241,7 +9300,7 @@
     ]
   },
   {
-    "id": 723,
+    "id": 726,
     "name": "bevy_window::window::WindowTheme:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9252,7 +9311,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 111,
+    "id": 115,
     "name": "bevy_winit::cursor::CursorIcon",
     "type": "class",
     "useAs": [
@@ -9282,7 +9341,7 @@
     ]
   },
   {
-    "id": 108,
+    "id": 112,
     "name": "bevy_winit::cursor::CursorIcon:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9293,7 +9352,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 109,
+    "id": 113,
     "name": "bevy_winit::cursor::CursorIcon::Custom",
     "type": "class",
     "useAs": [
@@ -9311,7 +9370,7 @@
     ]
   },
   {
-    "id": 110,
+    "id": 114,
     "name": "bevy_winit::cursor::CursorIcon::System",
     "type": "class",
     "useAs": [
@@ -9329,7 +9388,7 @@
     ]
   },
   {
-    "id": 463,
+    "id": 472,
     "name": "bevy_winit::custom_cursor::CustomCursor",
     "type": "class",
     "useAs": [
@@ -9353,7 +9412,7 @@
     ]
   },
   {
-    "id": 461,
+    "id": 470,
     "name": "bevy_winit::custom_cursor::CustomCursor:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9363,7 +9422,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 462,
+    "id": 471,
     "name": "bevy_winit::custom_cursor::CustomCursor::Image",
     "type": "class",
     "useAs": [
@@ -9381,7 +9440,7 @@
     ]
   },
   {
-    "id": 466,
+    "id": 475,
     "name": "bevy_winit::custom_cursor::CustomCursorImage",
     "type": "class",
     "useAs": [
@@ -9429,7 +9488,7 @@
     ]
   },
   {
-    "id": 700,
+    "id": 703,
     "name": "core::option::Option<(u8, u8)>",
     "type": "class",
     "useAs": [
@@ -9453,7 +9512,7 @@
     ]
   },
   {
-    "id": 698,
+    "id": 701,
     "name": "core::option::Option<(u8, u8)>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9464,7 +9523,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 699,
+    "id": 702,
     "name": "core::option::Option<(u8, u8)>::Some",
     "type": "class",
     "useAs": [
@@ -9482,7 +9541,7 @@
     ]
   },
   {
-    "id": 685,
+    "id": 688,
     "name": "core::option::Option<alloc::string::String>",
     "type": "class",
     "useAs": [
@@ -9506,7 +9565,7 @@
     ]
   },
   {
-    "id": 683,
+    "id": 686,
     "name": "core::option::Option<alloc::string::String>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9517,7 +9576,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 684,
+    "id": 687,
     "name": "core::option::Option<alloc::string::String>::Some",
     "type": "class",
     "useAs": [
@@ -9534,7 +9593,7 @@
     ]
   },
   {
-    "id": 365,
+    "id": 368,
     "name": "core::option::Option<avian2d::dynamics::solver::joints::AngleLimit>",
     "type": "class",
     "useAs": [
@@ -9558,7 +9617,7 @@
     ]
   },
   {
-    "id": 363,
+    "id": 366,
     "name": "core::option::Option<avian2d::dynamics::solver::joints::AngleLimit>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9569,7 +9628,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 364,
+    "id": 367,
     "name": "core::option::Option<avian2d::dynamics::solver::joints::AngleLimit>::Some",
     "type": "class",
     "useAs": [
@@ -9587,7 +9646,7 @@
     ]
   },
   {
-    "id": 410,
+    "id": 411,
     "name": "core::option::Option<avian2d::dynamics::solver::joints::DistanceLimit>",
     "type": "class",
     "useAs": [
@@ -9611,7 +9670,7 @@
     ]
   },
   {
-    "id": 408,
+    "id": 409,
     "name": "core::option::Option<avian2d::dynamics::solver::joints::DistanceLimit>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9622,7 +9681,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 409,
+    "id": 410,
     "name": "core::option::Option<avian2d::dynamics::solver::joints::DistanceLimit>::Some",
     "type": "class",
     "useAs": [
@@ -9640,7 +9699,7 @@
     ]
   },
   {
-    "id": 744,
+    "id": 747,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::world::asset::TiledWorld>>",
     "type": "class",
     "useAs": [
@@ -9664,7 +9723,7 @@
     ]
   },
   {
-    "id": 742,
+    "id": 745,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::world::asset::TiledWorld>>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9675,7 +9734,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 743,
+    "id": 746,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::world::asset::TiledWorld>>::Some",
     "type": "class",
     "useAs": [
@@ -9692,7 +9751,7 @@
     ]
   },
   {
-    "id": 568,
+    "id": 586,
     "name": "core::option::Option<bevy_audio::audio::SpatialScale>",
     "type": "class",
     "useAs": [
@@ -9716,7 +9775,7 @@
     ]
   },
   {
-    "id": 566,
+    "id": 584,
     "name": "core::option::Option<bevy_audio::audio::SpatialScale>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9727,7 +9786,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 567,
+    "id": 585,
     "name": "core::option::Option<bevy_audio::audio::SpatialScale>::Some",
     "type": "class",
     "useAs": [
@@ -9745,7 +9804,7 @@
     ]
   },
   {
-    "id": 608,
+    "id": 403,
     "name": "core::option::Option<bevy_ecs::entity::Entity>",
     "type": "class",
     "useAs": [
@@ -9769,7 +9828,7 @@
     ]
   },
   {
-    "id": 606,
+    "id": 401,
     "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9780,7 +9839,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 607,
+    "id": 402,
     "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
     "type": "class",
     "useAs": [
@@ -9797,7 +9856,7 @@
     ]
   },
   {
-    "id": 471,
+    "id": 480,
     "name": "core::option::Option<bevy_image::texture_atlas::TextureAtlas>",
     "type": "class",
     "useAs": [
@@ -9821,7 +9880,7 @@
     ]
   },
   {
-    "id": 469,
+    "id": 478,
     "name": "core::option::Option<bevy_image::texture_atlas::TextureAtlas>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9832,7 +9891,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 470,
+    "id": 479,
     "name": "core::option::Option<bevy_image::texture_atlas::TextureAtlas>::Some",
     "type": "class",
     "useAs": [
@@ -9850,7 +9909,7 @@
     ]
   },
   {
-    "id": 716,
+    "id": 719,
     "name": "core::option::Option<bevy_math::compass::CompassOctant>",
     "type": "class",
     "useAs": [
@@ -9874,7 +9933,7 @@
     ]
   },
   {
-    "id": 714,
+    "id": 717,
     "name": "core::option::Option<bevy_math::compass::CompassOctant>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9885,7 +9944,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 715,
+    "id": 718,
     "name": "core::option::Option<bevy_math::compass::CompassOctant>::Some",
     "type": "class",
     "useAs": [
@@ -9903,7 +9962,7 @@
     ]
   },
   {
-    "id": 494,
+    "id": 508,
     "name": "core::option::Option<bevy_math::rects::rect::Rect>",
     "type": "class",
     "useAs": [
@@ -9927,7 +9986,7 @@
     ]
   },
   {
-    "id": 492,
+    "id": 506,
     "name": "core::option::Option<bevy_math::rects::rect::Rect>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9938,7 +9997,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 493,
+    "id": 507,
     "name": "core::option::Option<bevy_math::rects::rect::Rect>::Some",
     "type": "class",
     "useAs": [
@@ -9956,7 +10015,7 @@
     ]
   },
   {
-    "id": 474,
+    "id": 483,
     "name": "core::option::Option<bevy_math::rects::urect::URect>",
     "type": "class",
     "useAs": [
@@ -9980,7 +10039,7 @@
     ]
   },
   {
-    "id": 472,
+    "id": 481,
     "name": "core::option::Option<bevy_math::rects::urect::URect>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -9991,7 +10050,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 473,
+    "id": 482,
     "name": "core::option::Option<bevy_math::rects::urect::URect>::Some",
     "type": "class",
     "useAs": [
@@ -10009,7 +10068,7 @@
     ]
   },
   {
-    "id": 659,
+    "id": 662,
     "name": "core::option::Option<bevy_render::camera::camera::SubCameraView>",
     "type": "class",
     "useAs": [
@@ -10033,7 +10092,7 @@
     ]
   },
   {
-    "id": 657,
+    "id": 660,
     "name": "core::option::Option<bevy_render::camera::camera::SubCameraView>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10044,7 +10103,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 658,
+    "id": 661,
     "name": "core::option::Option<bevy_render::camera::camera::SubCameraView>::Some",
     "type": "class",
     "useAs": [
@@ -10062,7 +10121,7 @@
     ]
   },
   {
-    "id": 695,
+    "id": 698,
     "name": "core::option::Option<bevy_window::window::WindowTheme>",
     "type": "class",
     "useAs": [
@@ -10086,7 +10145,7 @@
     ]
   },
   {
-    "id": 693,
+    "id": 696,
     "name": "core::option::Option<bevy_window::window::WindowTheme>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10097,7 +10156,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 694,
+    "id": 697,
     "name": "core::option::Option<bevy_window::window::WindowTheme>::Some",
     "type": "class",
     "useAs": [
@@ -10115,7 +10174,7 @@
     ]
   },
   {
-    "id": 713,
+    "id": 716,
     "name": "core::option::Option<bool>",
     "type": "class",
     "useAs": [
@@ -10139,7 +10198,7 @@
     ]
   },
   {
-    "id": 711,
+    "id": 714,
     "name": "core::option::Option<bool>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10150,7 +10209,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 712,
+    "id": 715,
     "name": "core::option::Option<bool>::Some",
     "type": "class",
     "useAs": [
@@ -10167,7 +10226,7 @@
     ]
   },
   {
-    "id": 445,
+    "id": 442,
     "name": "core::option::Option<f32>",
     "type": "class",
     "useAs": [
@@ -10191,7 +10250,7 @@
     ]
   },
   {
-    "id": 443,
+    "id": 440,
     "name": "core::option::Option<f32>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10202,7 +10261,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 444,
+    "id": 441,
     "name": "core::option::Option<f32>::Some",
     "type": "class",
     "useAs": [
@@ -10219,7 +10278,7 @@
     ]
   },
   {
-    "id": 719,
+    "id": 722,
     "name": "core::option::Option<glam::DVec2>",
     "type": "class",
     "useAs": [
@@ -10243,7 +10302,7 @@
     ]
   },
   {
-    "id": 717,
+    "id": 720,
     "name": "core::option::Option<glam::DVec2>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10254,7 +10313,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 718,
+    "id": 721,
     "name": "core::option::Option<glam::DVec2>::Some",
     "type": "class",
     "useAs": [
@@ -10272,7 +10331,7 @@
     ]
   },
   {
-    "id": 563,
+    "id": 581,
     "name": "core::option::Option<glam::Quat>",
     "type": "class",
     "useAs": [
@@ -10296,7 +10355,7 @@
     ]
   },
   {
-    "id": 561,
+    "id": 579,
     "name": "core::option::Option<glam::Quat>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10307,7 +10366,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 562,
+    "id": 580,
     "name": "core::option::Option<glam::Quat>::Some",
     "type": "class",
     "useAs": [
@@ -10325,7 +10384,7 @@
     ]
   },
   {
-    "id": 442,
+    "id": 439,
     "name": "core::option::Option<glam::Vec2>",
     "type": "class",
     "useAs": [
@@ -10349,7 +10408,7 @@
     ]
   },
   {
-    "id": 440,
+    "id": 437,
     "name": "core::option::Option<glam::Vec2>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10360,7 +10419,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 441,
+    "id": 438,
     "name": "core::option::Option<glam::Vec2>::Some",
     "type": "class",
     "useAs": [
@@ -10378,7 +10437,7 @@
     ]
   },
   {
-    "id": 528,
+    "id": 546,
     "name": "core::option::Option<glam::Vec3>",
     "type": "class",
     "useAs": [
@@ -10402,7 +10461,7 @@
     ]
   },
   {
-    "id": 526,
+    "id": 544,
     "name": "core::option::Option<glam::Vec3>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10413,7 +10472,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 527,
+    "id": 545,
     "name": "core::option::Option<glam::Vec3>::Some",
     "type": "class",
     "useAs": [
@@ -10431,7 +10490,7 @@
     ]
   },
   {
-    "id": 549,
+    "id": 567,
     "name": "core::option::Option<std::path::PathBuf>",
     "type": "class",
     "useAs": [
@@ -10455,7 +10514,7 @@
     ]
   },
   {
-    "id": 547,
+    "id": 565,
     "name": "core::option::Option<std::path::PathBuf>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -10466,7 +10525,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 548,
+    "id": 566,
     "name": "core::option::Option<std::path::PathBuf>::Some",
     "type": "class",
     "useAs": [
@@ -10483,7 +10542,7 @@
     ]
   },
   {
-    "id": 542,
+    "id": 560,
     "name": "glam::Affine3A",
     "type": "class",
     "useAs": [
@@ -10527,7 +10586,7 @@
     ]
   },
   {
-    "id": 722,
+    "id": 725,
     "name": "glam::DVec2",
     "type": "class",
     "useAs": [
@@ -10549,7 +10608,7 @@
     ]
   },
   {
-    "id": 610,
+    "id": 625,
     "name": "glam::IVec2",
     "type": "class",
     "useAs": [
@@ -10571,7 +10630,7 @@
     ]
   },
   {
-    "id": 543,
+    "id": 561,
     "name": "glam::Mat3A",
     "type": "class",
     "useAs": [
@@ -10613,7 +10672,7 @@
     ]
   },
   {
-    "id": 414,
+    "id": 415,
     "name": "glam::Quat",
     "type": "class",
     "useAs": [
@@ -10645,7 +10704,7 @@
     ]
   },
   {
-    "id": 486,
+    "id": 495,
     "name": "glam::UVec2",
     "type": "class",
     "useAs": [
@@ -10667,7 +10726,7 @@
     ]
   },
   {
-    "id": 731,
+    "id": 734,
     "name": "glam::UVec3",
     "type": "class",
     "useAs": [
@@ -10694,7 +10753,7 @@
     ]
   },
   {
-    "id": 361,
+    "id": 364,
     "name": "glam::Vec2",
     "type": "class",
     "useAs": [
@@ -10716,7 +10775,7 @@
     ]
   },
   {
-    "id": 362,
+    "id": 365,
     "name": "glam::Vec3",
     "type": "class",
     "useAs": [
@@ -10743,7 +10802,7 @@
     ]
   },
   {
-    "id": 544,
+    "id": 562,
     "name": "glam::Vec3A",
     "type": "class",
     "useAs": [
@@ -10770,7 +10829,7 @@
     ]
   },
   {
-    "id": 267,
+    "id": 197,
     "name": "spirit_hotel::audio::Music",
     "type": "class",
     "useAs": [
@@ -10781,7 +10840,7 @@
     "members": []
   },
   {
-    "id": 59,
+    "id": 278,
     "name": "spirit_hotel::audio::SoundEffect",
     "type": "class",
     "useAs": [
@@ -10792,7 +10851,7 @@
     "members": []
   },
   {
-    "id": 250,
+    "id": 34,
     "name": "spirit_hotel::game::animation::AnimationPath",
     "type": "class",
     "useAs": [
@@ -10809,7 +10868,29 @@
     ]
   },
   {
-    "id": 223,
+    "id": 233,
+    "name": "spirit_hotel::game::animation::InitAnimation",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "tag",
+        "type": "string",
+        "value": ""
+      },
+      {
+        "name": "repeat",
+        "type": "bool",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": 201,
     "name": "spirit_hotel::game::dialogue::StartConversation",
     "type": "class",
     "useAs": [
@@ -10826,7 +10907,7 @@
     ]
   },
   {
-    "id": 295,
+    "id": 299,
     "name": "spirit_hotel::game::level::LevelAssets",
     "type": "class",
     "useAs": [
@@ -10849,7 +10930,7 @@
     ]
   },
   {
-    "id": 158,
+    "id": 279,
     "name": "spirit_hotel::game::level::LoadLevel",
     "type": "class",
     "useAs": [
@@ -10866,7 +10947,7 @@
     ]
   },
   {
-    "id": 312,
+    "id": 203,
     "name": "spirit_hotel::game::movement::CanMove",
     "type": "class",
     "useAs": [
@@ -10898,7 +10979,7 @@
     ]
   },
   {
-    "id": 86,
+    "id": 234,
     "name": "spirit_hotel::game::movement::MovementDuration",
     "type": "class",
     "useAs": [
@@ -10915,7 +10996,7 @@
     ]
   },
   {
-    "id": 301,
+    "id": 179,
     "name": "spirit_hotel::game::path_finding::FollowPath",
     "type": "class",
     "useAs": [
@@ -10932,7 +11013,7 @@
     ]
   },
   {
-    "id": 203,
+    "id": 41,
     "name": "spirit_hotel::game::path_finding::InWorldGrid",
     "type": "class",
     "useAs": [
@@ -10943,7 +11024,7 @@
     "members": []
   },
   {
-    "id": 230,
+    "id": 32,
     "name": "spirit_hotel::game::path_finding::PathNode",
     "type": "class",
     "useAs": [
@@ -10960,7 +11041,7 @@
     ]
   },
   {
-    "id": 148,
+    "id": 62,
     "name": "spirit_hotel::game::player::Player",
     "type": "class",
     "useAs": [
@@ -10971,7 +11052,7 @@
     "members": []
   },
   {
-    "id": 241,
+    "id": 104,
     "name": "spirit_hotel::game::scene::ChangeGameScene",
     "type": "class",
     "useAs": [
@@ -10994,7 +11075,7 @@
     ]
   },
   {
-    "id": 627,
+    "id": 462,
     "name": "spirit_hotel::game::scene::ChangeGameSceneAction",
     "type": "class",
     "useAs": [
@@ -11012,7 +11093,7 @@
     ]
   },
   {
-    "id": 626,
+    "id": 461,
     "name": "spirit_hotel::game::scene::ChangeGameSceneAction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -11024,7 +11105,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 143,
+    "id": 293,
     "name": "spirit_hotel::game::scene::HideInGameScene",
     "type": "class",
     "useAs": [
@@ -11041,7 +11122,7 @@
     ]
   },
   {
-    "id": 124,
+    "id": 98,
     "name": "spirit_hotel::game::scene::ShowInGameScene",
     "type": "class",
     "useAs": [
@@ -11058,7 +11139,7 @@
     ]
   },
   {
-    "id": 262,
+    "id": 308,
     "name": "spirit_hotel::game::scene::StartingGameScene",
     "type": "class",
     "useAs": [
@@ -11075,7 +11156,7 @@
     ]
   },
   {
-    "id": 348,
+    "id": 268,
     "name": "spirit_hotel::game::trigger::IsTrigger",
     "type": "class",
     "useAs": [
@@ -11093,7 +11174,7 @@
     ]
   },
   {
-    "id": 347,
+    "id": 267,
     "name": "spirit_hotel::game::trigger::IsTrigger:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -11104,7 +11185,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 34,
+    "id": 117,
     "name": "spirit_hotel::menus::credits::CreditsAssets",
     "type": "class",
     "useAs": [
@@ -11121,7 +11202,7 @@
     ]
   },
   {
-    "id": 186,
+    "id": 261,
     "name": "spirit_hotel::menus::settings::GlobalVolumeLabel",
     "type": "class",
     "useAs": [
@@ -11132,7 +11213,7 @@
     "members": []
   },
   {
-    "id": 242,
+    "id": 95,
     "name": "spirit_hotel::theme::interaction::InteractionAssets",
     "type": "class",
     "useAs": [
@@ -11154,7 +11235,7 @@
     ]
   },
   {
-    "id": 118,
+    "id": 320,
     "name": "spirit_hotel::theme::interaction::InteractionPalette",
     "type": "class",
     "useAs": [

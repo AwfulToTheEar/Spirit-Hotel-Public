@@ -1126,6 +1126,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy_light_2d"
+version = "0.6.0"
+dependencies = [
+ "bevy",
+ "smallvec",
+]
+
+[[package]]
 name = "bevy_log"
 version = "0.16.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5388,6 +5396,7 @@ dependencies = [
  "bevy_aseprite_ultra",
  "bevy_ecs_tiled",
  "bevy_ecs_tilemap",
+ "bevy_light_2d",
  "bevy_mod_debugdump",
  "bevy_northstar",
  "bevy_yarnspinner",

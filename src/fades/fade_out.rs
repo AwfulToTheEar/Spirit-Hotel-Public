@@ -1,21 +1,20 @@
 use bevy::prelude::*;
 
 use crate::{
-    fades::{Fade, FadeData}, theme::widget, AppSystems
+    AppSystems,
+    fades::{Fade, FadeData},
+    theme::widget,
 };
 
 pub(super) fn plugin(app: &mut App) {
-    app
-        .add_systems(OnEnter(Fade::Out), spawn_fade_out)
+    app.add_systems(OnEnter(Fade::Out), spawn_fade_out)
         .add_systems(
             Update,
             (
                 tick_fade_out.in_set(AppSystems::TickTimers),
-                (
-                    apply_fade_out,
-                    check_fade_out_timer
-                ).in_set(AppSystems::Update)
-            ).run_if(in_state(Fade::Out))
+                (apply_fade_out, check_fade_out_timer).in_set(AppSystems::Update),
+            )
+                .run_if(in_state(Fade::Out)),
         );
 }
 
@@ -23,23 +22,17 @@ pub(super) fn plugin(app: &mut App) {
 #[reflect(Component)]
 pub struct FadeOut(Timer);
 
-pub fn spawn_fade_out(
-    mut commands: Commands,
-    fade_data: Res<FadeData>
-) {
+pub fn spawn_fade_out(mut commands: Commands, fade_data: Res<FadeData>) {
     commands.spawn((
         widget::ui_root("Fade Out"),
         StateScoped(Fade::Out),
         ZIndex(10),
         BackgroundColor(fade_data.color.with_alpha(0.)),
-        FadeOut(Timer::from_seconds(fade_data.duration, TimerMode::Once))
+        FadeOut(Timer::from_seconds(fade_data.duration, TimerMode::Once)),
     ));
 }
 
-pub fn tick_fade_out(
-    time: Res<Time>,
-    mut q_fade_out: Query<&mut FadeOut>,
-) {
+pub fn tick_fade_out(time: Res<Time>, mut q_fade_out: Query<&mut FadeOut>) {
     let Ok(mut fade_out) = q_fade_out.single_mut() else {
         return;
     };
@@ -47,18 +40,15 @@ pub fn tick_fade_out(
     fade_out.0.tick(time.delta());
 }
 
-pub fn apply_fade_out(
-    mut q_background: Query<(&FadeOut, &mut BackgroundColor)>
-) {
+pub fn apply_fade_out(mut q_background: Query<(&FadeOut, &mut BackgroundColor)>) {
     for (fade_out, mut background_color) in q_background.iter_mut() {
-        background_color.0.set_alpha(fade_out.0.fraction_remaining())
+        background_color
+            .0
+            .set_alpha(fade_out.0.fraction_remaining())
     }
 }
 
-pub fn check_fade_out_timer(
-    mut next_fade: ResMut<NextState<Fade>>,
-    q_fade_out: Query<&FadeOut>
-) {
+pub fn check_fade_out_timer(mut next_fade: ResMut<NextState<Fade>>, q_fade_out: Query<&FadeOut>) {
     let Ok(fade_out) = q_fade_out.single() else {
         return;
     };

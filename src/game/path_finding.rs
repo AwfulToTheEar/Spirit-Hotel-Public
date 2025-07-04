@@ -1,50 +1,58 @@
-use avian2d::{collision::collider::contact_query, prelude::{Collider, RigidBody}};
+use avian2d::{
+    collision::collider::contact_query,
+    prelude::{Collider, RigidBody},
+};
 use bevy::{ecs::entity_disabling::Disabled, prelude::*};
-use bevy_ecs_tiled::{prelude::{TiledMap, TiledWorld, TiledWorldMarker, TilemapAnchor}, world::TiledWorldHandle};
+use bevy_ecs_tiled::{
+    prelude::{TiledMap, TiledWorld, TiledWorldMarker, TilemapAnchor},
+    world::TiledWorldHandle,
+};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
 use bevy_northstar::prelude::*;
 
-use crate::{game::{level::{LevelSystems}, movement::{CanMove, MoveToLocation, MovementIntent}, trigger::TriggerCollider, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{
+    AppSystems, PausableSystems,
+    game::{
+        GameplaySystems,
+        level::LevelSystems,
+        movement::{CanMove, MoveToLocation, MovementIntent},
+        trigger::TriggerCollider,
+    },
+};
 
 pub(super) fn plugin(app: &mut App) {
-    app
-        .add_plugins(NorthstarPlugin::<CardinalNeighborhood>::default())
-
+    app.add_plugins(NorthstarPlugin::<CardinalNeighborhood>::default())
         .register_type::<PathNode>()
         .register_type::<FollowPath>()
         .register_type::<InWorldGrid>()
-
-        .add_systems(PreUpdate,(
-                build_world_path_finding_grid,
-                mark_agents_in_world_grid
-            )
+        .add_systems(
+            PreUpdate,
+            (build_world_path_finding_grid, mark_agents_in_world_grid)
                 .chain()
                 .in_set(GameplaySystems)
-                .after(LevelSystems)
+                .after(LevelSystems),
         )
-
-        .add_systems(Update,
+        .add_systems(
+            Update,
             (
                 set_grid_pos_from_transform,
                 apply_goal_from_path_node,
-                (
-                    remove_next_pos,
-                    apply_intent_from_next_pos
-                )
+                (remove_next_pos, apply_intent_from_next_pos),
             )
                 .chain()
                 .in_set(PausableSystems)
                 .in_set(AppSystems::Update)
-                .in_set(GameplaySystems)
+                .in_set(GameplaySystems),
         )
-
-        .add_systems(PostUpdate,(
+        .add_systems(
+            PostUpdate,
+            (
                 clear_map_for_recompution_when_collider_disabled,
-                compute_grid_collision
+                compute_grid_collision,
             )
                 .chain()
                 .in_set(GameplaySystems)
-                .after(LevelSystems)
+                .after(LevelSystems),
         );
 }
 
@@ -82,7 +90,10 @@ pub fn build_world_path_finding_grid(
     mut commands: Commands,
     tiled_worlds: Res<Assets<TiledWorld>>,
     tiled_maps: Res<Assets<TiledMap>>,
-    s_world: Single<(Entity, &TiledWorldHandle, &TilemapAnchor), Without<Grid<CardinalNeighborhood>>>,
+    s_world: Single<
+        (Entity, &TiledWorldHandle, &TilemapAnchor),
+        Without<Grid<CardinalNeighborhood>>,
+    >,
 ) {
     let (entity, world_handle, anchor) = s_world.into_inner();
 
@@ -98,7 +109,10 @@ pub fn build_world_path_finding_grid(
         return;
     };
 
-    let tile_size = UVec2::new(first_tiled_map.map.tile_width, first_tiled_map.map.tile_height);
+    let tile_size = UVec2::new(
+        first_tiled_map.map.tile_width,
+        first_tiled_map.map.tile_height,
+    );
 
     let grid_size = tiled_world.rect.max.as_uvec2() / tile_size;
 
@@ -121,7 +135,7 @@ pub fn build_world_path_finding_grid(
             .default_impassable()
             .enable_collision()
             .avoidance_distance(4)
-            .build()
+            .build(),
     );
 
     for (rect, _) in tiled_world.maps.iter() {
@@ -133,7 +147,6 @@ pub fn build_world_path_finding_grid(
                 grid.set_nav(UVec3::new(x, y, 0), Nav::Passable(1));
             }
         }
-
     }
 
     grid.build();
@@ -160,14 +173,14 @@ pub fn build_world_path_finding_grid(
                 Collider::rectangle((tile_size.x - 2) as f32, (tile_size.y - 2) as f32),
                 ScanCollider
             )
-        ]
+        ],
     ));
 }
 
 pub fn mark_agents_in_world_grid(
     mut commands: Commands,
     s_world_grid: Single<Entity, (With<TiledWorldMarker>, With<Grid<CardinalNeighborhood>>)>,
-    q_agents: Query<Entity, (With<InWorldGrid>, Without<AgentOfGrid>)>
+    q_agents: Query<Entity, (With<InWorldGrid>, Without<AgentOfGrid>)>,
 ) {
     let world_grid = s_world_grid.into_inner();
 
@@ -178,9 +191,17 @@ pub fn mark_agents_in_world_grid(
 
 fn compute_grid_collision(
     mut commands: Commands,
-    mut q_grids: Query<(Entity, &mut Grid<CardinalNeighborhood>, &GridTileSize, &TilemapAnchor)>,
+    mut q_grids: Query<(
+        Entity,
+        &mut Grid<CardinalNeighborhood>,
+        &GridTileSize,
+        &TilemapAnchor,
+    )>,
     q_scan_colliders: Query<(&Collider, &ChildOf), With<ScanCollider>>,
-    q_colliders: Query<(Entity, &GlobalTransform, &Collider, &RigidBody), (Without<GridCollisionCalculated>, Without<TriggerCollider>)>,
+    q_colliders: Query<
+        (Entity, &GlobalTransform, &Collider, &RigidBody),
+        (Without<GridCollisionCalculated>, Without<TriggerCollider>),
+    >,
 ) {
     if q_colliders.is_empty() {
         return;
@@ -217,7 +238,7 @@ fn compute_grid_collision(
                         Quat::default(),
                         other_collider,
                         other_collider_transform.translation().truncate(),
-                        other_collider_transform.rotation()
+                        other_collider_transform.rotation(),
                     ) else {
                         continue;
                     };
@@ -242,7 +263,7 @@ fn clear_map_for_recompution_when_collider_disabled(
     mut commands: Commands,
     mut q_grids: Query<&mut Grid<CardinalNeighborhood>>,
     q_disabled_colliders: Query<Entity, (Added<Disabled>, With<GridCollisionCalculated>)>,
-    q_colliders: Query<Entity, With<GridCollisionCalculated>>
+    q_colliders: Query<Entity, With<GridCollisionCalculated>>,
 ) {
     if q_disabled_colliders.is_empty() {
         return;
@@ -270,7 +291,15 @@ fn clear_map_for_recompution_when_collider_disabled(
 pub fn set_grid_pos_from_transform(
     mut commands: Commands,
     q_grids: Query<(&Grid<CardinalNeighborhood>, &GridTileSize, &TilemapAnchor)>,
-    mut q_grid_items: Query<(Entity, &GlobalTransform, &AgentOfGrid, Option<&mut AgentPos>), (Changed<Transform>, Or<(With<FollowPath>, With<PathNode>)>)>,
+    mut q_grid_items: Query<
+        (
+            Entity,
+            &GlobalTransform,
+            &AgentOfGrid,
+            Option<&mut AgentPos>,
+        ),
+        (Changed<Transform>, Or<(With<FollowPath>, With<PathNode>)>),
+    >,
 ) {
     for (entity, transform, agent_of_grid, grid_pos_option) in q_grid_items.iter_mut() {
         let Ok((grid, tile_size, anchor)) = q_grids.get(agent_of_grid.0) else {
@@ -284,13 +313,17 @@ pub fn set_grid_pos_from_transform(
             &TilemapType::Square,
         );
 
-        let grid_pos_vec = (transform.translation().truncate() - offset + (tile_size.0 / 2).as_vec2()) / tile_size.0.as_vec2();
-        let grid_pos_uvec = UVec3::new(grid_pos_vec.x.round() as u32, grid_pos_vec.y.round() as u32, 0);
+        let grid_pos_vec = (transform.translation().truncate() - offset
+            + (tile_size.0 / 2).as_vec2())
+            / tile_size.0.as_vec2();
+        let grid_pos_uvec = UVec3::new(
+            grid_pos_vec.x.round() as u32,
+            grid_pos_vec.y.round() as u32,
+            0,
+        );
 
         let Some(mut grid_pos) = grid_pos_option else {
-            commands.entity(entity).insert(
-                AgentPos(grid_pos_uvec)
-            );
+            commands.entity(entity).insert(AgentPos(grid_pos_uvec));
 
             continue;
         };
@@ -301,16 +334,24 @@ pub fn set_grid_pos_from_transform(
 
 pub fn apply_goal_from_path_node(
     mut commands: Commands,
-    mut q_movables: Query<(Entity, &mut FollowPath, &AgentOfGrid), (With<CanMove>, Without<Pathfind>, Without<Path>, Without<MoveToLocation>)>,
-    q_path_nodes: Query<(&AgentPos, &PathNode, &AgentOfGrid), Without<CanMove>>
+    mut q_movables: Query<
+        (Entity, &mut FollowPath, &AgentOfGrid),
+        (
+            With<CanMove>,
+            Without<Pathfind>,
+            Without<Path>,
+            Without<MoveToLocation>,
+        ),
+    >,
+    q_path_nodes: Query<(&AgentPos, &PathNode, &AgentOfGrid), Without<CanMove>>,
 ) {
-    for (entity,  mut goal, agent_of_grid) in q_movables.iter_mut() {
+    for (entity, mut goal, agent_of_grid) in q_movables.iter_mut() {
         let Some(goal_entity) = goal.0 else {
             continue;
         };
 
         let Ok((goal_pos, next, path_of_grid)) = q_path_nodes.get(goal_entity) else {
-            continue
+            continue;
         };
 
         if agent_of_grid.0 != path_of_grid.0 {
@@ -324,26 +365,46 @@ pub fn apply_goal_from_path_node(
                 goal: goal_pos.0,
                 ..default()
             },
-            DebugPath::default()
+            DebugPath::default(),
         ));
     }
 }
 
 pub fn apply_intent_from_next_pos(
     mut commands: Commands,
-    q_next_positions: Query<(Entity, &AgentPos, &NextPos), (With<AgentOfGrid>, Without<MovementIntent>, Without<MoveToLocation>, Without<NextPosToBeRemoved>)>
+    q_next_positions: Query<
+        (Entity, &AgentPos, &NextPos),
+        (
+            With<AgentOfGrid>,
+            Without<MovementIntent>,
+            Without<MoveToLocation>,
+            Without<NextPosToBeRemoved>,
+        ),
+    >,
 ) {
     for (entity, grid_pos, next_pos) in q_next_positions.iter() {
         commands.entity(entity).insert((
-            MovementIntent((next_pos.0.as_vec3() - grid_pos.0.as_vec3()).truncate().normalize()),
-            NextPosToBeRemoved
+            MovementIntent(
+                (next_pos.0.as_vec3() - grid_pos.0.as_vec3())
+                    .truncate()
+                    .normalize(),
+            ),
+            NextPosToBeRemoved,
         ));
     }
 }
 
 pub fn remove_next_pos(
     mut commands: Commands,
-    q_next_positions: Query<(Entity, &AgentPos, &NextPos), (With<AgentOfGrid>, Without<MovementIntent>, Without<MoveToLocation>, With<NextPosToBeRemoved>)>
+    q_next_positions: Query<
+        (Entity, &AgentPos, &NextPos),
+        (
+            With<AgentOfGrid>,
+            Without<MovementIntent>,
+            Without<MoveToLocation>,
+            With<NextPosToBeRemoved>,
+        ),
+    >,
 ) {
     for (entity, grid_pos, next_pos) in q_next_positions.iter() {
         if grid_pos.0 != next_pos.0 {
@@ -352,9 +413,8 @@ pub fn remove_next_pos(
             continue;
         }
 
-        commands.entity(entity).remove::<(
-            NextPos,
-            NextPosToBeRemoved
-        )>();
+        commands
+            .entity(entity)
+            .remove::<(NextPos, NextPosToBeRemoved)>();
     }
 }

@@ -18,6 +18,7 @@ Hohenheim: Hi, I'm Jan Hohenheim, creator of Yarn Spinner for Rust. I hope you e
 Let's set a condition. Do you prefer dogs or cats?
 -> Dogs
     <<set $animal = "dog">>
+    <<toggle_game_scene "bla">>
 -> Cats
     <<set $animal = "cats">>
 -> Turtles
@@ -33,14 +34,4 @@ Cats! (Can't say I agree, but you do you)
 Turtles! Solid choice.
 <<endif>>
 Et voilà! That was all. Thanks for checking out Yarn Spinner for Rust! Continuing from the last node will exit the dialogue.
-===
-title: Node
-position: 307,-61
----
-test
-
-=> 
-<<jump AnotherNode>>
-=> 
-<<jump HelloWorld>>
 ===

@@ -5,15 +5,16 @@
 
 mod asset_tracking;
 mod audio;
-mod game;
 #[cfg(feature = "dev")]
 mod dev_tools;
+mod fades;
+mod game;
 mod menus;
 mod screens;
-mod fades;
 mod theme;
 
 use bevy::{asset::AssetMetaCheck, prelude::*};
+use bevy_light_2d::light::AmbientLight2d;
 
 use crate::fades::Fade;
 
@@ -73,38 +74,22 @@ impl Plugin for AppPlugin {
 
         app.configure_sets(
             FixedUpdate,
-            (
-                AppSystems::TickTimers,
-                AppSystems::Update,
-            )
-                .chain(),
+            (AppSystems::TickTimers, AppSystems::Update).chain(),
         );
 
         // Set up the `Pause` state.
         app.init_state::<Pause>();
         app.configure_sets(
             PreUpdate,
-            PausableSystems
-                .run_if(
-                    in_state(Pause(false))
-                    .and(in_state(Fade::None))
-                )
+            PausableSystems.run_if(in_state(Pause(false)).and(in_state(Fade::None))),
         );
         app.configure_sets(
             Update,
-            PausableSystems
-                .run_if(
-                    in_state(Pause(false))
-                    .and(in_state(Fade::None))
-                )
+            PausableSystems.run_if(in_state(Pause(false)).and(in_state(Fade::None))),
         );
         app.configure_sets(
             FixedUpdate,
-            PausableSystems
-                .run_if(
-                    in_state(Pause(false))
-                    .and(in_state(Fade::None))
-                )
+            PausableSystems.run_if(in_state(Pause(false)).and(in_state(Fade::None))),
         );
 
         // Spawn the main camera.
@@ -135,5 +120,12 @@ pub struct Pause(pub bool);
 struct PausableSystems;
 
 fn spawn_camera(mut commands: Commands) {
-    commands.spawn((Name::new("Camera"), Camera2d));
+    commands.spawn((
+        Name::new("Camera"),
+        Camera2d,
+        AmbientLight2d {
+            brightness: 0.1,
+            ..default()
+        },
+    ));
 }

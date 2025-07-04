@@ -1,25 +1,30 @@
 use avian2d::{collision::collider::contact_query, prelude::Collider};
 use bevy::prelude::*;
 
-use crate::{game::{movement::{CanMove, MoveToLocation}, GameplaySystems}, AppSystems};
+use crate::{
+    AppSystems,
+    game::{
+        GameplaySystems,
+        movement::{CanMove, MoveToLocation},
+    },
+};
 
 pub(super) fn plugin(app: &mut App) {
-    app
-    .register_type::<IsTrigger>()
-
-    .add_event::<TriggerEnteredEvent>()
-    .add_event::<TriggerExitedEvent>()
-    .add_event::<TriggerActivatedEvent>()
-
-    .add_systems(Update, (
-            check_trigger_overlap,
-            debug_trigger_events,
-            activate_instant_triggers,
-            activate_interact_triggers,
-        )
-            .in_set(AppSystems::Update)
-            .in_set(GameplaySystems)
-    );
+    app.register_type::<IsTrigger>()
+        .add_event::<TriggerEnteredEvent>()
+        .add_event::<TriggerExitedEvent>()
+        .add_event::<TriggerActivatedEvent>()
+        .add_systems(
+            Update,
+            (
+                check_trigger_overlap,
+                debug_trigger_events,
+                activate_instant_triggers,
+                activate_interact_triggers,
+            )
+                .in_set(AppSystems::Update)
+                .in_set(GameplaySystems),
+        );
 }
 
 #[derive(Component, Default, Reflect, Debug)]
@@ -27,7 +32,7 @@ pub(super) fn plugin(app: &mut App) {
 pub enum IsTrigger {
     #[default]
     Instant,
-    Interact
+    Interact,
 }
 
 #[derive(Component)]
@@ -36,32 +41,35 @@ pub struct TriggerCollider;
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
 pub struct InsideTriggers {
-    pub entities: Vec<Entity>
+    pub entities: Vec<Entity>,
 }
 
 #[derive(Event)]
 pub struct TriggerEnteredEvent {
     pub entity: Entity,
-    pub trigger: Entity
+    pub trigger: Entity,
 }
 
 #[derive(Event)]
 pub struct TriggerExitedEvent {
     pub entity: Entity,
-    pub trigger: Entity
+    pub trigger: Entity,
 }
 
 #[derive(Event)]
 pub struct TriggerActivatedEvent {
     pub entity: Entity,
-    pub trigger: Entity
+    pub trigger: Entity,
 }
 
 pub fn check_trigger_overlap(
     mut commands: Commands,
     mut e_trigger_entered: EventWriter<TriggerEnteredEvent>,
     mut e_trigger_exited: EventWriter<TriggerExitedEvent>,
-    mut q_entites: Query<(Entity, &Children, Option<&mut InsideTriggers>), (With<Transform>, Without<MoveToLocation>, With<CanMove>)>,
+    mut q_entites: Query<
+        (Entity, &Children, Option<&mut InsideTriggers>),
+        (With<Transform>, Without<MoveToLocation>, With<CanMove>),
+    >,
     q_colliders: Query<(&Collider, &GlobalTransform)>,
     q_trigger_colliders: Query<(&Collider, &GlobalTransform, &ChildOf), With<TriggerCollider>>,
 ) {
@@ -78,7 +86,7 @@ pub fn check_trigger_overlap(
                     collider_transform.rotation(),
                     trigger_collider,
                     trigger_transform.translation().truncate(),
-                    trigger_transform.rotation()
+                    trigger_transform.rotation(),
                 ) else {
                     continue;
                 };
@@ -94,7 +102,7 @@ pub fn check_trigger_overlap(
 
                     e_trigger_entered.write(TriggerEnteredEvent {
                         entity: entity,
-                        trigger: child_of.0
+                        trigger: child_of.0,
                     });
 
                     continue;
@@ -111,9 +119,9 @@ pub fn check_trigger_overlap(
                         commands.entity(entity).remove::<InsideTriggers>();
                     }
 
-                    e_trigger_exited.write(TriggerExitedEvent{
+                    e_trigger_exited.write(TriggerExitedEvent {
                         entity: entity,
-                        trigger: child_of.0
+                        trigger: child_of.0,
                     });
 
                     continue;
@@ -125,7 +133,7 @@ pub fn check_trigger_overlap(
 
                 e_trigger_entered.write(TriggerEnteredEvent {
                     entity: entity,
-                    trigger: child_of.0
+                    trigger: child_of.0,
                 });
 
                 inside_triggers.entities.push(child_of.0);
@@ -136,9 +144,8 @@ pub fn check_trigger_overlap(
 
 pub fn debug_trigger_events(
     mut e_trigger_entered: EventReader<TriggerEnteredEvent>,
-    mut e_trigger_exited: EventReader<TriggerExitedEvent>
+    mut e_trigger_exited: EventReader<TriggerExitedEvent>,
 ) {
-
     for e in e_trigger_entered.read() {
         info!("entity {} entered trigger {}", e.entity, e.trigger)
     }
@@ -151,7 +158,7 @@ pub fn debug_trigger_events(
 pub fn activate_instant_triggers(
     mut e_trigger_entered: EventReader<TriggerEnteredEvent>,
     mut e_trigger_activated: EventWriter<TriggerActivatedEvent>,
-    q_triggers: Query<&IsTrigger>
+    q_triggers: Query<&IsTrigger>,
 ) {
     for e in e_trigger_entered.read() {
         let Ok(trigger) = q_triggers.get(e.trigger) else {
@@ -160,12 +167,15 @@ pub fn activate_instant_triggers(
 
         if match trigger {
             IsTrigger::Interact => true,
-            _ => false
+            _ => false,
         } {
             return;
         }
 
-        e_trigger_activated.write(TriggerActivatedEvent { entity: e.entity, trigger: e.trigger });
+        e_trigger_activated.write(TriggerActivatedEvent {
+            entity: e.entity,
+            trigger: e.trigger,
+        });
     }
 }
 
@@ -173,7 +183,7 @@ pub fn activate_interact_triggers(
     keyboard_input: Res<ButtonInput<KeyCode>>,
     mut e_trigger_activated: EventWriter<TriggerActivatedEvent>,
     q_inside_triggers: Query<(Entity, &InsideTriggers)>,
-    q_triggers: Query<&IsTrigger>
+    q_triggers: Query<&IsTrigger>,
 ) {
     if !keyboard_input.just_pressed(KeyCode::KeyE) {
         return;
@@ -187,12 +197,15 @@ pub fn activate_interact_triggers(
 
             if match trigger {
                 IsTrigger::Instant => true,
-                _ => false
+                _ => false,
             } {
                 continue;
             }
 
-            e_trigger_activated.write(TriggerActivatedEvent { entity: entity, trigger: trigger_entity.clone() });
+            e_trigger_activated.write(TriggerActivatedEvent {
+                entity: entity,
+                trigger: trigger_entity.clone(),
+            });
         }
     }
 }

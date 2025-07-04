@@ -26,10 +26,12 @@ tracing = { version = "0.1", features = [
 avian2d = "0.3.1"
 bevy_northstar = "0.3.0"
 bevy_mod_debugdump = "0.13.0"
+bevy_light_2d = "0.6.0"
 
 [patch.crates-io]
 bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
 bevy_aseprite_ultra = { path = "crates/bevy_aseprite_ultra" }
+bevy_light_2d = { path = "crates/bevy_light_2d" }
 
 # Your web builds will start failing if you add a dependency that pulls in `getrandom` v0.3+.
 # To fix this, you should tell `getrandom` to use the `wasm_js` backend on Wasm.

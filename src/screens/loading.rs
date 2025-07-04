@@ -10,12 +10,11 @@ pub(super) fn plugin(app: &mut App) {
 
     app.add_systems(
         Update,
-        enter_gameplay_screen
-            .run_if(
-                in_state(Screen::Loading)
+        enter_gameplay_screen.run_if(
+            in_state(Screen::Loading)
                 .and(in_state(Fade::None))
-                .and(all_assets_loaded)
-            ),
+                .and(all_assets_loaded),
+        ),
     );
 }
 
@@ -29,7 +28,7 @@ fn spawn_loading_screen(mut commands: Commands) {
 
 fn enter_gameplay_screen(
     mut next_screen: ResMut<NextState<Screen>>,
-    mut next_fade: ResMut<NextState<Fade>>
+    mut next_fade: ResMut<NextState<Fade>>,
 ) {
     next_screen.set(Screen::Gameplay);
     next_fade.set(Fade::Out)

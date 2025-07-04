@@ -1,31 +1,37 @@
 use bevy::{ecs::entity_disabling::Disabled, platform::collections::HashSet, prelude::*};
 
-use crate::{game::{level::DisabledByVisibility, trigger::{IsTrigger, TriggerActivatedEvent}, GameplaySystems}, AppSystems};
+use crate::{
+    AppSystems,
+    game::{
+        GameplaySystems,
+        level::DisabledByVisibility,
+        trigger::{IsTrigger, TriggerActivatedEvent},
+    },
+};
 
 pub(super) fn plugin(app: &mut App) {
-    app
-        .register_type::<ShowInGameScene>()
+    app.register_type::<ShowInGameScene>()
         .register_type::<HideInGameScene>()
         .register_type::<ChangeGameScene>()
         .register_type::<StartingGameScene>()
         .register_type::<CurrentGameScenes>()
-
         .init_resource::<CurrentGameScenes>()
-
-        .add_systems(PreUpdate,
+        .add_systems(
+            PreUpdate,
             set_starting_scene
                 .in_set(GameplaySystems)
-                .run_if(resource_added::<StartingGameScene>)
+                .run_if(resource_added::<StartingGameScene>),
         )
-        .add_systems(Update,(
+        .add_systems(
+            Update,
+            (
                 change_scene_from_activated_trigger,
                 hide_scene_entities,
-                show_scene_entities
+                show_scene_entities,
             )
                 .in_set(GameplaySystems)
-                .in_set(AppSystems::Update)
+                .in_set(AppSystems::Update),
         );
-
 }
 
 #[derive(Resource, Default, Clone, Reflect)]
@@ -54,7 +60,7 @@ pub struct HideInGameScene(pub String);
 #[reflect(Component, Default)]
 pub struct ChangeGameScene {
     pub scene: String,
-    pub action: ChangeGameSceneAction
+    pub action: ChangeGameSceneAction,
 }
 
 #[derive(Default, Debug, Reflect)]
@@ -63,17 +69,23 @@ pub enum ChangeGameSceneAction {
     #[default]
     Toggle,
     Add,
-    Remove
+    Remove,
 }
 
 pub fn hide_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), With<GameSceneObject>>
+    mut q_scenes: Query<
+        (
+            Option<&HideInGameScene>,
+            Option<&ShowInGameScene>,
+            &mut Visibility,
+        ),
+        With<GameSceneObject>,
+    >,
 ) {
     for (hide_in_scene, show_in_scene, mut visibility) in q_scenes.iter_mut() {
-        if
-            (hide_in_scene.is_none() || !current_scenes.0.contains(&hide_in_scene.unwrap().0)) &&
-            (show_in_scene.is_none() || current_scenes.0.contains(&show_in_scene.unwrap().0))
+        if (hide_in_scene.is_none() || !current_scenes.0.contains(&hide_in_scene.unwrap().0))
+            && (show_in_scene.is_none() || current_scenes.0.contains(&show_in_scene.unwrap().0))
         {
             continue;
         }
@@ -84,12 +96,22 @@ pub fn hide_scene_entities(
 
 pub fn show_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,
-    mut q_scenes: Query<(Option<&HideInGameScene>, Option<&ShowInGameScene>, &mut Visibility), (With<Disabled>, With<DisabledByVisibility>, With<GameSceneObject>)>
+    mut q_scenes: Query<
+        (
+            Option<&HideInGameScene>,
+            Option<&ShowInGameScene>,
+            &mut Visibility,
+        ),
+        (
+            With<Disabled>,
+            With<DisabledByVisibility>,
+            With<GameSceneObject>,
+        ),
+    >,
 ) {
     for (hide_in_scene, show_in_scene, mut visibility) in q_scenes.iter_mut() {
-        if
-            (hide_in_scene.is_some() && current_scenes.0.contains(&hide_in_scene.unwrap().0)) ||
-            (show_in_scene.is_some() && !current_scenes.0.contains(&show_in_scene.unwrap().0))
+        if (hide_in_scene.is_some() && current_scenes.0.contains(&hide_in_scene.unwrap().0))
+            || (show_in_scene.is_some() && !current_scenes.0.contains(&show_in_scene.unwrap().0))
         {
             continue;
         }
@@ -101,7 +123,7 @@ pub fn show_scene_entities(
 pub fn set_starting_scene(
     mut commands: Commands,
     starting_game_scene: Res<StartingGameScene>,
-    mut current_game_scenes: ResMut<CurrentGameScenes>
+    mut current_game_scenes: ResMut<CurrentGameScenes>,
 ) {
     current_game_scenes.0.clear();
     current_game_scenes.0.insert(starting_game_scene.0.clone());
@@ -112,7 +134,7 @@ pub fn set_starting_scene(
 pub fn change_scene_from_activated_trigger(
     mut current_scenes: ResMut<CurrentGameScenes>,
     mut e_trigger_activated: EventReader<TriggerActivatedEvent>,
-    q_scene_setters: Query<&ChangeGameScene, With<IsTrigger>>
+    q_scene_setters: Query<&ChangeGameScene, With<IsTrigger>>,
 ) {
     for e in e_trigger_activated.read() {
         let Ok(change_game_scene) = q_scene_setters.get(e.trigger) else {
@@ -135,4 +157,29 @@ pub fn change_scene_from_activated_trigger(
             }
         }
     }
+}
+
+pub fn add_scene_from_dialogue_command(
+    In(scene): In<String>,
+    mut current_scenes: ResMut<CurrentGameScenes>,
+) {
+    current_scenes.0.insert(scene.clone());
+}
+
+pub fn remove_scene_from_dialogue_command(
+    In(scene): In<String>,
+    mut current_scenes: ResMut<CurrentGameScenes>,
+) {
+    current_scenes.0.remove(&scene);
+}
+
+pub fn toggle_scene_from_dialogue_command(
+    In(scene): In<String>,
+    mut current_scenes: ResMut<CurrentGameScenes>,
+) {
+    if current_scenes.0.contains(&scene) {
+        current_scenes.0.remove(&scene);
+        return;
+    }
+    current_scenes.0.insert(scene.clone());
 }
