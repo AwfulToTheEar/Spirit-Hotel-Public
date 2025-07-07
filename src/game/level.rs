@@ -167,7 +167,7 @@ pub fn mark_objects_inside_map(
         };
 
         let map_translation = map_transform.translation();
-        let map_size = Vec2::new(tiled_map.rect.max.x as f32, tiled_map.rect.max.y as f32);
+        let map_size = Vec2::new(tiled_map.rect.max.x, tiled_map.rect.max.y);
 
         for (entity, transform, inside_map_option) in q_tiled_map_objects.iter_mut() {
             let translation = transform.translation();

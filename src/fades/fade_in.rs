@@ -64,6 +64,6 @@ pub fn check_fade_in_timer(
     if fade_in.0.just_finished() {
         fade_data.next_state = None;
         next_fade.set(Fade::None);
-        next_screen.set(screen.clone());
+        next_screen.set(screen);
     }
 }

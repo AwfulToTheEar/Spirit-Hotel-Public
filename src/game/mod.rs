@@ -59,7 +59,7 @@ pub(super) fn plugin(app: &mut App) {
                     }
                 }
 
-                return false;
+                false
             });
         });
 }

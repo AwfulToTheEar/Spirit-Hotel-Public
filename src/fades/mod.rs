@@ -21,11 +21,11 @@ pub struct FadeData {
 
 impl FromWorld for FadeData {
     fn from_world(_world: &mut World) -> Self {
-        return Self {
+        Self {
             color: FADE_BACKGROUND_COLOR,
             duration: 0.3,
             next_state: None,
-        };
+        }
     }
 }
 

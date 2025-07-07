@@ -39,7 +39,7 @@ fn enter_loading_or_gameplay_screen(
     mut level_assets: ResMut<LevelAssets>,
     mut next_screen: ResMut<NextState<Screen>>,
 ) {
-    if level_assets.world == None {
+    if level_assets.world.is_none() {
         level_assets.world = Some(asset_server.load("tiled\\worlds\\test.world"))
     }
 

@@ -152,7 +152,7 @@ pub fn build_world_path_finding_grid(
     grid.build();
 
     let offset = anchor.as_offset(
-        &TilemapSize::new(grid_size.x as u32, grid_size.y as u32),
+        &TilemapSize::new(grid_size.x, grid_size.y),
         &TilemapGridSize::new(tile_size.x as f32, tile_size.y as f32),
         &TilemapTileSize::new(tile_size.x as f32, tile_size.y as f32),
         &TilemapType::Square,
@@ -216,9 +216,7 @@ fn compute_grid_collision(
         );
 
         let Some((collider, _)) = q_scan_colliders
-            .iter()
-            .filter(|(_, child_of)| child_of.0 == entity)
-            .next()
+            .iter().find(|(_, child_of)| child_of.0 == entity)
         else {
             continue;
         };

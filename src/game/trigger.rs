@@ -101,7 +101,7 @@ pub fn check_trigger_overlap(
                     commands.entity(entity).insert(inside_triggers);
 
                     e_trigger_entered.write(TriggerEnteredEvent {
-                        entity: entity,
+                        entity,
                         trigger: child_of.0,
                     });
 
@@ -120,7 +120,7 @@ pub fn check_trigger_overlap(
                     }
 
                     e_trigger_exited.write(TriggerExitedEvent {
-                        entity: entity,
+                        entity,
                         trigger: child_of.0,
                     });
 
@@ -132,7 +132,7 @@ pub fn check_trigger_overlap(
                 }
 
                 e_trigger_entered.write(TriggerEnteredEvent {
-                    entity: entity,
+                    entity,
                     trigger: child_of.0,
                 });
 
@@ -165,10 +165,7 @@ pub fn activate_instant_triggers(
             continue;
         };
 
-        if match trigger {
-            IsTrigger::Interact => true,
-            _ => false,
-        } {
+        if matches!(trigger, IsTrigger::Interact) {
             return;
         }
 
@@ -191,20 +188,17 @@ pub fn activate_interact_triggers(
 
     for (entity, inside_triggers) in q_inside_triggers.iter() {
         for trigger_entity in inside_triggers.entities.iter() {
-            let Ok(trigger) = q_triggers.get(trigger_entity.clone()) else {
+            let Ok(trigger) = q_triggers.get(*trigger_entity) else {
                 continue;
             };
 
-            if match trigger {
-                IsTrigger::Instant => true,
-                _ => false,
-            } {
+            if matches!(trigger, IsTrigger::Instant) {
                 continue;
             }
 
             e_trigger_activated.write(TriggerActivatedEvent {
-                entity: entity,
-                trigger: trigger_entity.clone(),
+                entity,
+                trigger: *trigger_entity,
             });
         }
     }
