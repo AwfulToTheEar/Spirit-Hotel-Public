@@ -1,5 +1,8 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::{prelude::{TiledPhysicsAvianBackend, TiledPhysicsSettings, TilemapAnchor}, world::TiledWorldHandle};
+use bevy_ecs_tiled::{
+    prelude::{TiledPhysicsAvianBackend, TiledPhysicsSettings, TilemapAnchor},
+    world::TiledWorldHandle,
+};
 
 use crate::{game::level::resources::prelude::LevelAssets, screens::Screen};
 

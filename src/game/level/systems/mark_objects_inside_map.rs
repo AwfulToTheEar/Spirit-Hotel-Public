@@ -1,5 +1,8 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::{map::TiledMapHandle, prelude::{TiledColliderMarker, TiledMap, TiledMapObject}};
+use bevy_ecs_tiled::{
+    map::TiledMapHandle,
+    prelude::{TiledColliderMarker, TiledMap, TiledMapObject},
+};
 
 use crate::game::level::components::prelude::InsideMap;
 

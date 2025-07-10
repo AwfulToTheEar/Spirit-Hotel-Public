@@ -1,7 +1,17 @@
 use bevy::prelude::*;
 use bevy_northstar::{plugin::NorthstarPlugin, prelude::CardinalNeighborhood};
 
-use crate::{game::{level::system_sets::prelude::LevelSystems, path_finding::{components::prelude::{FollowPath, InWorldGrid, PathNode}, systems::prelude::*}, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{
+    AppSystems, PausableSystems,
+    game::{
+        GameplaySystems,
+        level::system_sets::prelude::LevelSystems,
+        path_finding::{
+            components::prelude::{FollowPath, InWorldGrid, PathNode},
+            systems::prelude::*,
+        },
+    },
+};
 
 pub mod components;
 pub mod systems;

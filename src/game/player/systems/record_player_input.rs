@@ -1,6 +1,9 @@
 use bevy::prelude::*;
 
-use crate::game::{movement::components::prelude::{MoveToLocation, MovementIntent}, player::components::prelude::Player};
+use crate::game::{
+    movement::components::prelude::{MoveToLocation, MovementIntent},
+    player::components::prelude::Player,
+};
 
 pub fn record_player_input(
     mut commands: Commands,

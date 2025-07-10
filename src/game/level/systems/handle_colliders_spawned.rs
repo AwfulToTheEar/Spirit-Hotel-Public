@@ -1,5 +1,7 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::{TiledColliderCreated, TiledMapLayer, TiledMapMarker, TiledMapObject};
+use bevy_ecs_tiled::prelude::{
+    TiledColliderCreated, TiledMapLayer, TiledMapMarker, TiledMapObject,
+};
 
 use crate::game::level::components::prelude::TiledCollidersSpawned;
 

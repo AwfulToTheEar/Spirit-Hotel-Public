@@ -1,6 +1,12 @@
 use bevy::prelude::*;
 
-use crate::{game::{trigger::{components::prelude::IsTrigger, events::prelude::*, systems::prelude::*}, GameplaySystems}, AppSystems};
+use crate::{
+    AppSystems,
+    game::{
+        GameplaySystems,
+        trigger::{components::prelude::IsTrigger, events::prelude::*, systems::prelude::*},
+    },
+};
 
 pub mod components;
 pub mod events;

@@ -1,6 +1,16 @@
 use bevy::prelude::*;
 
-use crate::{game::{scene::{components::prelude::{ChangeGameScene, HideInGameScene, ShowInGameScene}, resources::prelude::{CurrentGameScenes, StartingGameScene}, systems::prelude::*}, GameplaySystems}, AppSystems};
+use crate::{
+    AppSystems,
+    game::{
+        GameplaySystems,
+        scene::{
+            components::prelude::{ChangeGameScene, HideInGameScene, ShowInGameScene},
+            resources::prelude::{CurrentGameScenes, StartingGameScene},
+            systems::prelude::*,
+        },
+    },
+};
 
 pub mod components;
 pub mod resources;

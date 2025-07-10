@@ -1,7 +1,20 @@
 use bevy::{prelude::*, render::view::VisibilitySystems};
-use bevy_ecs_tiled::{prelude::{TiledPhysicsAvianBackend, TiledPhysicsPlugin}, TiledMapPlugin};
+use bevy_ecs_tiled::{
+    TiledMapPlugin,
+    prelude::{TiledPhysicsAvianBackend, TiledPhysicsPlugin},
+};
 
-use crate::{asset_tracking::LoadResource, game::{level::{components::prelude::LoadLevel, resources::prelude::LevelAssets, system_sets::prelude::LevelSystems, systems::prelude::*}, GameplaySystems}, AppSystems};
+use crate::{
+    AppSystems,
+    asset_tracking::LoadResource,
+    game::{
+        GameplaySystems,
+        level::{
+            components::prelude::LoadLevel, resources::prelude::LevelAssets,
+            system_sets::prelude::LevelSystems, systems::prelude::*,
+        },
+    },
+};
 
 pub mod components;
 pub mod resources;

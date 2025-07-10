@@ -1,6 +1,9 @@
 use bevy::prelude::*;
 
-use crate::game::scene::{components::prelude::{GameSceneObject, HideInGameScene, ShowInGameScene}, resources::prelude::CurrentGameScenes};
+use crate::game::scene::{
+    components::prelude::{GameSceneObject, HideInGameScene, ShowInGameScene},
+    resources::prelude::CurrentGameScenes,
+};
 
 pub fn hide_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,

@@ -1,5 +1,5 @@
-pub mod commands;
 mod change_scene_from_activated_trigger;
+pub mod commands;
 mod hide_scene_entities;
 mod set_starting_scene;
 mod show_scene_entities;

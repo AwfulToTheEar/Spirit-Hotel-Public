@@ -3,7 +3,8 @@
 use bevy::prelude::*;
 
 use crate::{
-    asset_tracking::ResourceHandles, game::level::resources::prelude::LevelAssets, menus::Menu, screens::Screen, theme::widget
+    asset_tracking::ResourceHandles, game::level::resources::prelude::LevelAssets, menus::Menu,
+    screens::Screen, theme::widget,
 };
 
 pub(super) fn plugin(app: &mut App) {

@@ -1,8 +1,15 @@
 use avian2d::prelude::Collider;
 use bevy::prelude::*;
-use bevy_ecs_tiled::{prelude::{TiledMap, TiledWorld, TilemapAnchor}, world::TiledWorldHandle};
+use bevy_ecs_tiled::{
+    prelude::{TiledMap, TiledWorld, TilemapAnchor},
+    world::TiledWorldHandle,
+};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
-use bevy_northstar::{grid::{Grid, GridSettingsBuilder}, nav::Nav, prelude::{CardinalNeighborhood, DebugGridBuilder}};
+use bevy_northstar::{
+    grid::{Grid, GridSettingsBuilder},
+    nav::Nav,
+    prelude::{CardinalNeighborhood, DebugGridBuilder},
+};
 
 use crate::game::path_finding::components::prelude::{GridTileSize, ScanCollider};
 

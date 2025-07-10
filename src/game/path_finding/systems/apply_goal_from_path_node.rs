@@ -1,7 +1,13 @@
 use bevy::prelude::*;
-use bevy_northstar::{path::Path, prelude::{AgentOfGrid, AgentPos, DebugPath, Pathfind}};
+use bevy_northstar::{
+    path::Path,
+    prelude::{AgentOfGrid, AgentPos, DebugPath, Pathfind},
+};
 
-use crate::game::{movement::components::prelude::{CanMove, MoveToLocation}, path_finding::components::prelude::{FollowPath, PathNode}};
+use crate::game::{
+    movement::components::prelude::{CanMove, MoveToLocation},
+    path_finding::components::prelude::{FollowPath, PathNode},
+};
 
 pub fn apply_goal_from_path_node(
     mut commands: Commands,

@@ -2,11 +2,19 @@ use bevy::prelude::*;
 use bevy_aseprite_ultra::AsepriteUltraPlugin;
 use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
-use crate::{asset_tracking::LoadResource, game::{animation::{components::prelude::*, resources::prelude::*, systems::prelude::*}, level::system_sets::prelude::LevelSystems, GameplaySystems}, AppSystems, PausableSystems, Pause};
+use crate::{
+    AppSystems, PausableSystems, Pause,
+    asset_tracking::LoadResource,
+    game::{
+        GameplaySystems,
+        animation::{components::prelude::*, resources::prelude::*, systems::prelude::*},
+        level::system_sets::prelude::LevelSystems,
+    },
+};
 
 pub mod components;
-pub mod systems;
 pub mod resources;
+pub mod systems;
 
 pub fn plugin(app: &mut App) {
     app.add_plugins((

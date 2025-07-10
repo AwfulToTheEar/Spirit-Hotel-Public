@@ -2,7 +2,17 @@ use bevy::prelude::*;
 use bevy_yarnspinner::prelude::{YarnProject, YarnSpinnerPlugin};
 use bevy_yarnspinner_example_dialogue_view::ExampleYarnSpinnerDialogueViewPlugin;
 
-use crate::{game::{dialogue::{components::prelude::StartConversation, systems::prelude::{spawn_dialogue_runner, start_conversation_from_activated_trigger}}, GameplaySystems}, screens::Screen, AppSystems};
+use crate::{
+    AppSystems,
+    game::{
+        GameplaySystems,
+        dialogue::{
+            components::prelude::StartConversation,
+            systems::prelude::{spawn_dialogue_runner, start_conversation_from_activated_trigger},
+        },
+    },
+    screens::Screen,
+};
 
 pub mod components;
 pub mod systems;

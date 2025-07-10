@@ -1,6 +1,9 @@
 use bevy::prelude::*;
 
-use crate::game::trigger::{components::prelude::IsTrigger, events::prelude::{TriggerActivatedEvent, TriggerEnteredEvent}};
+use crate::game::trigger::{
+    components::prelude::IsTrigger,
+    events::prelude::{TriggerActivatedEvent, TriggerEnteredEvent},
+};
 
 pub fn activate_instant_triggers(
     mut e_trigger_entered: EventReader<TriggerEnteredEvent>,

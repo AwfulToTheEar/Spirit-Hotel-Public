@@ -3,7 +3,9 @@ use std::path::PathBuf;
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::TiledObjectCreated;
 
-use crate::game::animation::{components::prelude::AnimationPath, resources::prelude::AnimationAssets};
+use crate::game::animation::{
+    components::prelude::AnimationPath, resources::prelude::AnimationAssets,
+};
 
 pub fn handle_object_animation_path(
     asset_server: Res<AssetServer>,

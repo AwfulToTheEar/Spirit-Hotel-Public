@@ -1,6 +1,9 @@
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::TiledWorldMarker;
-use bevy_northstar::{grid::Grid, prelude::{AgentOfGrid, CardinalNeighborhood}};
+use bevy_northstar::{
+    grid::Grid,
+    prelude::{AgentOfGrid, CardinalNeighborhood},
+};
 
 use crate::game::path_finding::components::prelude::InWorldGrid;
 

@@ -1,10 +1,16 @@
-use avian2d::{collision::collider::contact_query, prelude::{Collider, RigidBody}};
+use avian2d::{
+    collision::collider::contact_query,
+    prelude::{Collider, RigidBody},
+};
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::TilemapAnchor;
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
 use bevy_northstar::{grid::Grid, nav::Nav, prelude::CardinalNeighborhood};
 
-use crate::game::{path_finding::components::prelude::{GridCollisionCalculated, GridTileSize, ScanCollider}, trigger::components::prelude::TriggerCollider};
+use crate::game::{
+    path_finding::components::prelude::{GridCollisionCalculated, GridTileSize, ScanCollider},
+    trigger::components::prelude::TriggerCollider,
+};
 
 pub fn compute_grid_collision(
     mut commands: Commands,
@@ -33,7 +39,8 @@ pub fn compute_grid_collision(
         );
 
         let Some((collider, _)) = q_scan_colliders
-            .iter().find(|(_, child_of)| child_of.0 == entity)
+            .iter()
+            .find(|(_, child_of)| child_of.0 == entity)
         else {
             continue;
         };

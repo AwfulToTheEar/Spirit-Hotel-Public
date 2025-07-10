@@ -1,7 +1,10 @@
 use bevy::prelude::*;
 use bevy_northstar::prelude::{AgentOfGrid, AgentPos, NextPos};
 
-use crate::game::{movement::components::prelude::{MoveToLocation, MovementIntent}, path_finding::components::prelude::NextPosToBeRemoved};
+use crate::game::{
+    movement::components::prelude::{MoveToLocation, MovementIntent},
+    path_finding::components::prelude::NextPosToBeRemoved,
+};
 
 pub fn apply_intent_from_next_pos(
     mut commands: Commands,

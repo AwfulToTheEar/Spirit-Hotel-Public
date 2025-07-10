@@ -1,7 +1,10 @@
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::TilemapAnchor;
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
-use bevy_northstar::{grid::Grid, prelude::{AgentOfGrid, AgentPos, CardinalNeighborhood}};
+use bevy_northstar::{
+    grid::Grid,
+    prelude::{AgentOfGrid, AgentPos, CardinalNeighborhood},
+};
 
 use crate::game::path_finding::components::prelude::{FollowPath, GridTileSize, PathNode};
 

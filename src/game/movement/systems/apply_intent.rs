@@ -1,7 +1,11 @@
 use avian2d::{collision::collider::contact_query, prelude::Collider};
 use bevy::prelude::*;
 
-use crate::game::{movement::components::prelude::{CanMove, MoveToLocation, MovementDuration, MovementIntent}, path_finding::components::prelude::{GridTileSize, ScanCollider}, trigger::components::prelude::TriggerCollider};
+use crate::game::{
+    movement::components::prelude::{CanMove, MoveToLocation, MovementDuration, MovementIntent},
+    path_finding::components::prelude::{GridTileSize, ScanCollider},
+    trigger::components::prelude::TriggerCollider,
+};
 
 //TODO: support multiple grids
 pub fn apply_intent(

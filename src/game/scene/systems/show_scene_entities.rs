@@ -1,6 +1,12 @@
 use bevy::{ecs::entity_disabling::Disabled, prelude::*};
 
-use crate::game::{level::components::prelude::DisabledByVisibility, scene::{components::prelude::{GameSceneObject, HideInGameScene, ShowInGameScene}, resources::prelude::CurrentGameScenes}};
+use crate::game::{
+    level::components::prelude::DisabledByVisibility,
+    scene::{
+        components::prelude::{GameSceneObject, HideInGameScene, ShowInGameScene},
+        resources::prelude::CurrentGameScenes,
+    },
+};
 
 pub fn show_scene_entities(
     current_scenes: ResMut<CurrentGameScenes>,

@@ -1,6 +1,12 @@
 use bevy::prelude::*;
 
-use crate::game::{scene::{components::prelude::{ChangeGameScene, ChangeGameSceneAction}, resources::prelude::CurrentGameScenes}, trigger::{components::prelude::IsTrigger, events::prelude::TriggerActivatedEvent}};
+use crate::game::{
+    scene::{
+        components::prelude::{ChangeGameScene, ChangeGameSceneAction},
+        resources::prelude::CurrentGameScenes,
+    },
+    trigger::{components::prelude::IsTrigger, events::prelude::TriggerActivatedEvent},
+};
 
 pub fn change_scene_from_activated_trigger(
     mut current_scenes: ResMut<CurrentGameScenes>,

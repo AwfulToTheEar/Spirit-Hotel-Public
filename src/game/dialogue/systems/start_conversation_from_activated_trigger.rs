@@ -1,7 +1,10 @@
 use bevy::prelude::*;
 use bevy_yarnspinner::prelude::DialogueRunner;
 
-use crate::game::{dialogue::components::prelude::StartConversation, trigger::{components::prelude::IsTrigger, events::prelude::TriggerActivatedEvent}};
+use crate::game::{
+    dialogue::components::prelude::StartConversation,
+    trigger::{components::prelude::IsTrigger, events::prelude::TriggerActivatedEvent},
+};
 
 pub fn start_conversation_from_activated_trigger(
     mut e_trigger_activated: EventReader<TriggerActivatedEvent>,

@@ -2,7 +2,13 @@ use std::path::PathBuf;
 
 use bevy::prelude::*;
 
-use crate::{game::{level::{components::prelude::LoadLevel, resources::prelude::LevelAssets}, trigger::{components::prelude::IsTrigger, events::prelude::TriggerActivatedEvent}}, screens::Screen};
+use crate::{
+    game::{
+        level::{components::prelude::LoadLevel, resources::prelude::LevelAssets},
+        trigger::{components::prelude::IsTrigger, events::prelude::TriggerActivatedEvent},
+    },
+    screens::Screen,
+};
 
 pub fn load_level_from_activated_trigger(
     asset_server: Res<AssetServer>,

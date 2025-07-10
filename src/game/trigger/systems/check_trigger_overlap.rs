@@ -1,7 +1,13 @@
 use avian2d::{collision::collider::contact_query, prelude::Collider};
 use bevy::prelude::*;
 
-use crate::game::{movement::components::prelude::{CanMove, MoveToLocation}, trigger::{components::prelude::{InsideTriggers, TriggerCollider}, events::prelude::{TriggerEnteredEvent, TriggerExitedEvent}}};
+use crate::game::{
+    movement::components::prelude::{CanMove, MoveToLocation},
+    trigger::{
+        components::prelude::{InsideTriggers, TriggerCollider},
+        events::prelude::{TriggerEnteredEvent, TriggerExitedEvent},
+    },
+};
 
 pub fn check_trigger_overlap(
     mut commands: Commands,

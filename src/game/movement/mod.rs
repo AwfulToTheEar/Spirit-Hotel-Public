@@ -1,6 +1,15 @@
 use bevy::prelude::*;
 
-use crate::{game::{movement::{components::prelude::{CanMove, MovementDuration}, systems::prelude::*}, GameplaySystems}, AppSystems, PausableSystems};
+use crate::{
+    AppSystems, PausableSystems,
+    game::{
+        GameplaySystems,
+        movement::{
+            components::prelude::{CanMove, MovementDuration},
+            systems::prelude::*,
+        },
+    },
+};
 
 pub mod components;
 pub mod systems;

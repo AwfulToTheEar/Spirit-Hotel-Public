@@ -1,6 +1,9 @@
 use bevy::prelude::*;
 
-use crate::game::trigger::{components::prelude::{InsideTriggers, IsTrigger}, events::prelude::TriggerActivatedEvent};
+use crate::game::trigger::{
+    components::prelude::{InsideTriggers, IsTrigger},
+    events::prelude::TriggerActivatedEvent,
+};
 
 pub fn activate_interact_triggers(
     keyboard_input: Res<ButtonInput<KeyCode>>,
