@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="2">
  <properties>
-  <property name="show_in_scene" type="class" propertytype="spirit_hotel::game::scene::ShowInGameScene">
+  <property name="show_in_scene" type="class" propertytype="spirit_hotel::game::scene::components::ShowInGameScene::ShowInGameScene">
    <properties>
     <property name="0" value="bla"/>
    </properties>
@@ -26,12 +26,12 @@
  <objectgroup id="2" name="Object Layer 1">
   <object id="1" gid="16" x="134" y="160" width="20" height="32">
    <properties>
-    <property name="animation_path" type="class" propertytype="spirit_hotel::game::animation::AnimationPath">
+    <property name="animation_path" type="class" propertytype="spirit_hotel::game::animation::components::AnimationPath::AnimationPath">
      <properties>
       <property name="0" type="file" value="../../animations/player.aseprite"/>
      </properties>
     </property>
-    <property name="init_animation" type="class" propertytype="spirit_hotel::game::animation::InitAnimation">
+    <property name="init_animation" type="class" propertytype="spirit_hotel::game::animation::components::InitAnimation::InitAnimation">
      <properties>
       <property name="repeat" type="bool" value="true"/>
       <property name="tag" value="idle"/>

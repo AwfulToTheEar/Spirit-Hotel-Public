@@ -11,7 +11,7 @@ use bevy_ecs_tiled::map;
 
 use crate::screens::Screen;
 
-mod animation;
+pub mod animation;
 mod dialogue;
 pub mod level;
 mod lighting;
