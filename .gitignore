@@ -5,3 +5,5 @@
 /crates
 spirit_hotel.code-workspace
 spirit_hotel.tiled-session
+/.vscode/
+/.idea/
