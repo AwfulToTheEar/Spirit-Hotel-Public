@@ -1,5 +1,5 @@
 use bevy::{ecs::entity_disabling::Disabled, prelude::*};
-use bevy_ecs_tiled::prelude::{TiledMapLayer, TiledMapMarker, TiledMapObject};
+use bevy_ecs_tiled::prelude::{TiledLayer, TiledMap, TiledObject};
 
 use crate::game::level::components::prelude::{DisabledByVisibility, TiledCollidersSpawned};
 
@@ -10,9 +10,9 @@ pub fn disable_tiled_entities_when_hidden(
         (
             With<TiledCollidersSpawned>,
             Or<(
-                With<TiledMapMarker>,
-                With<TiledMapLayer>,
-                With<TiledMapObject>,
+                With<TiledMap>,
+                With<TiledLayer>,
+                With<TiledObject>,
             )>,
         ),
     >,

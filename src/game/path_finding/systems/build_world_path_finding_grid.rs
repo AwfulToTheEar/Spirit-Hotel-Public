@@ -1,9 +1,9 @@
 use avian2d::prelude::Collider;
 use bevy::prelude::*;
 use bevy_ecs_tiled::{
-    prelude::{TiledMap, TiledWorld, TilemapAnchor},
-    world::TiledWorldHandle,
+    prelude::{TiledWorld, TilemapAnchor},
 };
+use bevy_ecs_tiled::prelude::{TiledMapAsset, TiledWorldAsset};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
 use bevy_northstar::{
     grid::{Grid, GridSettingsBuilder},
@@ -15,10 +15,10 @@ use crate::game::path_finding::components::prelude::{GridTileSize, ScanCollider}
 
 pub fn build_world_path_finding_grid(
     mut commands: Commands,
-    tiled_worlds: Res<Assets<TiledWorld>>,
-    tiled_maps: Res<Assets<TiledMap>>,
+    tiled_worlds: Res<Assets<TiledWorldAsset>>,
+    tiled_maps: Res<Assets<TiledMapAsset>>,
     s_world: Single<
-        (Entity, &TiledWorldHandle, &TilemapAnchor),
+        (Entity, &TiledWorld, &TilemapAnchor),
         Without<Grid<CardinalNeighborhood>>,
     >,
 ) {
@@ -94,7 +94,7 @@ pub fn build_world_path_finding_grid(
                     .enable_chunks()
                     .enable_cells()
                     .build(),
-                Transform::from_translation(offset.extend(0.0))
+                //Transform::from_translation(offset.extend(0.0))
             ),
             (
                 Collider::rectangle((tile_size.x - 2) as f32, (tile_size.y - 2) as f32),

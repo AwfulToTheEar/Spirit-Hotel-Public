@@ -1,5 +1,5 @@
 use bevy::{ecs::entity_disabling::Disabled, prelude::*};
-use bevy_ecs_tiled::prelude::TiledColliderMarker;
+use bevy_ecs_tiled::prelude::{TiledColliderOrigin};
 
 use crate::game::level::components::prelude::DisabledByParent;
 
@@ -10,7 +10,7 @@ pub fn enable_tiled_colliders_when_parent_enabled(
         (
             With<DisabledByParent>,
             With<Disabled>,
-            With<TiledColliderMarker>,
+            With<TiledColliderOrigin>,
         ),
     >,
     q_parents: Query<Entity>,

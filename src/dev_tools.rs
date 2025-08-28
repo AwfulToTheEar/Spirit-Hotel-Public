@@ -1,5 +1,6 @@
 //! Development tools for the game. This plugin is only enabled in dev builds.
 
+use avian2d::prelude::PhysicsDebugPlugin;
 use bevy::{
     dev_tools::states::log_transitions, input::common_conditions::input_just_pressed, prelude::*,
     ui::UiDebugOptions,
@@ -12,13 +13,11 @@ use crate::screens::Screen;
 
 pub(super) fn plugin(app: &mut App) {
     app.add_plugins((
-        EguiPlugin {
-            enable_multipass_for_primary_context: true,
-        },
+        EguiPlugin::default(),
         WorldInspectorPlugin::new(),
         //TiledDebugPluginGroup,
         NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
-        //PhysicsDebugPlugin::default(),
+        PhysicsDebugPlugin::default(),
         CommandLineArgs,
     ));
     // Log `Screen` state transitions.

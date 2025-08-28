@@ -38,7 +38,7 @@ pub fn record_player_input(
     if keyboard_input.pressed(KeyCode::ArrowDown) {
         direction = Vec2::new(0.0, -1.0);
     }
-
+    
     if direction == Vec2::ZERO {
         return;
     }

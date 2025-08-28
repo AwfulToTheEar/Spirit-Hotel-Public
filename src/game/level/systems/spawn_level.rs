@@ -1,9 +1,8 @@
 use bevy::prelude::*;
 use bevy_ecs_tiled::{
     prelude::{TiledPhysicsAvianBackend, TiledPhysicsSettings, TilemapAnchor},
-    world::TiledWorldHandle,
 };
-
+use bevy_ecs_tiled::prelude::TiledWorld;
 use crate::{game::level::resources::prelude::LevelAssets, screens::Screen};
 
 pub fn spawn_level(mut commands: Commands, level_assets: Res<LevelAssets>) {
@@ -14,7 +13,7 @@ pub fn spawn_level(mut commands: Commands, level_assets: Res<LevelAssets>) {
     commands.spawn((
         Name::new("Level"),
         Visibility::default(),
-        TiledWorldHandle(world.clone()),
+        TiledWorld(world.clone()),
         //TiledWorldChunking::new(200., 200.),
         //TiledMapHandle(map.clone()),
         TilemapAnchor::Center,

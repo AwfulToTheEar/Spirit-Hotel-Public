@@ -1,7 +1,7 @@
 use std::path::PathBuf;
 
 use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::TiledObjectCreated;
+use bevy_ecs_tiled::prelude::{ObjectCreated, TiledEvent};
 
 use crate::game::animation::{
     components::prelude::AnimationPath, resources::prelude::AnimationAssets,
@@ -10,11 +10,11 @@ use crate::game::animation::{
 pub fn handle_object_animation_path(
     asset_server: Res<AssetServer>,
     mut animation_assets: ResMut<AnimationAssets>,
-    mut e_object_created: EventReader<TiledObjectCreated>,
+    mut e_object_created: EventReader<TiledEvent<ObjectCreated>>,
     q_animation_paths: Query<(Entity, &AnimationPath)>,
 ) {
     for e in e_object_created.read() {
-        let Ok((entity, animation_path)) = q_animation_paths.get(e.entity) else {
+        let Ok((entity, animation_path)) = q_animation_paths.get(e.origin) else {
             continue;
         };
 

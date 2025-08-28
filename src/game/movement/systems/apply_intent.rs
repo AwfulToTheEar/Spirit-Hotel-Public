@@ -54,6 +54,7 @@ pub fn apply_intent(
                 };
 
                 if result {
+                    info!("collided with {other_entity}");
                     collider_found = true;
                     commands.entity(entity).remove::<MovementIntent>();
                     break;

@@ -1,12 +1,12 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::TiledWorld;
+use bevy_ecs_tiled::prelude::{TiledWorldAsset};
 
 #[derive(Resource, Asset, Clone, Reflect)]
 #[reflect(Resource)]
 pub struct LevelAssets {
     #[dependency]
     music: Handle<AudioSource>,
-    pub world: Option<Handle<TiledWorld>>,
+    pub world: Option<Handle<TiledWorldAsset>>,
 }
 
 impl FromWorld for LevelAssets {

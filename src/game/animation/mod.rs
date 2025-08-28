@@ -1,6 +1,5 @@
 use bevy::prelude::*;
 use bevy_aseprite_ultra::AsepriteUltraPlugin;
-use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
 use crate::{
     AppSystems, PausableSystems, Pause,
@@ -19,7 +18,6 @@ pub mod systems;
 pub fn plugin(app: &mut App) {
     app.add_plugins((
         AsepriteUltraPlugin,
-        FilterQueryInspectorPlugin::<With<AnimatableMarker>>::default(),
     ))
     .register_type::<AnimationPath>()
     .register_type::<InitAnimation>()

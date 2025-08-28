@@ -1,9 +1,10 @@
+use std::env;
 use bevy::{prelude::*, render::view::VisibilitySystems};
 use bevy_ecs_tiled::{
-    TiledMapPlugin,
     prelude::{TiledPhysicsAvianBackend, TiledPhysicsPlugin},
 };
-
+use bevy_ecs_tiled::prelude::{RegexSet, TiledFilter};
+use bevy_ecs_tiled::tiled::{TiledPlugin, TiledPluginConfig};
 use crate::{
     AppSystems,
     asset_tracking::LoadResource,
@@ -22,8 +23,24 @@ pub mod system_sets;
 pub mod systems;
 
 pub fn plugin(app: &mut App) {
+    let mut path = env::current_dir().unwrap();
+    path.push("tiled_types_export.json");
+
     app.add_plugins((
-        TiledMapPlugin::default(),
+        TiledPlugin(TiledPluginConfig {
+            // Note: if you set this setting to `None`
+            // properties won't be exported anymore but
+            // you will still be able to load them from the map
+            tiled_types_export_file: Some(path),
+            tiled_types_filter: TiledFilter::from(
+                RegexSet::new([
+                    r"^spirit_hotel::.*",
+                    r"^bevy_render::view::visibility::Visibility.*",
+                    r"^bevy_light_2d::.*",
+                ])
+                    .unwrap(),
+            ),
+        }),
         TiledPhysicsPlugin::<TiledPhysicsAvianBackend>::default(),
     ))
     .register_type::<LevelAssets>()

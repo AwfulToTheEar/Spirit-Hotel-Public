@@ -5,10 +5,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bevy = { version = "0.16", features = ["wayland"] }
-bevy-inspector-egui = "0.31.0"
-bevy_aseprite_ultra = "0.6.1"
-bevy_ecs_tiled = { version = "0.7.0", features = ["user_properties", "avian_debug"]}
+bevy = { version = "0.16.1", features = ["wayland"] }
+bevy-inspector-egui = "0.33.1"
+bevy_aseprite_ultra = { git = "https://github.com/Lommix/bevy_aseprite_ultra.git", branch = "master" }
+bevy_ecs_tiled = { version = "0.9.0", features = ["user_properties", "avian_debug"]}
 bevy_ecs_tilemap = "0.16.0"
 bevy_yarnspinner = "0.5.0"
 bevy_yarnspinner_example_dialogue_view = "0.5.0"
@@ -24,14 +24,14 @@ tracing = { version = "0.1", features = [
     "release_max_level_warn",
 ] }
 avian2d = "0.3.1"
-bevy_northstar = "0.3.0"
+bevy_northstar = "0.3.2"
 bevy_mod_debugdump = "0.13.0"
-bevy_light_2d = "0.6.0"
+bevy_light_2d = "0.7.0"
 
 [patch.crates-io]
-bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
-bevy_aseprite_ultra = { path = "crates/bevy_aseprite_ultra" }
-bevy_light_2d = { path = "crates/bevy_light_2d" }
+#bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
+#bevy_aseprite_ultra = { path = "crates/bevy_aseprite_ultra" }
+#bevy_light_2d = { path = "crates/bevy_light_2d" }
 
 # Your web builds will start failing if you add a dependency that pulls in `getrandom` v0.3+.
 # To fix this, you should tell `getrandom` to use the `wasm_js` backend on Wasm.

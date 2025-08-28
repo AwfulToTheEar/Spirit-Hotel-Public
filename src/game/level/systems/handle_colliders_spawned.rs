@@ -1,22 +1,20 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::{
-    TiledColliderCreated, TiledMapLayer, TiledMapMarker, TiledMapObject,
-};
+use bevy_ecs_tiled::prelude::{ColliderCreated, TiledEvent, TiledLayer, TiledMap, TiledObject};
 
 use crate::game::level::components::prelude::TiledCollidersSpawned;
 
 //this breaks if there are no objects with collision or no layers with collision in the world
 pub fn handle_colliders_spawned(
     mut commands: Commands,
-    e_collider_created: EventReader<TiledColliderCreated>,
+    e_collider_created: EventReader<TiledEvent<ColliderCreated>>,
     q_tiled_entities: Query<
         Entity,
         (
             Without<TiledCollidersSpawned>,
             Or<(
-                With<TiledMapMarker>,
-                With<TiledMapLayer>,
-                With<TiledMapObject>,
+                With<TiledMap>,
+                With<TiledLayer>,
+                With<TiledObject>,
             )>,
         ),
     >,

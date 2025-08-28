@@ -14,7 +14,7 @@ mod screens;
 mod theme;
 
 use bevy::{asset::AssetMetaCheck, prelude::*};
-use bevy_light_2d::light::AmbientLight2d;
+use bevy_light_2d::light::{AmbientLight2d, Light2d};
 
 use crate::fades::Fade;
 
@@ -123,9 +123,11 @@ fn spawn_camera(mut commands: Commands) {
     commands.spawn((
         Name::new("Camera"),
         Camera2d,
-        AmbientLight2d {
-            brightness: 0.1,
-            ..default()
+        Light2d {
+            ambient_light: AmbientLight2d {
+                brightness: 0.1,
+                ..default()
+            }
         },
     ));
 }

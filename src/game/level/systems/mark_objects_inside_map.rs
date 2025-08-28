@@ -1,22 +1,18 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::{
-    map::TiledMapHandle,
-    prelude::{TiledColliderMarker, TiledMap, TiledMapObject},
-};
-
+use bevy_ecs_tiled::prelude::{TiledColliderOrigin, TiledMap, TiledMapAsset, TiledObject};
 use crate::game::level::components::prelude::InsideMap;
 
 pub fn mark_objects_inside_map(
     mut commands: Commands,
-    tiled_maps: Res<Assets<TiledMap>>,
+    tiled_maps: Res<Assets<TiledMapAsset>>,
     mut q_tiled_map_objects: Query<
         (Entity, &GlobalTransform, Option<&mut InsideMap>),
         (
-            Or<(With<TiledMapObject>, With<TiledColliderMarker>)>,
+            Or<(With<TiledObject>, With<TiledColliderOrigin>)>,
             Changed<GlobalTransform>,
         ),
     >,
-    q_maps: Query<(Entity, &TiledMapHandle, &GlobalTransform)>,
+    q_maps: Query<(Entity, &TiledMap, &GlobalTransform)>,
 ) {
     for (map_entity, handle, map_transform) in q_maps.iter() {
         let Some(tiled_map) = tiled_maps.get(handle.0.id()) else {
