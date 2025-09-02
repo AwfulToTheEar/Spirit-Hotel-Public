@@ -3,11 +3,11 @@
 //! Feel free to change the logic found here if you feel like tinkering around
 //! to get a feeling for the template.
 
+use crate::game::movement::components::prelude::Pushable;
+use crate::screens::Screen;
 use avian2d::PhysicsPlugins;
 use bevy::prelude::*;
 use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
-use crate::game::player::components::prelude::Player;
-use crate::screens::Screen;
 
 pub mod animation;
 mod dialogue;
@@ -21,7 +21,7 @@ mod trigger;
 
 pub(super) fn plugin(app: &mut App) {
     app.add_plugins(PhysicsPlugins::default().with_length_unit(100.0))
-        .add_plugins(FilterQueryInspectorPlugin::<With<Player>>::default())
+        .add_plugins(FilterQueryInspectorPlugin::<With<Pushable>>::default())
         .add_plugins((
             level::plugin,
             trigger::plugin,

@@ -16,6 +16,7 @@
      <property name="up" value="walk-up"/>
     </properties>
    </property>
+   <property name="can_push" type="class" propertytype="spirit_hotel::game::movement::components::CanPush::CanPush"/>
    <property name="player" type="class" propertytype="spirit_hotel::game::player::components::Player::Player"/>
   </properties>
  </object>

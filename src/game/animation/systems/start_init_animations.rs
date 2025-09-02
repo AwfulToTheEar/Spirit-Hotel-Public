@@ -5,17 +5,26 @@ use crate::game::animation::components::prelude::InitAnimation;
 
 pub fn start_init_animations(
     mut commands: Commands,
-    mut q_animatables: Query<(Entity, &InitAnimation, &mut AseAnimation)>,
+    mut q_animatables: Query<(Entity, &InitAnimation, &Children)>,
+    mut q_visuals: Query<&mut AseAnimation>,
 ) {
-    for (entity, init_animation, mut ase_animation) in q_animatables.iter_mut() {
-        ase_animation.animation.play(
-            init_animation.tag.clone(),
-            match init_animation.repeat {
-                true => AnimationRepeat::Loop,
-                false => AnimationRepeat::Count(1),
-            },
-        );
+    for (entity, init_animation, children) in q_animatables.iter_mut() {
+        for child in children.iter() {
+            let Ok(mut ase_animation) = q_visuals.get_mut(child) else {
+                continue;
+            };
 
-        commands.entity(entity).remove::<InitAnimation>();
+            ase_animation.animation.play(
+                init_animation.tag.clone(),
+                match init_animation.repeat {
+                    true => AnimationRepeat::Loop,
+                    false => AnimationRepeat::Count(1),
+                },
+            );
+
+            commands.entity(entity).remove::<InitAnimation>();
+
+            break;
+        }
     }
 }

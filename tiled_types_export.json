@@ -1,6 +1,6 @@
 [
   {
-    "id": 40,
+    "id": 42,
     "name": "bevy_asset::assets::AssetIndex",
     "type": "class",
     "useAs": [
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": 36,
     "name": "bevy_color::color::Color",
     "type": "class",
     "useAs": [
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 30,
     "name": "bevy_render::view::visibility::Visibility",
     "type": "class",
     "useAs": [
@@ -116,7 +116,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": 29,
     "name": "bevy_render::view::visibility::Visibility:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -128,7 +128,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 46,
+    "id": 48,
     "name": "bevy_time::timer::TimerMode",
     "type": "class",
     "useAs": [
@@ -146,7 +146,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 47,
     "name": "bevy_time::timer::TimerMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -157,7 +157,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 51,
+    "id": 53,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
     "type": "class",
     "useAs": [
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "id": 49,
+    "id": 51,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -192,7 +192,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 50,
+    "id": 52,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
     "type": "class",
     "useAs": [
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": 35,
     "name": "core::option::Option<bevy_ecs::entity::Entity>",
     "type": "class",
     "useAs": [
@@ -233,7 +233,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": 33,
     "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -244,7 +244,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 32,
+    "id": 34,
     "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
     "type": "class",
     "useAs": [
@@ -261,7 +261,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "spirit_hotel::audio::Music",
     "type": "class",
     "useAs": [
@@ -283,7 +283,7 @@
     "members": []
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "spirit_hotel::game::animation::components::AnimationPath::AnimationPath",
     "type": "class",
     "useAs": [
@@ -322,7 +322,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "spirit_hotel::game::dialogue::components::StartConversation::StartConversation",
     "type": "class",
     "useAs": [
@@ -339,7 +339,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "spirit_hotel::game::level::components::LoadLevel::LoadLevel",
     "type": "class",
     "useAs": [
@@ -356,7 +356,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "spirit_hotel::game::level::resources::LevelAssets::LevelAssets",
     "type": "class",
     "useAs": [
@@ -379,7 +379,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "spirit_hotel::game::movement::components::CanMove::CanMove",
     "type": "class",
     "useAs": [
@@ -411,7 +411,18 @@
     ]
   },
   {
-    "id": 20,
+    "id": 32,
+    "name": "spirit_hotel::game::movement::components::CanPush::CanPush",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 21,
     "name": "spirit_hotel::game::movement::components::MovementDuration::MovementDuration",
     "type": "class",
     "useAs": [
@@ -426,6 +437,17 @@
         "value": null
       }
     ]
+  },
+  {
+    "id": 12,
+    "name": "spirit_hotel::game::movement::components::Pushable::Pushable",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
   },
   {
     "id": 1,
@@ -445,7 +467,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "spirit_hotel::game::path_finding::components::InWorldGrid::InWorldGrid",
     "type": "class",
     "useAs": [
@@ -456,7 +478,7 @@
     "members": []
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "spirit_hotel::game::path_finding::components::PathNode::PathNode",
     "type": "class",
     "useAs": [
@@ -473,7 +495,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": 31,
     "name": "spirit_hotel::game::player::components::Player::Player",
     "type": "class",
     "useAs": [
@@ -484,7 +506,7 @@
     "members": []
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "spirit_hotel::game::scene::components::ChangeGameScene::ChangeGameScene",
     "type": "class",
     "useAs": [
@@ -507,7 +529,7 @@
     ]
   },
   {
-    "id": 42,
+    "id": 44,
     "name": "spirit_hotel::game::scene::components::ChangeGameScene::ChangeGameSceneAction",
     "type": "class",
     "useAs": [
@@ -525,7 +547,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 43,
     "name": "spirit_hotel::game::scene::components::ChangeGameScene::ChangeGameSceneAction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -571,7 +593,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "spirit_hotel::game::scene::resources::StartingGameScene::StartingGameScene",
     "type": "class",
     "useAs": [
@@ -645,7 +667,7 @@
     "members": []
   },
   {
-    "id": 27,
+    "id": 28,
     "name": "spirit_hotel::theme::interaction::InteractionAssets",
     "type": "class",
     "useAs": [
@@ -667,7 +689,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "name": "spirit_hotel::theme::interaction::InteractionPalette",
     "type": "class",
     "useAs": [

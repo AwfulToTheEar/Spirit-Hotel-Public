@@ -8,16 +8,25 @@ use crate::game::animation::{
 pub fn init_animatable_entities(
     mut commands: Commands,
     animation_assets: Res<AnimationAssets>,
-    q_animatables: Query<Entity, (With<AnimatableMarker>, Without<AseAnimation>)>,
+    q_animatables: Query<(Entity, &Children), (With<AnimatableMarker>)>,
+    q_visuals: Query<Entity, (With<ChildOf>, With<Sprite>, Without<AseAnimation>)>,
 ) {
-    for entity in q_animatables.iter() {
-        let Some(animation_handle) = animation_assets.0.get(&entity) else {
-            continue;
-        };
+    for (entity, children) in q_animatables.iter() {
+        for child in children.iter() {
+            let Ok(visual_entity) = q_visuals.get(child) else {
+                continue;
+            };
 
-        commands.entity(entity).insert(AseAnimation {
-            aseprite: animation_handle.clone(),
-            ..default()
-        });
+            let Some(animation_handle) = animation_assets.0.get(&entity) else {
+                continue;
+            };
+
+            commands.entity(visual_entity).insert(AseAnimation {
+                aseprite: animation_handle.clone(),
+                ..default()
+            });
+
+            break;
+        }
     }
 }

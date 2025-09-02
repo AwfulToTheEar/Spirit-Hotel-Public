@@ -208,8 +208,10 @@
                 },
                 {
                     "name": "world",
-                    "type": "std::nullptr_t",
-                    "value": null
+                    "propertyType": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
+                    "type": "class",
+                    "value": {
+                    }
                 }
             ],
             "name": "spirit_hotel::game::level::resources::LevelAssets::LevelAssets",
@@ -532,6 +534,204 @@
                 }
             ],
             "name": "spirit_hotel::theme::interaction::InteractionPalette",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 67,
+            "members": [
+                {
+                    "name": "generation",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "index",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "bevy_asset::assets::AssetIndex",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 68,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "color",
+                    "value": "#ffffffff"
+                }
+            ],
+            "name": "bevy_color::color::Color",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 69,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "bevy_time::timer::TimerMode:::Variant",
+                    "type": "string",
+                    "value": "Once"
+                }
+            ],
+            "name": "bevy_time::timer::TimerMode",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 70,
+            "name": "bevy_time::timer::TimerMode:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Once",
+                "Repeating"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 71,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
+                    "type": "string",
+                    "value": "None"
+                },
+                {
+                    "name": "Some",
+                    "propertyType": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 72,
+            "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "None",
+                "Some"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 73,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 74,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
+                    "type": "string",
+                    "value": "None"
+                },
+                {
+                    "name": "Some",
+                    "propertyType": "core::option::Option<bevy_ecs::entity::Entity>::Some",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "core::option::Option<bevy_ecs::entity::Entity>",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 75,
+            "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "None",
+                "Some"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 76,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 77,
+            "members": [
+            ],
+            "name": "spirit_hotel::game::movement::components::CanPush::CanPush",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 78,
+            "members": [
+            ],
+            "name": "spirit_hotel::game::movement::components::Pushable::Pushable",
             "type": "class",
             "useAs": [
                 "property"

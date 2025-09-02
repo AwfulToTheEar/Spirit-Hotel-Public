@@ -1,6 +1,5 @@
 //! Development tools for the game. This plugin is only enabled in dev builds.
 
-use avian2d::prelude::PhysicsDebugPlugin;
 use bevy::{
     dev_tools::states::log_transitions, input::common_conditions::input_just_pressed, prelude::*,
     ui::UiDebugOptions,
@@ -17,7 +16,7 @@ pub(super) fn plugin(app: &mut App) {
         WorldInspectorPlugin::new(),
         //TiledDebugPluginGroup,
         NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
-        PhysicsDebugPlugin::default(),
+        //PhysicsDebugPlugin::default(),
         CommandLineArgs,
     ));
     // Log `Screen` state transitions.

@@ -1,5 +1,6 @@
 use bevy::prelude::*;
 
+use crate::game::movement::components::prelude::{CanPush, Pushable};
 use crate::{
     AppSystems, PausableSystems,
     game::{
@@ -13,10 +14,13 @@ use crate::{
 
 pub mod components;
 pub mod systems;
+pub(self) mod utils;
 
 pub(super) fn plugin(app: &mut App) {
     app.register_type::<CanMove>()
         .register_type::<MovementDuration>()
+        .register_type::<CanPush>()
+        .register_type::<Pushable>()
         .add_systems(
             Update,
             apply_intent
