@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="27">
  <properties>
+  <property name="init_breath_timer" type="class" propertytype="spirit_hotel::game::drowned_child::components::init_breath_timer::InitBreathTimer"/>
   <property name="starting_scene" type="class" propertytype="spirit_hotel::game::scene::resources::StartingGameScene::StartingGameScene">
    <properties>
     <property name="0" value="test"/>

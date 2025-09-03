@@ -11,6 +11,8 @@ use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
 pub mod animation;
 mod dialogue;
+mod drowned_child;
+mod general;
 pub mod level;
 mod lighting;
 mod movement;
@@ -32,6 +34,8 @@ pub(super) fn plugin(app: &mut App) {
             path_finding::plugin,
             scene::plugin,
             lighting::plugin,
+            drowned_child::plugin,
+            general::plugin,
         ))
         .configure_sets(
             PreUpdate,

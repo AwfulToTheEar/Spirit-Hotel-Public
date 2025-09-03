@@ -1,0 +1,357 @@
+title: TheHallway
+position: -264,-451
+---
+<<set $name1 to "Protagonist">>
+{$name1}: Ugh ... it's so dark ...
+{$name1}: Hey, (friend), are you okay?
+...
+{$name1}: Hello...?
+// the screen comes up. Only a small area around the protagonist is illuminated. They turn left and right. But her companion is nowhere to be seen.
+{$name1}: Shit! Where'd she go? She went in with me, right?
+{$name1}: ... I guess there's no way now but in. Here's to hoping she's okay.
+{$name1}: And ... I'm okay as well.
+// You step through an open sliding door, like the ones found in schools. In front of you, there's a sign. (This is all an automated sequence)
+The sign in front of you reads in large letters:
+Warning - DO NOT BREATHE IN THE HALLWAYS.
+Rulebreakers will be punished.
+
+Looks like you better hold your breath.
+
+Hold F to hold your breath.
+
+//a counter of 30(?) seconds appears.
+
+//the hallway in front of you is now lit up. It's an empty, clean school hallway with five evenly spaced-out doors leading left and right. There is also a bench or two and a sink. You have the option to go to one of the sinks, but if you try drinking the water from it, it'll be salt water, which will then deplete your oxygen counter by like 10 secs cause you have to cough.
+//you can approach all doors, but all except the first one will be firmly locked.
+
+<<jump TeaParty>>
+===
+
+title: TeaParty
+position: -263,-232
+---
+<<set $name1 to "Protagonist">>
+<<set $name2 to "Ghost Child">>
+<<set $mean to 0>>
+// You walk into the first room. The interior is really high-class and luxurious, though the room itself isn't that big. There's a little girl standing/sitting by an assortment of chairs around a small table with small cups and a teapot. The other chairs are taken by plushies, only one is empty.
+//there's a sign, not unlike the one in the hallway, next to the entrance. It reads "Task 1: Attend the party."
+// You interact with the girl in order to trigger the following dialogue sequence:
+
+{$name2}: Wah, hello. It's so good you're finally here! We were just about to start.
+{$name1}: Oh, uhm- start with what?
+{$name2}: Well, with the tea party of course! You came just at the right time. There's a spare seat left just for you.
+
+-> What kind of tea party is this? There's just water in these cups.
+    {$name2}: Ah ... I'm sorry. This is all I have for now. My mom will notice if I sneak up tea bags.
+    <<set $mean = $mean + 1>>
+-> Thank you! That's so thoughtful of you.
+    {$name2}: Hee-hee, of course! You are my esteemed guest, after all.
+{$name2}: Well then, sit down M'lady!
+
+// You go to the empty chair and sit down. Before you have the option to explore the room a little, but there's nothing relevant to your objective - except that you can take note of the closet, which will say something like "it's stuffed pretty full but there's still enough room for one person to squeeze in."
+The chair is sized for a small child, but it holds your weight, fortunately.
+The little girl diligently serves you your "tea". The cup is small enough to hold between two fingers.
+Actually, you're really thirsty. Like, incredibly so.
+But the little girl is only halfway through serving all her "guests" when the teapot doesn't shed another drop.
+{$name2}: Aw, it's empty. Just wait a moment. I'll go refill it.
+She hurries off through a door you hadn't noticed before.
+Your throat's dry as a desert.
+-> Just drink up right now.
+    {$name1}: It's not like she'll notice, right?
+    <<set $cup to "empty">>
+    <<set $mean = $mean + 1>>
+-> Wait till she comes back.
+    {$name1}: This ghost girl looks rich and cultured. I should probably be on my best behavior for this one.
+    <<set $cup to "full">>
+
+You're starting to get anxious as the moments tick by. Did you already fail? Were you not supposed to let her leave?
+But finally, the girl returns. She proudly holds the teapot in her little hands.
+{$name2}: Sorry it took a while. I had to sneak past my mom. She can't find out you're up here. Or else she'll get really mad.
+She sits down in her spot next to you. You notice her glance at your tiny cup.
+<<if $cup is "empty">>
+    Her expression drops slightly.
+    {$name2}: You know ... you're supposed to wait until everyone's at the table. It's rude if you don't.
+    {$name1}: Ah! I'm sorry.
+    {$name2}: It's okay. You can have a refill.
+<<else>>
+    A little smile appears on her face.
+    {$name2}: Yay! Drink up, everyone!
+<<endif>>
+{$name2}: The party is on! If you want more, just serve yourself - there's enough tea for everyone.
+Awesome. Who knows when you'll next get some fresh water?
+You drink in silence. The little girl keeps glancing around as if expecting the plushies to say something.
+{$name1}: (thinking) This is so awkward ... I should try and initiate some conversation.
+{$name1}: So ... what's your name?
+{$name2}: I'm Elizabeth. But feel free to call me Ellie!
+<<set $name2 to "Ellie">>
+{$name2}: Oh, I should introduce the rest too! The purple gentleman is Sir Thomas the great knight. And this here is Miss Anne.
+{$name1}: Nice to meet you. I'm (insert name). So ... are they your usual guests?
+{$name2}: Yes. Originally your seat belonged to Sir Arthur, but he was tragically slain in battle. He fought valiently.
+-> Do you not have any normal friends?
+    <<set $mean = $mean + 1>>
+    You can see Ellie's bottom lip jut out and tremble a little.
+    {$name2}: They are perfectly normal friends. The best. Also, it's rude to say that when they can hear you.
+    {$name1}: Woah. She's pretty sensitive. Better be careful what I say.
+-> Well, it's an honor to be a part of this fine gathering.
+    {$name2}: *blushes* It's fine. You're a guest of honor.
+// more dialogue but I don't have time right now ahhhhhh
+
+<<if $mean < 3>>
+{$name2}: If you're really hungry, I can go and try to sneak some cookies from the kitchen.
+{$name1}: Woah. You would do that?
+{$name2}: Of course. Just for you, though!
+//here the screen maybe fades out so we just get the text until she gets back?
+She leaves the room once again. This time, she's gone longer than when she fetched the water earlier.
+But eventually she returns and proudly pulls from behind her back a pack of cookies.
+<<declare $cookies = 5>>
+<<else>>
+{$name2}: Ah, sorry ... unfortunately I can't have any food in here. And if my mom catches me trying to sneak some up, she's gonna get real mad at me.
+<<endif>>
+
+// Idea: in every/most rooms you can find bonus items which are not exactly essential to winning the game, but they can be used to bring down your insanity counter or maybe replenish some health, depending on what variables we decide to include in the whole thing.
+
+//a very short while later this next part happens
+
+Suddenly you hear something. Clearly, you're not just imagining things. Ellie looks to be listening as well.
+The sound of steps grows louder from outside that door.
+{$name2}: Oh no. I think mom's coming this way! Quick, you have to hide somewhere. There - go into the closet. Also, Mom has really good ears so hold your breath whenever she gets near. 
+
+//a countdown appears. You have to hide in the closet. Once you're in, text appears like in the hallway that says:
+Press F to hold your breath.
+//you get the initial 30 seconds of holding your breath. Starting at like 10, it will get tougher and you'll hear a heartbeat speeding up, while the screen gets a bit shaky and/or darker. Once the countdown runs out, you gasp, which instantly alerts the momster. If she's in your immediate vicinity, you are dead. If not, she just comes over fast and stands in front of the door for 5 seconds (which basically means you're done as well cause of the next part). In addition, every second of breath you held will take like 2 seconds to recover. So you need to time it well. There's two steps: one auditory, where you hear her steps and wheezing grow louder. Ideally, you start holding your breath in that moment. Otherwise, she will get alerted and stand in front of the closet (visual cue - she's looking in through the crack between the closet doors) for a little longer than normally. Not pressing F while she's in your field of view is instant death.
+
+//after the momster leaves
+{$name2}: (with a hint of sadness on her face) You should probably leave now. It's almost dinner time.
+{$name1}: Hey, thanks for having me. It was nice. Um ... keep your chin up, alright?
+
+//cue the sound of a door unlocking. You can now leave the way you came.
+
+
+//we'll have to see how exactly this works chronologically, but if the mean counter exceeds a certain value (like 5 for example) Ellie will get out and run out of the room crying (or maybe she stays in the room but just starts crying which summons the momster). You then get the above mom sequence except it'll be less time for the countdown and Ellie won't tell you where to hide, or about holding your breath. Afterwards you'll apologize to Ellie. Maybe she'll say she wouldn't knowingly "feed" anyone to the momster and send you on your way. You did attend the party after all, even if not exactly nicely.
+
+<<jump Kagome>>
+===
+title: Kagome
+position: -276,-22
+---
+<<set $name3 to "Ghost Boy">>
+<<set $mean2 to 0>>
+//you enter what looks like a school yard. It seems to be a corner and it's empty save for one child sitting on the ground by himself.
+//There's a sign here as well, next to the door (which now looks like a fence gate) It reads:
+Task 2 - Play with the child.
+//You approach the boy. As you get closer, this text appears:
+You can hear faint muttering, sounding like poorly contained sobs.
+The boy doesn't look very happy.
+//then when you interact with him:
+{$name3}: Everyone's always being so mean to me.
+{$name3}: I bet you just came to make fun of me as well.
+-> Of course not! Only losers make fun of others.
+    The little boy looks somewhat skeptical.
+    {$name3}: Oh really? You gotta prove you mean it.
+    {$name1}: No problem. How about a little game?
+-> ...well, you do look a little thick.
+    <<set $mean2 = $mean2 + 1>>
+    The boy's expression is stuck somewhere between indignation and utter confusion, rendering it almost blank.
+    For a second, you're afraid that being needlessly mean to the poor ghost kid would turn out to be the last thing you ever do.
+    But instead ...
+    {$name3}: WAHHHHHHH! *sob sob*
+    Great. Was that worth it?
+    -> Absolutely.
+        Well, you've still got to finish your task, so you better calm the brat down.
+        <<set $mean2 = $mean2 + 1>>
+    -> Actually, I feel kinda bad now.
+        There may be hope for you yet. Then you better give him a decent apology now.
+    {$name1}: Look, kiddo, I'm sorry. I didn't mean it like that. Are you up for a little game, maybe?
+{$name3}: ... a game?
+{$name1}: Yeah. Is there any game you like in particular?
+{$name3}: I hate them all. I always lose. Doesn't matter which game it is.
+-> That's hardly surprising. Ahem, nooo ... I mean whaaat ...
+    <<set $mean2 = $mean2 + 1>>
+    {$name3}: Ugh, I knew it, you're just like everybody else! Meanie, meanie!!
+    {$name3}: I'll show you! I can totally beat you!!
+    {$name1}: Bring it on, loser.
+    Wow. You're an asshole. But somehow, the kid seems motivated now.
+-> Winning's not everything!
+    {$name3}: Easy for you to say. I'm sick of always losing! Always, always. I hate it. It's no fun!
+    {$name1}: Of course, I get that. Sorry. I'm sure you'll win this time!
+{$name1}: So, what game are we playing?
+{$name3}: ... do you know "Kagome Kagome"?
+-> Yes.
+    {$name3}: Ah, I don't have to explain the rules then.
+    {$name3}: Then you know how much it stinks, always having to be Oni!
+-> No.
+    {$name3}: Really?? We play it all the time here! It's pretty simple.
+    <<detour Rules>>
+{$name3}: I know the chant by heart, because I hear it all the time. But I never get to sing it. Because I can never guess who's standing behind me.
+{$name3}: Everyone always makes me be "Oni" first. I know they're cheating, but I can't figure out how.
+{$name3}: It stinks, it stinks!
+{$name3}: Just one time, I don't want to be "Oni". Just one time!
+{$name1}: Well, I'm pretty bad at games myself, so now's your chance! I promise I won't cheat.
+{$name3}: ... pinky promise?
+{$name1}: Pinky promise.
+{$name3}: Okay. Deal.
+{$name3}: So, do you remember all the rules?
+-> Yup.
+    {$name3}: Okay. No excuses then!
+-> Can you explain one more time?
+    {$name3}: *sigh* Okay, but just once.
+    <<detour Rules>>
+{$name3}: Let's get started then. You ... you get behind me first.
+{$name1}: Huh? Don't you want to chant first? You don't have to be "Oni".
+{$name3}: ... I can win. I'll win as "Oni" first.
+The boy covers his eyes with his hands.
+As you get into position, you notice shadowy, faceless figures appear next to you. The two on either side of you are holding out their hands towards you.
+-> Take their hands.
+    Despite being transparent, the hands are solid.
+    And they are incredibly cold. So much so that you instinctively try to pull back.
+    But you can't. Your hands are interlocked with the shadow figures like they are an extension of your own body.
+    You feel a sense of cold floating up your arms and into your body. You're part of their merry circle now.
+-> Don't take them.
+    The faceless things all collectively turn to look at you, or at least you imagine they do, as it's hard to tell when they don't have any distinguishing features to tell their face from the rest of their head.
+    Now what?
+    The boy starts muttering impatiently.
+    What are you going to do now?
+    -> take their hands.
+        Despite being transparent, the hands are solid.
+        And they are incredibly cold. So much so that you instinctively try to pull back. 
+        But you can't. Your hands are interlocked with the shadow figures like they are an extension of your own body.
+        You feel a sense of cold floating up your arms and into your body. You're part of their merry circle now.
+    -> take their hands.
+        Despite being transparent, the hands are solid.
+        And they are incredibly cold. So much so that you instinctively try to pull back.
+        But you can't. Your hands are interlocked with the shadow figures like they are an extension of your own body.
+        You feel a sense of cold floating up your arms and into your body. You're part of their merry circle now.
+
+//the game mechanics are as follows: you play two rounds. The first one, you have to decide for each round whether to move forward or stand still for every verse of the chant. If you stand still more than once in succession, though, the boy will notice and identify you as a cheater which will result in a game over.
+//Round two, you're "Oni". That means you have to guess either "Nobody" or "You" (maybe I'll give the boy a name that'd make sense). You have to determine if it's the boy standing behind you by how his voice sounds. It'll be loudest when he's right behind you.
+
+// what happens when you're too mean to Ghost Boy? Maybe actually nothing. Maybe there's no consequences for that until you meet the Drowned Child later.
+
+<<jump Cafeteria>>
+
+===
+
+title: Rules
+position: 34,-36
+---
+{$name3}: One person has to go in the middle with their eyes closed. That person is "Oni".
+{$name3}: The other players walk around that person in a circle and chant:
+{$name3}: "Kagome, Kagome"
+{$name3}: "Kago no naka tori ha"
+{$name3}: "Itsu itsu de yaru"
+{$name3}: "Yo ake no banni"
+{$name3}: "Tsuruto kame ga subetta"
+{$name3}: "Ushiro no shoumen dare"
+{$name3}: When the chant is finished, everybody has to stop walking and "Oni" has to guess who's standing behind them.
+===
+
+title: RoomClean
+position: 325,8
+---
+This room is different for two reasons.
+First, you can't immediately see the child. Second, it is an utter mess, and - are those bars in front of the window?
+
+===
+
+title: Lost
+position: 390,-129
+---
+
+
+===
+
+title: Cafeteria
+position: -297,175
+---
+When you walk up to the door this time, you can hear the hustle of bustle of voices and the clattering of plates and all other sorts of things.
+This is the final door.
+Are you going in?
+-> Go in.
+//this option might appear twice just for show
+//insert the sound effect of a door sliding open as the screen briefly fades to black.
+{$name1}: Woah ... so many people. It looks ... just like a regular school cafeteria.
+You look around and take in the unusual sight. It's almost like you're no longer at the spirit hotel at all.
+Everyone's wearing the same uniform. Everyone is - even ...
+{$name1}: Wait, why am I wearing the school uniform? I don't like this.
+There's no sign this time. No instructions what to do.
+You better figure out the task yourself.
+//you then go exploring and can interact with multiple things. Of course, the important aspect is the interaction that appears when you spot the Drowned Child, which is this:
+I look around. This kid is the only one sitting at a table all by themselves.
+Although they are wearing the boy's uniform, you're not certain whether they are actually a boy or a girl.
+Their chin-long hair hangs into their face. It looks deliberate. Like they're trying not to look at anyone, or to not have people look at them.
+The tray of food in front of them is untouched, and their uniform is a bit sloppy, dirty here and there.
+?: Hey! Are you new?
+You turn to the sound of the voice. There are three teenage girls standing behind you, all smiling at you.
+?: Is this your first day? Hey, why don't you come sit with us?
+-> Sure, why not?
+    <<jump DrownedChildBadEnding>>
+-> No, thank you.
+    Their expressions shift like day and night. Their faces turn to grotesque grimaces.
+    ?: Really? But there's no other free seats. Where are you going to sit, then?
+    You turn back. There are freee seats, of course - an entirely free table. Except now the kid is staring back at you with the same freakish grimace.
+    And you think now, maybe there's actually a reason the table is empty.
+    Are you really sure you want to sit there?
+    -> ... nevermind, the girls seemed nice after all.
+        <<jump DrownedChildBadEnding>>
+    -> Yeah, I'm placing my bets on the quiet kid.
+        <<jump DrownedChildGoodEnding>>
+===
+
+title: DrownedChildBadEnding
+position: -53,321
+---
+    They smile at each other, and then you.
+    ?: Yay! Welcome to the gang!
+    Before you follow them, you turn around once more and shudder.
+    The lonely child is staring at you through their strands of hair.
+    Their face is pure, unbridled hatred.
+    And suddenly, you find yourself locked in that stare.
+    You can't move. Can't even blink.
+    The sounds around you begin to fade, like someone is turning down the volume.
+    The room starts dissolving, until there's only you in a black void, and that table in front of you, with the middle schooler's jet black eyes still locked onto yours.
+    And then, laughter swells from behind you.
+
+===
+
+title: DrownedChildGoodEnding
+
+position: 374,237
+---
+//The question how the "mean" counters of the individual rooms are added up: You could just take the total sum of "mean" responses and make a cutoff value for each of the three different responses. In that case, there's no need for the separate variables. 
+//Orrrr you could also go something along the lines of: If your total sum is below the cutoff value but you were overwhelmingly mean to one of the children, that also counts as being "too mean". Annyway:
+<<set $dc to "The Drowned Child">>
+
+<<if $mean + $mean2 + $mean3 + $mean4 < 4>>
+The child smiles at you.
+{$dc}: Nice to see you love children just as much as I do.
+{$dc}: It was heartwarming, watching you interact with them. You were so gentle with them - thank you.
+{$dc}: And ... good luck.
+{$dc}: This trial can be harsh. If you ever find yourself in a pickle ... I'll help out if I can.
+<<set $ally to true>>
+
+<<elseif $mean + $mean2 + $mean3 + $mean4 < 10>>
+You get a slight frown from the child.
+{$dc}: Though ... I'd ask you to work on your empathy. And I hope you're not looking to go into child care.
+{$dc}: I know you were probably just trying to be funny, but these kids have been through enough.
+{$dc}: Still ... I can tell your heart is in the right place.
+The child flashes a tentative smile.
+{$dc}: So ... thank you. And good luck.
+<<set $ally to true>>
+
+<<elseif $mean + $mean2 + $mean3 + $mean4 >= 10>>
+The child looks different somehow. They have changed their uniform to the female one. And they are dripping wet, algae stuck to their hair and clothes.
+But most importantly, their shy, dead-eyed stare from the cafeteria has changed entirely.
+They are glaring you with seething hatred.
+This can't be good. Did you fail?
+But you passed all the rooms, didn't you?
+The child starts speaking in a messed-up, distorted kind of voice.
+{$dc}: Well. Looks like you made the right call in the end.
+{$dc}: Kind of surprising with how you've behaved up until now.
+{$dc}: It says a lot about a person how they behave towards the most vulnerable of us. And you ...
+{$dc}: Well. I hardly think it was your altruistic heart that got you here. That made you choose to help me in the end.
+{$dc}: You pass anyway. Now get out, and never show your face around here again.
+<<set $ally to true>>
+
+<<endif>>
+
+===

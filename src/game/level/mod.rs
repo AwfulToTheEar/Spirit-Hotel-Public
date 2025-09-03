@@ -1,10 +1,3 @@
-use std::env;
-use bevy::{prelude::*, render::view::VisibilitySystems};
-use bevy_ecs_tiled::{
-    prelude::{TiledPhysicsAvianBackend, TiledPhysicsPlugin},
-};
-use bevy_ecs_tiled::prelude::{RegexSet, TiledFilter};
-use bevy_ecs_tiled::tiled::{TiledPlugin, TiledPluginConfig};
 use crate::{
     AppSystems,
     asset_tracking::LoadResource,
@@ -16,6 +9,11 @@ use crate::{
         },
     },
 };
+use bevy::{prelude::*, render::view::VisibilitySystems};
+use bevy_ecs_tiled::prelude::{RegexSet, TiledFilter};
+use bevy_ecs_tiled::prelude::{TiledPhysicsAvianBackend, TiledPhysicsPlugin};
+use bevy_ecs_tiled::tiled::{TiledPlugin, TiledPluginConfig};
+use std::env;
 
 pub mod components;
 pub mod resources;
@@ -38,7 +36,7 @@ pub fn plugin(app: &mut App) {
                     r"^bevy_render::view::visibility::Visibility.*",
                     r"^bevy_light_2d::.*",
                 ])
-                    .unwrap(),
+                .unwrap(),
             ),
         }),
         TiledPhysicsPlugin::<TiledPhysicsAvianBackend>::default(),
@@ -57,6 +55,7 @@ pub fn plugin(app: &mut App) {
             handle_object_path_node,
             handle_collider_static,
             handle_colliders_spawned,
+            handle_world_init_breath_timer,
             reparent_player_to_world, //TODO: change to use object created event
         )
             .in_set(LevelSystems)

@@ -7,6 +7,7 @@ mod handle_colliders_spawned;
 mod handle_object_animation_path;
 mod handle_object_is_trigger;
 mod handle_object_path_node;
+mod handle_world_init_breath_timer;
 mod load_level_from_activated_trigger;
 mod mark_objects_inside_map;
 mod reparent_player_to_world;
@@ -22,6 +23,7 @@ pub mod prelude {
     pub use super::handle_object_animation_path::*;
     pub use super::handle_object_is_trigger::*;
     pub use super::handle_object_path_node::*;
+    pub use super::handle_world_init_breath_timer::*;
     pub use super::load_level_from_activated_trigger::*;
     pub use super::mark_objects_inside_map::*;
     pub use super::reparent_player_to_world::*;
