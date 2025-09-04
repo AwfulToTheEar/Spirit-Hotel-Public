@@ -27,9 +27,10 @@ avian2d = "0.3.1"
 bevy_northstar = "0.3.2"
 bevy_mod_debugdump = "0.13.0"
 bevy_light_2d = "0.7.0"
+bevy_enhanced_input = "0.18.1"
 
 [patch.crates-io]
-#bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
+bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
 #bevy_aseprite_ultra = { path = "crates/bevy_aseprite_ultra" }
 #bevy_light_2d = { path = "crates/bevy_light_2d" }
 

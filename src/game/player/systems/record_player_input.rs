@@ -1,14 +1,15 @@
-use bevy::prelude::*;
-
+use crate::game::player::input::prelude::Walk;
 use crate::game::{
     movement::components::prelude::{MoveToLocation, MovementIntent},
     player::components::prelude::Player,
 };
+use bevy::prelude::*;
+use bevy_enhanced_input::prelude::*;
 
 pub fn record_player_input(
+    trigger: Trigger<Fired<Walk>>,
     mut commands: Commands,
-    keyboard_input: Res<ButtonInput<KeyCode>>,
-    mut q_player: Query<
+    s_player: Single<
         Entity,
         (
             With<Player>,
@@ -17,31 +18,13 @@ pub fn record_player_input(
         ),
     >,
 ) {
-    let Ok(entity) = q_player.single_mut() else {
-        return;
-    };
-
-    let mut direction = Vec2::ZERO;
-
-    if keyboard_input.pressed(KeyCode::ArrowRight) {
-        direction = Vec2::new(1.0, 0.0);
-    }
-
-    if keyboard_input.pressed(KeyCode::ArrowLeft) {
-        direction = Vec2::new(-1.0, 0.0);
-    }
-
-    if keyboard_input.pressed(KeyCode::ArrowUp) {
-        direction = Vec2::new(0.0, 1.0);
-    }
-
-    if keyboard_input.pressed(KeyCode::ArrowDown) {
-        direction = Vec2::new(0.0, -1.0);
-    }
-    
-    if direction == Vec2::ZERO {
+    if trigger.value == Vec2::ZERO {
         return;
     }
 
-    commands.entity(entity).insert(MovementIntent(direction));
+    let entity = s_player.into_inner();
+
+    commands
+        .entity(entity)
+        .insert(MovementIntent(trigger.value));
 }

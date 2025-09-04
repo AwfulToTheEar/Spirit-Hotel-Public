@@ -9,7 +9,7 @@ pub fn start_animation_movement(
 ) {
     for (movement_intent, can_move, children) in q_moving_entities.iter_mut() {
         for child in children.iter() {
-            let Ok((mut ase_animation)) = q_visuals.get_mut(child) else {
+            let Ok(mut ase_animation) = q_visuals.get_mut(child) else {
                 continue;
             };
 

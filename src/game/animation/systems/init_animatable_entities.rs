@@ -8,7 +8,7 @@ use crate::game::animation::{
 pub fn init_animatable_entities(
     mut commands: Commands,
     animation_assets: Res<AnimationAssets>,
-    q_animatables: Query<(Entity, &Children), (With<AnimatableMarker>)>,
+    q_animatables: Query<(Entity, &Children), With<AnimatableMarker>>,
     q_visuals: Query<Entity, (With<ChildOf>, With<Sprite>, Without<AseAnimation>)>,
 ) {
     for (entity, children) in q_animatables.iter() {

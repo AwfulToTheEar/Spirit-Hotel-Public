@@ -3,11 +3,8 @@
 //! Feel free to change the logic found here if you feel like tinkering around
 //! to get a feeling for the template.
 
-use crate::game::movement::components::prelude::Pushable;
 use crate::screens::Screen;
-use avian2d::PhysicsPlugins;
 use bevy::prelude::*;
-use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
 
 pub mod animation;
 mod dialogue;
@@ -22,30 +19,28 @@ mod scene;
 mod trigger;
 
 pub(super) fn plugin(app: &mut App) {
-    app.add_plugins(PhysicsPlugins::default().with_length_unit(100.0))
-        .add_plugins(FilterQueryInspectorPlugin::<With<Pushable>>::default())
-        .add_plugins((
-            level::plugin,
-            trigger::plugin,
-            movement::plugin,
-            player::plugin,
-            animation::plugin,
-            dialogue::plugin,
-            path_finding::plugin,
-            scene::plugin,
-            lighting::plugin,
-            drowned_child::plugin,
-            general::plugin,
-        ))
-        .configure_sets(
-            PreUpdate,
-            GameplaySystems.run_if(in_state(Screen::Gameplay)),
-        )
-        .configure_sets(Update, GameplaySystems.run_if(in_state(Screen::Gameplay)))
-        .configure_sets(
-            FixedUpdate,
-            GameplaySystems.run_if(in_state(Screen::Gameplay)),
-        );
+    app.add_plugins((
+        general::plugin,
+        level::plugin,
+        trigger::plugin,
+        movement::plugin,
+        player::plugin,
+        animation::plugin,
+        dialogue::plugin,
+        path_finding::plugin,
+        scene::plugin,
+        lighting::plugin,
+        drowned_child::plugin,
+    ))
+    .configure_sets(
+        PreUpdate,
+        GameplaySystems.run_if(in_state(Screen::Gameplay)),
+    )
+    .configure_sets(Update, GameplaySystems.run_if(in_state(Screen::Gameplay)))
+    .configure_sets(
+        FixedUpdate,
+        GameplaySystems.run_if(in_state(Screen::Gameplay)),
+    );
 }
 
 #[derive(SystemSet, Debug, Clone, Copy, Eq, PartialEq, Hash, PartialOrd, Ord)]

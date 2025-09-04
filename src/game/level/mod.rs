@@ -9,6 +9,7 @@ use crate::{
         },
     },
 };
+use avian2d::PhysicsPlugins;
 use bevy::{prelude::*, render::view::VisibilitySystems};
 use bevy_ecs_tiled::prelude::{RegexSet, TiledFilter};
 use bevy_ecs_tiled::prelude::{TiledPhysicsAvianBackend, TiledPhysicsPlugin};
@@ -39,6 +40,7 @@ pub fn plugin(app: &mut App) {
                 .unwrap(),
             ),
         }),
+        PhysicsPlugins::default().with_length_unit(100.0),
         TiledPhysicsPlugin::<TiledPhysicsAvianBackend>::default(),
     ))
     .register_type::<LevelAssets>()

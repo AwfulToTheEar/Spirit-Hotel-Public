@@ -5,9 +5,11 @@ use bevy::prelude::*;
 
 pub fn spawn_breath_timer_ui(
     mut commands: Commands,
-    s_breath_timer: Single<&BreathTimer, Added<BreathTimer>>,
+    q_breath_timer: Query<&BreathTimer, Added<BreathTimer>>,
 ) {
-    let breath_timer = s_breath_timer.into_inner();
+    if q_breath_timer.is_empty() {
+        return;
+    }
 
     commands.spawn((
         widget::ui_root("Breath Timer Ui"),
@@ -15,7 +17,11 @@ pub fn spawn_breath_timer_ui(
         StateScoped(Screen::Gameplay),
         children![(
             BreathTimerIndicator,
-            widget::header(format!("Breath: {}", breath_timer.0.remaining().as_secs()))
-        ),],
+            Node {
+                align_self: AlignSelf::End,
+                ..default()
+            },
+            widget::header(format!("Hold Breath"))
+        )],
     ));
 }

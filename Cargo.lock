@@ -805,8 +805,6 @@ dependencies = [
 [[package]]
 name = "bevy_ecs_tiled"
 version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d055289a146ddbaa3305a2ebf84a3ce885caac018357dca4e50f2a4e123d0226"
 dependencies = [
  "avian2d",
  "bevy",
@@ -877,6 +875,32 @@ checksum = "8148f4edee470a2ea5cad010184c492a4c94c36d7a7158ea28e134ea87f274ab"
 dependencies = [
  "bevy_macro_utils",
  "encase_derive_impl",
+]
+
+[[package]]
+name = "bevy_enhanced_input"
+version = "0.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "941b3445a0debedafb947e9b8977feb65820acb7a02c1a5c1265af35f847e74e"
+dependencies = [
+ "bevy",
+ "bevy_enhanced_input_macros",
+ "bitflags 2.9.1",
+ "log",
+ "serde",
+ "smallvec",
+ "variadics_please",
+]
+
+[[package]]
+name = "bevy_enhanced_input_macros"
+version = "0.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ea82bf756117527a2656af812b7df5830abdc3f9f8000003bc4b671396447995"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -5216,6 +5240,7 @@ dependencies = [
  "bevy_aseprite_ultra",
  "bevy_ecs_tiled",
  "bevy_ecs_tilemap",
+ "bevy_enhanced_input",
  "bevy_light_2d",
  "bevy_mod_debugdump",
  "bevy_northstar",
