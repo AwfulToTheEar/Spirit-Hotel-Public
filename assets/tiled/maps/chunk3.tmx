@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
  <properties>
-  <property name="hide_in_scene" type="class" propertytype="spirit_hotel::game::scene::components::HideInGameScene::HideInGameScene">
+  <property name="hide_in_scene" type="class" propertytype="spirit_hotel::game::scene::components::hide_in_game_scene::HideInGameScene">
    <properties>
     <property name="0" value="bla"/>
    </properties>
   </property>
-  <property name="show_in_scene" type="class" propertytype="spirit_hotel::game::scene::components::ShowInGameScene::ShowInGameScene">
+  <property name="show_in_scene" type="class" propertytype="spirit_hotel::game::scene::components::show_in_game_scene::ShowInGameScene">
    <properties>
     <property name="0" value="test"/>
    </properties>

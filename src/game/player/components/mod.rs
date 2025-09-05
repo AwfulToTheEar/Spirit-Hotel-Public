@@ -1,5 +1,5 @@
-mod Player;
+mod player;
 
 pub mod prelude {
-    pub use super::Player::*;
+    pub use super::player::*;
 }

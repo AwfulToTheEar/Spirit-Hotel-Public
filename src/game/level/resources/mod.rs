@@ -1,5 +1,5 @@
-mod LevelAssets;
+mod level_assets;
 
 pub mod prelude {
-    pub use super::LevelAssets::*;
+    pub use super::level_assets::*;
 }

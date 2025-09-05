@@ -1,9 +1,9 @@
-mod InsideTriggers;
-mod IsTrigger;
-mod TriggerCollider;
+mod inside_triggers;
+mod is_trigger;
+mod trigger_collider;
 
 pub mod prelude {
-    pub use super::InsideTriggers::*;
-    pub use super::IsTrigger::*;
-    pub use super::TriggerCollider::*;
+    pub use super::inside_triggers::*;
+    pub use super::is_trigger::*;
+    pub use super::trigger_collider::*;
 }

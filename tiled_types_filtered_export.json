@@ -383,7 +383,7 @@
   },
   {
     "id": 309,
-    "name": "spirit_hotel::game::scene::components::ShowInGameScene::ShowInGameScene",
+    "name": "spirit_hotel::game::scene::components::showInGameScene::ShowInGameScene",
     "type": "class",
     "useAs": [
       "property"

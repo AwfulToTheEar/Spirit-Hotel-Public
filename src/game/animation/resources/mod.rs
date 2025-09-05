@@ -1,5 +1,5 @@
-mod AnimationAssets;
+mod animation_assets;
 
 pub mod prelude {
-    pub use super::AnimationAssets::*;
+    pub use super::animation_assets::*;
 }

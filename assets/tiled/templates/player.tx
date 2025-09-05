@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="../tilesets/player.tsx"/>
  <object gid="2" width="20" height="32">
   <properties>
-   <property name="animation_path" type="class" propertytype="spirit_hotel::game::animation::components::AnimationPath::AnimationPath">
+   <property name="animation_path" type="class" propertytype="spirit_hotel::game::animation::components::animation_path::AnimationPath">
     <properties>
      <property name="0" type="file" value="../../animations/player.aseprite"/>
     </properties>
    </property>
-   <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::CanMove::CanMove">
+   <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove">
     <properties>
      <property name="down" value="walk-down"/>
      <property name="left" value=""/>
@@ -16,8 +16,8 @@
      <property name="up" value="walk-up"/>
     </properties>
    </property>
-   <property name="can_push" type="class" propertytype="spirit_hotel::game::movement::components::CanPush::CanPush"/>
-   <property name="player" type="class" propertytype="spirit_hotel::game::player::components::Player::Player"/>
+   <property name="can_push" type="class" propertytype="spirit_hotel::game::movement::components::can_push::CanPush"/>
+   <property name="player" type="class" propertytype="spirit_hotel::game::player::components::player::Player"/>
   </properties>
  </object>
 </template>

@@ -2,7 +2,7 @@
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="27">
  <properties>
   <property name="init_breath_timer" type="class" propertytype="spirit_hotel::game::drowned_child::components::init_breath_timer::InitBreathTimer"/>
-  <property name="starting_scene" type="class" propertytype="spirit_hotel::game::scene::resources::StartingGameScene::StartingGameScene">
+  <property name="starting_scene" type="class" propertytype="spirit_hotel::game::scene::resources::starting_game_scene::StartingGameScene">
    <properties>
     <property name="0" value="test"/>
    </properties>
@@ -27,12 +27,12 @@
  <objectgroup id="7" name="objects">
   <object id="14" x="32" y="32" width="32" height="32">
    <properties>
-    <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::components::IsTrigger::IsTrigger">
+    <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::components::is_trigger::IsTrigger">
      <properties>
-      <property name=":variant" propertytype="spirit_hotel::game::trigger::components::IsTrigger::IsTrigger:::Variant" value="Instant"/>
+      <property name=":variant" propertytype="spirit_hotel::game::trigger::components::is_trigger::IsTrigger:::Variant" value="Instant"/>
      </properties>
     </property>
-    <property name="load_level" type="class" propertytype="spirit_hotel::game::level::components::LoadLevel::LoadLevel">
+    <property name="load_level" type="class" propertytype="spirit_hotel::game::level::components::load_level::LoadLevel">
      <properties>
       <property name="0" type="file" value="../worlds/world2.world"/>
      </properties>
@@ -42,12 +42,12 @@
   <object id="18" template="../templates/player.tx" x="262" y="256"/>
   <object id="22" x="288" y="128" width="32" height="64">
    <properties>
-    <property name="change_scene" type="class" propertytype="spirit_hotel::game::scene::components::ChangeGameScene::ChangeGameScene">
+    <property name="change_scene" type="class" propertytype="spirit_hotel::game::scene::components::change_game_scene::ChangeGameScene">
      <properties>
       <property name="scene" value="bla"/>
      </properties>
     </property>
-    <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::components::IsTrigger::IsTrigger"/>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::components::is_trigger::IsTrigger"/>
    </properties>
   </object>
   <object id="25" x="160" y="224">
@@ -63,8 +63,8 @@
   </object>
   <object id="26" gid="5" x="96" y="288" width="32" height="32">
    <properties>
-    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::CanMove::CanMove"/>
-    <property name="pushable" type="class" propertytype="spirit_hotel::game::movement::components::Pushable::Pushable"/>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="pushable" type="class" propertytype="spirit_hotel::game::movement::components::pushable::Pushable"/>
    </properties>
   </object>
  </objectgroup>

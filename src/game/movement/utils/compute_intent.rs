@@ -1,5 +1,5 @@
 use crate::game::movement::components::prelude::{
-    CanMove, MoveToLocation, MovementDuration, MovementIntent, Pushable,
+    CanMove, MoveToLocation, MovementDuration, MovementFlag, MovementIntent, Pushable,
 };
 use crate::game::path_finding::components::prelude::ScanCollider;
 use crate::game::trigger::components::prelude::TriggerCollider;
@@ -16,6 +16,7 @@ pub fn compute_intent(
     step: Vec3,
     children: &Children,
     can_push: bool,
+    movement_flag_option: Option<&MovementFlag>,
     q_colliders: Query<
         (Entity, &Collider, &GlobalTransform, &ChildOf),
         (Without<TriggerCollider>, Without<ScanCollider>),
@@ -26,6 +27,25 @@ pub fn compute_intent(
     >,
     being_pushed: bool,
 ) -> bool {
+    if let Some(movement_flag) = movement_flag_option {
+        return match movement_flag {
+            MovementFlag::Force => {
+                commands.entity(entity).insert(MoveToLocation {
+                    timer: Timer::from_seconds(duration.0, TimerMode::Once),
+                    start: transform.translation,
+                    end: transform.translation + step,
+                });
+
+                false
+            }
+            MovementFlag::Block => {
+                commands.entity(entity).remove::<MovementIntent>();
+
+                true
+            }
+        };
+    }
+
     for child in children.iter() {
         let Ok((_, collider, collider_transform, _)) = q_colliders.get(child) else {
             continue;
@@ -70,6 +90,7 @@ pub fn compute_intent(
                     step,
                     pushable_children,
                     can_push,
+                    movement_flag_option,
                     q_colliders,
                     q_pushables,
                     true,

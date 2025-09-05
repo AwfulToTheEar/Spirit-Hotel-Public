@@ -1,11 +1,11 @@
-mod AnimatableMarker;
-mod AnimationPath;
-mod InitAnimation;
-mod PausedByState;
+mod animatable_marker;
+mod animation_path;
+mod init_animation;
+mod paused_by_state;
 
 pub mod prelude {
-    pub use super::AnimatableMarker::*;
-    pub use super::AnimationPath::*;
-    pub use super::InitAnimation::*;
-    pub use super::PausedByState::*;
+    pub use super::animatable_marker::*;
+    pub use super::animation_path::*;
+    pub use super::init_animation::*;
+    pub use super::paused_by_state::*;
 }

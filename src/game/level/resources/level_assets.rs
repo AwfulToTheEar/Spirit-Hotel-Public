@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::{TiledWorldAsset};
+use bevy_ecs_tiled::prelude::TiledWorldAsset;
 
 #[derive(Resource, Asset, Clone, Reflect)]
 #[reflect(Resource)]
