@@ -5,7 +5,7 @@ use crate::game::level::components::prelude::TiledCollidersSpawned;
 
 pub fn handle_colliders_spawned(
     mut commands: Commands,
-    mut e_collider_created: EventReader<TiledEvent<ColliderCreated>>,
+    e_collider_created: EventReader<TiledEvent<ColliderCreated>>,
     q_tiled_entities: Query<
         Entity,
         (

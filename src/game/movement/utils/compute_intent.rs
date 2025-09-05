@@ -68,7 +68,7 @@ pub fn compute_intent(
             };
 
             if result {
-                if (!can_push || can_push && q_pushables.get(child_of.0).is_err()) {
+                if !can_push || can_push && q_pushables.get(child_of.0).is_err() {
                     commands.entity(entity).remove::<MovementIntent>();
                     return true;
                 }

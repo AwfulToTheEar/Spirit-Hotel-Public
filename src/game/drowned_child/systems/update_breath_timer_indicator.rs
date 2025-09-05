@@ -3,7 +3,7 @@ use bevy::prelude::*;
 
 pub fn update_breath_timer_indicator(
     s_breath_timer: Single<(&BreathTimer, Ref<BreathTimer>)>,
-    mut s_breath_timer_indicator: Single<(&mut Text), (With<BreathTimerIndicator>)>,
+    s_breath_timer_indicator: Single<&mut Text, With<BreathTimerIndicator>>,
 ) {
     let (breath_timer, breath_timer_ref) = s_breath_timer.into_inner();
 
