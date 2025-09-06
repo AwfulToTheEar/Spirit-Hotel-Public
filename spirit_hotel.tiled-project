@@ -373,6 +373,35 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 82,
+            "members": [
+            ],
+            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 83,
+            "members": [
+                {
+                    "name": "is_oni",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "spirit_hotel::game::drowned_child::resources::kagume_kagume::KagumeKagume",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 79,
             "members": [
                 {
@@ -791,10 +820,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 82,
+            "id": 84,
             "members": [
             ],
-            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer",
+            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_start_path_node::KagumeKagumeStartPathNode",
             "type": "class",
             "useAs": [
                 "property"
@@ -803,15 +832,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 83,
+            "id": 85,
             "members": [
-                {
-                    "name": "is_oni",
-                    "type": "bool",
-                    "value": false
-                }
             ],
-            "name": "spirit_hotel::game::drowned_child::resources::kagume_kagume::KagumeKagume",
+            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_start_position::KagumeKagumeStartPosition",
             "type": "class",
             "useAs": [
                 "property"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="45">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="9" nextobjectid="64">
  <properties>
   <property name="kagume_kagume" type="class" propertytype="spirit_hotel::game::drowned_child::resources::kagume_kagume::KagumeKagume"/>
  </properties>
@@ -9,18 +9,18 @@
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,
 2,0,0,0,0,0,0,0,0,2,
-2,0,7,7,7,7,7,7,7,2,
-2,0,0,1,1,1,1,0,0,2,
-2,0,0,1,5,5,1,0,0,2,
-2,5,5,1,1,1,1,5,5,2,
 2,0,0,0,0,0,0,0,0,2,
-2,3,3,3,3,3,3,3,0,2,
+2,0,0,1,1,1,1,0,0,2,
+2,0,0,1,0,0,1,0,0,2,
+2,0,0,1,1,1,1,0,0,2,
+2,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,2,
 2,2,2,2,2,2,2,2,2,2
 </data>
  </layer>
  <objectgroup id="7" name="objects">
-  <object id="14" x="256" y="224" width="32" height="32">
+  <object id="14" x="256" y="256" width="32" height="32">
    <properties>
     <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::components::is_trigger::IsTrigger"/>
     <property name="load_level" type="class" propertytype="spirit_hotel::game::level::components::load_level::LoadLevel">
@@ -31,7 +31,7 @@
    </properties>
   </object>
   <object id="20" template="../templates/player.tx" x="38" y="64"/>
-  <object id="24" gid="18" x="262" y="128" width="20" height="32">
+  <object id="24" gid="18" x="262" y="64" width="20" height="32">
    <properties>
     <property name="is_trigger" type="class" propertytype="spirit_hotel::game::trigger::components::is_trigger::IsTrigger">
      <properties>
@@ -45,11 +45,12 @@
     </property>
    </properties>
   </object>
-  <object id="25" x="256" y="96" width="32" height="32"/>
+  <object id="25" x="256" y="32" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="paths">
-  <object id="39" template="../templates/path_node.tx" x="64" y="160">
+  <object id="39" template="../templates/path_node.tx" x="64" y="96">
    <properties>
+    <property name="kagume_kagume_start_path_node" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_start_path_node::KagumeKagumeStartPathNode"/>
     <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::components::path_node::PathNode">
      <properties>
       <property name="0" type="object" value="40"/>
@@ -57,16 +58,16 @@
     </property>
    </properties>
   </object>
-  <object id="40" template="../templates/path_node.tx" x="160" y="224">
+  <object id="40" template="../templates/path_node.tx" x="64" y="224">
    <properties>
     <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::components::path_node::PathNode">
      <properties>
-      <property name="0" type="object" value="41"/>
+      <property name="0" type="object" value="46"/>
      </properties>
     </property>
    </properties>
   </object>
-  <object id="41" template="../templates/path_node.tx" x="192" y="128">
+  <object id="41" template="../templates/path_node.tx" x="224" y="96">
    <properties>
     <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::components::path_node::PathNode">
      <properties>
@@ -75,7 +76,7 @@
     </property>
    </properties>
   </object>
-  <object id="42" gid="9" x="38" y="224" width="20" height="32">
+  <object id="42" gid="9" x="70" y="192" width="20" height="32">
    <properties>
     <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
     <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
@@ -86,6 +87,213 @@
     <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
     <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
    </properties>
+  </object>
+  <object id="45" gid="9" x="230" y="128" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="41"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="46" template="../templates/path_node.tx" x="224" y="224">
+   <properties>
+    <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::components::path_node::PathNode">
+     <properties>
+      <property name="0" type="object" value="41"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="47" gid="9" x="70" y="160" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="40"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="48" gid="9" x="70" y="128" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="40"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="49" gid="9" x="70" y="224" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="46"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="50" gid="9" x="102" y="224" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="46"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="51" gid="9" x="134" y="224" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="46"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="52" gid="9" x="166" y="224" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="46"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="53" gid="9" x="198" y="224" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="46"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="54" gid="9" x="230" y="224" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="41"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="55" gid="9" x="230" y="192" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="41"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="56" gid="9" x="230" y="160" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="41"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="57" gid="9" x="230" y="96" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="39"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="58" gid="9" x="198" y="96" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="39"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="59" gid="9" x="166" y="96" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="39"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="60" gid="9" x="102" y="96" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="39"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="61" gid="9" x="70" y="96" width="20" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel::game::movement::components::can_move::CanMove"/>
+    <property name="follow_path" type="class" propertytype="spirit_hotel::game::path_finding::components::follow_path::FollowPath">
+     <properties>
+      <property name="0" type="object" value="40"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
+    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
+   </properties>
+  </object>
+  <object id="63" x="128" y="96">
+   <properties>
+    <property name="kagume_kagume_start_position" type="class" propertytype="spirit_hotel::game::drowned_child::components::kagume_kagume_start_position::KagumeKagumeStartPosition"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
 </map>
