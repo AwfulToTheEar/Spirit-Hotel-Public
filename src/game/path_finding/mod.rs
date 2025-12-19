@@ -12,6 +12,7 @@ use crate::{
         },
     },
 };
+use crate::game::movement::systems::prelude::apply_intent;
 
 pub mod components;
 pub mod systems;
@@ -36,6 +37,7 @@ pub fn plugin(app: &mut App) {
                 (remove_next_pos, apply_intent_from_next_pos),
             )
                 .chain()
+                .before(apply_intent)
                 .in_set(PausableSystems)
                 .in_set(AppSystems::Update)
                 .in_set(GameplaySystems),

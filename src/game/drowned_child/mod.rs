@@ -16,11 +16,16 @@ use crate::game::drowned_child::systems::prelude::{
     toggle_block_movement_player_oni, toggle_halt_pathfinding_intent_kagume_kagume_dancers,
     update_breath_timer_indicator,
 };
+use crate::game::movement::systems::prelude::{
+    mark_movement_completed, remove_move_to_location_synced,
+};
 use crate::game::path_finding::systems::prelude::apply_intent_from_next_pos;
 use crate::{AppSystems, PausableSystems};
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
 use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
+use bevy_northstar::prelude::NextPos;
+use crate::game::movement::components::prelude::MovementCompleted;
 
 pub mod components;
 pub mod input;
@@ -28,7 +33,9 @@ pub mod resources;
 pub mod systems;
 
 pub fn plugin(app: &mut App) {
-    app.add_plugins(FilterQueryInspectorPlugin::<With<KagumeKagumeDancer>>::new())
+    app.add_plugins(FilterQueryInspectorPlugin::<(
+        With<KagumeKagumeDancer>,
+    )>::new())
         .register_type::<Mean>()
         .register_type::<BreathTimer>()
         .register_type::<InitBreathTimer>()
@@ -83,5 +90,13 @@ pub fn plugin(app: &mut App) {
                 spawn_breath_timer_ui,
             )
                 .in_set(GameplaySystems),
+        )
+        .add_systems(
+            FixedUpdate,
+            remove_move_to_location_synced::<KagumeKagumeDancer>
+                .in_set(PausableSystems)
+                .in_set(GameplaySystems)
+                .in_set(AppSystems::Update)
+                .after(mark_movement_completed),
         );
 }

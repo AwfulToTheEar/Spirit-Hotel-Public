@@ -21,7 +21,7 @@ pub fn remove_next_pos(
     for (entity, grid_pos, next_pos) in q_next_positions.iter() {
         if grid_pos.0 != next_pos.0 {
             //TODO: do something when position can't be reached
-            warn!("position not reached");
+            warn!("position not reached (at: {}, goal: {})", grid_pos.0, next_pos.0);
             continue;
         }
 

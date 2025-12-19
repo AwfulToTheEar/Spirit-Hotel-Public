@@ -32,7 +32,10 @@ pub(super) fn plugin(app: &mut App) {
             FixedUpdate,
             (
                 tick_move_to_location.in_set(AppSystems::TickTimers),
-                (apply_move_to_location, remove_move_to_location)
+                (
+                    apply_move_to_location,
+                    (remove_move_to_location, mark_movement_completed),
+                )
                     .chain()
                     .in_set(AppSystems::Update),
             )
