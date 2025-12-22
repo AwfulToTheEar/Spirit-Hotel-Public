@@ -48,18 +48,39 @@ spirit_hotel_scene_dialogue = { path = "crates/spirit_hotel_scene_dialogue" }
 # Alternatively, you can opt out of the rustflags check with this patch:
 #[patch.crates-io]
 #getrandom = { git = "https://github.com/benfrankel/getrandom" }
+[workspace]
+members = ["crates/*"]
 
 [workspace.dependencies]
 bevy = { version = "0.17.3", features = ["wayland"]}
+avian2d = "0.4.1"
+bevy_aseprite_ultra = "0.7.0"
+bevy_yarnspinner = "0.6.0"
+bevy_yarnspinner_example_dialogue_view = "0.6.0"
+bevy_ecs_tiled = { version = "0.10.0", features = ["avian_debug"] }
+bevy_light_2d = "0.8.0"
+bevy_ecs_tilemap = "0.17.0"
+bevy_northstar = "0.5.0"
+bevy_enhanced_input = "0.20.0"
+
 
 [features]
 # Default to a native dev build.
 default = ["dev_native"]
 dev = [
-    "spirit_hotel_core/dev",
+    # Improve compile times for dev builds by linking Bevy as a dynamic library.
+    "bevy/dynamic_linking",
+    "bevy/bevy_dev_tools",
+    "bevy/bevy_ui_debug",
+    # Improve error events coming from Bevy
+    "bevy/track_location",
 ]
 dev_native = [
-    "spirit_hotel_core/dev_native",
+    "dev",
+    # Enable asset hot reloading for native dev builds.
+    "bevy/file_watcher",
+    # Enable embedded asset hot reloading for native dev builds.
+    "bevy/embedded_watcher",
 ]
 
 
