@@ -6,8 +6,34 @@
 #[cfg(feature = "dev")]
 mod dev_tools;
 
-use spirit_hotel_core::bevy::{asset::AssetMetaCheck, prelude::*};
-use spirit_hotel_lighting::light_2d::light::{AmbientLight2d, Light2d};
+use bevy::{asset::AssetMetaCheck, prelude::*};
+use bevy_light_2d::light::{AmbientLight2d, Light2d};
+use spirit_hotel_animation::SpiritHotelAnimationPlugin;
+use spirit_hotel_animation_movement::SpiritHotelAnimationMovementPlugin;
+use spirit_hotel_core::SpiritHotelCorePlugin;
+use spirit_hotel_dialogue::SpiritHotelDialoguePlugin;
+use spirit_hotel_dialogue_trigger::SpiritHotelDialogueTriggerPlugin;
+use spirit_hotel_level::SpiritHotelLevelPlugin;
+use spirit_hotel_level_animation::SpiritHotelLevelAnimationPlugin;
+use spirit_hotel_level_movement::SpiritHotelLevelMovementPlugin;
+use spirit_hotel_level_pathfinding::SpiritHotelLevelPathfindingPlugin;
+use spirit_hotel_level_player::SpiritHotelLevelPlayerPlugin;
+use spirit_hotel_level_scene::SpiritHotelLevelScenePlugin;
+use spirit_hotel_level_trigger::SpiritHotelLevelTriggerPlugin;
+use spirit_hotel_lighting::SpiritHotelLightingPlugin;
+use spirit_hotel_movement::SpiritHotelMovementPlugin;
+use spirit_hotel_movement_trigger::SpiritHotelMovementTriggerPlugin;
+use spirit_hotel_pathfinding::SpiritHotelPathfindingPlugin;
+use spirit_hotel_pathfinding_movement::SpiritHotelPathfindingMovementPlugin;
+use spirit_hotel_pathfinding_movement_trigger::SpiritHotelPathfindingMovementTriggerPlugin;
+use spirit_hotel_pathfinding_trigger::SpiritHotelPathfindingTriggerPlugin;
+use spirit_hotel_player::SpiritHotelPlayerPlugin;
+use spirit_hotel_player_movement::SpiritHotelPlayerMovementPlugin;
+use spirit_hotel_scene::SpiritHotelScenePlugin;
+use spirit_hotel_scene_dialogue::SpiritHotelSceneDialoguePlugin;
+use spirit_hotel_scene_trigger::SpiritHotelSceneTriggerPlugin;
+use spirit_hotel_trigger::SpiritHotelTriggerPlugin;
+use crate::dev_tools::SpiritHotelDevToolsPlugin;
 
 fn main() -> AppExit {
     App::new().add_plugins(AppPlugin).run()
@@ -39,40 +65,44 @@ impl Plugin for AppPlugin {
                 }),
         );
 
+        app.add_plugins((
+            SpiritHotelCorePlugin,
+            SpiritHotelLevelPlugin,
+            SpiritHotelDialoguePlugin,
+            SpiritHotelLightingPlugin,
+            SpiritHotelPathfindingPlugin,
+            SpiritHotelMovementPlugin,
+            SpiritHotelAnimationPlugin,
+            SpiritHotelPlayerPlugin,
+            SpiritHotelScenePlugin,
+            SpiritHotelTriggerPlugin,
+            #[cfg(feature = "dev")]
+            SpiritHotelDevToolsPlugin,
+        ));
+
         // Add other plugins.
         app.add_plugins((
-            spirit_hotel_core::plugin,
-            spirit_hotel_level::plugin,
-            spirit_hotel_dialogue::plugin,
-            spirit_hotel_lighting::plugin,
-            spirit_hotel_pathfinding::plugin,
-            spirit_hotel_movement::plugin,
-            spirit_hotel_animation::plugin,
-            spirit_hotel_player::plugin,
-            spirit_hotel_scene::plugin,
-            spirit_hotel_trigger::plugin,
+            SpiritHotelLevelAnimationPlugin,
+            SpiritHotelLevelMovementPlugin,
+            SpiritHotelLevelPlayerPlugin,
+            SpiritHotelLevelPathfindingPlugin,
+            SpiritHotelLevelTriggerPlugin,
+            SpiritHotelLevelScenePlugin,
 
-            spirit_hotel_level_animation::plugin,
-            spirit_hotel_level_movement::plugin,
-            spirit_hotel_level_player::plugin,
-            spirit_hotel_level_pathfinding::plugin,
-            spirit_hotel_level_trigger::plugin,
+            SpiritHotelDialogueTriggerPlugin,
 
-            spirit_hotel_dialogue_trigger::plugin,
+            SpiritHotelPathfindingMovementPlugin,
+            SpiritHotelPathfindingMovementTriggerPlugin,
+            SpiritHotelPathfindingTriggerPlugin,
 
-            spirit_hotel_pathfinding_movement::plugin,
-            spirit_hotel_pathfinding_movement_trigger::plugin,
-            spirit_hotel_pathfinding_trigger::plugin,
+            SpiritHotelMovementTriggerPlugin,
 
-            spirit_hotel_movement_trigger::plugin,
+            SpiritHotelAnimationMovementPlugin,
 
-            spirit_hotel_animation_movement::plugin,
+            SpiritHotelPlayerMovementPlugin,
 
-            spirit_hotel_player_movement::plugin,
-
-            spirit_hotel_scene_dialogue::plugin,
-            #[cfg(feature = "dev")]
-            dev_tools::plugin,
+            SpiritHotelSceneDialoguePlugin,
+            SpiritHotelSceneTriggerPlugin
         ));
 
         // Spawn the main camera.
@@ -83,6 +113,10 @@ impl Plugin for AppPlugin {
 fn spawn_camera(mut commands: Commands) {
     commands.spawn((
         Name::new("Camera"),
+        Camera {
+            order: 0,
+            ..default()
+        },
         Camera2d,
         Light2d {
             ambient_light: AmbientLight2d {

@@ -7,30 +7,35 @@ edition = "2024"
 [dependencies]
 bevy-inspector-egui = "0.35.0"
 bevy_mod_debugdump = "0.14.0"
+bevy = { workspace = true }
+bevy_light_2d = { workspace = true }
+bevy_northstar = { workspace = true }
 
-spirit_hotel_core = { path = "crates/spirit_hotel_core" }
-spirit_hotel_player = { path = "crates/spirit_hotel_player" }
-spirit_hotel_pathfinding = { path = "crates/spirit_hotel_pathfinding" }
-spirit_hotel_animation = { path = "crates/spirit_hotel_animation" }
-spirit_hotel_level = { path = "crates/spirit_hotel_level" }
-spirit_hotel_scene = { path = "crates/spirit_hotel_scene" }
-spirit_hotel_trigger = { path = "crates/spirit_hotel_trigger" }
-spirit_hotel_movement = { path = "crates/spirit_hotel_movement" }
-spirit_hotel_dialogue = { path = "crates/spirit_hotel_dialogue" }
-spirit_hotel_lighting = { path = "crates/spirit_hotel_lighting" }
-spirit_hotel_animation_movement = { path = "crates/spirit_hotel_animation_movement" }
-spirit_hotel_dialogue_trigger = { path = "crates/spirit_hotel_dialogue_trigger" }
-spirit_hotel_level_animation = { path = "crates/spirit_hotel_level_animation" }
-spirit_hotel_level_movement = { path = "crates/spirit_hotel_level_movement" }
-spirit_hotel_level_pathfinding = { path = "crates/spirit_hotel_level_pathfinding" }
-spirit_hotel_level_player = { path = "crates/spirit_hotel_level_player" }
-spirit_hotel_level_trigger = { path = "crates/spirit_hotel_level_trigger" }
-spirit_hotel_movement_trigger = { path = "crates/spirit_hotel_movement_trigger" }
-spirit_hotel_pathfinding_movement = { path = "crates/spirit_hotel_pathfinding_movement" }
-spirit_hotel_pathfinding_movement_trigger = { path = "crates/spirit_hotel_pathfinding_movement_trigger" }
-spirit_hotel_pathfinding_trigger = { path = "crates/spirit_hotel_pathfinding_trigger" }
-spirit_hotel_player_movement = { path = "crates/spirit_hotel_player_movement" }
-spirit_hotel_scene_dialogue = { path = "crates/spirit_hotel_scene_dialogue" }
+spirit_hotel_core = { workspace = true }
+spirit_hotel_player = { workspace = true }
+spirit_hotel_pathfinding = { workspace = true }
+spirit_hotel_animation = { workspace = true }
+spirit_hotel_level = { workspace = true }
+spirit_hotel_scene = { workspace = true }
+spirit_hotel_trigger = { workspace = true }
+spirit_hotel_movement = { workspace = true }
+spirit_hotel_dialogue = { workspace = true }
+spirit_hotel_lighting = { workspace = true }
+spirit_hotel_animation_movement = { workspace = true }
+spirit_hotel_dialogue_trigger = { workspace = true }
+spirit_hotel_level_animation = { workspace = true }
+spirit_hotel_level_movement = { workspace = true }
+spirit_hotel_level_pathfinding = { workspace = true }
+spirit_hotel_level_player = { workspace = true }
+spirit_hotel_level_trigger = { workspace = true }
+spirit_hotel_level_scene = { workspace = true }
+spirit_hotel_movement_trigger = { workspace = true }
+spirit_hotel_pathfinding_movement = { workspace = true }
+spirit_hotel_pathfinding_movement_trigger = { workspace = true }
+spirit_hotel_pathfinding_trigger = { workspace = true }
+spirit_hotel_player_movement = { workspace = true }
+spirit_hotel_scene_dialogue = { workspace = true }
+spirit_hotel_scene_trigger = { workspace = true }
 
 [patch.crates-io]
 #bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
@@ -49,19 +54,45 @@ spirit_hotel_scene_dialogue = { path = "crates/spirit_hotel_scene_dialogue" }
 #[patch.crates-io]
 #getrandom = { git = "https://github.com/benfrankel/getrandom" }
 [workspace]
-members = ["crates/*"]
+members = ["crates/spirit_hotel*"]
 
 [workspace.dependencies]
-bevy = { version = "0.17.3", features = ["wayland"]}
+bevy = { version = "0.17.3", features = ["wayland"] }
 avian2d = "0.4.1"
 bevy_aseprite_ultra = "0.7.0"
 bevy_yarnspinner = "0.6.0"
 bevy_yarnspinner_example_dialogue_view = "0.6.0"
-bevy_ecs_tiled = { version = "0.10.0", features = ["avian_debug"] }
+bevy_ecs_tiled = { version = "0.10.0", features = ["avian_debug", "user_properties"] }
 bevy_light_2d = "0.8.0"
 bevy_ecs_tilemap = "0.17.0"
 bevy_northstar = "0.5.0"
 bevy_enhanced_input = "0.20.0"
+
+spirit_hotel_core = { path = "crates/spirit_hotel_core" }
+spirit_hotel_player = { path = "crates/spirit_hotel_player" }
+spirit_hotel_pathfinding = { path = "crates/spirit_hotel_pathfinding" }
+spirit_hotel_animation = { path = "crates/spirit_hotel_animation" }
+spirit_hotel_level = { path = "crates/spirit_hotel_level" }
+spirit_hotel_scene = { path = "crates/spirit_hotel_scene" }
+spirit_hotel_trigger = { path = "crates/spirit_hotel_trigger" }
+spirit_hotel_movement = { path = "crates/spirit_hotel_movement" }
+spirit_hotel_dialogue = { path = "crates/spirit_hotel_dialogue" }
+spirit_hotel_lighting = { path = "crates/spirit_hotel_lighting" }
+spirit_hotel_animation_movement = { path = "crates/spirit_hotel_animation_movement" }
+spirit_hotel_dialogue_trigger = { path = "crates/spirit_hotel_dialogue_trigger" }
+spirit_hotel_level_animation = { path = "crates/spirit_hotel_level_animation" }
+spirit_hotel_level_movement = { path = "crates/spirit_hotel_level_movement" }
+spirit_hotel_level_pathfinding = { path = "crates/spirit_hotel_level_pathfinding" }
+spirit_hotel_level_player = { path = "crates/spirit_hotel_level_player" }
+spirit_hotel_level_trigger = { path = "crates/spirit_hotel_level_trigger" }
+spirit_hotel_level_scene = { path = "crates/spirit_hotel_level_scene" }
+spirit_hotel_movement_trigger = { path = "crates/spirit_hotel_movement_trigger" }
+spirit_hotel_pathfinding_movement = { path = "crates/spirit_hotel_pathfinding_movement" }
+spirit_hotel_pathfinding_movement_trigger = { path = "crates/spirit_hotel_pathfinding_movement_trigger" }
+spirit_hotel_pathfinding_trigger = { path = "crates/spirit_hotel_pathfinding_trigger" }
+spirit_hotel_player_movement = { path = "crates/spirit_hotel_player_movement" }
+spirit_hotel_scene_dialogue = { path = "crates/spirit_hotel_scene_dialogue" }
+spirit_hotel_scene_trigger = { path = "crates/spirit_hotel_scene_trigger" }
 
 
 [features]

@@ -13,29 +13,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 67,
-            "members": [
-                {
-                    "name": "generation",
-                    "type": "int",
-                    "value": 0
-                },
-                {
-                    "name": "index",
-                    "type": "int",
-                    "value": 0
-                }
-            ],
-            "name": "bevy_asset::assets::AssetIndex",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 68,
+            "id": 86,
             "members": [
                 {
                     "name": "0",
@@ -52,7 +30,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 38,
+            "id": 87,
             "members": [
                 {
                     "name": "brightness",
@@ -74,7 +52,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 39,
+            "id": 88,
             "members": [
                 {
                     "name": "cast_shadows",
@@ -111,37 +89,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 40,
-            "members": [
-                {
-                    "name": ":variant",
-                    "propertyType": "bevy_render::view::visibility::Visibility:::Variant",
-                    "type": "string",
-                    "value": "Inherited"
-                }
-            ],
-            "name": "bevy_render::view::visibility::Visibility",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "id": 41,
-            "name": "bevy_render::view::visibility::Visibility:::Variant",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "Inherited",
-                "Hidden",
-                "Visible"
-            ],
-            "valuesAsFlags": false
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 69,
+            "id": 89,
             "members": [
                 {
                     "name": ":variant",
@@ -157,7 +105,7 @@
             ]
         },
         {
-            "id": 70,
+            "id": 90,
             "name": "bevy_time::timer::TimerMode:::Variant",
             "storageType": "string",
             "type": "enum",
@@ -170,7 +118,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 71,
+            "id": 91,
             "members": [
                 {
                     "name": ":variant",
@@ -193,7 +141,7 @@
             ]
         },
         {
-            "id": 72,
+            "id": 92,
             "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
             "storageType": "string",
             "type": "enum",
@@ -206,7 +154,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 73,
+            "id": 93,
             "members": [
                 {
                     "name": "0",
@@ -223,7 +171,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 74,
+            "id": 94,
             "members": [
                 {
                     "name": ":variant",
@@ -246,7 +194,7 @@
             ]
         },
         {
-            "id": 75,
+            "id": 95,
             "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
             "storageType": "string",
             "type": "enum",
@@ -259,7 +207,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 76,
+            "id": 96,
             "members": [
                 {
                     "name": "0",
@@ -276,10 +224,20 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 42,
+            "id": 97,
             "members": [
+                {
+                    "name": "x",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "y",
+                    "type": "int",
+                    "value": 0
+                }
             ],
-            "name": "spirit_hotel::audio::Music",
+            "name": "glam::UVec2",
             "type": "class",
             "useAs": [
                 "property"
@@ -288,10 +246,20 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 43,
+            "id": 98,
             "members": [
+                {
+                    "name": "x",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "y",
+                    "type": "float",
+                    "value": 0
+                }
             ],
-            "name": "spirit_hotel::audio::SoundEffect",
+            "name": "glam::Vec2",
             "type": "class",
             "useAs": [
                 "property"
@@ -300,7 +268,19 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 44,
+            "id": 99,
+            "members": [
+            ],
+            "name": "spirit_hotel_animation::components::animatable_marker::AnimatableMarker",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 100,
             "members": [
                 {
                     "name": "0",
@@ -308,7 +288,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::animation::components::animation_path::AnimationPath",
+            "name": "spirit_hotel_animation::components::animation_path::AnimationPath",
             "type": "class",
             "useAs": [
                 "property"
@@ -317,7 +297,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 45,
+            "id": 101,
             "members": [
                 {
                     "name": "repeat",
@@ -330,7 +310,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::animation::components::init_animation::InitAnimation",
+            "name": "spirit_hotel_animation::components::init_animation::InitAnimation",
             "type": "class",
             "useAs": [
                 "property"
@@ -339,7 +319,148 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 46,
+            "id": 102,
+            "members": [
+            ],
+            "name": "spirit_hotel_animation::components::paused_by_state::PausedByState",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 103,
+            "members": [
+            ],
+            "name": "spirit_hotel_core::audio::Music",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 104,
+            "members": [
+            ],
+            "name": "spirit_hotel_core::audio::SoundEffect",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 105,
+            "members": [
+                {
+                    "name": "music",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_core::menus::credits::CreditsAssets",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 106,
+            "members": [
+            ],
+            "name": "spirit_hotel_core::menus::settings::GlobalVolumeLabel",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 107,
+            "members": [
+                {
+                    "name": "fade_duration",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "t",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "total_duration",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_core::screens::splash::ImageNodeFadeInOut",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 108,
+            "members": [
+                {
+                    "name": "click",
+                    "type": "file",
+                    "value": ""
+                },
+                {
+                    "name": "hover",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_core::theme::interaction::InteractionAssets",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 109,
+            "members": [
+                {
+                    "name": "hovered",
+                    "type": "color",
+                    "value": ""
+                },
+                {
+                    "name": "none",
+                    "type": "color",
+                    "value": ""
+                },
+                {
+                    "name": "pressed",
+                    "type": "color",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_core::theme::interaction::InteractionPalette",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 110,
             "members": [
                 {
                     "name": "0",
@@ -347,7 +468,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::dialogue::components::start_conversation::StartConversation",
+            "name": "spirit_hotel_dialogue::components::start_conversation::StartConversation",
             "type": "class",
             "useAs": [
                 "property"
@@ -356,61 +477,39 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 81,
+            "id": 111,
+            "members": [
+            ],
+            "name": "spirit_hotel_level::components::disabled_by_parent::DisabledByParent",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 112,
+            "members": [
+            ],
+            "name": "spirit_hotel_level::components::disabled_by_visibility::DisabledByVisibility",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 113,
             "members": [
                 {
                     "name": "0",
-                    "type": "int",
-                    "value": 30
-                }
-            ],
-            "name": "spirit_hotel::game::drowned_child::components::init_breath_timer::InitBreathTimer",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 82,
-            "members": [
-            ],
-            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_dancer::KagumeKagumeDancer",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 83,
-            "members": [
-                {
-                    "name": "is_oni",
-                    "type": "bool",
-                    "value": false
-                }
-            ],
-            "name": "spirit_hotel::game::drowned_child::resources::kagume_kagume::KagumeKagume",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 79,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "int",
+                    "type": "object",
                     "value": 0
                 }
             ],
-            "name": "spirit_hotel::game::drowned_child::resources::mean::Mean",
+            "name": "spirit_hotel_level::components::inside_map::InsideMap",
             "type": "class",
             "useAs": [
                 "property"
@@ -419,24 +518,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 80,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "int",
-                    "value": 0
-                }
-            ],
-            "name": "spirit_hotel::game::general::resources::insanity::Insanity",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 47,
+            "id": 114,
             "members": [
                 {
                     "name": "0",
@@ -444,7 +526,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::level::components::load_level::LoadLevel",
+            "name": "spirit_hotel_level::components::load_level::LoadLevel",
             "type": "class",
             "useAs": [
                 "property"
@@ -453,7 +535,19 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 48,
+            "id": 115,
+            "members": [
+            ],
+            "name": "spirit_hotel_level::components::tiled_colliders_spawned::TiledCollidersSpawned",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 116,
             "members": [
                 {
                     "name": "music",
@@ -468,7 +562,7 @@
                     }
                 }
             ],
-            "name": "spirit_hotel::game::level::resources::level_assets::LevelAssets",
+            "name": "spirit_hotel_level::resources::level_assets::LevelAssets",
             "type": "class",
             "useAs": [
                 "property"
@@ -477,7 +571,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 49,
+            "id": 117,
             "members": [
                 {
                     "name": "down",
@@ -500,7 +594,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::movement::components::can_move::CanMove",
+            "name": "spirit_hotel_movement::components::can_move::CanMove",
             "type": "class",
             "useAs": [
                 "property"
@@ -509,10 +603,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 77,
+            "id": 118,
             "members": [
             ],
-            "name": "spirit_hotel::game::movement::components::can_push::CanPush",
+            "name": "spirit_hotel_movement::components::can_push::CanPush",
             "type": "class",
             "useAs": [
                 "property"
@@ -521,7 +615,19 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 50,
+            "id": 119,
+            "members": [
+            ],
+            "name": "spirit_hotel_movement::components::movement_completed::MovementCompleted",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 120,
             "members": [
                 {
                     "name": "0",
@@ -529,7 +635,7 @@
                     "value": 0
                 }
             ],
-            "name": "spirit_hotel::game::movement::components::movement_duration::MovementDuration",
+            "name": "spirit_hotel_movement::components::movement_duration::MovementDuration",
             "type": "class",
             "useAs": [
                 "property"
@@ -538,10 +644,58 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 78,
+            "id": 121,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel_movement::components::movement_flag::MovementFlag:::Variant",
+                    "type": "string",
+                    "value": "Force"
+                }
+            ],
+            "name": "spirit_hotel_movement::components::movement_flag::MovementFlag",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 122,
+            "name": "spirit_hotel_movement::components::movement_flag::MovementFlag:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Force",
+                "Block"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 123,
+            "members": [
+                {
+                    "name": "0",
+                    "propertyType": "glam::Vec2",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "spirit_hotel_movement::components::movement_intent::MovementIntent",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 124,
             "members": [
             ],
-            "name": "spirit_hotel::game::movement::components::pushable::Pushable",
+            "name": "spirit_hotel_movement::components::pushable::Pushable",
             "type": "class",
             "useAs": [
                 "property"
@@ -550,7 +704,62 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 51,
+            "id": 125,
+            "members": [
+            ],
+            "name": "spirit_hotel_movement::components::sync_movement::SyncMovement",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 126,
+            "members": [
+            ],
+            "name": "spirit_hotel_pathfinding::components::grid_collision_calculated::GridCollisionCalculated",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 127,
+            "members": [
+                {
+                    "name": "0",
+                    "propertyType": "glam::UVec2",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "spirit_hotel_pathfinding::components::grid_tile_size::GridTileSize",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 128,
+            "members": [
+            ],
+            "name": "spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 129,
             "members": [
                 {
                     "name": "0",
@@ -558,7 +767,7 @@
                     "value": 0
                 }
             ],
-            "name": "spirit_hotel::game::path_finding::components::follow_path::FollowPath",
+            "name": "spirit_hotel_pathfinding::components::path_node::PathNode",
             "type": "class",
             "useAs": [
                 "property"
@@ -567,10 +776,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 52,
+            "id": 130,
             "members": [
             ],
-            "name": "spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid",
+            "name": "spirit_hotel_pathfinding::components::scan_collider::ScanCollider",
             "type": "class",
             "useAs": [
                 "property"
@@ -579,7 +788,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 53,
+            "id": 131,
             "members": [
                 {
                     "name": "0",
@@ -587,7 +796,7 @@
                     "value": 0
                 }
             ],
-            "name": "spirit_hotel::game::path_finding::components::path_node::PathNode",
+            "name": "spirit_hotel_pathfinding_movement::components::follow_path::FollowPath",
             "type": "class",
             "useAs": [
                 "property"
@@ -596,10 +805,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 54,
+            "id": 132,
             "members": [
             ],
-            "name": "spirit_hotel::game::player::components::player::Player",
+            "name": "spirit_hotel_pathfinding_movement::components::halt_pathfinding_intent::HaltPathfindingIntent",
             "type": "class",
             "useAs": [
                 "property"
@@ -608,11 +817,35 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 55,
+            "id": 133,
+            "members": [
+            ],
+            "name": "spirit_hotel_pathfinding_movement::components::next_pos_to_be_removed::NextPosToBeRemoved",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 134,
+            "members": [
+            ],
+            "name": "spirit_hotel_player::components::player::Player",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 135,
             "members": [
                 {
                     "name": "action",
-                    "propertyType": "spirit_hotel::game::scene::components::change_game_scene::ChangeGameSceneAction",
+                    "propertyType": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction",
                     "type": "class",
                     "value": {
                     }
@@ -623,7 +856,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::scene::components::change_game_scene::ChangeGameScene",
+            "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameScene",
             "type": "class",
             "useAs": [
                 "property"
@@ -632,24 +865,24 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 56,
+            "id": 136,
             "members": [
                 {
                     "name": ":variant",
-                    "propertyType": "spirit_hotel::game::scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
+                    "propertyType": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
                     "type": "string",
                     "value": "Toggle"
                 }
             ],
-            "name": "spirit_hotel::game::scene::components::change_game_scene::ChangeGameSceneAction",
+            "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction",
             "type": "class",
             "useAs": [
                 "property"
             ]
         },
         {
-            "id": 57,
-            "name": "spirit_hotel::game::scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
+            "id": 137,
+            "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
             "storageType": "string",
             "type": "enum",
             "values": [
@@ -662,15 +895,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 58,
+            "id": 138,
             "members": [
-                {
-                    "name": "0",
-                    "type": "string",
-                    "value": ""
-                }
             ],
-            "name": "spirit_hotel::game::scene::components::hide_in_game_scene::HideInGameScene",
+            "name": "spirit_hotel_scene::components::game_scene_object::GameSceneObject",
             "type": "class",
             "useAs": [
                 "property"
@@ -679,7 +907,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 59,
+            "id": 139,
             "members": [
                 {
                     "name": "0",
@@ -687,7 +915,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::scene::components::show_in_game_scene::ShowInGameScene",
+            "name": "spirit_hotel_scene::components::hide_in_game_scene::HideInGameScene",
             "type": "class",
             "useAs": [
                 "property"
@@ -696,7 +924,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 60,
+            "id": 140,
             "members": [
                 {
                     "name": "0",
@@ -704,7 +932,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel::game::scene::resources::starting_game_scene::StartingGameScene",
+            "name": "spirit_hotel_scene::components::show_in_game_scene::ShowInGameScene",
             "type": "class",
             "useAs": [
                 "property"
@@ -713,24 +941,41 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 61,
+            "id": 141,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_scene::resources::starting_game_scene::StartingGameScene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 142,
             "members": [
                 {
                     "name": ":variant",
-                    "propertyType": "spirit_hotel::game::trigger::components::is_trigger::IsTrigger:::Variant",
+                    "propertyType": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
                     "type": "string",
                     "value": "Instant"
                 }
             ],
-            "name": "spirit_hotel::game::trigger::components::is_trigger::IsTrigger",
+            "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger",
             "type": "class",
             "useAs": [
                 "property"
             ]
         },
         {
-            "id": 62,
-            "name": "spirit_hotel::game::trigger::components::is_trigger::IsTrigger:::Variant",
+            "id": 143,
+            "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
             "storageType": "string",
             "type": "enum",
             "values": [
@@ -738,108 +983,6 @@
                 "Interact"
             ],
             "valuesAsFlags": false
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 63,
-            "members": [
-                {
-                    "name": "music",
-                    "type": "file",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel::menus::credits::CreditsAssets",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 64,
-            "members": [
-            ],
-            "name": "spirit_hotel::menus::settings::GlobalVolumeLabel",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 65,
-            "members": [
-                {
-                    "name": "click",
-                    "type": "file",
-                    "value": ""
-                },
-                {
-                    "name": "hover",
-                    "type": "file",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel::theme::interaction::InteractionAssets",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 66,
-            "members": [
-                {
-                    "name": "hovered",
-                    "type": "color",
-                    "value": ""
-                },
-                {
-                    "name": "none",
-                    "type": "color",
-                    "value": ""
-                },
-                {
-                    "name": "pressed",
-                    "type": "color",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel::theme::interaction::InteractionPalette",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 84,
-            "members": [
-            ],
-            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_start_path_node::KagumeKagumeStartPathNode",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 85,
-            "members": [
-            ],
-            "name": "spirit_hotel::game::drowned_child::components::kagume_kagume_start_position::KagumeKagumeStartPosition",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
         }
     ]
 }

@@ -886,6 +886,8 @@ dependencies = [
  "geo",
  "log",
  "regex",
+ "serde",
+ "serde_json",
  "thiserror 2.0.12",
  "tiled",
 ]
@@ -5761,8 +5763,11 @@ dependencies = [
 name = "spirit_hotel"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy-inspector-egui",
+ "bevy_light_2d",
  "bevy_mod_debugdump",
+ "bevy_northstar",
  "spirit_hotel_animation",
  "spirit_hotel_animation_movement",
  "spirit_hotel_core",
@@ -5773,6 +5778,7 @@ dependencies = [
  "spirit_hotel_level_movement",
  "spirit_hotel_level_pathfinding",
  "spirit_hotel_level_player",
+ "spirit_hotel_level_scene",
  "spirit_hotel_level_trigger",
  "spirit_hotel_lighting",
  "spirit_hotel_movement",
@@ -5785,6 +5791,7 @@ dependencies = [
  "spirit_hotel_player_movement",
  "spirit_hotel_scene",
  "spirit_hotel_scene_dialogue",
+ "spirit_hotel_scene_trigger",
  "spirit_hotel_trigger",
 ]
 
@@ -5792,6 +5799,7 @@ dependencies = [
 name = "spirit_hotel_animation"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy_aseprite_ultra",
  "spirit_hotel_core",
 ]
@@ -5800,6 +5808,7 @@ dependencies = [
 name = "spirit_hotel_animation_movement"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_animation",
  "spirit_hotel_core",
  "spirit_hotel_movement",
@@ -5817,6 +5826,7 @@ dependencies = [
 name = "spirit_hotel_dialogue"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy_yarnspinner",
  "bevy_yarnspinner_example_dialogue_view",
  "spirit_hotel_core",
@@ -5826,6 +5836,7 @@ dependencies = [
 name = "spirit_hotel_dialogue_trigger"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_dialogue",
  "spirit_hotel_trigger",
@@ -5835,6 +5846,7 @@ dependencies = [
 name = "spirit_hotel_level"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy_ecs_tiled",
  "spirit_hotel_core",
 ]
@@ -5843,6 +5855,7 @@ dependencies = [
 name = "spirit_hotel_level_animation"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_animation",
  "spirit_hotel_core",
  "spirit_hotel_level",
@@ -5852,6 +5865,7 @@ dependencies = [
 name = "spirit_hotel_level_movement"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_level",
  "spirit_hotel_movement",
@@ -5861,6 +5875,7 @@ dependencies = [
 name = "spirit_hotel_level_pathfinding"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_level",
  "spirit_hotel_pathfinding",
@@ -5870,15 +5885,27 @@ dependencies = [
 name = "spirit_hotel_level_player"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_level",
  "spirit_hotel_player",
 ]
 
 [[package]]
+name = "spirit_hotel_level_scene"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "spirit_hotel_core",
+ "spirit_hotel_level",
+ "spirit_hotel_scene",
+]
+
+[[package]]
 name = "spirit_hotel_level_trigger"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_level",
  "spirit_hotel_trigger",
@@ -5888,6 +5915,7 @@ dependencies = [
 name = "spirit_hotel_lighting"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy_light_2d",
  "spirit_hotel_core",
 ]
@@ -5896,6 +5924,7 @@ dependencies = [
 name = "spirit_hotel_movement"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
 ]
 
@@ -5903,6 +5932,7 @@ dependencies = [
 name = "spirit_hotel_movement_trigger"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_movement",
  "spirit_hotel_trigger",
@@ -5912,6 +5942,7 @@ dependencies = [
 name = "spirit_hotel_pathfinding"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy_ecs_tilemap",
  "bevy_northstar",
  "spirit_hotel_core",
@@ -5922,6 +5953,7 @@ dependencies = [
 name = "spirit_hotel_pathfinding_movement"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_level",
  "spirit_hotel_movement",
@@ -5932,6 +5964,7 @@ dependencies = [
 name = "spirit_hotel_pathfinding_movement_trigger"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_movement",
  "spirit_hotel_pathfinding",
@@ -5942,6 +5975,7 @@ dependencies = [
 name = "spirit_hotel_pathfinding_trigger"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_level",
  "spirit_hotel_pathfinding",
@@ -5952,6 +5986,7 @@ dependencies = [
 name = "spirit_hotel_player"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "bevy_enhanced_input",
  "spirit_hotel_core",
 ]
@@ -5960,6 +5995,7 @@ dependencies = [
 name = "spirit_hotel_player_movement"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_movement",
  "spirit_hotel_player",
@@ -5969,6 +6005,7 @@ dependencies = [
 name = "spirit_hotel_scene"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
 ]
 
@@ -5976,15 +6013,27 @@ dependencies = [
 name = "spirit_hotel_scene_dialogue"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
  "spirit_hotel_dialogue",
  "spirit_hotel_scene",
 ]
 
 [[package]]
+name = "spirit_hotel_scene_trigger"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "spirit_hotel_core",
+ "spirit_hotel_scene",
+ "spirit_hotel_trigger",
+]
+
+[[package]]
 name = "spirit_hotel_trigger"
 version = "0.1.0"
 dependencies = [
+ "bevy",
  "spirit_hotel_core",
 ]
 
