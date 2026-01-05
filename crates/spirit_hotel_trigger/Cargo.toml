@@ -1,0 +1,9 @@
+[package]
+name = "spirit_hotel_trigger"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+
+spirit_hotel_core = { workspace = true }
