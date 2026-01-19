@@ -9,7 +9,7 @@
  </tile>
  <tile id="10">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="-22" y="-48" width="96" height="96"/>
+   <object id="1" x="-38" y="-32" width="96" height="96"/>
   </objectgroup>
  </tile>
 </tileset>

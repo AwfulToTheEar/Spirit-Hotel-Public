@@ -6,6 +6,7 @@
 #[cfg(feature = "dev")]
 mod dev_tools;
 
+use crate::dev_tools::SpiritHotelDevToolsPlugin;
 use bevy::{asset::AssetMetaCheck, prelude::*};
 use bevy_light_2d::light::{AmbientLight2d, Light2d};
 use spirit_hotel_animation::SpiritHotelAnimationPlugin;
@@ -13,8 +14,14 @@ use spirit_hotel_animation_movement::SpiritHotelAnimationMovementPlugin;
 use spirit_hotel_core::SpiritHotelCorePlugin;
 use spirit_hotel_dialogue::SpiritHotelDialoguePlugin;
 use spirit_hotel_dialogue_trigger::SpiritHotelDialogueTriggerPlugin;
+use spirit_hotel_drowned_child::SpiritHotelDrownedChildPlugin;
+use spirit_hotel_drowned_child_movement::SpiritHotelDrownedChildMovementPlugin;
+use spirit_hotel_drowned_child_player::SpiritHotelDrownedChildPlayerPlugin;
+use spirit_hotel_drowned_child_player_movement::SpiritHotelDrownedChildPlayerMovementPlugin;
+use spirit_hotel_drowned_child_player_pathfinding_movement::SpiritHotelDrownedChildPlayerPathfindingMovementPlugin;
 use spirit_hotel_level::SpiritHotelLevelPlugin;
 use spirit_hotel_level_animation::SpiritHotelLevelAnimationPlugin;
+use spirit_hotel_level_drowned_child::SpiritHotelLevelDrownedChildPlugin;
 use spirit_hotel_level_movement::SpiritHotelLevelMovementPlugin;
 use spirit_hotel_level_pathfinding::SpiritHotelLevelPathfindingPlugin;
 use spirit_hotel_level_player::SpiritHotelLevelPlayerPlugin;
@@ -33,7 +40,6 @@ use spirit_hotel_scene::SpiritHotelScenePlugin;
 use spirit_hotel_scene_dialogue::SpiritHotelSceneDialoguePlugin;
 use spirit_hotel_scene_trigger::SpiritHotelSceneTriggerPlugin;
 use spirit_hotel_trigger::SpiritHotelTriggerPlugin;
-use crate::dev_tools::SpiritHotelDevToolsPlugin;
 
 fn main() -> AppExit {
     App::new().add_plugins(AppPlugin).run()
@@ -76,6 +82,7 @@ impl Plugin for AppPlugin {
             SpiritHotelPlayerPlugin,
             SpiritHotelScenePlugin,
             SpiritHotelTriggerPlugin,
+            SpiritHotelDrownedChildPlugin,
             #[cfg(feature = "dev")]
             SpiritHotelDevToolsPlugin,
         ));
@@ -88,21 +95,26 @@ impl Plugin for AppPlugin {
             SpiritHotelLevelPathfindingPlugin,
             SpiritHotelLevelTriggerPlugin,
             SpiritHotelLevelScenePlugin,
-
-            SpiritHotelDialogueTriggerPlugin,
-
+            SpiritHotelLevelDrownedChildPlugin
+        ))
+        .add_plugins(SpiritHotelDialogueTriggerPlugin)
+        .add_plugins((
             SpiritHotelPathfindingMovementPlugin,
             SpiritHotelPathfindingMovementTriggerPlugin,
             SpiritHotelPathfindingTriggerPlugin,
-
-            SpiritHotelMovementTriggerPlugin,
-
-            SpiritHotelAnimationMovementPlugin,
-
-            SpiritHotelPlayerMovementPlugin,
-
+        ))
+        .add_plugins(SpiritHotelMovementTriggerPlugin)
+        .add_plugins(SpiritHotelAnimationMovementPlugin)
+        .add_plugins(SpiritHotelPlayerMovementPlugin)
+        .add_plugins((
             SpiritHotelSceneDialoguePlugin,
-            SpiritHotelSceneTriggerPlugin
+            SpiritHotelSceneTriggerPlugin,
+        ))
+        .add_plugins((
+            SpiritHotelDrownedChildMovementPlugin,
+            SpiritHotelDrownedChildPlayerPlugin,
+            SpiritHotelDrownedChildPlayerMovementPlugin,
+            SpiritHotelDrownedChildPlayerPathfindingMovementPlugin,
         ));
 
         // Spawn the main camera.

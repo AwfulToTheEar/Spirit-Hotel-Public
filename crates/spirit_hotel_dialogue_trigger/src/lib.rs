@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use spirit_hotel_core::{AppSystems, game::GameplaySystems, screens::Screen};
+use spirit_hotel_core::{AppSystems, game::GameplaySystems};
 use crate::systems::prelude::start_conversation_from_activated_trigger;
 
 pub mod systems;

@@ -5,7 +5,9 @@ edition = "2024"
 
 [dependencies]
 bevy = { workspace = true }
+avian2d = { workspace = true }
 bevy_ecs_tilemap = { workspace = true }
+bevy_ecs_tiled = { workspace = true }
 bevy_northstar = { workspace = true }
 
 spirit_hotel_core = { workspace = true }

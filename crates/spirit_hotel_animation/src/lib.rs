@@ -12,10 +12,6 @@ pub mod components;
 pub mod resources;
 pub mod systems;
 
-pub mod aseprite_ultra {
-    pub use bevy_aseprite_ultra::*;
-}
-
 pub struct SpiritHotelAnimationPlugin;
 
 impl Plugin for SpiritHotelAnimationPlugin {

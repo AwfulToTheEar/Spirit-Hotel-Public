@@ -6,7 +6,7 @@ pub fn mark_movement_completed(
     q_timers: Query<(Entity, &MoveToLocation), (With<MovementIntent>, With<SyncMovement>, Without<MovementCompleted>)>,
 ) {
     for (entity, move_to_location) in q_timers.iter() {
-        if !move_to_location.timer.finished() {
+        if !move_to_location.timer.is_finished() {
             continue;
         }
 

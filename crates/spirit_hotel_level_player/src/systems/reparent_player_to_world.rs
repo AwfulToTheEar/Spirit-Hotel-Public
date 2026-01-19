@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use spirit_hotel_level::tiled::prelude::{TiledWorld};
+use bevy_ecs_tiled::prelude::{TiledWorld};
 use spirit_hotel_player::components::prelude::Player;
 
 pub fn reparent_player_to_world(

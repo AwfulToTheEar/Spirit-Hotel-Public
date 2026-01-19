@@ -2,7 +2,7 @@ use crate::components::prelude::LoadLevel;
 use crate::resources::prelude::*;
 use crate::system_sets::prelude::*;
 use crate::systems::prelude::*;
-use spirit_hotel_core::avian::PhysicsPlugins;
+use avian2d::PhysicsPlugins;
 use bevy_ecs_tiled::prelude::regex::RegexSet;
 use bevy_ecs_tiled::prelude::{
     TiledFilter, TiledPhysicsAvianBackend, TiledPhysicsPlugin, TiledPlugin, TiledPluginConfig,
@@ -17,10 +17,6 @@ pub mod components;
 pub mod resources;
 pub mod system_sets;
 pub mod systems;
-
-pub mod tiled {
-    pub use bevy_ecs_tiled::*;
-}
 
 pub struct SpiritHotelLevelPlugin;
 

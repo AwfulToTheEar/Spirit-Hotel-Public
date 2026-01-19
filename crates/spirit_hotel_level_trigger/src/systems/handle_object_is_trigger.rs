@@ -1,25 +1,16 @@
-use spirit_hotel_core::avian::prelude::Collider;
 use bevy::prelude::*;
-use spirit_hotel_level::tiled::prelude::{ObjectCreated, TiledEvent};
+use bevy_ecs_tiled::prelude::{ColliderCreated, TiledEvent};
 use spirit_hotel_trigger::components::prelude::{IsTrigger, TriggerCollider};
 
 pub fn handle_object_is_trigger(
+    mut e_collider_created: On<TiledEvent<ColliderCreated>>,
     mut commands: Commands,
-    mut e_object_created: MessageReader<TiledEvent<ObjectCreated>>,
-    q_triggers: Query<&Children, With<IsTrigger>>,
-    q_colliders: Query<Entity, (With<Collider>, With<ChildOf>)>,
+    q_triggers: Query<Entity, With<IsTrigger>>,
 ) {
-    for e in e_object_created.read() {
-        let Ok(children) = q_triggers.get(e.origin) else {
-            continue;
+
+        if !q_triggers.contains(e_collider_created.event.collider_of.0) {
+            return;
         };
 
-        for entity in children.iter() {
-            if !q_colliders.contains(entity) {
-                continue;
-            }
-
-            commands.entity(entity).insert(TriggerCollider);
-        }
-    }
+        commands.entity(e_collider_created.origin).insert(TriggerCollider);
 }

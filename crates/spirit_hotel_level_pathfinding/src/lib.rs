@@ -9,11 +9,6 @@ pub struct SpiritHotelLevelPathfindingPlugin;
 
 impl Plugin for SpiritHotelLevelPathfindingPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(
-            PreUpdate,
-            (handle_object_path_node)
-                .after(LevelSystems)
-                .in_set(GameplaySystems),
-        );
+        app.add_observer(handle_object_path_node);
     }
 }

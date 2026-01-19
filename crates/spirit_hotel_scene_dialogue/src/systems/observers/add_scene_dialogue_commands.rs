@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use spirit_hotel_dialogue::yarnspinner::prelude::DialogueRunner;
+use bevy_yarnspinner::prelude::DialogueRunner;
 use crate::systems::commands::prelude::*;
 
 pub fn add_scene_dialogue_commands(

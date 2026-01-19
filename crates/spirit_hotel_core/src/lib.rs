@@ -6,10 +6,6 @@ pub mod menus;
 pub mod screens;
 pub mod theme;
 
-pub mod avian {
-    pub use avian2d::*;
-}
-
 use bevy::prelude::*;
 
 use crate::fades::Fade;

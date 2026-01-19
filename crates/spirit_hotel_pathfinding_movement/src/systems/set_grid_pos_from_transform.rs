@@ -1,10 +1,11 @@
 use bevy::prelude::*;
-use spirit_hotel_level::tiled::prelude::TilemapAnchor;
-use spirit_hotel_pathfinding::tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
-use spirit_hotel_pathfinding::northstar::{
+use bevy_ecs_tiled::prelude::TilemapAnchor;
+use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
+use bevy_northstar::{
     grid::Grid,
     prelude::{AgentOfGrid, AgentPos, CardinalNeighborhood},
 };
+use spirit_hotel_core::game::Teleport;
 use spirit_hotel_pathfinding::components::prelude::{GridTileSize, PathNode};
 use crate::components::prelude::FollowPath;
 
@@ -18,7 +19,7 @@ pub fn set_grid_pos_from_transform(
             &AgentOfGrid,
             Option<&mut AgentPos>,
         ),
-        (Changed<Transform>, Or<(With<FollowPath>, With<PathNode>)>),
+        (Or<(Changed<Transform>, Without<AgentPos>)>, Without<Teleport>),
     >,
 ) {
     for (entity, transform, agent_of_grid, grid_pos_option) in q_grid_items.iter_mut() {

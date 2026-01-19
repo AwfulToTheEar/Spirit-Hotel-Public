@@ -6,10 +6,10 @@ use bevy_northstar::{
     prelude::{CardinalNeighborhood, DebugGridBuilder},
 };
 
-use spirit_hotel_core::avian::prelude::Collider;
+use avian2d::prelude::Collider;
 use bevy::prelude::*;
-use spirit_hotel_level::tiled::prelude::{TiledMapAsset, TiledWorldAsset};
-use spirit_hotel_level::tiled::prelude::{TiledWorld, TilemapAnchor};
+use bevy_ecs_tiled::prelude::{TiledMapAsset, TiledWorldAsset};
+use bevy_ecs_tiled::prelude::{TiledWorld, TilemapAnchor};
 use crate::components::prelude::{GridTileSize, ScanCollider};
 
 pub fn build_world_path_finding_grid(

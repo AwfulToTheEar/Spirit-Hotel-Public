@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use spirit_hotel_dialogue::components::prelude::StartConversation;
-use spirit_hotel_dialogue::yarnspinner::prelude::DialogueRunner;
+use bevy_yarnspinner::prelude::DialogueRunner;
 use spirit_hotel_trigger::components::prelude::IsTrigger;
 use spirit_hotel_trigger::messages::prelude::TriggerActivatedMessage;
 

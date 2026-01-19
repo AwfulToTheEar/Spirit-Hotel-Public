@@ -9,10 +9,10 @@ pub struct SpiritHotelLevelAnimationPlugin;
 
 impl Plugin for SpiritHotelLevelAnimationPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(
+        app.add_observer(handle_object_animation_path).add_systems(
             PreUpdate,
-            (handle_object_animation_path, init_animatable_entities)
-                .after(LevelSystems)
+            (init_animatable_entities)
+                .in_set(LevelSystems)
                 .in_set(GameplaySystems),
         );
     }

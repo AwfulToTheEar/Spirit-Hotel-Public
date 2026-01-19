@@ -1,5 +1,5 @@
-use spirit_hotel_core::avian::collision::collider::contact_query;
-use spirit_hotel_core::avian::prelude::Collider;
+use avian2d::collision::collider::contact_query;
+use avian2d::prelude::Collider;
 use bevy::prelude::*;
 use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation, MovementDuration, MovementFlag, MovementIntent, Pushable};
 use spirit_hotel_pathfinding::components::prelude::ScanCollider;

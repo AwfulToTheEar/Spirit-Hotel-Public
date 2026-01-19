@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="27">
  <properties>
-  <property name="init_breath_timer" value=""/>
+  <property name="init_breath_timer" type="class" propertytype="spirit_hotel_drowned_child::components::init_breath_timer::InitBreathTimer"/>
   <property name="starting_scene" type="class" propertytype="spirit_hotel_scene::resources::starting_game_scene::StartingGameScene">
    <properties>
     <property name="0" value="test"/>
@@ -35,7 +35,7 @@
     </property>
    </properties>
   </object>
-  <object id="18" template="../templates/player.tx" x="262" y="256"/>
+  <object id="18" template="../templates/player.tx" x="256" y="256"/>
   <object id="22" x="288" y="128" width="32" height="64">
    <properties>
     <property name="change_scene" type="class" propertytype="spirit_hotel_scene::components::change_game_scene::ChangeGameScene">

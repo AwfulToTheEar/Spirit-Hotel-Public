@@ -14,7 +14,7 @@ impl FromWorld for LevelAssets {
         let assets = world.resource::<AssetServer>();
         Self {
             music: assets.load("audio/music/Fluffing A Duck.ogg"),
-            world: Some(assets.load("tiled/worlds/test.world")),
+            world: Some(assets.load("tiled/worlds/world2.world")),
         }
     }
 }

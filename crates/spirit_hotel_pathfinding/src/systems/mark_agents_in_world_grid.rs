@@ -4,7 +4,7 @@ use bevy_northstar::{
 };
 
 use bevy::prelude::*;
-use spirit_hotel_level::tiled::prelude::{TiledWorld};
+use bevy_ecs_tiled::prelude::{TiledWorld};
 use crate::components::prelude::InWorldGrid;
 
 pub fn mark_agents_in_world_grid(

@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 bevy = { workspace = true }
+bevy_yarnspinner = { workspace = true }
 
 spirit_hotel_core = { workspace = true }
 spirit_hotel_dialogue = { workspace = true }

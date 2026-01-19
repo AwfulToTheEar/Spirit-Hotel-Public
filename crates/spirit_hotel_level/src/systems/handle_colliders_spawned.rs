@@ -17,6 +17,8 @@ pub fn handle_colliders_spawned(
         return;
     }
 
+    info!("Colliders spawned!");
+
     for entity in q_tiled_entities {
         commands.entity(entity).insert(TiledCollidersSpawned);
     }

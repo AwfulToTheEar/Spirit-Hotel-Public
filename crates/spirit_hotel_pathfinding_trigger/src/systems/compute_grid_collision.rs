@@ -1,12 +1,12 @@
-use spirit_hotel_core::avian::{
+use avian2d::{
     collision::collider::contact_query,
     prelude::{Collider, RigidBody},
 };
 use bevy::prelude::*;
-use spirit_hotel_level::tiled::prelude::TilemapAnchor;
+use bevy_ecs_tiled::prelude::TilemapAnchor;
 use spirit_hotel_pathfinding::components::prelude::{GridCollisionCalculated, GridTileSize, ScanCollider};
-use spirit_hotel_pathfinding::tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
-use spirit_hotel_pathfinding::northstar::{grid::Grid, nav::Nav, prelude::CardinalNeighborhood};
+use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
+use bevy_northstar::{grid::Grid, nav::Nav, prelude::CardinalNeighborhood};
 use spirit_hotel_trigger::components::prelude::TriggerCollider;
 
 pub fn compute_grid_collision(
@@ -20,14 +20,18 @@ pub fn compute_grid_collision(
     q_scan_colliders: Query<(&Collider, &ChildOf), With<ScanCollider>>,
     q_colliders: Query<
         (Entity, &GlobalTransform, &Collider, Option<&RigidBody>),
-        (Without<GridCollisionCalculated>, Without<TriggerCollider>),
+        (Without<GridCollisionCalculated>, Without<TriggerCollider>, Without<ScanCollider>),
     >,
 ) {
-    if q_colliders.is_empty() {
+    let filtered_colliders = q_colliders.iter().filter(|(_, _, _, optional_rigid_body)| optional_rigid_body.is_none() || *optional_rigid_body.unwrap() == RigidBody::Static);
+
+    if filtered_colliders.clone().count() == 0 {
         return;
     }
 
-    for (entity, mut grid, tile_size, anchor) in q_grids.iter_mut() {
+    info!("Computing grid collisions...");
+
+    for (grid_entity, mut grid, tile_size, anchor) in q_grids.iter_mut() {
         let offset = anchor.as_offset(
             &TilemapSize::new(grid.width(), grid.height()),
             &TilemapGridSize::new(tile_size.0.x as f32, tile_size.0.y as f32),
@@ -37,16 +41,13 @@ pub fn compute_grid_collision(
 
         let Some((collider, _)) = q_scan_colliders
             .iter()
-            .find(|(_, child_of)| child_of.0 == entity)
+            .find(|(_, child_of)| child_of.0 == grid_entity)
         else {
             continue;
         };
 
-        for (entity, other_collider_transform, other_collider, optional_rigid_body) in q_colliders.iter() {
-            if optional_rigid_body.is_some() && *optional_rigid_body.unwrap() != RigidBody::Static {
-                continue;
-            }
-
+        for (collider_entity, other_collider_transform, other_collider, _) in filtered_colliders.clone() {
+            info!("{}", collider_entity);
             for x in 0..grid.width() {
                 for y in 0..grid.height() {
                     let collider_translation = offset + (tile_size.0 * UVec2::new(x, y)).as_vec2();
@@ -70,7 +71,7 @@ pub fn compute_grid_collision(
                 }
             }
 
-            commands.entity(entity).insert(GridCollisionCalculated);
+            commands.entity(collider_entity).insert(GridCollisionCalculated);
         }
 
         grid.build();

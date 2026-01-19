@@ -10,6 +10,7 @@ bevy_mod_debugdump = "0.14.0"
 bevy = { workspace = true }
 bevy_light_2d = { workspace = true }
 bevy_northstar = { workspace = true }
+avian2d = { workspace = true }
 
 spirit_hotel_core = { workspace = true }
 spirit_hotel_player = { workspace = true }
@@ -29,6 +30,7 @@ spirit_hotel_level_pathfinding = { workspace = true }
 spirit_hotel_level_player = { workspace = true }
 spirit_hotel_level_trigger = { workspace = true }
 spirit_hotel_level_scene = { workspace = true }
+spirit_hotel_level_drowned_child = { workspace = true }
 spirit_hotel_movement_trigger = { workspace = true }
 spirit_hotel_pathfinding_movement = { workspace = true }
 spirit_hotel_pathfinding_movement_trigger = { workspace = true }
@@ -36,6 +38,11 @@ spirit_hotel_pathfinding_trigger = { workspace = true }
 spirit_hotel_player_movement = { workspace = true }
 spirit_hotel_scene_dialogue = { workspace = true }
 spirit_hotel_scene_trigger = { workspace = true }
+spirit_hotel_drowned_child = { workspace = true }
+spirit_hotel_drowned_child_movement = { workspace = true }
+spirit_hotel_drowned_child_player = { workspace = true }
+spirit_hotel_drowned_child_player_movement = { workspace = true }
+spirit_hotel_drowned_child_player_pathfinding_movement = { workspace = true }
 
 [patch.crates-io]
 #bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
@@ -54,7 +61,7 @@ spirit_hotel_scene_trigger = { workspace = true }
 #[patch.crates-io]
 #getrandom = { git = "https://github.com/benfrankel/getrandom" }
 [workspace]
-members = ["crates/spirit_hotel*"]
+members = ["crates/spirit_hotel*", "crates/spirit_hotel_level_drowned_child"]
 
 [workspace.dependencies]
 bevy = { version = "0.17.3", features = ["wayland"] }
@@ -86,6 +93,7 @@ spirit_hotel_level_pathfinding = { path = "crates/spirit_hotel_level_pathfinding
 spirit_hotel_level_player = { path = "crates/spirit_hotel_level_player" }
 spirit_hotel_level_trigger = { path = "crates/spirit_hotel_level_trigger" }
 spirit_hotel_level_scene = { path = "crates/spirit_hotel_level_scene" }
+spirit_hotel_level_drowned_child = { path = "crates/spirit_hotel_level_drowned_child" }
 spirit_hotel_movement_trigger = { path = "crates/spirit_hotel_movement_trigger" }
 spirit_hotel_pathfinding_movement = { path = "crates/spirit_hotel_pathfinding_movement" }
 spirit_hotel_pathfinding_movement_trigger = { path = "crates/spirit_hotel_pathfinding_movement_trigger" }
@@ -93,6 +101,11 @@ spirit_hotel_pathfinding_trigger = { path = "crates/spirit_hotel_pathfinding_tri
 spirit_hotel_player_movement = { path = "crates/spirit_hotel_player_movement" }
 spirit_hotel_scene_dialogue = { path = "crates/spirit_hotel_scene_dialogue" }
 spirit_hotel_scene_trigger = { path = "crates/spirit_hotel_scene_trigger" }
+spirit_hotel_drowned_child = { path = "crates/spirit_hotel_drowned_child" }
+spirit_hotel_drowned_child_movement = { path = "crates/spirit_hotel_drowned_child_movement" }
+spirit_hotel_drowned_child_player = { path = "crates/spirit_hotel_drowned_child_player" }
+spirit_hotel_drowned_child_player_movement = { path = "crates/spirit_hotel_drowned_child_player_movement" }
+spirit_hotel_drowned_child_player_pathfinding_movement = { path = "crates/spirit_hotel_drowned_child_player_pathfinding_movement" }
 
 
 [features]

@@ -3,20 +3,23 @@
 //! Feel free to change the logic found here if you feel like tinkering around
 //! to get a feeling for the template.
 
+mod teleport;
+
 use crate::screens::Screen;
 use bevy::prelude::*;
+pub use teleport::*;
 
 pub(super) fn plugin(app: &mut App) {
-    app
-        .configure_sets(
-            PreUpdate,
-            GameplaySystems.run_if(in_state(Screen::Gameplay)),
-        )
-        .configure_sets(Update, GameplaySystems.run_if(in_state(Screen::Gameplay)))
-        .configure_sets(
-            FixedUpdate,
-            GameplaySystems.run_if(in_state(Screen::Gameplay)),
-        );
+    app.configure_sets(
+        PreUpdate,
+        GameplaySystems.run_if(in_state(Screen::Gameplay)),
+    )
+    .configure_sets(Update, GameplaySystems.run_if(in_state(Screen::Gameplay)))
+    .configure_sets(
+        FixedUpdate,
+        GameplaySystems.run_if(in_state(Screen::Gameplay)),
+    )
+    .add_systems(Update, teleport.in_set(GameplaySystems));
 }
 
 #[derive(SystemSet, Debug, Clone, Copy, Eq, PartialEq, Hash, PartialOrd, Ord)]

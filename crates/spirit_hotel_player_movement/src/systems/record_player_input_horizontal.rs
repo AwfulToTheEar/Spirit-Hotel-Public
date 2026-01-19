@@ -1,6 +1,6 @@
 use spirit_hotel_player::components::prelude::Player;
 use bevy::prelude::*;
-use spirit_hotel_player::enhanced_input::prelude::*;
+use bevy_enhanced_input::prelude::*;
 use spirit_hotel_player::input::prelude::WalkHorizontal;
 use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent};
 

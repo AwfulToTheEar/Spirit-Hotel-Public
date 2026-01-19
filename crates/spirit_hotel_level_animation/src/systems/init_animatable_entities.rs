@@ -1,4 +1,4 @@
-use spirit_hotel_animation::aseprite_ultra::prelude::AseAnimation;
+use bevy_aseprite_ultra::prelude::AseAnimation;
 use spirit_hotel_animation::{
     components::prelude::AnimatableMarker, resources::prelude::AnimationAssets,
 };

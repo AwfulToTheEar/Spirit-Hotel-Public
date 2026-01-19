@@ -13,12 +13,6 @@ use crate::{
 
 pub mod components;
 pub mod systems;
-pub mod yarnspinner {
-    pub use bevy_yarnspinner::*;
-    pub mod example_dialogue_view {
-        pub use bevy_yarnspinner_example_dialogue_view::*;
-    }
-}
 
 pub struct SpiritHotelDialoguePlugin;
 

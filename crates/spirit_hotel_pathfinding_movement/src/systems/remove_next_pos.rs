@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use spirit_hotel_pathfinding::northstar::prelude::{AgentOfGrid, AgentPos, NextPos};
+use bevy_northstar::prelude::{AgentOfGrid, AgentPos, NextPos};
 
 use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent};
 use crate::components::prelude::NextPosToBeRemoved;

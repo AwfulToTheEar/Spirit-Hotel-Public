@@ -1,6 +1,6 @@
 use bevy::prelude::*;
-use spirit_hotel_core::avian::collision::collider::contact_query;
-use spirit_hotel_core::avian::prelude::Collider;
+use avian2d::collision::collider::contact_query;
+use avian2d::prelude::Collider;
 use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation};
 use spirit_hotel_trigger::{
     components::prelude::{InsideTriggers, TriggerCollider},

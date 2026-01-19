@@ -7,7 +7,7 @@ pub fn remove_move_to_location(
     q_timers: Query<(Entity, &MoveToLocation), (With<MovementIntent>, Without<SyncMovement>)>,
 ) {
     for (entity, move_to_location) in q_timers.iter() {
-        if !move_to_location.timer.finished() {
+        if !move_to_location.timer.is_finished() {
             continue;
         }
 

@@ -2,8 +2,8 @@
 <template>
  <object>
   <properties>
-   <property name="in_world_grid" type="class" propertytype="spirit_hotel::game::path_finding::components::in_world_grid::InWorldGrid"/>
-   <property name="path_node" type="class" propertytype="spirit_hotel::game::path_finding::components::path_node::PathNode"/>
+   <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
+   <property name="path_node" type="class" propertytype="spirit_hotel_pathfinding::components::path_node::PathNode"/>
   </properties>
   <point/>
  </object>

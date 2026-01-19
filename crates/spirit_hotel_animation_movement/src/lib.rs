@@ -1,7 +1,7 @@
 use crate::systems::prelude::{start_animation_movement, stop_animation_movement};
 use bevy::prelude::*;
 use spirit_hotel_core::{
-    AppSystems, PausableSystems, Pause, asset_tracking::LoadResource, game::GameplaySystems,
+    AppSystems, PausableSystems, game::GameplaySystems,
 };
 
 pub mod systems;

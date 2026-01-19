@@ -9,10 +9,6 @@ pub mod components;
 pub mod input;
 pub mod systems;
 
-pub mod enhanced_input {
-    pub use bevy_enhanced_input::*;
-}
-
 pub struct SpiritHotelPlayerPlugin;
 
 impl Plugin for SpiritHotelPlayerPlugin {
