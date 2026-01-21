@@ -16,6 +16,7 @@
     </properties>
    </property>
    <property name="can_push" type="class" propertytype="spirit_hotel_movement::components::can_push::CanPush"/>
+   <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
    <property name="player" type="class" propertytype="spirit_hotel_player::components::player::Player"/>
   </properties>
  </object>

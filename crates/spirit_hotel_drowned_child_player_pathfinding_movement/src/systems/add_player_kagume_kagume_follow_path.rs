@@ -3,11 +3,12 @@ use bevy_ecs_tiled::prelude::TiledWorld;
 use bevy_northstar::grid::Grid;
 use bevy_northstar::neighbor::CardinalNeighborhood;
 use bevy_northstar::prelude::AgentOfGrid;
-use spirit_hotel_drowned_child::components::prelude::KagumeKagumeStartPathNode;
+use spirit_hotel_drowned_child::components::prelude::{KagumeKagume, KagumeKagumeStartPathNode};
 use spirit_hotel_pathfinding_movement::components::prelude::FollowPath;
 use spirit_hotel_player::components::prelude::Player;
 
 pub fn add_player_kagume_kagume_follow_path(
+    _: On<Add, KagumeKagume>,
     mut commands: Commands,
     s_player: Single<Entity, With<Player>>,
     s_kagume_kagume_start_path_node: Single<Entity, With<KagumeKagumeStartPathNode>>,

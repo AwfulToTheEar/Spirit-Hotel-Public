@@ -1,8 +1,10 @@
 use bevy::prelude::*;
 use bevy_enhanced_input::context::ContextActivity;
+use spirit_hotel_drowned_child::components::prelude::KagumeKagume;
 use spirit_hotel_player::components::prelude::Player;
 
 pub fn disable_player_input_action_context(
+    _: On<Add, KagumeKagume>,
     mut commands: Commands,
     s_player: Single<Entity, With<Player>>,
 ) {

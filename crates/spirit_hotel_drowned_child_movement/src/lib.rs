@@ -3,7 +3,6 @@ use crate::systems::prelude::*;
 use bevy::prelude::*;
 use spirit_hotel_core::{AppSystems, PausableSystems};
 use spirit_hotel_core::game::GameplaySystems;
-use spirit_hotel_drowned_child::resources::prelude::KagumeKagume;
 use spirit_hotel_movement::systems::prelude::{mark_movement_completed, remove_move_to_location_synced};
 
 pub mod components;
@@ -14,14 +13,12 @@ pub struct SpiritHotelDrownedChildMovementPlugin;
 impl Plugin for SpiritHotelDrownedChildMovementPlugin {
     fn build(&self, app: &mut App) {
         app.register_type::<KagumeKagumeDancer>()
+            .add_observer(remove_force_movement_kagume_kagume_dancers)
             .add_systems(
                 Update,
                 (
-                    add_block_movement_kagume_kagume_dancers
-                        .run_if(not(resource_exists::<KagumeKagume>)),
-                    add_force_movement_kagume_kagume_dancers.run_if(resource_exists::<KagumeKagume>),
-                    remove_force_movement_kagume_kagume_dancers
-                        .run_if(resource_removed::<KagumeKagume>),
+                    add_block_movement_kagume_kagume_dancers,
+                    add_force_movement_kagume_kagume_dancers,
                 )
                     .in_set(AppSystems::Update)
                     .in_set(GameplaySystems),

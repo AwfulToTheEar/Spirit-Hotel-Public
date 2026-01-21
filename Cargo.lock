@@ -5778,6 +5778,7 @@ dependencies = [
  "spirit_hotel_drowned_child_movement",
  "spirit_hotel_drowned_child_player",
  "spirit_hotel_drowned_child_player_movement",
+ "spirit_hotel_drowned_child_player_pathfinding",
  "spirit_hotel_drowned_child_player_pathfinding_movement",
  "spirit_hotel_level",
  "spirit_hotel_level_animation",
@@ -5890,6 +5891,18 @@ dependencies = [
  "spirit_hotel_drowned_child",
  "spirit_hotel_drowned_child_movement",
  "spirit_hotel_movement",
+ "spirit_hotel_player",
+]
+
+[[package]]
+name = "spirit_hotel_drowned_child_player_pathfinding"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_northstar",
+ "spirit_hotel_core",
+ "spirit_hotel_drowned_child",
+ "spirit_hotel_pathfinding",
  "spirit_hotel_player",
 ]
 

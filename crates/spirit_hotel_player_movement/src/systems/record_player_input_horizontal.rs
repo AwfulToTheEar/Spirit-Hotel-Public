@@ -21,7 +21,7 @@ pub fn record_player_input_horizontal(
     }
 
     let entity = s_player.into_inner();
-
+    
     commands
         .entity(entity)
         .insert(MovementIntent((Vec2::X * trigger.value).normalize()));

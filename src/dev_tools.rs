@@ -23,8 +23,8 @@ impl Plugin for SpiritHotelDevToolsPlugin {
             )>::new(),
             WorldInspectorPlugin::new(),
             //TiledDebugPluginGroup,
-            NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
-            PhysicsDebugPlugin::default(),
+            //NorthstarDebugPlugin::<CardinalNeighborhood>::default(),
+            //PhysicsDebugPlugin::default(),
             CommandLineArgs,
         ));
         // Log `Screen` state transitions.

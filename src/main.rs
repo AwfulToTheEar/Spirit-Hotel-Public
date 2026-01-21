@@ -18,6 +18,7 @@ use spirit_hotel_drowned_child::SpiritHotelDrownedChildPlugin;
 use spirit_hotel_drowned_child_movement::SpiritHotelDrownedChildMovementPlugin;
 use spirit_hotel_drowned_child_player::SpiritHotelDrownedChildPlayerPlugin;
 use spirit_hotel_drowned_child_player_movement::SpiritHotelDrownedChildPlayerMovementPlugin;
+use spirit_hotel_drowned_child_player_pathfinding::SpiritHotelDrownedChildPlayerPathfindingPlugin;
 use spirit_hotel_drowned_child_player_pathfinding_movement::SpiritHotelDrownedChildPlayerPathfindingMovementPlugin;
 use spirit_hotel_level::SpiritHotelLevelPlugin;
 use spirit_hotel_level_animation::SpiritHotelLevelAnimationPlugin;
@@ -114,6 +115,7 @@ impl Plugin for AppPlugin {
             SpiritHotelDrownedChildMovementPlugin,
             SpiritHotelDrownedChildPlayerPlugin,
             SpiritHotelDrownedChildPlayerMovementPlugin,
+            SpiritHotelDrownedChildPlayerPathfindingPlugin,
             SpiritHotelDrownedChildPlayerPathfindingMovementPlugin,
         ));
 

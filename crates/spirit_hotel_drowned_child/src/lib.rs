@@ -24,11 +24,14 @@ impl Plugin for SpiritHotelDrownedChildPlugin {
                 (
                     (
                         update_breath_timer_indicator,
+                        update_kagume_kagume_cycle_indicator,
+                        remove_kagume_kagume_cycle_timeout,
                         lose_game_breath_timer_timeout,
                     )
                         .in_set(AppSystems::Update)
                         .in_set(PausableSystems),
                     spawn_breath_timer_ui,
+                    spawn_kagume_kagume_cycle_ui,
                 )
                     .in_set(GameplaySystems),
             );
