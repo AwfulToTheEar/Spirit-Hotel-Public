@@ -1,4 +1,3 @@
-use crate::components::prelude::LoadLevel;
 use crate::resources::prelude::*;
 use crate::system_sets::prelude::*;
 use crate::systems::prelude::*;
@@ -44,7 +43,6 @@ impl Plugin for SpiritHotelLevelPlugin {
             TiledPhysicsPlugin::<TiledPhysicsAvianBackend>::default(),
         ))
             .register_type::<LevelAssets>()
-            .register_type::<LoadLevel>()
             .load_resource::<LevelAssets>()
             .configure_sets(PreUpdate, LevelSystems)
             .configure_sets(Update, LevelSystems)

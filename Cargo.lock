@@ -714,13 +714,12 @@ dependencies = [
 [[package]]
 name = "bevy_av1"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6cb61a698c0cc95cd1b7ae201cefd0b3e6ea69dc00c329b719b4ac5ae18346bf"
 dependencies = [
  "async-channel",
  "bevy",
  "bitstream-io",
  "dav1d",
+ "rand",
  "yuv",
 ]
 

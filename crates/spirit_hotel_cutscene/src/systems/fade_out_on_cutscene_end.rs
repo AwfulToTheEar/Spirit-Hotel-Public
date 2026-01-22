@@ -1,10 +1,14 @@
 use bevy::prelude::*;
 use bevy_av1::VideoPlayer;
-use spirit_hotel_core::fades::Fade;
+use spirit_hotel_core::fades::{Fade, ReadyForFadeOut};
 
 pub fn fade_out_on_cutscene_end(
     _: On<Despawn, VideoPlayer>,
-    mut next_fade: ResMut<NextState<Fade>>
+    mut ready_for_fade_out: ResMut<ReadyForFadeOut>,
 ) {
-    next_fade.set(Fade::Out)
+    let Some(cutscene) = ready_for_fade_out.0.get_mut(&"cutscene".to_string()) else {
+        return;
+    };
+
+    *cutscene = true;
 }

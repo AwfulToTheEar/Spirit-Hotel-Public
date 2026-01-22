@@ -9,11 +9,6 @@ pub struct SpiritHotelSceneTriggerPlugin;
 
 impl Plugin for SpiritHotelSceneTriggerPlugin {
     fn build(&self, app: &mut App) {
-        app.add_systems(
-            Update,
-            change_scene_from_activated_trigger
-                .in_set(GameplaySystems)
-                .in_set(AppSystems::Update),
-        );
+        app.add_observer(change_scene_from_activated_trigger);
     }
 }

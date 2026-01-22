@@ -509,6 +509,23 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 158,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_cutscene::resources::fade_to_cutscene::FadeToCutscene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 110,
             "members": [
                 {
@@ -689,23 +706,6 @@
                 }
             ],
             "name": "spirit_hotel_level::components::inside_map::InsideMap",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 114,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "file",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel_level::components::load_level::LoadLevel",
             "type": "class",
             "useAs": [
                 "property"
@@ -1178,7 +1178,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 158,
+            "id": 160,
             "members": [
                 {
                     "name": "0",
@@ -1186,7 +1186,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel_cutscene::resources::fade_to_cutscene::FadeToCutscene",
+            "name": "spirit_hotel_cutscene_trigger::components::StartCutscene::StartCutscene",
             "type": "class",
             "useAs": [
                 "property"
@@ -1195,7 +1195,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 159,
+            "id": 161,
             "members": [
                 {
                     "name": "0",
@@ -1203,7 +1203,19 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel_cutscene::components::StartCutscene::StartCutscene",
+            "name": "spirit_hotel_level_trigger::components::load_level::LoadLevel",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 162,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::fade_in::FadeIn",
             "type": "class",
             "useAs": [
                 "property"

@@ -29,6 +29,6 @@ pub fn tick_kagume_kagume_cycle_pause(
         commands.entity(entity).insert(KagumeKagumeCyclePause(Timer::from_seconds(1.0, TimerMode::Once)));
         return;
     }
-    
+
     option_kagume_kagume_cycle_pause.unwrap().0.tick(time.delta());
 }

@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 
-#[derive(Message)]
-pub struct TriggerEnteredMessage {
+#[derive(Event)]
+pub struct TriggerEntered {
     pub entity: Entity,
     pub trigger: Entity,
 }

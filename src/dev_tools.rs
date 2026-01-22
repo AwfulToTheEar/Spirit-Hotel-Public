@@ -10,6 +10,7 @@ use bevy_northstar::{
     debug::NorthstarDebugPlugin, prelude::CardinalNeighborhood,
 };
 use avian2d::prelude::PhysicsDebugPlugin;
+use spirit_hotel_core::fades::Fade;
 use spirit_hotel_player::components::prelude::Player;
 
 pub(super) struct SpiritHotelDevToolsPlugin;
@@ -29,6 +30,7 @@ impl Plugin for SpiritHotelDevToolsPlugin {
         ));
         // Log `Screen` state transitions.
         app.add_systems(Update, log_transitions::<Screen>);
+        app.add_systems(Update, log_transitions::<Fade>);
 
         // Toggle the debug overlay for UI.
         app.add_systems(

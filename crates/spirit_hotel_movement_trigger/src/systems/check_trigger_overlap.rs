@@ -4,13 +4,11 @@ use avian2d::prelude::Collider;
 use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation};
 use spirit_hotel_trigger::{
     components::prelude::{InsideTriggers, TriggerCollider},
-    messages::prelude::{TriggerEnteredMessage, TriggerExitedMessage},
+    events::prelude::{TriggerEntered, TriggerExited},
 };
 
 pub fn check_trigger_overlap(
     mut commands: Commands,
-    mut e_trigger_entered: MessageWriter<TriggerEnteredMessage>,
-    mut e_trigger_exited: MessageWriter<TriggerExitedMessage>,
     mut q_entites: Query<
         (Entity, &Children, Option<&mut InsideTriggers>),
         (With<Transform>, Without<MoveToLocation>, With<CanMove>),
@@ -45,7 +43,7 @@ pub fn check_trigger_overlap(
                     inside_triggers.entities.push(child_of.0);
                     commands.entity(entity).insert(inside_triggers);
 
-                    e_trigger_entered.write(TriggerEnteredMessage {
+                    commands.trigger(TriggerEntered {
                         entity,
                         trigger: child_of.0,
                     });
@@ -64,7 +62,7 @@ pub fn check_trigger_overlap(
                         commands.entity(entity).remove::<InsideTriggers>();
                     }
 
-                    e_trigger_exited.write(TriggerExitedMessage {
+                    commands.trigger(TriggerExited {
                         entity,
                         trigger: child_of.0,
                     });
@@ -76,7 +74,7 @@ pub fn check_trigger_overlap(
                     continue;
                 }
 
-                e_trigger_entered.write(TriggerEnteredMessage {
+                commands.trigger(TriggerEntered {
                     entity,
                     trigger: child_of.0,
                 });

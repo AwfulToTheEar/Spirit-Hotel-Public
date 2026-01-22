@@ -2,6 +2,7 @@ mod fade_in;
 mod fade_out;
 
 use bevy::camera::visibility::RenderLayers;
+use bevy::platform::collections::HashMap;
 use bevy::prelude::*;
 
 use crate::{screens::Screen, theme::palette::FADE_BACKGROUND_COLOR};
@@ -9,6 +10,7 @@ use crate::{screens::Screen, theme::palette::FADE_BACKGROUND_COLOR};
 pub(super) fn plugin(app: &mut App) {
     app.init_state::<Fade>();
     app.init_resource::<FadeData>();
+    app.init_resource::<ReadyForFadeOut>();
 
     app.add_plugins((fade_in::plugin, fade_out::plugin))
         .add_systems(Startup, spawn_fade_camera);
@@ -26,6 +28,10 @@ pub struct FadeToScreen(pub Screen);
 #[derive(Resource)]
 pub struct FadeOutInstantly;
 
+#[derive(Resource, Default, Reflect)]
+#[reflect(Resource, Default)]
+pub struct ReadyForFadeOut(pub HashMap<String, bool>);
+
 impl FromWorld for FadeData {
     fn from_world(_world: &mut World) -> Self {
         Self {
@@ -41,6 +47,7 @@ pub enum Fade {
     #[default]
     None,
     In,
+    Waiting,
     Out,
 }
 
