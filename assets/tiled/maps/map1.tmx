@@ -33,6 +33,11 @@
       <property name="0" type="file" value="../worlds/world2.world"/>
      </properties>
     </property>
+    <property name="start_cutscene" type="class" propertytype="spirit_hotel_cutscene::components::StartCutscene::StartCutscene">
+     <properties>
+      <property name="0" type="file" value="../../cutscenes/output.ivf"/>
+     </properties>
+    </property>
    </properties>
   </object>
   <object id="18" template="../templates/player.tx" x="256" y="256"/>

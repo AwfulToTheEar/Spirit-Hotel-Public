@@ -17,16 +17,20 @@ pub(super) fn plugin(app: &mut App) {
 #[derive(Resource)]
 pub struct FadeData {
     pub color: Color,
-    pub duration: f32,
-    pub next_state: Option<Screen>,
+    pub duration: f32
 }
+
+#[derive(Resource)]
+pub struct FadeToScreen(pub Screen);
+
+#[derive(Resource)]
+pub struct FadeOutInstantly;
 
 impl FromWorld for FadeData {
     fn from_world(_world: &mut World) -> Self {
         Self {
             color: FADE_BACKGROUND_COLOR,
-            duration: 0.3,
-            next_state: None,
+            duration: 0.3
         }
     }
 }

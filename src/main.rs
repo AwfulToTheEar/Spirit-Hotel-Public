@@ -12,6 +12,8 @@ use bevy_light_2d::light::{AmbientLight2d, Light2d};
 use spirit_hotel_animation::SpiritHotelAnimationPlugin;
 use spirit_hotel_animation_movement::SpiritHotelAnimationMovementPlugin;
 use spirit_hotel_core::SpiritHotelCorePlugin;
+use spirit_hotel_cutscene::SpiritHotelCutscenePlugin;
+use spirit_hotel_cutscene_trigger::SpiritHotelCutsceneTriggerPlugin;
 use spirit_hotel_dialogue::SpiritHotelDialoguePlugin;
 use spirit_hotel_dialogue_trigger::SpiritHotelDialogueTriggerPlugin;
 use spirit_hotel_drowned_child::SpiritHotelDrownedChildPlugin;
@@ -84,6 +86,7 @@ impl Plugin for AppPlugin {
             SpiritHotelScenePlugin,
             SpiritHotelTriggerPlugin,
             SpiritHotelDrownedChildPlugin,
+            SpiritHotelCutscenePlugin,
             #[cfg(feature = "dev")]
             SpiritHotelDevToolsPlugin,
         ));
@@ -96,7 +99,7 @@ impl Plugin for AppPlugin {
             SpiritHotelLevelPathfindingPlugin,
             SpiritHotelLevelTriggerPlugin,
             SpiritHotelLevelScenePlugin,
-            SpiritHotelLevelDrownedChildPlugin
+            SpiritHotelLevelDrownedChildPlugin,
         ))
         .add_plugins(SpiritHotelDialogueTriggerPlugin)
         .add_plugins((
@@ -117,8 +120,8 @@ impl Plugin for AppPlugin {
             SpiritHotelDrownedChildPlayerMovementPlugin,
             SpiritHotelDrownedChildPlayerPathfindingPlugin,
             SpiritHotelDrownedChildPlayerPathfindingMovementPlugin,
-        ));
-
+        ))
+        .add_plugins(SpiritHotelCutsceneTriggerPlugin);
         // Spawn the main camera.
         app.add_systems(Startup, spawn_camera);
     }

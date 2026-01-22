@@ -567,6 +567,42 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 155,
+            "members": [
+            ],
+            "name": "spirit_hotel_drowned_child::components::init_kagume_kagume::InitKagumeKagume",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 156,
+            "members": [
+            ],
+            "name": "spirit_hotel_drowned_child::components::kagume_kagume_cycle_indicator::KagumeKagumeCycleIndicator",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 157,
+            "members": [
+            ],
+            "name": "spirit_hotel_drowned_child::components::kagume_kagume_cycle_ticking::KagumeKagumeCycleTicking",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 147,
             "members": [
             ],
@@ -1142,10 +1178,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 155,
+            "id": 158,
             "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
             ],
-            "name": "spirit_hotel_drowned_child::components::init_kagume_kagume::InitKagumeKagume",
+            "name": "spirit_hotel_cutscene::resources::fade_to_cutscene::FadeToCutscene",
             "type": "class",
             "useAs": [
                 "property"
@@ -1154,22 +1195,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 156,
+            "id": 159,
             "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
             ],
-            "name": "spirit_hotel_drowned_child::components::kagume_kagume_cycle_indicator::KagumeKagumeCycleIndicator",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 157,
-            "members": [
-            ],
-            "name": "spirit_hotel_drowned_child::components::kagume_kagume_cycle_ticking::KagumeKagumeCycleTicking",
+            "name": "spirit_hotel_cutscene::components::StartCutscene::StartCutscene",
             "type": "class",
             "useAs": [
                 "property"

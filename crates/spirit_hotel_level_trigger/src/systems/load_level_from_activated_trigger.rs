@@ -1,7 +1,7 @@
 use std::path::PathBuf;
 
 use bevy::prelude::*;
-use spirit_hotel_core::fades::{Fade, FadeData};
+use spirit_hotel_core::fades::{Fade, FadeData, FadeToScreen};
 use spirit_hotel_core::screens::Screen;
 use spirit_hotel_level::components::prelude::LoadLevel;
 use spirit_hotel_level::resources::prelude::LevelAssets;
@@ -9,9 +9,9 @@ use spirit_hotel_trigger::components::prelude::IsTrigger;
 use spirit_hotel_trigger::messages::prelude::TriggerActivatedMessage;
 
 pub fn load_level_from_activated_trigger(
+    mut commands: Commands,
     asset_server: Res<AssetServer>,
     mut level_assets: ResMut<LevelAssets>,
-    mut fade_data: ResMut<FadeData>,
     mut next_fade: ResMut<NextState<Fade>>,
     mut e_trigger_activated: MessageReader<TriggerActivatedMessage>,
     q_map_loaders: Query<&LoadLevel, With<IsTrigger>>,
@@ -27,7 +27,7 @@ pub fn load_level_from_activated_trigger(
 
         level_assets.world = Some(asset_server.load(path));
 
-        fade_data.next_state = Some(Screen::Loading);
+        commands.insert_resource(FadeToScreen(Screen::Loading));
         next_fade.set(Fade::In);
 
         return;

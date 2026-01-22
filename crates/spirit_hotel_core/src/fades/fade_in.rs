@@ -1,6 +1,8 @@
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
+use bevy::prelude::OnTransition;
 
+use crate::fades::{FadeOutInstantly, FadeToScreen};
 use crate::{
     AppSystems,
     fades::{Fade, FadeData},
@@ -17,7 +19,9 @@ pub(super) fn plugin(app: &mut App) {
                 (apply_fade_in, check_fade_in_timer).in_set(AppSystems::Update),
             )
                 .run_if(in_state(Fade::In)),
-        );
+        )
+        .add_systems(OnTransition {exited: Fade::In, entered: Fade::None}, fade_out.run_if(resource_exists::<FadeOutInstantly>))
+        .add_systems(OnTransition {exited: Fade::In, entered: Fade::None}, change_screen.run_if(resource_exists::<FadeToScreen>));
 }
 
 #[derive(Component, Reflect)]
@@ -30,7 +34,7 @@ pub fn spawn_fade_in(mut commands: Commands, fade_data: Res<FadeData>) {
         DespawnOnExit(Fade::In),
         BackgroundColor(fade_data.color.with_alpha(0.)),
         FadeIn(Timer::from_seconds(fade_data.duration, TimerMode::Once)),
-        RenderLayers::layer(1)
+        RenderLayers::layer(1),
     ));
 }
 
@@ -48,23 +52,31 @@ pub fn apply_fade_in(mut q_background: Query<(&FadeIn, &mut BackgroundColor)>) {
     }
 }
 
-pub fn check_fade_in_timer(
-    mut fade_data: ResMut<FadeData>,
-    mut next_fade: ResMut<NextState<Fade>>,
-    mut next_screen: ResMut<NextState<Screen>>,
-    q_fade_in: Query<&FadeIn>,
-) {
+pub fn check_fade_in_timer(mut next_fade: ResMut<NextState<Fade>>, q_fade_in: Query<&FadeIn>) {
     let Ok(fade_in) = q_fade_in.single() else {
         return;
     };
 
-    let Some(screen) = fade_data.next_state else {
-        return;
-    };
-
     if fade_in.0.just_finished() {
-        fade_data.next_state = None;
         next_fade.set(Fade::None);
-        next_screen.set(screen);
     }
+}
+
+pub fn fade_out(
+    mut commands: Commands,
+    mut next_fade: ResMut<NextState<Fade>>,
+) {
+    next_fade.set(Fade::Out);
+
+    commands.remove_resource::<FadeOutInstantly>();
+}
+
+pub fn change_screen(
+    mut commands: Commands,
+    screen: Res<FadeToScreen>,
+    mut next_screen: ResMut<NextState<Screen>>,
+) {
+    next_screen.set(screen.0);
+
+    commands.remove_resource::<FadeToScreen>();
 }
