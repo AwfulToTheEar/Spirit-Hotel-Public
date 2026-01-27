@@ -78,6 +78,7 @@ bevy_ecs_tilemap = "0.17.0"
 bevy_northstar = "0.5.0"
 bevy_enhanced_input = "0.20.0"
 bevy_av1 = { path = "crates/external/bevy_av1" }
+bitvec = "1.0.1"
 
 spirit_hotel_core = { path = "crates/spirit_hotel_core" }
 spirit_hotel_player = { path = "crates/spirit_hotel_player" }

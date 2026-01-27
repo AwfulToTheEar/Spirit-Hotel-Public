@@ -1,4 +1,4 @@
-use crate::fades::{FadeOutInstantly, FadeToScreen, ReadyForFadeOut};
+use crate::fades::{FadeToScreen, FadeTasks, complete_fade_task};
 use crate::{
     AppSystems,
     fades::{Fade, FadeData},
@@ -12,6 +12,7 @@ use bevy::reflect::Map;
 
 pub(super) fn plugin(app: &mut App) {
     app.add_systems(OnEnter(Fade::In), spawn_fade_in)
+        .add_observer(complete_fade_task::<FadeToScreen>)
         .add_systems(
             Update,
             (
@@ -24,10 +25,6 @@ pub(super) fn plugin(app: &mut App) {
             Update,
             fade_out_when_ready
                 .run_if(in_state(Fade::Waiting)),
-        )
-        .add_systems(
-            OnEnter(Fade::Waiting),
-            fade_out_instantly.run_if(resource_exists::<FadeOutInstantly>),
         )
         .add_systems(
             OnEnter(Fade::Waiting),
@@ -73,36 +70,22 @@ pub fn check_fade_in_timer(mut next_fade: ResMut<NextState<Fade>>, q_fade_in: Qu
     }
 }
 
-pub fn fade_out_instantly(mut commands: Commands, mut next_fade: ResMut<NextState<Fade>>) {
-    next_fade.set(Fade::Out);
-
-    commands.remove_resource::<FadeOutInstantly>();
-}
-
 pub fn fade_out_when_ready(
-    mut ready_for_fade_out: ResMut<ReadyForFadeOut>,
+    mut fade_out_tasks: ResMut<FadeTasks>,
     mut next_fade: ResMut<NextState<Fade>>,
 ) {
-    if !ready_for_fade_out.0.is_empty()
-        && ready_for_fade_out
-            .0
-            .iter()
-            .find(|&(_, &ready)| !ready)
-            .is_some()
+    if !fade_out_tasks.0.all()
     {
         return;
     }
 
     next_fade.set(Fade::Out);
-    ready_for_fade_out.0.clear();
+    fade_out_tasks.0.clear();
 }
 
 pub fn change_screen(
-    mut commands: Commands,
-    screen: Res<FadeToScreen>,
+    fade_to_screen: Res<FadeToScreen>,
     mut next_screen: ResMut<NextState<Screen>>,
 ) {
-    next_screen.set(screen.0);
-
-    commands.remove_resource::<FadeToScreen>();
+    next_screen.set(fade_to_screen.0);
 }

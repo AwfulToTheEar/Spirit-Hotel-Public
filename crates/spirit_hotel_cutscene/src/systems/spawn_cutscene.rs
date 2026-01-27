@@ -2,14 +2,13 @@ use crate::resources::prelude::FadeToCutscene;
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 use bevy_av1::{PlaybackMode, VideoPlayer, VideoSink};
-use spirit_hotel_core::fades::ReadyForFadeOut;
+use spirit_hotel_core::fades::FadeTasks;
 use spirit_hotel_core::theme::widget;
 
 pub fn spawn_cutscene(
     mut commands: Commands,
     asset_server: Res<AssetServer>,
     fade_to_cutscene: Res<FadeToCutscene>,
-    mut ready_for_fade_out: ResMut<ReadyForFadeOut>,
 ) {
     commands
         .spawn((
@@ -31,6 +30,4 @@ pub fn spawn_cutscene(
                 }
             },
         );
-
-    ready_for_fade_out.0.insert("cutscene".to_string(), false);
 }

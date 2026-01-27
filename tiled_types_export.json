@@ -363,6 +363,28 @@
     "members": []
   },
   {
+    "id": 10,
+    "name": "spirit_hotel_core::fades::FadeData",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "color",
+        "type": "color",
+        "value": "#ff050505"
+      },
+      {
+        "name": "duration",
+        "type": "float",
+        "value": 0.30000001192092896
+      }
+    ]
+  },
+  {
     "id": 13,
     "name": "spirit_hotel_core::game::teleport::Teleport",
     "type": "class",

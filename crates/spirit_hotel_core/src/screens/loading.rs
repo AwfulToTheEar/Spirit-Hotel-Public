@@ -3,8 +3,8 @@
 
 use bevy::prelude::*;
 
+use crate::fades::{Fade, FadeTasks, FadeToScreen};
 use crate::{asset_tracking::ResourceHandles, screens::Screen, theme::prelude::*};
-use crate::fades::{Fade, ReadyForFadeOut};
 
 pub(super) fn plugin(app: &mut App) {
     app.add_systems(OnEnter(Screen::Loading), spawn_loading_screen);
@@ -23,13 +23,9 @@ fn spawn_loading_screen(mut commands: Commands) {
     ));
 }
 
-fn enter_gameplay_screen(mut next_screen: ResMut<NextState<Screen>>, mut ready_for_fade_out: ResMut<ReadyForFadeOut>) {
-    let Some(screen) = ready_for_fade_out.0.get_mut(&"screen".to_string()) else {
-        next_screen.set(Screen::Gameplay);
-        return;
-    };
-
-    *screen = true;
+fn enter_gameplay_screen(
+    mut next_screen: ResMut<NextState<Screen>>,
+) {
     next_screen.set(Screen::Gameplay);
 }
 

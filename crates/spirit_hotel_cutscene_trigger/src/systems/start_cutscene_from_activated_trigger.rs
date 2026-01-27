@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use spirit_hotel_core::fades::Fade;
+use spirit_hotel_core::fades::{Fade, FadeTask, FadeTasks};
 use crate::components::prelude::StartCutscene;
 use spirit_hotel_cutscene::resources::prelude::FadeToCutscene;
 use spirit_hotel_trigger::components::prelude::IsTrigger;
@@ -9,6 +9,7 @@ use std::path::PathBuf;
 pub fn start_cutscene_from_activated_trigger(
     e_trigger_activated: On<TriggerActivated>,
     mut commands: Commands,
+    mut fade_tasks: ResMut<FadeTasks>,
     q_cutscene_starters: Query<&StartCutscene, With<IsTrigger>>,
 ) {
     let Ok(start_cutscene) = q_cutscene_starters.get(e_trigger_activated.trigger) else {
@@ -19,6 +20,7 @@ pub fn start_cutscene_from_activated_trigger(
     path.push("worlds");
     path.push(start_cutscene.0.clone());
 
+    commands.insert_resource(FadeTask::<FadeToCutscene>::new(fade_tasks.take()));
     commands.insert_resource(FadeToCutscene(path));
 
     return;
