@@ -47,11 +47,6 @@ spirit_hotel_drowned_child_player_pathfinding_movement = { workspace = true }
 spirit_hotel_cutscene = { workspace = true }
 spirit_hotel_cutscene_trigger = { workspace = true }
 
-[patch.crates-io]
-#bevy_ecs_tiled = { path = "crates/bevy_ecs_tiled" }
-#bevy_aseprite_ultra = { path = "crates/bevy_aseprite_ultra" }
-#bevy_light_2d = { path = "crates/bevy_light_2d" }
-
 # Your web builds will start failing if you add a dependency that pulls in `getrandom` v0.3+.
 # To fix this, you should tell `getrandom` to use the `wasm_js` backend on Wasm.
 # See: <https://docs.rs/getrandom/0.3.3/getrandom/#webassembly-support>.
@@ -72,12 +67,12 @@ avian2d = "0.4.1"
 bevy_aseprite_ultra = "0.7.0"
 bevy_yarnspinner = "0.6.0"
 bevy_yarnspinner_example_dialogue_view = "0.6.0"
-bevy_ecs_tiled = { version = "0.10.0", features = ["avian_debug", "user_properties"] }
+bevy_ecs_tiled = { git = "https://github.com/AwfulToTheEar/bevy_ecs_tiled.git", branch = "add-text-support", features = ["avian_debug", "user_properties"] }
 bevy_light_2d = "0.8.0"
 bevy_ecs_tilemap = "0.17.0"
 bevy_northstar = "0.5.0"
 bevy_enhanced_input = "0.20.0"
-bevy_av1 = { path = "crates/external/bevy_av1" }
+bevy_av1 = { git = "https://github.com/AwfulToTheEar/bevy_av1.git" }
 bitvec = "1.0.1"
 
 spirit_hotel_core = { path = "crates/spirit_hotel_core" }

@@ -4,7 +4,7 @@
  <object gid="1" width="32" height="32">
   <properties>
    <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>
-   <property name="follow_path" type="class" propertytype="spirit_hotel_pathfinding_movement::components::follow_path::FollowPath"/>
+   <property name="follow" type="class" propertytype="spirit_hotel_pathfinding_movement::components::follow::Follow"/>
    <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
    <property name="kagume_kagume_dancer" type="class" propertytype="spirit_hotel_drowned_child_movement::components::kagume_kagume_dancer::KagumeKagumeDancer"/>
   </properties>

@@ -526,6 +526,23 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 160,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_cutscene_trigger::components::StartCutscene::StartCutscene",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 110,
             "members": [
                 {
@@ -742,6 +759,23 @@
                 }
             ],
             "name": "spirit_hotel_level::resources::level_assets::LevelAssets",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 161,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_level_trigger::components::load_level::LoadLevel",
             "type": "class",
             "useAs": [
                 "property"
@@ -967,23 +1001,6 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 131,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "object",
-                    "value": 0
-                }
-            ],
-            "name": "spirit_hotel_pathfinding_movement::components::follow_path::FollowPath",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
             "id": 132,
             "members": [
             ],
@@ -1149,6 +1166,18 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 162,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::fade_in::FadeIn",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 142,
             "members": [
                 {
@@ -1178,15 +1207,20 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 160,
+            "id": 163,
             "members": [
                 {
-                    "name": "0",
-                    "type": "file",
-                    "value": ""
+                    "name": "color",
+                    "type": "color",
+                    "value": "#ff050505"
+                },
+                {
+                    "name": "duration",
+                    "type": "float",
+                    "value": 0.30000001192092896
                 }
             ],
-            "name": "spirit_hotel_cutscene_trigger::components::StartCutscene::StartCutscene",
+            "name": "spirit_hotel_core::fades::FadeData",
             "type": "class",
             "useAs": [
                 "property"
@@ -1195,27 +1229,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 161,
+            "id": 164,
             "members": [
                 {
                     "name": "0",
-                    "type": "file",
-                    "value": ""
+                    "type": "object",
+                    "value": 0
                 }
             ],
-            "name": "spirit_hotel_level_trigger::components::load_level::LoadLevel",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 162,
-            "members": [
-            ],
-            "name": "spirit_hotel_trigger::components::fade_in::FadeIn",
+            "name": "spirit_hotel_pathfinding_movement::components::follow::Follow",
             "type": "class",
             "useAs": [
                 "property"

@@ -56,12 +56,14 @@ pub struct FadeTasks(BitVec);
 
 impl FadeTasks {
     pub fn take(&mut self)-> FadeTaskKey {
+        info!("Taking fade task");
         let index = self.0.len();
-        self.0.set(index, false);
+        self.0.insert(index, false);
         FadeTaskKey(index)
     }
 
     pub fn complete(&mut self, key: &FadeTaskKey){
+        info!("Completing fade task");
         self.0.set(key.0, true);
     }
 }

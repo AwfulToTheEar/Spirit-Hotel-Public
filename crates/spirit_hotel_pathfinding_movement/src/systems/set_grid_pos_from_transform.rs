@@ -7,7 +7,7 @@ use bevy_northstar::{
 };
 use spirit_hotel_core::game::Teleport;
 use spirit_hotel_pathfinding::components::prelude::{GridTileSize, PathNode};
-use crate::components::prelude::FollowPath;
+use crate::components::prelude::Follow;
 
 pub fn set_grid_pos_from_transform(
     mut commands: Commands,

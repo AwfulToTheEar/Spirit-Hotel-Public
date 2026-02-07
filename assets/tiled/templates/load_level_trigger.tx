@@ -3,7 +3,11 @@
  <object width="32" height="32">
   <properties>
    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
-   <property name="load_level" type="class" propertytype="spirit_hotel_level_trigger::components::load_level::LoadLevel"/>
+   <property name="load_level" type="class" propertytype="spirit_hotel_level_trigger::components::load_level::LoadLevel">
+    <properties>
+     <property name="0" type="file" value="../worlds/test.world"/>
+    </properties>
+   </property>
   </properties>
  </object>
 </template>

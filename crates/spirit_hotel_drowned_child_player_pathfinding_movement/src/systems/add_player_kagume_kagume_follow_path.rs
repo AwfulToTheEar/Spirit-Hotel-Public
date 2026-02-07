@@ -4,7 +4,7 @@ use bevy_northstar::grid::Grid;
 use bevy_northstar::neighbor::CardinalNeighborhood;
 use bevy_northstar::prelude::AgentOfGrid;
 use spirit_hotel_drowned_child::components::prelude::{KagumeKagume, KagumeKagumeStartPathNode};
-use spirit_hotel_pathfinding_movement::components::prelude::FollowPath;
+use spirit_hotel_pathfinding_movement::components::prelude::Follow;
 use spirit_hotel_player::components::prelude::Player;
 
 pub fn add_player_kagume_kagume_follow_path(
@@ -19,7 +19,7 @@ pub fn add_player_kagume_kagume_follow_path(
     let world_grid_entity = s_world_grid.into_inner();
 
     commands.entity(entity).insert((
-        FollowPath(Some(path_node_entity)),
+        Follow(path_node_entity),
         AgentOfGrid(world_grid_entity),
     ));
 }
