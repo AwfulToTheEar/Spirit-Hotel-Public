@@ -3,25 +3,36 @@ use crate::{
     components::prelude::IsTrigger,
     events::prelude::{TriggerActivated, TriggerEntered},
 };
+use crate::components::prelude::{InteractTrigger, ThrottleTrigger, TriggerFor, TriggerHasBeenActivated};
 
 pub fn activate_instant_triggers(
     e_trigger_entered: On<TriggerEntered>,
     mut commands: Commands,
-    q_triggers: Query<&IsTrigger>,
+    mut q_triggers: Query<(Option<&TriggerFor>, Option<&mut ThrottleTrigger>), (Without<InteractTrigger>, With<IsTrigger>)>,
 ) {
 
-    let Ok(trigger) = q_triggers.get(e_trigger_entered.trigger) else {
+    let Ok((option_trigger_for, option_throttle_trigger)) = q_triggers.get_mut(e_trigger_entered.trigger) else {
         return;
     };
 
-    if matches!(trigger, IsTrigger::Interact) {
+    if let Some(trigger_for) = option_trigger_for && trigger_for.0 != e_trigger_entered.entity {
         return;
+    }
+
+    if let Some(mut throttle_trigger) = option_throttle_trigger {
+        if throttle_trigger.timer.is_some() {
+            return;
+        }
+
+        throttle_trigger.timer = Some(Timer::from_seconds(throttle_trigger.throttle, TimerMode::Once));
     }
 
     commands.trigger(TriggerActivated {
         entity: e_trigger_entered.entity,
         trigger: e_trigger_entered.trigger,
     });
+
+    commands.entity(e_trigger_entered.trigger).insert_if_new(TriggerHasBeenActivated);
 }
 
 /*

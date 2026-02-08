@@ -1,9 +1,5 @@
 use bevy::prelude::*;
 
-#[derive(Component, Default, Reflect, Debug)]
-#[reflect(Component, Default)]
-pub enum IsTrigger {
-    #[default]
-    Instant,
-    Interact,
-}
+#[derive(Component, Reflect)]
+#[reflect(Component)]
+pub struct IsTrigger;

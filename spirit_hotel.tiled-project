@@ -806,10 +806,54 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 165,
+            "members": [
+            ],
+            "name": "spirit_hotel_movement::components::can_move::CanMove",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 118,
             "members": [
             ],
             "name": "spirit_hotel_movement::components::can_push::CanPush",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 166,
+            "members": [
+                {
+                    "name": "down",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "left",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "right",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "up",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_movement::components::movement_animations::MovementAnimations",
             "type": "class",
             "useAs": [
                 "property"
@@ -1185,14 +1229,20 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 142,
+            "id": 167,
             "members": [
-                {
-                    "name": ":variant",
-                    "propertyType": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
-                    "type": "string",
-                    "value": "Instant"
-                }
+            ],
+            "name": "spirit_hotel_trigger::components::interact_trigger::InteractTrigger",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 168,
+            "members": [
             ],
             "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger",
             "type": "class",
@@ -1201,23 +1251,17 @@
             ]
         },
         {
-            "id": 143,
-            "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "Instant",
-                "Interact"
-            ],
-            "valuesAsFlags": false
-        },
-        {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 165,
+            "id": 169,
             "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
             ],
-            "name": "spirit_hotel_movement::components::can_move::CanMove",
+            "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
             "type": "class",
             "useAs": [
                 "property"
@@ -1226,30 +1270,49 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 166,
+            "id": 170,
             "members": [
                 {
-                    "name": "down",
-                    "type": "string",
-                    "value": ""
+                    "name": "throttle",
+                    "type": "float",
+                    "value": 0
                 },
                 {
-                    "name": "left",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "right",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "up",
-                    "type": "string",
-                    "value": ""
+                    "name": "timer",
+                    "type": "std::nullptr_t",
+                    "value": null
                 }
             ],
-            "name": "spirit_hotel_movement::components::movement_animations::MovementAnimations",
+            "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 171,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::trigger_for::TriggerFor",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 172,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::trigger_has_been_activated::TriggerHasBeenActivated",
             "type": "class",
             "useAs": [
                 "property"

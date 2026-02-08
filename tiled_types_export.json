@@ -1,6 +1,6 @@
 [
   {
-    "id": 73,
+    "id": 79,
     "name": "bevy_color::color::Color",
     "type": "class",
     "useAs": [
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "id": 77,
+    "id": 83,
     "name": "bevy_time::timer::TimerMode",
     "type": "class",
     "useAs": [
@@ -94,7 +94,7 @@
     ]
   },
   {
-    "id": 76,
+    "id": 82,
     "name": "bevy_time::timer::TimerMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -105,7 +105,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 99,
+    "id": 105,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
     "type": "class",
     "useAs": [
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "id": 97,
+    "id": 103,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -140,7 +140,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 98,
+    "id": 104,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
     "type": "class",
     "useAs": [
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "id": 106,
+    "id": 112,
     "name": "core::option::Option<bevy_ecs::entity::Entity>",
     "type": "class",
     "useAs": [
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "id": 104,
+    "id": 110,
     "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -192,7 +192,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 105,
+    "id": 111,
     "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
     "type": "class",
     "useAs": [
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "id": 103,
+    "id": 109,
     "name": "glam::UVec2",
     "type": "class",
     "useAs": [
@@ -231,7 +231,7 @@
     ]
   },
   {
-    "id": 102,
+    "id": 108,
     "name": "glam::Vec2",
     "type": "class",
     "useAs": [
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "id": 80,
+    "id": 86,
     "name": "glam::Vec3",
     "type": "class",
     "useAs": [
@@ -1077,7 +1077,7 @@
     ]
   },
   {
-    "id": 108,
+    "id": 114,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction",
     "type": "class",
     "useAs": [
@@ -1095,7 +1095,7 @@
     ]
   },
   {
-    "id": 107,
+    "id": 113,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1169,7 +1169,7 @@
     ]
   },
   {
-    "id": 69,
+    "id": 70,
     "name": "spirit_hotel_trigger::components::fade_in::FadeIn",
     "type": "class",
     "useAs": [
@@ -1181,7 +1181,29 @@
   },
   {
     "id": 72,
+    "name": "spirit_hotel_trigger::components::interact_trigger::InteractTrigger",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 73,
     "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 74,
+    "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
     "type": "class",
     "useAs": [
       "property"
@@ -1190,22 +1212,61 @@
     "drawFill": true,
     "members": [
       {
-        "name": ":variant",
-        "propertyType": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
-        "type": "class",
-        "value": "Instant"
+        "name": "0",
+        "type": "object",
+        "value": null
       }
     ]
   },
   {
-    "id": 71,
-    "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
-    "type": "enum",
-    "storageType": "string",
-    "values": [
-      "Instant",
-      "Interact"
+    "id": 76,
+    "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
+    "type": "class",
+    "useAs": [
+      "property"
     ],
-    "valuesAsFlags": false
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "throttle",
+        "type": "float",
+        "value": 0.0
+      },
+      {
+        "name": "timer",
+        "propertyType": "core::option::Option<bevy_time::timer::Timer>",
+        "type": "class",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "spirit_hotel_trigger::components::trigger_for::TriggerFor",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "type": "object",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "spirit_hotel_trigger::components::trigger_has_been_activated::TriggerHasBeenActivated",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
   }
 ]

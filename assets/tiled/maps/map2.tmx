@@ -31,13 +31,11 @@
    </properties>
   </object>
   <object id="20" template="../templates/player.tx" x="32" y="64"/>
-  <object id="24" gid="22" x="256" y="64" width="32" height="32">
+  <object id="24" gid="22" x="256" y="64" width="32" height="32"/>
+  <object id="25" x="224" y="0" width="96" height="96">
    <properties>
-    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger">
-     <properties>
-      <property name=":variant" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant" value="Interact"/>
-     </properties>
-    </property>
+    <property name="interact_trigger" type="class" propertytype="spirit_hotel_trigger::components::interact_trigger::InteractTrigger"/>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
     <property name="start_conversation" type="class" propertytype="spirit_hotel_dialogue::components::start_conversation::StartConversation">
      <properties>
       <property name="0" value="TheHallway"/>
@@ -45,7 +43,6 @@
     </property>
    </properties>
   </object>
-  <object id="25" x="256" y="32" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="paths">
   <object id="39" template="../templates/path_node.tx" x="64" y="96">

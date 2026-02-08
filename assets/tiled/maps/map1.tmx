@@ -47,7 +47,7 @@
       <property name="scene" value="test2"/>
      </properties>
     </property>
-    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
+    <property name="is_trigger" type="class"/>
    </properties>
   </object>
   <object id="25" x="160" y="224">
