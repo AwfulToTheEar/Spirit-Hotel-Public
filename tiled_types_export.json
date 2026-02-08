@@ -375,7 +375,7 @@
       {
         "name": "color",
         "type": "color",
-        "value": "#ff050505"
+        "value": "#ff000000"
       },
       {
         "name": "duration",

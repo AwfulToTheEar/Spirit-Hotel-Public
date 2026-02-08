@@ -6,7 +6,7 @@ use bevy_northstar::{
 use bevy_northstar::prelude::NextPos;
 use spirit_hotel_movement::components::prelude::{CanMove};
 use spirit_hotel_pathfinding::components::prelude::PathNode;
-use crate::components::prelude::{Follow, WithoutPathfinding};
+use crate::components::prelude::{Follow, NextPosToBeRemoved, WithoutPathfinding};
 
 pub fn apply_goal_from_moving_entity(
     mut commands: Commands,
@@ -42,6 +42,6 @@ pub fn apply_goal_from_moving_entity(
                 ..default()
             },
             DebugPath::default(),
-        )).remove::<(Path, NextPos)>();
+        ));
     }
 }

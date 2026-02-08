@@ -6,6 +6,7 @@
 #[cfg(feature = "dev")]
 mod dev_tools;
 
+#[cfg(feature = "dev")]
 use crate::dev_tools::SpiritHotelDevToolsPlugin;
 use bevy::{asset::AssetMetaCheck, prelude::*};
 use bevy_light_2d::light::{AmbientLight2d, Light2d};

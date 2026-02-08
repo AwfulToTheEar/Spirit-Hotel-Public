@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 
-pub const FADE_BACKGROUND_COLOR: Color = Color::srgb(0.157, 0.157, 0.157);
+pub const FADE_BACKGROUND_COLOR: Color = Color::srgb(0., 0., 0.);
 
 /// #ddd369
 pub const LABEL_TEXT: Color = Color::srgb(0.867, 0.827, 0.412);

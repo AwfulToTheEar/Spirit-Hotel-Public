@@ -19,9 +19,9 @@ impl Plugin for SpiritHotelDevToolsPlugin {
     fn build(&self, app: &mut App) {
         app.add_plugins((
             EguiPlugin::default(),
-            FilterQueryInspectorPlugin::<(
+            /*FilterQueryInspectorPlugin::<(
                 With<Player>,
-            )>::new(),
+            )>::new(),*/
             WorldInspectorPlugin::new(),
             //TiledDebugPluginGroup,
             //NorthstarDebugPlugin::<CardinalNeighborhood>::default(),

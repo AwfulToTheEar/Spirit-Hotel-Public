@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="4">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="7">
  <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
@@ -31,5 +31,17 @@
   </object>
   <object id="2" template="../templates/load_level_trigger.tx" x="96" y="64"/>
   <object id="3" template="../templates/player.tx" x="288" y="288"/>
+  <object id="5" x="256" y="32" width="160" height="32">
+   <text wrap="1" halign="center" valign="center">Follow Test World</text>
+  </object>
+  <object id="6" template="../templates/load_level_trigger.tx" x="320" y="64">
+   <properties>
+    <property name="load_level" type="class" propertytype="spirit_hotel_level_trigger::components::load_level::LoadLevel">
+     <properties>
+      <property name="0" type="file" value="../worlds/follow_test.world"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
  </objectgroup>
 </map>

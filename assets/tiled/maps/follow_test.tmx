@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="3">
+ <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
+ <tileset firstgid="8" source="../tilesets/rogues.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="20" height="20">
+  <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="1" template="../templates/player.tx" x="32" y="64"/>
+  <object id="2" gid="50" x="576" y="608" width="32" height="32">
+   <properties>
+    <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>
+    <property name="follow" type="class" propertytype="spirit_hotel_pathfinding_movement::components::follow::Follow">
+     <properties>
+      <property name="0" type="object" value="1"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
