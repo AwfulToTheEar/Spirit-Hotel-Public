@@ -8,7 +8,7 @@
      <property name="0" type="file" value="../../animations/player.aseprite"/>
     </properties>
    </property>
-   <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove">
+   <property name="movement_animations" type="class" propertytype="spirit_hotel_movement::components::movement_animations::MovementAnimations">
     <properties>
      <property name="down" value="walk-down"/>
      <property name="right" value="walk-right"/>

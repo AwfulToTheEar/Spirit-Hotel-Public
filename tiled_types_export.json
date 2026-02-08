@@ -1,6 +1,6 @@
 [
   {
-    "id": 72,
+    "id": 73,
     "name": "bevy_color::color::Color",
     "type": "class",
     "useAs": [
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "id": 76,
+    "id": 77,
     "name": "bevy_time::timer::TimerMode",
     "type": "class",
     "useAs": [
@@ -94,7 +94,7 @@
     ]
   },
   {
-    "id": 75,
+    "id": 76,
     "name": "bevy_time::timer::TimerMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -105,7 +105,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 98,
+    "id": 99,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
     "type": "class",
     "useAs": [
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "id": 96,
+    "id": 97,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -140,7 +140,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 97,
+    "id": 98,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
     "type": "class",
     "useAs": [
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "id": 105,
+    "id": 106,
     "name": "core::option::Option<bevy_ecs::entity::Entity>",
     "type": "class",
     "useAs": [
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "id": 103,
+    "id": 104,
     "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -192,7 +192,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 104,
+    "id": 105,
     "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
     "type": "class",
     "useAs": [
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "id": 102,
+    "id": 103,
     "name": "glam::UVec2",
     "type": "class",
     "useAs": [
@@ -231,7 +231,7 @@
     ]
   },
   {
-    "id": 101,
+    "id": 102,
     "name": "glam::Vec2",
     "type": "class",
     "useAs": [
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "id": 79,
+    "id": 80,
     "name": "glam::Vec3",
     "type": "class",
     "useAs": [
@@ -782,6 +782,28 @@
     ],
     "color": "#000000",
     "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 44,
+    "name": "spirit_hotel_movement::components::can_push::CanPush",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": []
+  },
+  {
+    "id": 45,
+    "name": "spirit_hotel_movement::components::movement_animations::MovementAnimations",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
     "members": [
       {
         "name": "up",
@@ -806,18 +828,7 @@
     ]
   },
   {
-    "id": 44,
-    "name": "spirit_hotel_movement::components::can_push::CanPush",
-    "type": "class",
-    "useAs": [
-      "property"
-    ],
-    "color": "#000000",
-    "drawFill": true,
-    "members": []
-  },
-  {
-    "id": 45,
+    "id": 46,
     "name": "spirit_hotel_movement::components::movement_completed::MovementCompleted",
     "type": "class",
     "useAs": [
@@ -828,7 +839,7 @@
     "members": []
   },
   {
-    "id": 46,
+    "id": 47,
     "name": "spirit_hotel_movement::components::movement_duration::MovementDuration",
     "type": "class",
     "useAs": [
@@ -845,7 +856,7 @@
     ]
   },
   {
-    "id": 48,
+    "id": 49,
     "name": "spirit_hotel_movement::components::movement_flag::MovementFlag",
     "type": "class",
     "useAs": [
@@ -863,7 +874,7 @@
     ]
   },
   {
-    "id": 47,
+    "id": 48,
     "name": "spirit_hotel_movement::components::movement_flag::MovementFlag:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -874,7 +885,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 49,
+    "id": 50,
     "name": "spirit_hotel_movement::components::movement_intent::MovementIntent",
     "type": "class",
     "useAs": [
@@ -892,7 +903,7 @@
     ]
   },
   {
-    "id": 50,
+    "id": 51,
     "name": "spirit_hotel_movement::components::pushable::Pushable",
     "type": "class",
     "useAs": [
@@ -903,7 +914,7 @@
     "members": []
   },
   {
-    "id": 51,
+    "id": 52,
     "name": "spirit_hotel_movement::components::sync_movement::SyncMovement",
     "type": "class",
     "useAs": [
@@ -914,7 +925,7 @@
     "members": []
   },
   {
-    "id": 52,
+    "id": 53,
     "name": "spirit_hotel_pathfinding::components::grid_collision_calculated::GridCollisionCalculated",
     "type": "class",
     "useAs": [
@@ -925,7 +936,7 @@
     "members": []
   },
   {
-    "id": 53,
+    "id": 54,
     "name": "spirit_hotel_pathfinding::components::grid_tile_size::GridTileSize",
     "type": "class",
     "useAs": [
@@ -943,7 +954,7 @@
     ]
   },
   {
-    "id": 54,
+    "id": 55,
     "name": "spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid",
     "type": "class",
     "useAs": [
@@ -954,7 +965,7 @@
     "members": []
   },
   {
-    "id": 55,
+    "id": 56,
     "name": "spirit_hotel_pathfinding::components::path_node::PathNode",
     "type": "class",
     "useAs": [
@@ -971,7 +982,7 @@
     ]
   },
   {
-    "id": 56,
+    "id": 57,
     "name": "spirit_hotel_pathfinding::components::scan_collider::ScanCollider",
     "type": "class",
     "useAs": [
@@ -982,7 +993,7 @@
     "members": []
   },
   {
-    "id": 57,
+    "id": 58,
     "name": "spirit_hotel_pathfinding_movement::components::follow::Follow",
     "type": "class",
     "useAs": [
@@ -999,7 +1010,7 @@
     ]
   },
   {
-    "id": 58,
+    "id": 59,
     "name": "spirit_hotel_pathfinding_movement::components::halt_pathfinding_intent::HaltPathfindingIntent",
     "type": "class",
     "useAs": [
@@ -1010,7 +1021,7 @@
     "members": []
   },
   {
-    "id": 59,
+    "id": 60,
     "name": "spirit_hotel_pathfinding_movement::components::next_pos_to_be_removed::NextPosToBeRemoved",
     "type": "class",
     "useAs": [
@@ -1021,7 +1032,7 @@
     "members": []
   },
   {
-    "id": 60,
+    "id": 61,
     "name": "spirit_hotel_pathfinding_movement::components::without_pathfinding::WithoutPathfinding",
     "type": "class",
     "useAs": [
@@ -1032,7 +1043,7 @@
     "members": []
   },
   {
-    "id": 61,
+    "id": 62,
     "name": "spirit_hotel_player::components::player::Player",
     "type": "class",
     "useAs": [
@@ -1043,7 +1054,7 @@
     "members": []
   },
   {
-    "id": 62,
+    "id": 63,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameScene",
     "type": "class",
     "useAs": [
@@ -1066,7 +1077,7 @@
     ]
   },
   {
-    "id": 107,
+    "id": 108,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction",
     "type": "class",
     "useAs": [
@@ -1084,7 +1095,7 @@
     ]
   },
   {
-    "id": 106,
+    "id": 107,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1096,7 +1107,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 63,
+    "id": 64,
     "name": "spirit_hotel_scene::components::game_scene_object::GameSceneObject",
     "type": "class",
     "useAs": [
@@ -1107,7 +1118,7 @@
     "members": []
   },
   {
-    "id": 64,
+    "id": 65,
     "name": "spirit_hotel_scene::components::hide_in_game_scene::HideInGameScene",
     "type": "class",
     "useAs": [
@@ -1124,7 +1135,7 @@
     ]
   },
   {
-    "id": 65,
+    "id": 66,
     "name": "spirit_hotel_scene::components::show_in_game_scene::ShowInGameScene",
     "type": "class",
     "useAs": [
@@ -1141,7 +1152,7 @@
     ]
   },
   {
-    "id": 67,
+    "id": 68,
     "name": "spirit_hotel_scene::resources::starting_game_scene::StartingGameScene",
     "type": "class",
     "useAs": [
@@ -1158,7 +1169,7 @@
     ]
   },
   {
-    "id": 68,
+    "id": 69,
     "name": "spirit_hotel_trigger::components::fade_in::FadeIn",
     "type": "class",
     "useAs": [
@@ -1169,7 +1180,7 @@
     "members": []
   },
   {
-    "id": 71,
+    "id": 72,
     "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger",
     "type": "class",
     "useAs": [
@@ -1187,7 +1198,7 @@
     ]
   },
   {
-    "id": 70,
+    "id": 71,
     "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger:::Variant",
     "type": "enum",
     "storageType": "string",

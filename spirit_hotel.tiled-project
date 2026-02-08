@@ -382,6 +382,28 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 163,
+            "members": [
+                {
+                    "name": "color",
+                    "type": "color",
+                    "value": "#ff000000"
+                },
+                {
+                    "name": "duration",
+                    "type": "float",
+                    "value": 0.30000001192092896
+                }
+            ],
+            "name": "spirit_hotel_core::fades::FadeData",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 153,
             "members": [
                 {
@@ -784,38 +806,6 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 117,
-            "members": [
-                {
-                    "name": "down",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "left",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "right",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "up",
-                    "type": "string",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel_movement::components::can_move::CanMove",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
             "id": 118,
             "members": [
             ],
@@ -993,6 +983,23 @@
             "members": [
             ],
             "name": "spirit_hotel_pathfinding::components::scan_collider::ScanCollider",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 164,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_pathfinding_movement::components::follow::Follow",
             "type": "class",
             "useAs": [
                 "property"
@@ -1207,20 +1214,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 163,
+            "id": 165,
             "members": [
-                {
-                    "name": "color",
-                    "type": "color",
-                    "value": "#ff050505"
-                },
-                {
-                    "name": "duration",
-                    "type": "float",
-                    "value": 0.30000001192092896
-                }
             ],
-            "name": "spirit_hotel_core::fades::FadeData",
+            "name": "spirit_hotel_movement::components::can_move::CanMove",
             "type": "class",
             "useAs": [
                 "property"
@@ -1229,15 +1226,30 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 164,
+            "id": 166,
             "members": [
                 {
-                    "name": "0",
-                    "type": "object",
-                    "value": 0
+                    "name": "down",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "left",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "right",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "up",
+                    "type": "string",
+                    "value": ""
                 }
             ],
-            "name": "spirit_hotel_pathfinding_movement::components::follow::Follow",
+            "name": "spirit_hotel_movement::components::movement_animations::MovementAnimations",
             "type": "class",
             "useAs": [
                 "property"
