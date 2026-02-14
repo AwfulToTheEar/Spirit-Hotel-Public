@@ -28,7 +28,7 @@ pub fn spawn_fade_in(mut commands: Commands, fade_data: Res<FadeData>) {
         DespawnOnExit(Fade::In),
         BackgroundColor(fade_data.color.with_alpha(0.)),
         FadeIn(Timer::from_seconds(fade_data.duration, TimerMode::Once)),
-        RenderLayers::layer(2),
+        RenderLayers::layer(1),
     ));
 }
 

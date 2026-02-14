@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object>
+  <properties>
+   <property name="light" type="class" propertytype="bevy_light_2d::light::PointLight2d">
+    <properties>
+     <property name="radius" type="float" value="100"/>
+    </properties>
+   </property>
+  </properties>
+  <point/>
+ </object>
+</template>

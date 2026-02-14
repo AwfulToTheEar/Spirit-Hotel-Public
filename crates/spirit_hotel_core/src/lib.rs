@@ -1,14 +1,15 @@
 pub mod asset_tracking;
 pub mod audio;
+pub mod dismissibles;
 pub mod fades;
 pub mod game;
 pub mod menus;
 pub mod screens;
 pub mod theme;
 
-use bevy::prelude::*;
-
+use crate::dismissibles::DismissiblesOpen;
 use crate::fades::Fade;
+use bevy::prelude::*;
 
 pub struct SpiritHotelCorePlugin;
 
@@ -23,6 +24,7 @@ impl Plugin for SpiritHotelCorePlugin {
             screens::plugin,
             theme::plugin,
             fades::plugin,
+            dismissibles::plugin,
         ));
 
         // Order new `AppSystems` variants by adding them here:
@@ -45,15 +47,27 @@ impl Plugin for SpiritHotelCorePlugin {
         app.init_state::<Pause>();
         app.configure_sets(
             PreUpdate,
-            PausableSystems.run_if(in_state(Pause(false)).and(in_state(Fade::None))),
+            PausableSystems.run_if(
+                in_state(Pause(false))
+                    .and(in_state(Fade::None))
+                    .and(in_state(DismissiblesOpen(false))),
+            ),
         );
         app.configure_sets(
             Update,
-            PausableSystems.run_if(in_state(Pause(false)).and(in_state(Fade::None))),
+            PausableSystems.run_if(
+                in_state(Pause(false))
+                    .and(in_state(Fade::None))
+                    .and(in_state(DismissiblesOpen(false))),
+            ),
         );
         app.configure_sets(
             FixedUpdate,
-            PausableSystems.run_if(in_state(Pause(false)).and(in_state(Fade::None))),
+            PausableSystems.run_if(
+                in_state(Pause(false))
+                    .and(in_state(Fade::None))
+                    .and(in_state(DismissiblesOpen(false))),
+            ),
         );
     }
 }
@@ -79,4 +93,3 @@ pub struct Pause(pub bool);
 /// A system set for systems that shouldn't run while the game is paused.
 #[derive(SystemSet, Copy, Clone, Eq, PartialEq, Hash, Debug)]
 pub struct PausableSystems;
-

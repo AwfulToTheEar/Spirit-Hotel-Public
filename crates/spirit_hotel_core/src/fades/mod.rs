@@ -19,8 +19,7 @@ pub(super) fn plugin(app: &mut App) {
         .add_fade_task_update::<Delay>((
             tick_delay.in_set(AppSystems::TickTimers),
             complete_delay.in_set(AppSystems::Update),
-        ))
-        .add_systems(Startup, spawn_fade_camera);
+        ));
 }
 
 //TODO: find better name for this
@@ -44,9 +43,7 @@ impl<M> AddFadeTask<M> for App {
         self.add_systems(
             OnEnter(Fade::Waiting),
             systems.run_if(resource_exists::<R>.and(resource_exists::<FadeTask<R>>)),
-        );
-
-        self
+        )
     }
 
     fn add_fade_task_update<R: Resource>(
@@ -56,9 +53,7 @@ impl<M> AddFadeTask<M> for App {
         self.add_systems(
             Update,
             systems.run_if(resource_exists::<R>.and(resource_exists::<FadeTask<R>>)),
-        );
-
-        self
+        )
     }
 }
 
@@ -163,16 +158,4 @@ pub fn complete_fade_task<R: Resource>(
     fade_out_tasks.complete(&fade_task.key);
     commands.remove_resource::<FadeTask<R>>();
     commands.remove_resource::<R>();
-}
-
-fn spawn_fade_camera(mut commands: Commands) {
-    commands.spawn((
-        Name::new("Fade Camera"),
-        Camera {
-            order: 2,
-            ..default()
-        },
-        Camera2d,
-        RenderLayers::layer(2),
-    ));
 }

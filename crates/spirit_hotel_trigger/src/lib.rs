@@ -18,7 +18,7 @@ impl Plugin for SpiritHotelTriggerPlugin {
     fn build(&self, app: &mut App) {
         app.register_type::<IsTrigger>()
             .add_observer(activate_instant_triggers)
-            .add_observer(fade_in_on_activated_trigger)
+            .add_observer(action_on_activated_trigger)
             .add_observer(add_delay_on_activated_trigger)
             .add_systems(
                 Update,

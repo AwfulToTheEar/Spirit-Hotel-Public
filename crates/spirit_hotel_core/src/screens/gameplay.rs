@@ -2,9 +2,10 @@
 
 use bevy::{input::common_conditions::input_just_pressed, prelude::*};
 
-use crate::fades::{ChangeScreen};
-use crate::{Pause, menus::Menu, screens::Screen};
+use crate::dismissibles::DismissiblesOpen;
+use crate::fades::ChangeScreen;
 use crate::screens::complete_fade_to_screen_task;
+use crate::{Pause, menus::Menu, screens::Screen};
 
 pub(super) fn plugin(app: &mut App) {
     //app.add_systems(OnEnter(Screen::Gameplay), spawn_level);
@@ -25,8 +26,14 @@ pub(super) fn plugin(app: &mut App) {
             ),
         ),
     );
-    app.add_systems(OnEnter(Screen::Gameplay), complete_fade_to_screen_task.run_if(resource_exists::<ChangeScreen>));
-    app.add_systems(OnExit(Screen::Gameplay), (close_menu, unpause));
+    app.add_systems(
+        OnEnter(Screen::Gameplay),
+        complete_fade_to_screen_task.run_if(resource_exists::<ChangeScreen>),
+    );
+    app.add_systems(
+        OnExit(Screen::Gameplay),
+        (close_menu, unpause, close_dismissibles),
+    );
     app.add_systems(
         OnEnter(Menu::None),
         unpause.run_if(in_state(Screen::Gameplay)),
@@ -35,6 +42,10 @@ pub(super) fn plugin(app: &mut App) {
 
 fn unpause(mut next_pause: ResMut<NextState<Pause>>) {
     next_pause.set(Pause(false));
+}
+
+fn close_dismissibles(mut next_dismissibles: ResMut<NextState<DismissiblesOpen>>) {
+    next_dismissibles.set(DismissiblesOpen(false));
 }
 
 fn pause(mut next_pause: ResMut<NextState<Pause>>) {

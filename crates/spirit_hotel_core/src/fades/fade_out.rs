@@ -25,7 +25,7 @@ pub fn spawn_fade_out(mut commands: Commands, fade_data: Res<FadeData>) {
         DespawnOnExit(Fade::Out),
         BackgroundColor(fade_data.color.with_alpha(0.)),
         FadeOut(Timer::from_seconds(fade_data.duration, TimerMode::Once)),
-        RenderLayers::layer(2)
+        RenderLayers::layer(1)
     ));
 }
 

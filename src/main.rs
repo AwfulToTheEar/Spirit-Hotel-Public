@@ -9,6 +9,7 @@ mod dev_tools;
 #[cfg(feature = "dev")]
 use crate::dev_tools::SpiritHotelDevToolsPlugin;
 use bevy::{asset::AssetMetaCheck, prelude::*};
+use bevy::camera::visibility::RenderLayers;
 use bevy_light_2d::light::{AmbientLight2d, Light2d};
 use spirit_hotel_animation::SpiritHotelAnimationPlugin;
 use spirit_hotel_animation_movement::SpiritHotelAnimationMovementPlugin;
@@ -142,5 +143,16 @@ fn spawn_camera(mut commands: Commands) {
                 ..default()
             },
         },
+        RenderLayers::layer(0),
+    ));
+
+    commands.spawn((
+        Name::new("Overlay Camera"),
+        Camera {
+            order: 1,
+            ..default()
+        },
+        Camera2d,
+        RenderLayers::layer(1),
     ));
 }

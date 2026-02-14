@@ -1217,6 +1217,23 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 173,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::add_delay::AddDelay",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 162,
             "members": [
             ],
@@ -1321,31 +1338,31 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 173,
+            "id": 175,
             "members": [
                 {
-                    "name": "0",
-                    "type": "float",
-                    "value": 0
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+                    "type": "string",
+                    "value": "FadeIn"
                 }
             ],
-            "name": "spirit_hotel_trigger::components::add_delay::AddDelay",
+            "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger",
             "type": "class",
             "useAs": [
                 "property"
             ]
         },
         {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 174,
-            "members": [
+            "id": 176,
+            "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "FadeIn",
+                "OpenDismissibles"
             ],
-            "name": "spirit_hotel_trigger::components::fade_in::FadeInFromTrigger",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
+            "valuesAsFlags": false
         }
     ]
 }

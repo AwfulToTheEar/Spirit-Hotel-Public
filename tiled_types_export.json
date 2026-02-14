@@ -1,6 +1,6 @@
 [
   {
-    "id": 80,
+    "id": 81,
     "name": "bevy_color::color::Color",
     "type": "class",
     "useAs": [
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "id": 84,
+    "id": 85,
     "name": "bevy_time::timer::TimerMode",
     "type": "class",
     "useAs": [
@@ -94,7 +94,7 @@
     ]
   },
   {
-    "id": 83,
+    "id": 84,
     "name": "bevy_time::timer::TimerMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -105,7 +105,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 106,
+    "id": 107,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
     "type": "class",
     "useAs": [
@@ -129,7 +129,7 @@
     ]
   },
   {
-    "id": 104,
+    "id": 105,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -140,7 +140,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 105,
+    "id": 106,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
     "type": "class",
     "useAs": [
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "id": 113,
+    "id": 114,
     "name": "core::option::Option<bevy_ecs::entity::Entity>",
     "type": "class",
     "useAs": [
@@ -181,7 +181,7 @@
     ]
   },
   {
-    "id": 111,
+    "id": 112,
     "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -192,7 +192,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 112,
+    "id": 113,
     "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
     "type": "class",
     "useAs": [
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "id": 110,
+    "id": 111,
     "name": "glam::UVec2",
     "type": "class",
     "useAs": [
@@ -231,7 +231,7 @@
     ]
   },
   {
-    "id": 109,
+    "id": 110,
     "name": "glam::Vec2",
     "type": "class",
     "useAs": [
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "id": 87,
+    "id": 88,
     "name": "glam::Vec3",
     "type": "class",
     "useAs": [
@@ -1077,7 +1077,7 @@
     ]
   },
   {
-    "id": 115,
+    "id": 116,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction",
     "type": "class",
     "useAs": [
@@ -1095,7 +1095,7 @@
     ]
   },
   {
-    "id": 114,
+    "id": 115,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1186,18 +1186,36 @@
     ]
   },
   {
-    "id": 71,
-    "name": "spirit_hotel_trigger::components::fade_in::FadeInFromTrigger",
+    "id": 72,
+    "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger",
     "type": "class",
     "useAs": [
       "property"
     ],
     "color": "#000000",
     "drawFill": true,
-    "members": []
+    "members": [
+      {
+        "name": ":variant",
+        "propertyType": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+        "type": "class",
+        "value": "FadeIn"
+      }
+    ]
   },
   {
-    "id": 73,
+    "id": 71,
+    "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+    "type": "enum",
+    "storageType": "string",
+    "values": [
+      "FadeIn",
+      "OpenDismissibles"
+    ],
+    "valuesAsFlags": false
+  },
+  {
+    "id": 74,
     "name": "spirit_hotel_trigger::components::interact_trigger::InteractTrigger",
     "type": "class",
     "useAs": [
@@ -1208,7 +1226,7 @@
     "members": []
   },
   {
-    "id": 74,
+    "id": 75,
     "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger",
     "type": "class",
     "useAs": [
@@ -1219,7 +1237,7 @@
     "members": []
   },
   {
-    "id": 75,
+    "id": 76,
     "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
     "type": "class",
     "useAs": [
@@ -1236,7 +1254,7 @@
     ]
   },
   {
-    "id": 77,
+    "id": 78,
     "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
     "type": "class",
     "useAs": [
@@ -1259,7 +1277,7 @@
     ]
   },
   {
-    "id": 78,
+    "id": 79,
     "name": "spirit_hotel_trigger::components::trigger_for::TriggerFor",
     "type": "class",
     "useAs": [
@@ -1276,7 +1294,7 @@
     ]
   },
   {
-    "id": 79,
+    "id": 80,
     "name": "spirit_hotel_trigger::components::trigger_has_been_activated::TriggerHasBeenActivated",
     "type": "class",
     "useAs": [

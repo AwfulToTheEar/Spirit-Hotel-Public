@@ -47,19 +47,10 @@
       <property name="scene" value="test2"/>
      </properties>
     </property>
-    <property name="is_trigger" type="class"/>
+    <property name="is_trigger" value=""/>
    </properties>
   </object>
-  <object id="25" x="160" y="224">
-   <properties>
-    <property name="light" type="class" propertytype="bevy_light_2d::light::PointLight2d">
-     <properties>
-      <property name="radius" type="float" value="100"/>
-     </properties>
-    </property>
-   </properties>
-   <point/>
-  </object>
+  <object id="25" template="../templates/light.tx" x="160" y="224"/>
   <object id="26" gid="5" x="96" y="288" width="32" height="32">
    <properties>
     <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>

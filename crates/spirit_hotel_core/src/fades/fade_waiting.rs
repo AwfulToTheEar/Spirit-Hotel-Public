@@ -18,7 +18,7 @@ pub fn spawn_fade_waiting(mut commands: Commands, fade_data: Res<FadeData>) {
         widget::ui_root("Fade Waiting"),
         DespawnOnExit(Fade::Waiting),
         BackgroundColor(fade_data.color),
-        RenderLayers::layer(2),
+        RenderLayers::layer(1),
     ));
 }
 
