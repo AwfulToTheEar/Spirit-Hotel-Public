@@ -1,5 +1,5 @@
-mod StartCutscene;
+mod start_cutscene;
 
 pub mod prelude {
-    pub use super::StartCutscene::*;
+    pub use super::start_cutscene::*;
 }

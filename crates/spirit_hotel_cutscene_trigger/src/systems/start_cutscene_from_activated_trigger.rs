@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use spirit_hotel_core::fades::{Fade, FadeTask, FadeTasks};
+use spirit_hotel_core::fades::{FadeTask, FadeTasks};
 use crate::components::prelude::StartCutscene;
 use spirit_hotel_cutscene::resources::prelude::SpawnCutscene;
 use spirit_hotel_trigger::components::prelude::{FromTrigger, IsTrigger};

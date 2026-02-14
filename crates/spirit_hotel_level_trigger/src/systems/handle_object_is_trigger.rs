@@ -3,7 +3,7 @@ use bevy_ecs_tiled::prelude::{ColliderCreated, TiledEvent};
 use spirit_hotel_trigger::components::prelude::{IsTrigger, TriggerCollider};
 
 pub fn handle_object_is_trigger(
-    mut e_collider_created: On<TiledEvent<ColliderCreated>>,
+    e_collider_created: On<TiledEvent<ColliderCreated>>,
     mut commands: Commands,
     q_triggers: Query<Entity, With<IsTrigger>>,
 ) {

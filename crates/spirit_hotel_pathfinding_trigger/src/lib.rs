@@ -1,7 +1,6 @@
 use crate::systems::prelude::compute_grid_collision;
 use bevy::prelude::*;
 use spirit_hotel_core::game::GameplaySystems;
-use spirit_hotel_level::system_sets::prelude::LevelSystems;
 use spirit_hotel_pathfinding::system_sets::prelude::PathfindingSystems;
 
 pub mod systems;

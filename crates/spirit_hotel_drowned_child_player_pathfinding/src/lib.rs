@@ -1,7 +1,7 @@
 use crate::systems::prelude::*;
 use bevy::prelude::*;
 use spirit_hotel_core::game::GameplaySystems;
-use spirit_hotel_core::{AppSystems, PausableSystems};
+use spirit_hotel_core::AppSystems;
 
 pub mod systems;
 

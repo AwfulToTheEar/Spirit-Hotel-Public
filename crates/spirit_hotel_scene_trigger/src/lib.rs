@@ -1,7 +1,6 @@
 use bevy::prelude::*;
 
 use crate::systems::prelude::change_scene_from_activated_trigger;
-use spirit_hotel_core::{AppSystems, game::GameplaySystems};
 
 pub mod systems;
 

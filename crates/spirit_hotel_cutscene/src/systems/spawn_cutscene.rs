@@ -2,7 +2,6 @@ use crate::resources::prelude::SpawnCutscene;
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 use bevy_av1::{PlaybackMode, VideoPlayer, VideoSink};
-use spirit_hotel_core::fades::FadeTasks;
 use spirit_hotel_core::theme::widget;
 use crate::components::prelude::Cutscene;
 

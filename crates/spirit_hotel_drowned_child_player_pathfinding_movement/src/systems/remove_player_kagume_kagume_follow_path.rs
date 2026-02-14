@@ -1,4 +1,3 @@
-use bevy::ecs::entity::Entities;
 use bevy::prelude::*;
 use spirit_hotel_drowned_child::components::prelude::KagumeKagume;
 use spirit_hotel_pathfinding_movement::components::prelude::Follow;
