@@ -1,8 +1,8 @@
 use bevy::prelude::*;
 use std::path::PathBuf;
-use spirit_hotel_trigger::components::prelude::FadeIn;
+use spirit_hotel_trigger::components::prelude::FadeInFromTrigger;
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]
-#[require(FadeIn)]
+#[require(FadeInFromTrigger)]
 pub struct LoadLevel(pub PathBuf);

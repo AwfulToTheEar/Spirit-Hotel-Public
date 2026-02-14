@@ -2,8 +2,9 @@
 
 use bevy::{input::common_conditions::input_just_pressed, prelude::*};
 
-use crate::fades::{complete_fade_task, FadeTask, FadeTaskFinished, FadeTasks, FadeToScreen};
+use crate::fades::{ChangeScreen};
 use crate::{Pause, menus::Menu, screens::Screen};
+use crate::screens::complete_fade_to_screen_task;
 
 pub(super) fn plugin(app: &mut App) {
     //app.add_systems(OnEnter(Screen::Gameplay), spawn_level);
@@ -24,7 +25,7 @@ pub(super) fn plugin(app: &mut App) {
             ),
         ),
     );
-    app.add_systems(OnEnter(Screen::Gameplay), complete_fade_to_screen_task.run_if(resource_exists::<FadeToScreen>));
+    app.add_systems(OnEnter(Screen::Gameplay), complete_fade_to_screen_task.run_if(resource_exists::<ChangeScreen>));
     app.add_systems(OnExit(Screen::Gameplay), (close_menu, unpause));
     app.add_systems(
         OnEnter(Menu::None),
@@ -52,10 +53,6 @@ fn spawn_pause_overlay(mut commands: Commands) {
         BackgroundColor(Color::srgba(0.0, 0.0, 0.0, 0.8)),
         DespawnOnExit(Pause(true)),
     ));
-}
-
-fn complete_fade_to_screen_task(mut commands: Commands) {
-    commands.trigger(FadeTaskFinished::<FadeToScreen>::new());
 }
 
 fn open_pause_menu(mut next_menu: ResMut<NextState<Menu>>) {

@@ -36,6 +36,11 @@
   </object>
   <object id="6" template="../templates/load_level_trigger.tx" x="320" y="64">
    <properties>
+    <property name="add_delay" type="class" propertytype="spirit_hotel_trigger::components::add_delay::AddDelay">
+     <properties>
+      <property name="0" type="float" value="10"/>
+     </properties>
+    </property>
     <property name="load_level" type="class" propertytype="spirit_hotel_level_trigger::components::load_level::LoadLevel">
      <properties>
       <property name="0" type="file" value="../worlds/follow_test.world"/>

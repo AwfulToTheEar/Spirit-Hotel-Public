@@ -19,6 +19,7 @@ impl Plugin for SpiritHotelTriggerPlugin {
         app.register_type::<IsTrigger>()
             .add_observer(activate_instant_triggers)
             .add_observer(fade_in_on_activated_trigger)
+            .add_observer(add_delay_on_activated_trigger)
             .add_systems(
                 Update,
                 (

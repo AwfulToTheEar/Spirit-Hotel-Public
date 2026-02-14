@@ -2,7 +2,7 @@
 
 use bevy::prelude::*;
 
-use crate::fades::{Fade, FadeTasks, FadeToScreen, FadeTask};
+use crate::fades::{Fade, FadeTasks, ChangeScreen, FadeTask};
 use crate::{asset_tracking::ResourceHandles, menus::Menu, screens::Screen, theme::widget};
 
 pub(super) fn plugin(app: &mut App) {
@@ -37,13 +37,13 @@ fn enter_loading_or_gameplay_screen(
     mut fade_out_tasks: ResMut<FadeTasks>,
     mut next_fade: ResMut<NextState<Fade>>,
 ) {
-    commands.insert_resource(FadeTask::<FadeToScreen>::new(fade_out_tasks.take()));
+    commands.insert_resource(FadeTask::<ChangeScreen>::new(fade_out_tasks.take()));
 
     if resource_handles.is_all_done() {
-        commands.insert_resource(FadeToScreen(Screen::Gameplay));
+        commands.insert_resource(ChangeScreen(Screen::Gameplay));
 
     } else {
-        commands.insert_resource(FadeToScreen(Screen::Loading));
+        commands.insert_resource(ChangeScreen(Screen::Loading));
     }
 
     next_fade.set(Fade::In);

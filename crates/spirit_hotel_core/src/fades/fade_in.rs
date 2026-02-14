@@ -1,10 +1,6 @@
-use crate::fades::{FadeToScreen, FadeTasks, complete_fade_task};
-use crate::{
-    AppSystems,
-    fades::{Fade, FadeData},
-    screens::Screen,
-    theme::widget,
-};
+use crate::fades::{ChangeScreen, FadeTask, FadeTasks, complete_fade_task, AddFadeTask};
+use crate::game::GameplaySystems;
+use crate::{AppSystems, fades::{Fade, FadeData}, screens::Screen, theme::widget, Pause};
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::OnTransition;
 use bevy::prelude::*;
@@ -12,7 +8,6 @@ use bevy::reflect::Map;
 
 pub(super) fn plugin(app: &mut App) {
     app.add_systems(OnEnter(Fade::In), spawn_fade_in)
-        .add_observer(complete_fade_task::<FadeToScreen>)
         .add_systems(
             Update,
             (
@@ -20,15 +15,6 @@ pub(super) fn plugin(app: &mut App) {
                 (apply_fade_in, check_fade_in_timer).in_set(AppSystems::Update),
             )
                 .run_if(in_state(Fade::In)),
-        )
-        .add_systems(
-            Update,
-            fade_out_when_ready
-                .run_if(in_state(Fade::Waiting)),
-        )
-        .add_systems(
-            OnEnter(Fade::Waiting),
-            change_screen.run_if(resource_exists::<FadeToScreen>),
         );
 }
 
@@ -42,7 +28,7 @@ pub fn spawn_fade_in(mut commands: Commands, fade_data: Res<FadeData>) {
         DespawnOnExit(Fade::In),
         BackgroundColor(fade_data.color.with_alpha(0.)),
         FadeIn(Timer::from_seconds(fade_data.duration, TimerMode::Once)),
-        RenderLayers::layer(1),
+        RenderLayers::layer(2),
     ));
 }
 
@@ -70,22 +56,3 @@ pub fn check_fade_in_timer(mut next_fade: ResMut<NextState<Fade>>, q_fade_in: Qu
     }
 }
 
-pub fn fade_out_when_ready(
-    mut fade_out_tasks: ResMut<FadeTasks>,
-    mut next_fade: ResMut<NextState<Fade>>,
-) {
-    if !fade_out_tasks.0.all()
-    {
-        return;
-    }
-
-    next_fade.set(Fade::Out);
-    fade_out_tasks.0.clear();
-}
-
-pub fn change_screen(
-    fade_to_screen: Res<FadeToScreen>,
-    mut next_screen: ResMut<NextState<Screen>>,
-) {
-    next_screen.set(fade_to_screen.0);
-}

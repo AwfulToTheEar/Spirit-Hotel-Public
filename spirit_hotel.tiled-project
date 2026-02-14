@@ -539,7 +539,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel_cutscene::resources::fade_to_cutscene::FadeToCutscene",
+            "name": "spirit_hotel_cutscene::resources::spawn_cutscene::SpawnCutscene",
             "type": "class",
             "useAs": [
                 "property"
@@ -1313,6 +1313,35 @@
             "members": [
             ],
             "name": "spirit_hotel_trigger::components::trigger_has_been_activated::TriggerHasBeenActivated",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 173,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::add_delay::AddDelay",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 174,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::fade_in::FadeInFromTrigger",
             "type": "class",
             "useAs": [
                 "property"

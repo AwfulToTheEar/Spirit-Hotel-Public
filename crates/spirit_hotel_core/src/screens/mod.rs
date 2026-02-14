@@ -6,6 +6,7 @@ mod splash;
 mod title;
 
 use bevy::prelude::*;
+use crate::fades::{ChangeScreen, FadeTaskFinished};
 
 pub(super) fn plugin(app: &mut App) {
     app.init_state::<Screen>();
@@ -27,4 +28,8 @@ pub enum Screen {
     Title,
     Loading,
     Gameplay,
+}
+
+fn complete_fade_to_screen_task(mut commands: Commands) {
+    commands.trigger(FadeTaskFinished::<ChangeScreen>::new());
 }

@@ -1,4 +1,4 @@
-use crate::resources::prelude::FadeToCutscene;
+use crate::resources::prelude::SpawnCutscene;
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 use bevy_av1::{PlaybackMode, VideoPlayer, VideoSink};
@@ -8,14 +8,14 @@ use spirit_hotel_core::theme::widget;
 pub fn spawn_cutscene(
     mut commands: Commands,
     asset_server: Res<AssetServer>,
-    fade_to_cutscene: Res<FadeToCutscene>,
+    spawn_cutscene: Res<SpawnCutscene>,
 ) {
     commands
         .spawn((
             widget::ui_root("Cutscene"),
-            RenderLayers::layer(1),
+            RenderLayers::layer(2),
             VideoPlayer::new(
-                asset_server.load(fade_to_cutscene.0.clone()),
+                asset_server.load(spawn_cutscene.0.clone()),
                 PlaybackMode::Despawn,
             ),
         ))

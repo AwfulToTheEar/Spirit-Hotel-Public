@@ -22,7 +22,7 @@ impl Plugin for SpiritHotelCorePlugin {
             menus::plugin,
             screens::plugin,
             theme::plugin,
-            fades::plugin
+            fades::plugin,
         ));
 
         // Order new `AppSystems` variants by adding them here:

@@ -4,4 +4,4 @@ use spirit_hotel_core::fades::FadeTaskKey;
 
 #[derive(Resource, Reflect, Default, Debug)]
 #[reflect(Resource, Default)]
-pub struct FadeToCutscene(pub PathBuf);
+pub struct SpawnCutscene(pub PathBuf);

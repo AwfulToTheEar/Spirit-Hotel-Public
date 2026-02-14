@@ -3,7 +3,7 @@
 
 use bevy::prelude::*;
 
-use crate::fades::{Fade, FadeTasks, FadeToScreen};
+use crate::fades::{Fade, FadeTasks, ChangeScreen};
 use crate::{asset_tracking::ResourceHandles, screens::Screen, theme::prelude::*};
 
 pub(super) fn plugin(app: &mut App) {
