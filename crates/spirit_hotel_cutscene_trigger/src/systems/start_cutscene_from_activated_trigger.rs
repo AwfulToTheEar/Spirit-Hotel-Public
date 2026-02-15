@@ -5,8 +5,6 @@ use spirit_hotel_cutscene::resources::prelude::SpawnCutscene;
 use spirit_hotel_trigger::components::prelude::{FromTrigger, IsTrigger};
 use spirit_hotel_trigger::events::prelude::TriggerActivated;
 use std::path::PathBuf;
-use spirit_hotel_core::dismissibles::Dismissible;
-use spirit_hotel_cutscene::components::prelude::Cutscene;
 
 pub fn start_cutscene_from_activated_trigger(
     e_trigger_activated: On<TriggerActivated>,
@@ -22,9 +20,8 @@ pub fn start_cutscene_from_activated_trigger(
     path.push("worlds");
     path.push(start_cutscene.0.clone());
 
-    match from_trigger {
-        FromTrigger::FadeIn => commands.insert_resource(FadeTask::<SpawnCutscene>::new(fade_tasks.take())),
-        FromTrigger::OpenDismissibles => commands.insert_resource(Dismissible::<Cutscene>::new())
+    if matches!(from_trigger, FromTrigger::FadeIn) {
+        commands.insert_resource(FadeTask::<SpawnCutscene>::new(fade_tasks.take()))
     }
     
     commands.insert_resource(SpawnCutscene(path));

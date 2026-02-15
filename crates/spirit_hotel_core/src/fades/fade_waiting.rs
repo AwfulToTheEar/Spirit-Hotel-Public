@@ -1,16 +1,24 @@
-use bevy::camera::visibility::RenderLayers;
-use bevy::prelude::*;
-use crate::fades::{complete_fade_task, AddFadeTask, ChangeScreen, Fade, FadeData, FadeTasks};
+use crate::fades::{
+    AddFadeTask, ChangeScreen, Delay, Fade, FadeData, FadeTaskFinished, FadeTasks, RegisterFadeTask,
+};
+use crate::game::ShowImage;
 use crate::screens::Screen;
 use crate::theme::widget;
+use crate::{AppSystems, OverlayRoot, Pause};
+use bevy::camera::visibility::RenderLayers;
+use bevy::prelude::*;
 
 pub(super) fn plugin(app: &mut App) {
-    app
-        .add_observer(complete_fade_task::<ChangeScreen>)
-        .add_systems(OnEnter(Fade::Waiting), spawn_fade_waiting)
+    app.add_systems(OnEnter(Fade::Waiting), spawn_fade_waiting)
         .add_systems(Update, fade_out_when_ready.run_if(in_state(Fade::Waiting)))
-        .add_fade_task_enter::<ChangeScreen>(change_screen);
-
+        .register_fade_task::<Delay>()
+        .register_fade_task::<ChangeScreen>()
+        .register_fade_task::<ShowImage>()
+        .add_fade_task_enter::<ChangeScreen>(change_screen)
+        .add_fade_task_update::<Delay>((
+            tick_delay.in_set(AppSystems::TickTimers).run_if(in_state(Pause(false))),
+            complete_delay.in_set(AppSystems::Update),
+        ));
 }
 
 pub fn spawn_fade_waiting(mut commands: Commands, fade_data: Res<FadeData>) {
@@ -19,6 +27,7 @@ pub fn spawn_fade_waiting(mut commands: Commands, fade_data: Res<FadeData>) {
         DespawnOnExit(Fade::Waiting),
         BackgroundColor(fade_data.color),
         RenderLayers::layer(1),
+        OverlayRoot,
     ));
 }
 
@@ -32,6 +41,18 @@ pub fn fade_out_when_ready(
 
     next_fade.set(Fade::Out);
     fade_out_tasks.0.clear();
+}
+
+pub fn tick_delay(time: Res<Time>, mut delay: ResMut<Delay>) {
+    delay.0.tick(time.delta());
+}
+
+pub fn complete_delay(mut commands: Commands, delay: Res<Delay>) {
+    if !delay.0.just_finished() {
+        return;
+    }
+
+    commands.trigger(FadeTaskFinished::<Delay>::new());
 }
 
 pub fn change_screen(

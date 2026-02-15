@@ -1,7 +1,7 @@
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 
-use crate::{AppSystems, fades::{Fade, FadeData}, theme::widget, Pause};
+use crate::{AppSystems, fades::{Fade, FadeData}, theme::widget};
 
 pub(super) fn plugin(app: &mut App) {
     app.add_systems(OnEnter(Fade::Out), spawn_fade_out)

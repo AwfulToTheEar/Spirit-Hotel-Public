@@ -2,8 +2,7 @@ mod fade_in;
 mod fade_out;
 mod fade_waiting;
 
-use crate::{AppSystems, screens::Screen, theme::palette::FADE_BACKGROUND_COLOR};
-use bevy::camera::visibility::RenderLayers;
+use crate::{screens::Screen, theme::palette::FADE_BACKGROUND_COLOR};
 use bevy::ecs::system::ScheduleSystem;
 use bevy::prelude::*;
 use bitvec::prelude::BitVec;
@@ -14,14 +13,22 @@ pub(super) fn plugin(app: &mut App) {
     app.init_resource::<FadeData>();
     app.init_resource::<FadeTasks>();
 
-    app.add_plugins((fade_in::plugin, fade_waiting::plugin, fade_out::plugin))
-        .add_observer(complete_fade_task::<Delay>)
-        .add_fade_task_update::<Delay>((
-            tick_delay.in_set(AppSystems::TickTimers),
-            complete_delay.in_set(AppSystems::Update),
-        ));
+    app.add_plugins((fade_in::plugin, fade_waiting::plugin, fade_out::plugin));
 }
 
+pub trait RegisterFadeTask {
+    fn register_fade_task<R: Resource>(&mut self) -> &mut Self;
+}
+
+impl RegisterFadeTask for App {
+    fn register_fade_task<R: Resource>(&mut self) -> &mut Self {
+        self.add_observer(complete_fade_task::<R>).add_systems(
+            OnExit(Fade::Waiting),
+            complete_fade_task_on_fade_exit::<R>
+                .run_if(resource_exists::<R>.and(resource_exists::<FadeTask<R>>)),
+        )
+    }
+}
 //TODO: find better name for this
 pub trait AddFadeTask<M> {
     fn add_fade_task_enter<R: Resource>(
@@ -52,7 +59,11 @@ impl<M> AddFadeTask<M> for App {
     ) -> &mut Self {
         self.add_systems(
             Update,
-            systems.run_if(resource_exists::<R>.and(resource_exists::<FadeTask<R>>)),
+            systems.run_if(
+                resource_exists::<R>
+                    .and(resource_exists::<FadeTask<R>>)
+                    .and(in_state(Fade::Waiting)),
+            ),
         )
     }
 }
@@ -137,16 +148,8 @@ impl<R: Resource> FadeTaskFinished<R> {
     }
 }
 
-pub fn tick_delay(time: Res<Time>, mut delay: ResMut<Delay>) {
-    delay.0.tick(time.delta());
-}
-
-pub fn complete_delay(mut commands: Commands, delay: Res<Delay>) {
-    if !delay.0.just_finished() {
-        return;
-    }
-
-    commands.trigger(FadeTaskFinished::<Delay>::new());
+pub fn complete_fade_task_on_fade_exit<R: Resource>(mut commands: Commands) {
+    commands.trigger(FadeTaskFinished::<R>::new());
 }
 
 pub fn complete_fade_task<R: Resource>(

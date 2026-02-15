@@ -15,6 +15,7 @@ impl Plugin for SpiritHotelTriggerPlugin {
             .add_observer(activate_instant_triggers)
             .add_observer(action_on_activated_trigger)
             .add_observer(add_delay_on_activated_trigger)
+            .add_observer(spawn_image_on_activated_trigger)
             .add_systems(
                 Update,
                 activate_interact_triggers

@@ -100,6 +100,9 @@ pub struct PausableSystems;
 #[derive(Component)]
 pub struct MainCamera;
 
+#[derive(Component)]
+pub struct OverlayRoot;
+
 fn spawn_cameras(mut commands: Commands) {
     commands.spawn((
         Name::new("Camera"),

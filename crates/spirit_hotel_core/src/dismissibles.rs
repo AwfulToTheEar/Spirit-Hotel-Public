@@ -1,40 +1,40 @@
-use crate::AppSystems;
+use crate::fades::FadeTask;
 use crate::game::GameplaySystems;
+use crate::theme::palette::DISMISSIBLE_BACKGROUND_COLOR;
+use crate::theme::widget;
+use crate::{AppSystems, OverlayRoot};
+use bevy::camera::visibility::RenderLayers;
+use bevy::ecs::system::ScheduleSystem;
 use bevy::input::common_conditions::input_just_pressed;
 use bevy::prelude::*;
-use std::marker::PhantomData;
-use bevy::ecs::system::ScheduleSystem;
-use crate::fades::FadeTask;
 
 pub fn plugin(app: &mut App) {
-    app.init_state::<DismissiblesOpen>().add_systems(
-        Update,
-        close_dismissibles
-            .in_set(AppSystems::Update)
-            .in_set(GameplaySystems)
-            .run_if(input_just_pressed(KeyCode::Escape)),
-    );
+    app.init_state::<DismissiblesOpen>()
+        .add_systems(OnEnter(DismissiblesOpen(true)), spawn_dismissible_root)
+        .add_systems(
+            Update,
+            close_dismissibles
+                .in_set(AppSystems::Update)
+                .in_set(GameplaySystems)
+                .run_if(input_just_pressed(KeyCode::Escape)),
+        );
 }
 
 pub trait AddDismissible<M> {
-    fn add_dismissible<R: Resource, C: Component>(&mut self, systems: impl IntoScheduleConfigs<ScheduleSystem, M> ) -> &mut Self;
+    fn add_dismissible<R: Resource>(
+        &mut self,
+        systems: impl IntoScheduleConfigs<ScheduleSystem, M>,
+    ) -> &mut Self;
 }
 
 impl<M> AddDismissible<M> for App {
-    fn add_dismissible<R: Resource, C: Component>(&mut self, systems: impl IntoScheduleConfigs<ScheduleSystem, M> ) -> &mut Self {
+    fn add_dismissible<R: Resource>(
+        &mut self,
+        systems: impl IntoScheduleConfigs<ScheduleSystem, M>,
+    ) -> &mut Self {
         self.add_systems(
-            Update,
-            mark_dismissible_despawn::<C>
-                .in_set(GameplaySystems)
-                .in_set(AppSystems::Update)
-                .run_if(resource_exists::<Dismissible<C>>.and(in_state(DismissiblesOpen(true)))),
-        ).add_systems(
             OnEnter(DismissiblesOpen(true)),
-            systems.run_if(
-                resource_exists::<R>
-                    .and(resource_exists::<Dismissible<C>>)
-                    .and(not(resource_exists::<FadeTask<R>>)),
-            ),
+            systems.run_if(resource_exists::<R>.and(not(resource_exists::<FadeTask<R>>))),
         )
     }
 }
@@ -43,24 +43,14 @@ impl<M> AddDismissible<M> for App {
 #[states(scoped_entities)]
 pub struct DismissiblesOpen(pub bool);
 
-#[derive(Resource)]
-pub struct Dismissible<C: Component>(PhantomData<C>);
-
-impl<C: Component> Dismissible<C> {
-    pub fn new() -> Self {
-        Self(PhantomData)
-    }
-}
-
-pub fn mark_dismissible_despawn<C: Component>(
-    mut commands: Commands,
-    query: Query<Entity, (Added<C>, Without<DespawnOnExit<DismissiblesOpen>>)>,
-) {
-    for entity in query.iter() {
-        commands
-            .entity(entity)
-            .insert(DespawnOnExit(DismissiblesOpen(true)));
-    }
+pub fn spawn_dismissible_root(mut commands: Commands) {
+    commands.spawn((
+        widget::ui_root("Dismissible Root"),
+        DespawnOnExit(DismissiblesOpen(true)),
+        BackgroundColor(DISMISSIBLE_BACKGROUND_COLOR),
+        RenderLayers::layer(1),
+        OverlayRoot,
+    ));
 }
 
 pub fn close_dismissibles(mut next_dismissibles: ResMut<NextState<DismissiblesOpen>>) {

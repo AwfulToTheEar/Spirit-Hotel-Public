@@ -1,15 +1,13 @@
 //! Development tools for the game. This plugin is only enabled in dev builds.
 
-use avian2d::prelude::Collider;
-use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
-use bevy_mod_debugdump::CommandLineArgs;
 use bevy::{
     dev_tools::states::log_transitions, input::common_conditions::input_just_pressed, prelude::*,
 };
-use bevy_inspector_egui::quick::FilterQueryInspectorPlugin;
-use spirit_hotel_core::screens::Screen;
-use spirit_hotel_core::fades::Fade;
+use bevy_inspector_egui::{bevy_egui::EguiPlugin, quick::WorldInspectorPlugin};
+use bevy_mod_debugdump::CommandLineArgs;
 use spirit_hotel_core::Pause;
+use spirit_hotel_core::fades::Fade;
+use spirit_hotel_core::screens::Screen;
 
 pub(super) struct SpiritHotelDevToolsPlugin;
 
@@ -17,9 +15,9 @@ impl Plugin for SpiritHotelDevToolsPlugin {
     fn build(&self, app: &mut App) {
         app.add_plugins((
             EguiPlugin::default(),
-            FilterQueryInspectorPlugin::<(
+            /*FilterQueryInspectorPlugin::<(
                 With<Collider>,
-            )>::new(),
+            )>::new(),*/
             WorldInspectorPlugin::new(),
             //TiledDebugPluginGroup,
             //NorthstarDebugPlugin::<CardinalNeighborhood>::default(),

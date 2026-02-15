@@ -1,10 +1,6 @@
-use crate::fades::{ChangeScreen, FadeTask, FadeTasks, complete_fade_task, AddFadeTask};
-use crate::game::GameplaySystems;
-use crate::{AppSystems, fades::{Fade, FadeData}, screens::Screen, theme::widget, Pause};
+use crate::{AppSystems, fades::{Fade, FadeData}, theme::widget};
 use bevy::camera::visibility::RenderLayers;
-use bevy::prelude::OnTransition;
 use bevy::prelude::*;
-use bevy::reflect::Map;
 
 pub(super) fn plugin(app: &mut App) {
     app.add_systems(OnEnter(Fade::In), spawn_fade_in)

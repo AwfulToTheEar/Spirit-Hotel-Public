@@ -1,24 +1,35 @@
+use crate::components::prelude::Cutscene;
 use crate::resources::prelude::SpawnCutscene;
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 use bevy_av1::{PlaybackMode, VideoPlayer, VideoSink};
-use spirit_hotel_core::theme::widget;
-use crate::components::prelude::Cutscene;
+use spirit_hotel_core::OverlayRoot;
 
 pub fn spawn_cutscene(
+    e_overlay_root_added: On<Add, OverlayRoot>,
     mut commands: Commands,
     asset_server: Res<AssetServer>,
-    spawn_cutscene: Res<SpawnCutscene>,
+    option_spawn_cutscene: Option<Res<SpawnCutscene>>,
 ) {
+    let Some(spawn_cutscene) = option_spawn_cutscene else {
+        return;
+    };
+
     commands
         .spawn((
-            widget::ui_root("Cutscene"),
+            Name::new("Cutscene"),
+            Node {
+                width: percent(100),
+                height: percent(100),
+                ..default()
+            },
             RenderLayers::layer(1),
             VideoPlayer::new(
                 asset_server.load(spawn_cutscene.0.clone()),
                 PlaybackMode::Despawn,
             ),
             Cutscene,
+            ChildOf(e_overlay_root_added.entity),
         ))
         .observe(
             |add: On<Add, VideoSink>, sinks: Query<&VideoSink>, mut commands: Commands| {

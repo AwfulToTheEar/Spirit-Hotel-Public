@@ -324,6 +324,23 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 178,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_animation::components::idle_animation::IdleAnimation",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 101,
             "members": [
                 {
@@ -350,6 +367,38 @@
             "members": [
             ],
             "name": "spirit_hotel_animation::components::paused_by_state::PausedByState",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 179,
+            "members": [
+                {
+                    "name": "down",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "left",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "right",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "up",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_animation_movement::components::movement_animations::MovementAnimations",
             "type": "class",
             "useAs": [
                 "property"
@@ -1335,47 +1384,15 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 178,
+            "id": 180,
             "members": [
                 {
                     "name": "0",
-                    "type": "string",
+                    "type": "file",
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel_animation::components::idle_animation::IdleAnimation",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 179,
-            "members": [
-                {
-                    "name": "down",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "left",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "right",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "up",
-                    "type": "string",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel_animation_movement::components::movement_animations::MovementAnimations",
+            "name": "spirit_hotel_trigger::components::spawn_image::SpawnImage",
             "type": "class",
             "useAs": [
                 "property"
