@@ -1,6 +1,7 @@
 use bevy_aseprite_ultra::prelude::AseAnimation;
 use bevy::prelude::*;
-use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation, MovementAnimations, MovementIntent};
+use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation, MovementIntent};
+use crate::components::prelude::MovementAnimations;
 
 pub fn start_animation_movement(
     mut q_moving_entities: Query<(&MovementIntent, &MovementAnimations, &Children), (With<CanMove>, Added<MoveToLocation>)>,

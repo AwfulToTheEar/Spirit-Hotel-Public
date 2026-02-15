@@ -12,11 +12,11 @@ pub fn activate_interact_triggers(
     time: Res<Time>,
     keyboard_input: Res<ButtonInput<KeyCode>>,
     q_inside_triggers: Query<(Entity, &InsideTriggers)>,
-    mut q_triggers: Query<(&IsTrigger, Option<&TriggerFor>, Option<&mut ThrottleTrigger>, Option<&mut ContinuousTrigger>, Has<InteractTrigger>)>,
+    mut q_triggers: Query<(Option<&TriggerFor>, Option<&mut ThrottleTrigger>, Option<&mut ContinuousTrigger>, Has<InteractTrigger>), With<IsTrigger>>,
 ) {
     for (entity, inside_triggers) in q_inside_triggers.iter() {
         for trigger_entity in inside_triggers.entities.iter() {
-            let Ok((trigger, option_trigger_for, option_throttle_trigger, option_continuous_trigger, has_interact_trigger)) = q_triggers.get_mut(*trigger_entity) else {
+            let Ok((option_trigger_for, option_throttle_trigger, option_continuous_trigger, has_interact_trigger)) = q_triggers.get_mut(*trigger_entity) else {
                 continue;
             };
 

@@ -11,13 +11,17 @@ position: -264,-451
 {$name1}: ... I guess there's no way now but in. Here's to hoping she's okay.
 {$name1}: And ... I'm okay as well.
 // You step through an open sliding door, like the ones found in schools. In front of you, there's a sign. (This is all an automated sequence)
-The sign in front of you reads in large letters:
+:The sign in front of you reads in large letters:
 Warning - DO NOT BREATHE IN THE HALLWAYS.
 Rulebreakers will be punished.
 
 Looks like you better hold your breath.
 
+<<add_game_scene "test">>
+
 Hold F to hold your breath.
+
+<<remove_game_scene "test">>
 
 //a counter of 30(?) seconds appears.
 

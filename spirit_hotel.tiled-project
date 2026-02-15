@@ -548,7 +548,7 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 160,
+            "id": 177,
             "members": [
                 {
                     "name": "0",
@@ -556,7 +556,7 @@
                     "value": ""
                 }
             ],
-            "name": "spirit_hotel_cutscene_trigger::components::StartCutscene::StartCutscene",
+            "name": "spirit_hotel_cutscene_trigger::components::start_cutscene::StartCutscene",
             "type": "class",
             "useAs": [
                 "property"
@@ -822,38 +822,6 @@
             "members": [
             ],
             "name": "spirit_hotel_movement::components::can_push::CanPush",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 166,
-            "members": [
-                {
-                    "name": "down",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "left",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "right",
-                    "type": "string",
-                    "value": ""
-                },
-                {
-                    "name": "up",
-                    "type": "string",
-                    "value": ""
-                }
-            ],
-            "name": "spirit_hotel_movement::components::movement_animations::MovementAnimations",
             "type": "class",
             "useAs": [
                 "property"
@@ -1246,6 +1214,35 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 175,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+                    "type": "string",
+                    "value": "FadeIn"
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 176,
+            "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "FadeIn",
+                "OpenDismissibles"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 167,
             "members": [
             ],
@@ -1338,31 +1335,51 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 175,
+            "id": 178,
             "members": [
                 {
-                    "name": ":variant",
-                    "propertyType": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
+                    "name": "0",
                     "type": "string",
-                    "value": "FadeIn"
+                    "value": ""
                 }
             ],
-            "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger",
+            "name": "spirit_hotel_animation::components::idle_animation::IdleAnimation",
             "type": "class",
             "useAs": [
                 "property"
             ]
         },
         {
-            "id": 176,
-            "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "FadeIn",
-                "OpenDismissibles"
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 179,
+            "members": [
+                {
+                    "name": "down",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "left",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "right",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "up",
+                    "type": "string",
+                    "value": ""
+                }
             ],
-            "valuesAsFlags": false
+            "name": "spirit_hotel_animation_movement::components::movement_animations::MovementAnimations",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
         }
     ]
 }

@@ -6,7 +6,7 @@ use crate::systems::prelude::{
     apply_goal_from_moving_entity, apply_goal_from_path_node, apply_intent_from_next_pos,
     remove_next_pos, set_grid_pos_from_transform,
 };
-use spirit_hotel_core::game::{GameplaySystems, teleport};
+use spirit_hotel_core::game::{GameplaySystems};
 use spirit_hotel_core::{AppSystems, PausableSystems};
 
 pub mod components;

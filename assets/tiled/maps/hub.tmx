@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="9">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="11">
  <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
+ <tileset firstgid="8" source="../tilesets/rogues.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
@@ -20,7 +21,7 @@
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
 </data>
@@ -65,9 +66,19 @@
      </properties>
     </property>
     <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
-    <property name="start_cutscene" type="class" propertytype="spirit_hotel_cutscene_trigger::components::StartCutscene::StartCutscene">
+    <property name="start_cutscene" type="class" propertytype="spirit_hotel_cutscene_trigger::components::start_cutscene::StartCutscene">
      <properties>
       <property name="0" type="file" value="../../cutscenes/output.ivf"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="9" template="../templates/dialogue_trigger.tx" x="32" y="512"/>
+  <object id="10" gid="23" x="352" y="576" width="32" height="32">
+   <properties>
+    <property name="show_in_scene" type="class" propertytype="spirit_hotel_scene::components::show_in_game_scene::ShowInGameScene">
+     <properties>
+      <property name="0" value="test"/>
      </properties>
     </property>
    </properties>

@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use crate::components::prelude::CanMove;
+use spirit_hotel_movement::components::prelude::CanMove;
 
 #[derive(Component, Default, Debug, Reflect)]
 #[reflect(Component, Default)]

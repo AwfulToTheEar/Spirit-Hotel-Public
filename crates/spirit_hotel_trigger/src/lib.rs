@@ -1,12 +1,7 @@
 use bevy::prelude::*;
-use spirit_hotel_core::{
-    AppSystems,
-    game::{
-        GameplaySystems
-    },
-};
+use spirit_hotel_core::{AppSystems, game::GameplaySystems};
 
-use crate::{components::prelude::IsTrigger, events::prelude::*, systems::prelude::*};
+use crate::{components::prelude::IsTrigger, systems::prelude::*};
 
 pub mod components;
 pub mod events;
@@ -22,9 +17,7 @@ impl Plugin for SpiritHotelTriggerPlugin {
             .add_observer(add_delay_on_activated_trigger)
             .add_systems(
                 Update,
-                (
-                    activate_interact_triggers,
-                )
+                activate_interact_triggers
                     .in_set(AppSystems::Update)
                     .in_set(GameplaySystems),
             );

@@ -5,6 +5,7 @@ use spirit_hotel_core::{
 };
 
 pub mod systems;
+mod components;
 
 pub struct SpiritHotelAnimationMovementPlugin;
 

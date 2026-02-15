@@ -9,8 +9,6 @@ mod dev_tools;
 #[cfg(feature = "dev")]
 use crate::dev_tools::SpiritHotelDevToolsPlugin;
 use bevy::{asset::AssetMetaCheck, prelude::*};
-use bevy::camera::visibility::RenderLayers;
-use bevy_light_2d::light::{AmbientLight2d, Light2d};
 use spirit_hotel_animation::SpiritHotelAnimationPlugin;
 use spirit_hotel_animation_movement::SpiritHotelAnimationMovementPlugin;
 use spirit_hotel_core::SpiritHotelCorePlugin;
@@ -124,35 +122,5 @@ impl Plugin for AppPlugin {
             SpiritHotelDrownedChildPlayerPathfindingMovementPlugin,
         ))
         .add_plugins(SpiritHotelCutsceneTriggerPlugin);
-        // Spawn the main camera.
-        app.add_systems(Startup, spawn_camera);
     }
-}
-
-fn spawn_camera(mut commands: Commands) {
-    commands.spawn((
-        Name::new("Camera"),
-        Camera {
-            order: 0,
-            ..default()
-        },
-        Camera2d,
-        Light2d {
-            ambient_light: AmbientLight2d {
-                brightness: 0.1,
-                ..default()
-            },
-        },
-        RenderLayers::layer(0),
-    ));
-
-    commands.spawn((
-        Name::new("Overlay Camera"),
-        Camera {
-            order: 1,
-            ..default()
-        },
-        Camera2d,
-        RenderLayers::layer(1),
-    ));
 }

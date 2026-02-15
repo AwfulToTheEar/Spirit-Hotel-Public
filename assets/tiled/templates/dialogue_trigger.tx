@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object width="96" height="96">
+  <properties>
+   <property name="interact_trigger" type="class" propertytype="spirit_hotel_trigger::components::interact_trigger::InteractTrigger"/>
+   <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
+   <property name="start_conversation" type="class" propertytype="spirit_hotel_dialogue::components::start_conversation::StartConversation">
+    <properties>
+     <property name="0" value="TheHallway"/>
+    </properties>
+   </property>
+  </properties>
+ </object>
+</template>

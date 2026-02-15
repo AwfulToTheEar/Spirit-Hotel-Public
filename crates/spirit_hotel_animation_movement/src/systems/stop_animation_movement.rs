@@ -5,11 +5,11 @@ use spirit_hotel_movement::components::prelude::MoveToLocation;
 
 pub fn stop_animation_movement(
     mut removed: RemovedComponents<MoveToLocation>,
-    q_animateable_entities: Query<&Children, With<AnimatableMarker>>,
+    q_animatable_entities: Query<&Children, With<AnimatableMarker>>,
     mut q_visuals: Query<&mut AseAnimation>,
 ) {
     for entity in removed.read() {
-        let Ok(children) = q_animateable_entities.get(entity) else {
+        let Ok(children) = q_animatable_entities.get(entity) else {
             continue;
         };
 

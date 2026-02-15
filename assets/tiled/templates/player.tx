@@ -8,15 +8,20 @@
      <property name="0" type="file" value="../../animations/player.aseprite"/>
     </properties>
    </property>
-   <property name="movement_animations" type="class" propertytype="spirit_hotel_movement::components::movement_animations::MovementAnimations">
+   <property name="can_push" type="class" propertytype="spirit_hotel_movement::components::can_push::CanPush"/>
+   <property name="idle_animation" type="class" propertytype="spirit_hotel_animation::components::idle_animation::IdleAnimation">
+    <properties>
+     <property name="0" value="idle"/>
+    </properties>
+   </property>
+   <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
+   <property name="movement_animations" type="class" propertytype="spirit_hotel_animation_movement::components::movement_animations::MovementAnimations">
     <properties>
      <property name="down" value="walk-down"/>
      <property name="right" value="walk-right"/>
      <property name="up" value="walk-up"/>
     </properties>
    </property>
-   <property name="can_push" type="class" propertytype="spirit_hotel_movement::components::can_push::CanPush"/>
-   <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
    <property name="player" type="class" propertytype="spirit_hotel_player::components::player::Player"/>
   </properties>
  </object>

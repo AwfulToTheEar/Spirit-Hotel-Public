@@ -7,6 +7,7 @@ pub mod menus;
 pub mod screens;
 pub mod theme;
 
+use bevy::camera::visibility::RenderLayers;
 use crate::dismissibles::DismissiblesOpen;
 use crate::fades::Fade;
 use bevy::prelude::*;
@@ -69,6 +70,8 @@ impl Plugin for SpiritHotelCorePlugin {
                     .and(in_state(DismissiblesOpen(false))),
             ),
         );
+
+        app.add_systems(Startup, spawn_cameras);
     }
 }
 
@@ -93,3 +96,29 @@ pub struct Pause(pub bool);
 /// A system set for systems that shouldn't run while the game is paused.
 #[derive(SystemSet, Copy, Clone, Eq, PartialEq, Hash, Debug)]
 pub struct PausableSystems;
+
+#[derive(Component)]
+pub struct MainCamera;
+
+fn spawn_cameras(mut commands: Commands) {
+    commands.spawn((
+        Name::new("Camera"),
+        Camera {
+            order: 0,
+            ..default()
+        },
+        Camera2d,
+        MainCamera,
+        RenderLayers::layer(0),
+    ));
+
+    commands.spawn((
+        Name::new("Overlay Camera"),
+        Camera {
+            order: 1,
+            ..default()
+        },
+        Camera2d,
+        RenderLayers::layer(1),
+    ));
+}

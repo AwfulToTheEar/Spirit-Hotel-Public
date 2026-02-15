@@ -8,7 +8,6 @@ mod pushable;
 mod sync_movement;
 mod sync_movement_with;
 mod movement_completed;
-mod movement_animations;
 
 pub mod prelude {
     pub use super::can_move::*;
@@ -21,5 +20,4 @@ pub mod prelude {
     pub use super::sync_movement::*;
     pub use super::sync_movement_with::*;
     pub use super::movement_completed::*;
-    pub use super::movement_animations::*;
 }

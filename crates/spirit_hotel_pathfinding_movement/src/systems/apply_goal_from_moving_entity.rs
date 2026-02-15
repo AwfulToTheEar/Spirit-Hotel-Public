@@ -1,12 +1,11 @@
 use bevy::prelude::*;
 use bevy_northstar::{
-    path::Path,
     prelude::{AgentOfGrid, AgentPos, DebugPath, Pathfind},
 };
 use bevy_northstar::prelude::NextPos;
 use spirit_hotel_movement::components::prelude::{CanMove};
 use spirit_hotel_pathfinding::components::prelude::PathNode;
-use crate::components::prelude::{Follow, NextPosToBeRemoved, WithoutPathfinding};
+use crate::components::prelude::{Follow, WithoutPathfinding};
 
 pub fn apply_goal_from_moving_entity(
     mut commands: Commands,
@@ -19,7 +18,7 @@ pub fn apply_goal_from_moving_entity(
     >,
     q_path_nodes: Query<(&AgentPos, &AgentOfGrid), (With<CanMove>, Changed<AgentPos>, Without<PathNode>)>,
 ) {
-    for (entity, mut goal, agent_of_grid, moveable_without_pathfinding) in q_movables.iter_mut() {
+    for (entity, goal, agent_of_grid, moveable_without_pathfinding) in q_movables.iter_mut() {
         let Ok((goal_pos, other_agent_of_grid)) = q_path_nodes.get(goal.0) else {
             continue;
         };

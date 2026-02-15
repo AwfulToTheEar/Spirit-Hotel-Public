@@ -66,6 +66,7 @@ pub fn compute_intent(
             };
 
             if result {
+                info!("Collision detected. {}", other_entity);
                 if !can_push || can_push && q_pushables.get(child_of.0).is_err() {
                     commands.entity(entity).remove::<MovementIntent>();
                     return true;
