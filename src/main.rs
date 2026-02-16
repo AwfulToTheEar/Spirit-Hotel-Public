@@ -9,6 +9,12 @@ mod dev_tools;
 #[cfg(feature = "dev")]
 use crate::dev_tools::SpiritHotelDevToolsPlugin;
 use bevy::{asset::AssetMetaCheck, prelude::*};
+use bevy::log::LogPlugin;
+use spirit_hotel_ai::SpiritHotelAiPlugin;
+use spirit_hotel_ai_all::SpiritHotelAiAllPlugin;
+use spirit_hotel_ai_pathfinding::SpiritHotelAiPathfindingPlugin;
+use spirit_hotel_ai_pathfinding_movement::SpiritHotelAiPathfindingMovementPlugin;
+use spirit_hotel_ai_player::SpiritHotelAiPlayerPlugin;
 use spirit_hotel_animation::SpiritHotelAnimationPlugin;
 use spirit_hotel_animation_movement::SpiritHotelAnimationMovementPlugin;
 use spirit_hotel_core::SpiritHotelCorePlugin;
@@ -71,7 +77,11 @@ impl Plugin for AppPlugin {
                     }
                     .into(),
                     ..default()
-                }),
+                })
+                .set(LogPlugin {
+                    //filter: "dogoap=debug,bevy_dogoap=debug".to_string(),
+                    ..default()
+                })
         );
 
         app.add_plugins((
@@ -87,6 +97,7 @@ impl Plugin for AppPlugin {
             SpiritHotelTriggerPlugin,
             SpiritHotelDrownedChildPlugin,
             SpiritHotelCutscenePlugin,
+            SpiritHotelAiPlugin,
             #[cfg(feature = "dev")]
             SpiritHotelDevToolsPlugin,
         ));
@@ -121,6 +132,12 @@ impl Plugin for AppPlugin {
             SpiritHotelDrownedChildPlayerPathfindingPlugin,
             SpiritHotelDrownedChildPlayerPathfindingMovementPlugin,
         ))
-        .add_plugins(SpiritHotelCutsceneTriggerPlugin);
+        .add_plugins(SpiritHotelCutsceneTriggerPlugin)
+        .add_plugins((
+            SpiritHotelAiPathfindingPlugin,
+            SpiritHotelAiPathfindingMovementPlugin,
+            SpiritHotelAiPlayerPlugin,
+            SpiritHotelAiAllPlugin
+        ));
     }
 }

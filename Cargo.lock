@@ -515,6 +515,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "bevy-trait-query"
+version = "0.17.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cd0a83072506bf02682163e6df09e4084d7c6239ca8f5f0097165d975c2532dc"
+dependencies = [
+ "bevy-trait-query-impl",
+ "bevy_app",
+ "bevy_ecs",
+ "tracing",
+]
+
+[[package]]
+name = "bevy-trait-query-impl"
+version = "0.17.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5db9be12e1884c7deeb812f658664d67af4f0fa88c8d0a56f8c025238fc0985a"
+dependencies = [
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "bevy_a11y"
 version = "0.17.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -847,6 +871,24 @@ dependencies = [
  "log",
  "serde",
  "sysinfo",
+]
+
+[[package]]
+name = "bevy_dogoap"
+version = "0.6.0"
+source = "git+https://github.com/victorb/dogoap.git#e429fd1c15b2eeb7e423609b3fdb954e1a5324da"
+dependencies = [
+ "bevy-trait-query",
+ "bevy_app",
+ "bevy_ecs",
+ "bevy_log",
+ "bevy_platform",
+ "bevy_reflect",
+ "bevy_tasks",
+ "crossbeam-channel",
+ "dogoap",
+ "dogoap_macros",
+ "rand",
 ]
 
 [[package]]
@@ -2639,6 +2681,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "deprecate-until"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a3767f826efbbe5a5ae093920b58b43b01734202be697e1354914e862e8e704"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "semver",
+ "syn",
+]
+
+[[package]]
 name = "derive_more"
 version = "2.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2722,6 +2776,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d4b8a88685455ed29a21542a33abd9cb6510b6b129abadabdcef0f4c55bc8f61"
 dependencies = [
  "litrs",
+]
+
+[[package]]
+name = "dogoap"
+version = "0.6.0"
+source = "git+https://github.com/victorb/dogoap.git#e429fd1c15b2eeb7e423609b3fdb954e1a5324da"
+dependencies = [
+ "bevy_reflect",
+ "pathfinding",
+]
+
+[[package]]
+name = "dogoap_macros"
+version = "0.6.0"
+source = "git+https://github.com/victorb/dogoap.git#e429fd1c15b2eeb7e423609b3fdb954e1a5324da"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -3916,6 +3989,15 @@ dependencies = [
  "js-sys",
  "wasm-bindgen",
  "web-sys",
+]
+
+[[package]]
+name = "integer-sqrt"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "276ec31bcb4a9ee45f58bec6f9ec700ae4cf4f4f8f2fa7e06cb406bd5ffdd770"
+dependencies = [
+ "num-traits",
 ]
 
 [[package]]
@@ -5122,6 +5204,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a"
 
 [[package]]
+name = "pathfinding"
+version = "4.14.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "59ac35caa284c08f3721fb33c2741b5f763decaf42d080c8a6a722154347017e"
+dependencies = [
+ "deprecate-until",
+ "indexmap",
+ "integer-sqrt",
+ "num-traits",
+ "rustc-hash 2.1.1",
+ "thiserror 2.0.18",
+]
+
+[[package]]
 name = "percent-encoding"
 version = "2.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5949,9 +6045,15 @@ dependencies = [
  "avian2d",
  "bevy",
  "bevy-inspector-egui",
+ "bevy_dogoap",
  "bevy_light_2d",
  "bevy_mod_debugdump",
  "bevy_northstar",
+ "spirit_hotel_ai",
+ "spirit_hotel_ai_all",
+ "spirit_hotel_ai_pathfinding",
+ "spirit_hotel_ai_pathfinding_movement",
+ "spirit_hotel_ai_player",
  "spirit_hotel_animation",
  "spirit_hotel_animation_movement",
  "spirit_hotel_core",
@@ -5986,6 +6088,67 @@ dependencies = [
  "spirit_hotel_scene_dialogue",
  "spirit_hotel_scene_trigger",
  "spirit_hotel_trigger",
+]
+
+[[package]]
+name = "spirit_hotel_ai"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_dogoap",
+ "spirit_hotel_core",
+]
+
+[[package]]
+name = "spirit_hotel_ai_all"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_dogoap",
+ "spirit_hotel_ai",
+ "spirit_hotel_ai_pathfinding",
+ "spirit_hotel_ai_pathfinding_movement",
+ "spirit_hotel_ai_player",
+ "spirit_hotel_core",
+]
+
+[[package]]
+name = "spirit_hotel_ai_pathfinding"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_dogoap",
+ "bevy_northstar",
+ "spirit_hotel_ai",
+ "spirit_hotel_core",
+ "spirit_hotel_pathfinding",
+]
+
+[[package]]
+name = "spirit_hotel_ai_pathfinding_movement"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_dogoap",
+ "bevy_northstar",
+ "spirit_hotel_ai",
+ "spirit_hotel_ai_pathfinding",
+ "spirit_hotel_core",
+ "spirit_hotel_movement",
+ "spirit_hotel_pathfinding",
+ "spirit_hotel_pathfinding_movement",
+]
+
+[[package]]
+name = "spirit_hotel_ai_player"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_dogoap",
+ "bevy_northstar",
+ "spirit_hotel_ai",
+ "spirit_hotel_core",
+ "spirit_hotel_player",
 ]
 
 [[package]]
@@ -6281,6 +6444,7 @@ dependencies = [
  "spirit_hotel_core",
  "spirit_hotel_movement",
  "spirit_hotel_pathfinding",
+ "spirit_hotel_pathfinding_movement",
  "spirit_hotel_trigger",
 ]
 

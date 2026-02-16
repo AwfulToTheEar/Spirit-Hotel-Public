@@ -3,6 +3,7 @@ use bevy::prelude::*;
 use bevy_northstar::prelude::{AgentOfGrid, CardinalNeighborhood, Grid};
 use spirit_hotel_movement::components::prelude::{CanMove, CanPush, MoveToLocation, MovementDuration, MovementFlag, MovementIntent, Pushable};
 use spirit_hotel_pathfinding::components::prelude::{GridTileSize, ScanCollider};
+use spirit_hotel_pathfinding_movement::components::prelude::Follow;
 use spirit_hotel_trigger::components::prelude::TriggerCollider;
 use crate::utils::prelude::compute_intent;
 
@@ -13,6 +14,7 @@ pub fn apply_intent(
     q_entities_with_intent: Query<
         (
             Entity,
+            Option<&Follow>,
             &AgentOfGrid,
             &MovementIntent,
             &MovementDuration,
@@ -32,7 +34,7 @@ pub fn apply_intent(
         (With<CanMove>, With<Pushable>),
     >,
 ) {
-    for (entity, agent_of_grid, intent, duration, can_push, movement_flag_option, transform, children) in
+    for (entity, option_follow, agent_of_grid, intent, duration, can_push, movement_flag_option, transform, children) in
         q_entities_with_intent.iter()
     {
         let Ok(grid_tile_size) = q_grid_tile_sizes.get(agent_of_grid.0) else {
@@ -44,6 +46,7 @@ pub fn apply_intent(
         compute_intent(
             &mut commands,
             entity,
+            option_follow,
             transform,
             intent,
             duration,

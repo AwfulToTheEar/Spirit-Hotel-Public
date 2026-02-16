@@ -8,6 +8,7 @@ edition = "2024"
 bevy-inspector-egui = "0.35.0"
 bevy_mod_debugdump = "0.14.0"
 bevy = { workspace = true }
+bevy_dogoap = { workspace = true }
 bevy_light_2d = { workspace = true }
 bevy_northstar = { workspace = true }
 avian2d = { workspace = true }
@@ -46,6 +47,11 @@ spirit_hotel_drowned_child_player_pathfinding = { workspace = true }
 spirit_hotel_drowned_child_player_pathfinding_movement = { workspace = true }
 spirit_hotel_cutscene = { workspace = true }
 spirit_hotel_cutscene_trigger = { workspace = true }
+spirit_hotel_ai = { workspace = true }
+spirit_hotel_ai_pathfinding = { workspace = true }
+spirit_hotel_ai_pathfinding_movement = { workspace = true }
+spirit_hotel_ai_player = { workspace = true }
+spirit_hotel_ai_all = { workspace = true }
 
 # Your web builds will start failing if you add a dependency that pulls in `getrandom` v0.3+.
 # To fix this, you should tell `getrandom` to use the `wasm_js` backend on Wasm.
@@ -73,6 +79,7 @@ bevy_ecs_tilemap = "0.17.0"
 bevy_northstar = "0.5.0"
 bevy_enhanced_input = "0.20.0"
 bevy_av1 = { git = "https://github.com/AwfulToTheEar/bevy_av1.git" }
+bevy_dogoap = { git = "https://github.com/victorb/dogoap.git" }
 bitvec = "1.0.1"
 
 spirit_hotel_core = { path = "crates/spirit_hotel_core" }
@@ -109,6 +116,11 @@ spirit_hotel_drowned_child_player_pathfinding = { path = "crates/spirit_hotel_dr
 spirit_hotel_drowned_child_player_pathfinding_movement = { path = "crates/spirit_hotel_drowned_child_player_pathfinding_movement" }
 spirit_hotel_cutscene = { path = "crates/spirit_hotel_cutscene" }
 spirit_hotel_cutscene_trigger = { path = "crates/spirit_hotel_cutscene_trigger" }
+spirit_hotel_ai = { path = "crates/spirit_hotel_ai" }
+spirit_hotel_ai_pathfinding = { path = "crates/spirit_hotel_ai_pathfinding" }
+spirit_hotel_ai_pathfinding_movement = { path = "crates/spirit_hotel_ai_pathfinding_movement" }
+spirit_hotel_ai_player = { path = "crates/spirit_hotel_ai_player" }
+spirit_hotel_ai_all = { path = "crates/spirit_hotel_ai_all" }
 
 
 [features]

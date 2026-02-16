@@ -1316,6 +1316,23 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 180,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::spawn_image::SpawnImage",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 169,
             "members": [
                 {
@@ -1384,19 +1401,47 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 180,
+            "id": 181,
             "members": [
                 {
                     "name": "0",
-                    "type": "file",
-                    "value": ""
+                    "type": "object",
+                    "value": 0
                 }
             ],
-            "name": "spirit_hotel_trigger::components::spawn_image::SpawnImage",
+            "name": "spirit_hotel_ai::components::target::Target",
             "type": "class",
             "useAs": [
                 "property"
             ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 182,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel_ai_all::components::brain::Brain:::Variant",
+                    "type": "string",
+                    "value": "PlayerFollower"
+                }
+            ],
+            "name": "spirit_hotel_ai_all::components::brain::Brain",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 183,
+            "name": "spirit_hotel_ai_all::components::brain::Brain:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "PlayerFollower"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }

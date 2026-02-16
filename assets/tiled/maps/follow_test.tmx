@@ -30,12 +30,12 @@
   <object id="1" template="../templates/player.tx" x="32" y="64"/>
   <object id="2" gid="50" x="576" y="608" width="32" height="32">
    <properties>
-    <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>
-    <property name="follow" type="class" propertytype="spirit_hotel_pathfinding_movement::components::follow::Follow">
+    <property name="brain" type="class" propertytype="spirit_hotel_ai_all::components::brain::Brain">
      <properties>
-      <property name="0" type="object" value="1"/>
+      <property name=":variant" propertytype="spirit_hotel_ai_all::components::brain::Brain:::Variant" value="PlayerFollower"/>
      </properties>
     </property>
+    <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>
     <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
    </properties>
   </object>

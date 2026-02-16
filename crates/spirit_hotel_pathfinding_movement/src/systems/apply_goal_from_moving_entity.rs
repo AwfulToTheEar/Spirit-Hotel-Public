@@ -16,10 +16,10 @@ pub fn apply_goal_from_moving_entity(
             With<AgentPos>,
         ),
     >,
-    q_path_nodes: Query<(&AgentPos, &AgentOfGrid), (With<CanMove>, Changed<AgentPos>, Without<PathNode>)>,
+    q_moving_target: Query<(&AgentPos, &AgentOfGrid), (With<CanMove>, Changed<AgentPos>, Without<PathNode>)>,
 ) {
     for (entity, goal, agent_of_grid, moveable_without_pathfinding) in q_movables.iter_mut() {
-        let Ok((goal_pos, other_agent_of_grid)) = q_path_nodes.get(goal.0) else {
+        let Ok((goal_pos, other_agent_of_grid)) = q_moving_target.get(goal.0) else {
             continue;
         };
 
