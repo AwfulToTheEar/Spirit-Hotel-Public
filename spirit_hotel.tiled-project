@@ -295,6 +295,51 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 181,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_ai::components::target::Target",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 182,
+            "members": [
+                {
+                    "name": ":variant",
+                    "propertyType": "spirit_hotel_ai_all::components::brain::Brain:::Variant",
+                    "type": "string",
+                    "value": "PlayerFollower"
+                }
+            ],
+            "name": "spirit_hotel_ai_all::components::brain::Brain",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "id": 183,
+            "name": "spirit_hotel_ai_all::components::brain::Brain:::Variant",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "PlayerFollower"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 99,
             "members": [
             ],
@@ -1397,51 +1442,6 @@
             "useAs": [
                 "property"
             ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 181,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "object",
-                    "value": 0
-                }
-            ],
-            "name": "spirit_hotel_ai::components::target::Target",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 182,
-            "members": [
-                {
-                    "name": ":variant",
-                    "propertyType": "spirit_hotel_ai_all::components::brain::Brain:::Variant",
-                    "type": "string",
-                    "value": "PlayerFollower"
-                }
-            ],
-            "name": "spirit_hotel_ai_all::components::brain::Brain",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "id": 183,
-            "name": "spirit_hotel_ai_all::components::brain::Brain:::Variant",
-            "storageType": "string",
-            "type": "enum",
-            "values": [
-                "PlayerFollower"
-            ],
-            "valuesAsFlags": false
         }
     ]
 }

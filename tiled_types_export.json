@@ -1,6 +1,33 @@
 [
   {
-    "id": 86,
+    "id": 88,
+    "name": "[alloc::string::String; 3]",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "[0]",
+        "type": "string",
+        "value": null
+      },
+      {
+        "name": "[1]",
+        "type": "string",
+        "value": null
+      },
+      {
+        "name": "[2]",
+        "type": "string",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 87,
     "name": "bevy_color::color::Color",
     "type": "class",
     "useAs": [
@@ -76,7 +103,7 @@
     ]
   },
   {
-    "id": 90,
+    "id": 92,
     "name": "bevy_time::timer::TimerMode",
     "type": "class",
     "useAs": [
@@ -94,7 +121,7 @@
     ]
   },
   {
-    "id": 89,
+    "id": 91,
     "name": "bevy_time::timer::TimerMode:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -105,7 +132,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 112,
+    "id": 114,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>",
     "type": "class",
     "useAs": [
@@ -129,7 +156,7 @@
     ]
   },
   {
-    "id": 110,
+    "id": 112,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -140,7 +167,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 111,
+    "id": 113,
     "name": "core::option::Option<bevy_asset::handle::Handle<bevy_ecs_tiled::tiled::world::asset::TiledWorldAsset>>::Some",
     "type": "class",
     "useAs": [
@@ -157,7 +184,7 @@
     ]
   },
   {
-    "id": 119,
+    "id": 121,
     "name": "core::option::Option<bevy_ecs::entity::Entity>",
     "type": "class",
     "useAs": [
@@ -181,7 +208,7 @@
     ]
   },
   {
-    "id": 117,
+    "id": 119,
     "name": "core::option::Option<bevy_ecs::entity::Entity>:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -192,7 +219,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 118,
+    "id": 120,
     "name": "core::option::Option<bevy_ecs::entity::Entity>::Some",
     "type": "class",
     "useAs": [
@@ -209,7 +236,7 @@
     ]
   },
   {
-    "id": 116,
+    "id": 118,
     "name": "glam::UVec2",
     "type": "class",
     "useAs": [
@@ -231,7 +258,7 @@
     ]
   },
   {
-    "id": 115,
+    "id": 117,
     "name": "glam::Vec2",
     "type": "class",
     "useAs": [
@@ -253,7 +280,7 @@
     ]
   },
   {
-    "id": 93,
+    "id": 95,
     "name": "glam::Vec3",
     "type": "class",
     "useAs": [
@@ -436,6 +463,24 @@
   },
   {
     "id": 13,
+    "name": "spirit_hotel_core::Test",
+    "type": "class",
+    "useAs": [
+      "property"
+    ],
+    "color": "#000000",
+    "drawFill": true,
+    "members": [
+      {
+        "name": "0",
+        "propertyType": "[alloc::string::String; 3]",
+        "type": "class",
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": 14,
     "name": "spirit_hotel_core::audio::Music",
     "type": "class",
     "useAs": [
@@ -446,7 +491,7 @@
     "members": []
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "spirit_hotel_core::audio::SoundEffect",
     "type": "class",
     "useAs": [
@@ -457,7 +502,7 @@
     "members": []
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "spirit_hotel_core::fades::FadeData",
     "type": "class",
     "useAs": [
@@ -479,7 +524,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "spirit_hotel_core::game::teleport::Teleport",
     "type": "class",
     "useAs": [
@@ -501,7 +546,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "spirit_hotel_core::menus::credits::CreditsAssets",
     "type": "class",
     "useAs": [
@@ -518,7 +563,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": 21,
     "name": "spirit_hotel_core::menus::settings::GlobalVolumeLabel",
     "type": "class",
     "useAs": [
@@ -529,7 +574,7 @@
     "members": []
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "spirit_hotel_core::screens::splash::ImageNodeFadeInOut",
     "type": "class",
     "useAs": [
@@ -556,7 +601,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": 24,
     "name": "spirit_hotel_core::theme::interaction::InteractionAssets",
     "type": "class",
     "useAs": [
@@ -578,7 +623,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": 25,
     "name": "spirit_hotel_core::theme::interaction::InteractionPalette",
     "type": "class",
     "useAs": [
@@ -605,7 +650,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "spirit_hotel_cutscene::resources::spawn_cutscene::SpawnCutscene",
     "type": "class",
     "useAs": [
@@ -622,7 +667,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": 27,
     "name": "spirit_hotel_cutscene_trigger::components::start_cutscene::StartCutscene",
     "type": "class",
     "useAs": [
@@ -639,7 +684,7 @@
     ]
   },
   {
-    "id": 27,
+    "id": 28,
     "name": "spirit_hotel_dialogue::components::start_conversation::StartConversation",
     "type": "class",
     "useAs": [
@@ -656,7 +701,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": 30,
     "name": "spirit_hotel_drowned_child::components::breath_timer_indicator::BreathTimerIndicator",
     "type": "class",
     "useAs": [
@@ -667,7 +712,7 @@
     "members": []
   },
   {
-    "id": 30,
+    "id": 31,
     "name": "spirit_hotel_drowned_child::components::breathing::Breathing",
     "type": "class",
     "useAs": [
@@ -678,7 +723,7 @@
     "members": []
   },
   {
-    "id": 31,
+    "id": 32,
     "name": "spirit_hotel_drowned_child::components::init_breath_timer::InitBreathTimer",
     "type": "class",
     "useAs": [
@@ -695,7 +740,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": 33,
     "name": "spirit_hotel_drowned_child::components::init_kagume_kagume::InitKagumeKagume",
     "type": "class",
     "useAs": [
@@ -706,7 +751,7 @@
     "members": []
   },
   {
-    "id": 35,
+    "id": 36,
     "name": "spirit_hotel_drowned_child::components::kagume_kagume_cycle_indicator::KagumeKagumeCycleIndicator",
     "type": "class",
     "useAs": [
@@ -717,7 +762,7 @@
     "members": []
   },
   {
-    "id": 37,
+    "id": 38,
     "name": "spirit_hotel_drowned_child::components::kagume_kagume_cycle_ticking::KagumeKagumeCycleTicking",
     "type": "class",
     "useAs": [
@@ -728,7 +773,7 @@
     "members": []
   },
   {
-    "id": 38,
+    "id": 39,
     "name": "spirit_hotel_drowned_child::components::kagume_kagume_start_path_node::KagumeKagumeStartPathNode",
     "type": "class",
     "useAs": [
@@ -739,7 +784,7 @@
     "members": []
   },
   {
-    "id": 39,
+    "id": 40,
     "name": "spirit_hotel_drowned_child::components::kagume_kagume_start_position::KagumeKagumeStartPosition",
     "type": "class",
     "useAs": [
@@ -750,7 +795,7 @@
     "members": []
   },
   {
-    "id": 40,
+    "id": 41,
     "name": "spirit_hotel_drowned_child::resources::mean::Mean",
     "type": "class",
     "useAs": [
@@ -767,7 +812,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 42,
     "name": "spirit_hotel_drowned_child_movement::components::kagume_kagume_dancer::KagumeKagumeDancer",
     "type": "class",
     "useAs": [
@@ -778,7 +823,7 @@
     "members": []
   },
   {
-    "id": 42,
+    "id": 43,
     "name": "spirit_hotel_level::components::disabled_by_parent::DisabledByParent",
     "type": "class",
     "useAs": [
@@ -789,7 +834,7 @@
     "members": []
   },
   {
-    "id": 43,
+    "id": 44,
     "name": "spirit_hotel_level::components::disabled_by_visibility::DisabledByVisibility",
     "type": "class",
     "useAs": [
@@ -800,7 +845,7 @@
     "members": []
   },
   {
-    "id": 44,
+    "id": 45,
     "name": "spirit_hotel_level::components::inside_map::InsideMap",
     "type": "class",
     "useAs": [
@@ -817,7 +862,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 46,
     "name": "spirit_hotel_level::components::tiled_colliders_spawned::TiledCollidersSpawned",
     "type": "class",
     "useAs": [
@@ -828,7 +873,7 @@
     "members": []
   },
   {
-    "id": 46,
+    "id": 47,
     "name": "spirit_hotel_level::resources::level_assets::LevelAssets",
     "type": "class",
     "useAs": [
@@ -851,7 +896,7 @@
     ]
   },
   {
-    "id": 47,
+    "id": 48,
     "name": "spirit_hotel_level_trigger::components::load_level::LoadLevel",
     "type": "class",
     "useAs": [
@@ -868,7 +913,7 @@
     ]
   },
   {
-    "id": 48,
+    "id": 49,
     "name": "spirit_hotel_movement::components::can_move::CanMove",
     "type": "class",
     "useAs": [
@@ -879,7 +924,7 @@
     "members": []
   },
   {
-    "id": 49,
+    "id": 50,
     "name": "spirit_hotel_movement::components::can_push::CanPush",
     "type": "class",
     "useAs": [
@@ -890,7 +935,7 @@
     "members": []
   },
   {
-    "id": 50,
+    "id": 51,
     "name": "spirit_hotel_movement::components::movement_completed::MovementCompleted",
     "type": "class",
     "useAs": [
@@ -901,7 +946,7 @@
     "members": []
   },
   {
-    "id": 51,
+    "id": 52,
     "name": "spirit_hotel_movement::components::movement_duration::MovementDuration",
     "type": "class",
     "useAs": [
@@ -918,7 +963,7 @@
     ]
   },
   {
-    "id": 53,
+    "id": 54,
     "name": "spirit_hotel_movement::components::movement_flag::MovementFlag",
     "type": "class",
     "useAs": [
@@ -936,7 +981,7 @@
     ]
   },
   {
-    "id": 52,
+    "id": 53,
     "name": "spirit_hotel_movement::components::movement_flag::MovementFlag:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -947,7 +992,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 54,
+    "id": 55,
     "name": "spirit_hotel_movement::components::movement_intent::MovementIntent",
     "type": "class",
     "useAs": [
@@ -965,7 +1010,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 56,
     "name": "spirit_hotel_movement::components::pushable::Pushable",
     "type": "class",
     "useAs": [
@@ -976,7 +1021,7 @@
     "members": []
   },
   {
-    "id": 56,
+    "id": 57,
     "name": "spirit_hotel_movement::components::sync_movement::SyncMovement",
     "type": "class",
     "useAs": [
@@ -987,7 +1032,7 @@
     "members": []
   },
   {
-    "id": 57,
+    "id": 58,
     "name": "spirit_hotel_pathfinding::components::grid_collision_calculated::GridCollisionCalculated",
     "type": "class",
     "useAs": [
@@ -998,7 +1043,7 @@
     "members": []
   },
   {
-    "id": 58,
+    "id": 59,
     "name": "spirit_hotel_pathfinding::components::grid_tile_size::GridTileSize",
     "type": "class",
     "useAs": [
@@ -1016,7 +1061,7 @@
     ]
   },
   {
-    "id": 59,
+    "id": 60,
     "name": "spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid",
     "type": "class",
     "useAs": [
@@ -1027,7 +1072,7 @@
     "members": []
   },
   {
-    "id": 60,
+    "id": 61,
     "name": "spirit_hotel_pathfinding::components::path_node::PathNode",
     "type": "class",
     "useAs": [
@@ -1044,7 +1089,7 @@
     ]
   },
   {
-    "id": 61,
+    "id": 62,
     "name": "spirit_hotel_pathfinding::components::scan_collider::ScanCollider",
     "type": "class",
     "useAs": [
@@ -1055,7 +1100,7 @@
     "members": []
   },
   {
-    "id": 62,
+    "id": 63,
     "name": "spirit_hotel_pathfinding_movement::components::follow::Follow",
     "type": "class",
     "useAs": [
@@ -1072,7 +1117,7 @@
     ]
   },
   {
-    "id": 63,
+    "id": 64,
     "name": "spirit_hotel_pathfinding_movement::components::halt_pathfinding_intent::HaltPathfindingIntent",
     "type": "class",
     "useAs": [
@@ -1083,7 +1128,7 @@
     "members": []
   },
   {
-    "id": 64,
+    "id": 65,
     "name": "spirit_hotel_pathfinding_movement::components::next_pos_to_be_removed::NextPosToBeRemoved",
     "type": "class",
     "useAs": [
@@ -1094,7 +1139,7 @@
     "members": []
   },
   {
-    "id": 65,
+    "id": 66,
     "name": "spirit_hotel_pathfinding_movement::components::without_pathfinding::WithoutPathfinding",
     "type": "class",
     "useAs": [
@@ -1105,7 +1150,7 @@
     "members": []
   },
   {
-    "id": 66,
+    "id": 67,
     "name": "spirit_hotel_player::components::player::Player",
     "type": "class",
     "useAs": [
@@ -1116,7 +1161,7 @@
     "members": []
   },
   {
-    "id": 67,
+    "id": 68,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameScene",
     "type": "class",
     "useAs": [
@@ -1139,7 +1184,7 @@
     ]
   },
   {
-    "id": 121,
+    "id": 123,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction",
     "type": "class",
     "useAs": [
@@ -1157,7 +1202,7 @@
     ]
   },
   {
-    "id": 120,
+    "id": 122,
     "name": "spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1169,7 +1214,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 68,
+    "id": 69,
     "name": "spirit_hotel_scene::components::game_scene_object::GameSceneObject",
     "type": "class",
     "useAs": [
@@ -1180,7 +1225,7 @@
     "members": []
   },
   {
-    "id": 69,
+    "id": 70,
     "name": "spirit_hotel_scene::components::hide_in_game_scene::HideInGameScene",
     "type": "class",
     "useAs": [
@@ -1197,7 +1242,7 @@
     ]
   },
   {
-    "id": 70,
+    "id": 71,
     "name": "spirit_hotel_scene::components::show_in_game_scene::ShowInGameScene",
     "type": "class",
     "useAs": [
@@ -1214,7 +1259,7 @@
     ]
   },
   {
-    "id": 72,
+    "id": 73,
     "name": "spirit_hotel_scene::resources::starting_game_scene::StartingGameScene",
     "type": "class",
     "useAs": [
@@ -1231,7 +1276,7 @@
     ]
   },
   {
-    "id": 73,
+    "id": 74,
     "name": "spirit_hotel_trigger::components::add_delay::AddDelay",
     "type": "class",
     "useAs": [
@@ -1248,7 +1293,7 @@
     ]
   },
   {
-    "id": 76,
+    "id": 77,
     "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger",
     "type": "class",
     "useAs": [
@@ -1266,7 +1311,7 @@
     ]
   },
   {
-    "id": 75,
+    "id": 76,
     "name": "spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant",
     "type": "enum",
     "storageType": "string",
@@ -1277,7 +1322,7 @@
     "valuesAsFlags": false
   },
   {
-    "id": 78,
+    "id": 79,
     "name": "spirit_hotel_trigger::components::interact_trigger::InteractTrigger",
     "type": "class",
     "useAs": [
@@ -1288,7 +1333,7 @@
     "members": []
   },
   {
-    "id": 79,
+    "id": 80,
     "name": "spirit_hotel_trigger::components::is_trigger::IsTrigger",
     "type": "class",
     "useAs": [
@@ -1299,7 +1344,7 @@
     "members": []
   },
   {
-    "id": 80,
+    "id": 81,
     "name": "spirit_hotel_trigger::components::spawn_image::SpawnImage",
     "type": "class",
     "useAs": [
@@ -1316,7 +1361,7 @@
     ]
   },
   {
-    "id": 81,
+    "id": 82,
     "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
     "type": "class",
     "useAs": [
@@ -1333,7 +1378,7 @@
     ]
   },
   {
-    "id": 83,
+    "id": 84,
     "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
     "type": "class",
     "useAs": [
@@ -1356,7 +1401,7 @@
     ]
   },
   {
-    "id": 84,
+    "id": 85,
     "name": "spirit_hotel_trigger::components::trigger_for::TriggerFor",
     "type": "class",
     "useAs": [
@@ -1373,7 +1418,7 @@
     ]
   },
   {
-    "id": 85,
+    "id": 86,
     "name": "spirit_hotel_trigger::components::trigger_has_been_activated::TriggerHasBeenActivated",
     "type": "class",
     "useAs": [

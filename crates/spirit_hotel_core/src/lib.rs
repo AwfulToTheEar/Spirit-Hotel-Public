@@ -11,6 +11,7 @@ use bevy::camera::visibility::RenderLayers;
 use crate::dismissibles::DismissiblesOpen;
 use crate::fades::Fade;
 use bevy::prelude::*;
+use bevy::reflect::Array;
 
 pub struct SpiritHotelCorePlugin;
 
