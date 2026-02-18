@@ -1,41 +1,64 @@
 use std::ops::Add;
 use std::time::Duration;
+use bevy::ecs::relationship::RelationshipSourceCollection;
 use bevy::prelude::*;
 use crate::{
     components::prelude::{InsideTriggers, IsTrigger},
     events::prelude::TriggerActivated,
 };
-use crate::components::prelude::{ContinuousTrigger, InteractTrigger, ThrottleTrigger, TriggerFor, TriggerHasBeenActivated};
+use crate::components::prelude::{ContinuousTrigger, TriggerHeldFor, InteractTrigger, ThrottleTrigger, ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, SubTriggers, SubTriggerOf};
 
 pub fn activate_interact_triggers(
     mut commands: Commands,
     time: Res<Time>,
     keyboard_input: Res<ButtonInput<KeyCode>>,
     q_inside_triggers: Query<(Entity, &InsideTriggers)>,
-    mut q_triggers: Query<(Option<&TriggerFor>, Option<&mut ThrottleTrigger>, Option<&mut ContinuousTrigger>, Has<InteractTrigger>), With<IsTrigger>>,
+    mut q_triggers: Query<(Option<&TriggerFor>, Option<&SubTriggers>, Option<&ThrottleTrigger>, Has<ThrottleTriggerTimer>, Has<ContinuousTrigger>, Has<TriggerHeldFor>, Has<InteractTrigger>), With<IsTrigger>>,
+    q_sub_triggers: Query<(&SubTriggerOf, Has<TriggerHasBeenActivated>, Has<TriggerHeldFor>)>,
 ) {
     for (entity, inside_triggers) in q_inside_triggers.iter() {
         for trigger_entity in inside_triggers.entities.iter() {
-            let Ok((option_trigger_for, option_throttle_trigger, option_continuous_trigger, has_interact_trigger)) = q_triggers.get_mut(*trigger_entity) else {
+            let Ok((option_trigger_for, option_sub_triggers, option_throttle_trigger, has_throttle_trigger_timer, has_continuous_trigger, has_trigger_held_for, has_interact_trigger)) = q_triggers.get_mut(trigger_entity) else {
                 continue;
             };
 
-            if has_interact_trigger && !keyboard_input.just_pressed(KeyCode::KeyE) || !has_interact_trigger && option_continuous_trigger.is_none() {
+            if let Some(sub_triggers) = option_sub_triggers {
+                let mut sub_triggers_not_valid = false;
+                for sub_trigger in sub_triggers.iter() {
+                    let Ok((sub_trigger_of, has_trigger_been_activated, has_trigger_held_for)) = q_sub_triggers.get(sub_trigger) else {
+                        continue;
+                    };
+
+                    if !has_trigger_been_activated {
+                        sub_triggers_not_valid = true;
+                        break;
+                    }
+
+                    if sub_trigger_of.should_be_held && !has_trigger_held_for {
+                        sub_triggers_not_valid = true;
+                        break;
+                    }
+                }
+
+                if sub_triggers_not_valid {
+                    continue;
+                }
+            }
+
+            if has_interact_trigger && !keyboard_input.just_pressed(KeyCode::KeyE) || !has_interact_trigger && !has_continuous_trigger {
                 continue;
             }
 
-            if let Some(mut throttle_trigger) = option_throttle_trigger {
-                if throttle_trigger.timer.is_some() {
-                    continue;
-                }
-
-                throttle_trigger.timer = Some(Timer::from_seconds(throttle_trigger.throttle, TimerMode::Once));
+            if has_throttle_trigger_timer {
+                continue;
             }
 
-            if let Some(mut continuous_trigger) = option_continuous_trigger {
-                let duration = continuous_trigger.0.get_or_insert(Duration::ZERO);
+            if let Some(throttle_trigger) = option_throttle_trigger {
+                commands.entity(trigger_entity).insert(ThrottleTriggerTimer(Timer::from_seconds(throttle_trigger.0, TimerMode::Once)));
+            }
 
-                *duration = duration.add(time.delta());
+            if !has_trigger_held_for {
+                commands.entity(trigger_entity).insert(TriggerHeldFor(Duration::ZERO));
             }
 
             if let Some(trigger_for) = option_trigger_for && trigger_for.0 != entity {
@@ -43,11 +66,9 @@ pub fn activate_interact_triggers(
             }
 
             commands.trigger(TriggerActivated {
-                entity,
-                trigger: *trigger_entity,
+                entity: Some(entity),
+                trigger: trigger_entity,
             });
-
-            commands.entity(*trigger_entity).insert_if_new(TriggerHasBeenActivated);
         }
     }
 }

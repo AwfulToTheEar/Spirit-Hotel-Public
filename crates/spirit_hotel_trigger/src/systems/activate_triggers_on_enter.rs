@@ -3,36 +3,51 @@ use crate::{
     components::prelude::IsTrigger,
     events::prelude::{TriggerActivated, TriggerEntered},
 };
-use crate::components::prelude::{InteractTrigger, ThrottleTrigger, TriggerFor, TriggerHasBeenActivated};
+use crate::components::prelude::{InteractTrigger, SubTriggerOf, SubTriggers, ThrottleTrigger, ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, TriggerHeldFor};
 
 pub fn activate_instant_triggers(
     e_trigger_entered: On<TriggerEntered>,
     mut commands: Commands,
-    mut q_triggers: Query<(Option<&TriggerFor>, Option<&mut ThrottleTrigger>), (Without<InteractTrigger>, With<IsTrigger>)>,
+    mut q_triggers: Query<(Option<&TriggerFor>, Option<&SubTriggers>, Option<&ThrottleTrigger>, Has<ThrottleTriggerTimer>), (Without<InteractTrigger>, With<IsTrigger>)>,
+    q_sub_triggers: Query<(&SubTriggerOf, Has<TriggerHasBeenActivated>, Has<TriggerHeldFor>)>,
 ) {
 
-    let Ok((option_trigger_for, option_throttle_trigger)) = q_triggers.get_mut(e_trigger_entered.trigger) else {
+    let Ok((option_trigger_for, option_sub_triggers, option_throttle_trigger, has_throttle_trigger_timer)) = q_triggers.get_mut(e_trigger_entered.trigger) else {
         return;
     };
+
+    if let Some(sub_triggers) = option_sub_triggers {
+        for sub_trigger in sub_triggers.iter() {
+            let Ok((sub_trigger_of, has_trigger_been_activated, has_trigger_held_for)) = q_sub_triggers.get(sub_trigger) else {
+                continue;
+            };
+
+            if !has_trigger_been_activated {
+                return;
+            }
+
+            if sub_trigger_of.should_be_held && !has_trigger_held_for {
+                return;
+            }
+        }
+    }
 
     if let Some(trigger_for) = option_trigger_for && trigger_for.0 != e_trigger_entered.entity {
         return;
     }
 
-    if let Some(mut throttle_trigger) = option_throttle_trigger {
-        if throttle_trigger.timer.is_some() {
-            return;
-        }
+    if has_throttle_trigger_timer {
+        return;
+    }
 
-        throttle_trigger.timer = Some(Timer::from_seconds(throttle_trigger.throttle, TimerMode::Once));
+    if let Some(throttle_trigger) = option_throttle_trigger {
+        commands.entity(e_trigger_entered.trigger).insert(ThrottleTriggerTimer(Timer::from_seconds(throttle_trigger.0, TimerMode::Once)));
     }
 
     commands.trigger(TriggerActivated {
-        entity: e_trigger_entered.entity,
+        entity: Some(e_trigger_entered.entity),
         trigger: e_trigger_entered.trigger,
     });
-
-    commands.entity(e_trigger_entered.trigger).insert_if_new(TriggerHasBeenActivated);
 }
 
 /*

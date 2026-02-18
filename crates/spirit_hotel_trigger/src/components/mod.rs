@@ -11,6 +11,9 @@ mod trigger_has_been_activated;
 mod throttle_trigger;
 mod add_delay;
 mod spawn_image;
+mod throttle_trigger_timer;
+mod trigger_held_for;
+mod activate_when_sub_triggers_active;
 
 pub mod prelude {
     pub use super::inside_triggers::*;
@@ -26,4 +29,7 @@ pub mod prelude {
     pub use super::throttle_trigger::*;
     pub use super::add_delay::*;
     pub use super::spawn_image::*;
+    pub use super::throttle_trigger_timer::*;
+    pub use super::trigger_held_for::*;
+    pub use super::activate_when_sub_triggers_active::*;
 }

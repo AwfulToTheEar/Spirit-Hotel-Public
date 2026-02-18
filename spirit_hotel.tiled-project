@@ -1378,45 +1378,6 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 169,
-            "members": [
-                {
-                    "name": "0",
-                    "type": "object",
-                    "value": 0
-                }
-            ],
-            "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 170,
-            "members": [
-                {
-                    "name": "throttle",
-                    "type": "float",
-                    "value": 0
-                },
-                {
-                    "name": "timer",
-                    "type": "std::nullptr_t",
-                    "value": null
-                }
-            ],
-            "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
             "id": 171,
             "members": [
                 {
@@ -1438,6 +1399,81 @@
             "members": [
             ],
             "name": "spirit_hotel_trigger::components::trigger_has_been_activated::TriggerHasBeenActivated",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 185,
+            "members": [
+            ],
+            "name": "spirit_hotel_level::components::reparent_to_world::ReparentToWorld",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 186,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 187,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::activate_when_sub_triggers_active::ActivateWhenSubTriggersActive",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 188,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::continuous_trigger::ContinuousTrigger",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 189,
+            "members": [
+                {
+                    "name": "entity",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "should_be_held",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
             "type": "class",
             "useAs": [
                 "property"

@@ -1,15 +1,10 @@
 use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::{TiledWorld};
+use spirit_hotel_level::components::prelude::ReparentToWorld;
 use spirit_hotel_player::components::prelude::Player;
 
 pub fn reparent_player_to_world(
+    e_player_added: On<Add, Player>,
     mut commands: Commands,
-    s_world: Single<Entity, With<TiledWorld>>,
-    s_player: Single<Entity, Added<Player>>,
 ) {
-    let world = s_world.into_inner();
-
-    let player = s_player.into_inner();
-
-    commands.entity(player).set_parent_in_place(world);
+    commands.entity(e_player_added.entity).insert(ReparentToWorld);
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
  <tileset firstgid="1" source="../tilesets/rogues.tsx"/>
- <object gid="2" width="32" height="32">
+ <object name="Player" gid="2" width="32" height="32">
   <properties>
    <property name="animation_path" type="class" propertytype="spirit_hotel_animation::components::animation_path::AnimationPath">
     <properties>

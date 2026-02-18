@@ -47,6 +47,7 @@ impl Plugin for SpiritHotelLevelPlugin {
             .configure_sets(PreUpdate, LevelSystems)
             .configure_sets(Update, LevelSystems)
             .configure_sets(PostUpdate, LevelSystems)
+            .add_observer(reparent_entity_to_world)
             .add_systems(OnEnter(Screen::Gameplay), spawn_level)
             .add_systems(
                 PreUpdate,
