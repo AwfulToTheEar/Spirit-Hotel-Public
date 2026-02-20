@@ -77,7 +77,6 @@ pub fn compute_intent(
                 commands.entity(entity).insert(CollidedWithFollowTarget);
             }
 
-            info!("Collision detected. {}", other_collider_entity);
             if !can_push || can_push && q_pushables.get(child_of.0).is_err() {
                 commands.entity(entity).remove::<MovementIntent>();
                 return true;

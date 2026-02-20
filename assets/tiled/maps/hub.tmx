@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="19">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="27">
  <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
  <tileset firstgid="8" source="../tilesets/rogues.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
@@ -18,7 +18,7 @@
 2,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
@@ -110,6 +110,7 @@
       <property name="0" type="float" value="3"/>
      </properties>
     </property>
+    <property name="continuous_trigger" type="class" propertytype="spirit_hotel_trigger::components::continuous_trigger::ContinuousTrigger"/>
     <property name="from_trigger" type="class" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger">
      <properties>
       <property name=":variant" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant" value="FadeIn"/>
@@ -119,6 +120,11 @@
     <property name="spawn_image" type="class" propertytype="spirit_hotel_trigger::components::spawn_image::SpawnImage">
      <properties>
       <property name="0" type="file" value="../../images/splash.png"/>
+     </properties>
+    </property>
+    <property name="throttle_trigger" type="class" propertytype="spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger">
+     <properties>
+      <property name="0" type="float" value="1"/>
      </properties>
     </property>
    </properties>
@@ -159,14 +165,9 @@
   <object id="17" x="128" y="256">
    <properties>
     <property name="activate_when_sub_triggers_active" type="class" propertytype="spirit_hotel_trigger::components::activate_when_sub_triggers_active::ActivateWhenSubTriggersActive"/>
-    <property name="add_delay" type="class" propertytype="spirit_hotel_trigger::components::add_delay::AddDelay">
-     <properties>
-      <property name="0" type="float" value="3"/>
-     </properties>
-    </property>
     <property name="from_trigger" type="class" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger">
      <properties>
-      <property name=":variant" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant" value="FadeIn"/>
+      <property name=":variant" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant" value="OpenDismissibles"/>
      </properties>
     </property>
     <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
@@ -182,6 +183,106 @@
    <properties>
     <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>
     <property name="pushable" type="class" propertytype="spirit_hotel_movement::components::pushable::Pushable"/>
+   </properties>
+  </object>
+  <object id="19" gid="27" x="480" y="512" width="32" height="32">
+   <properties>
+    <property name="add_delay" type="class" propertytype="spirit_hotel_trigger::components::add_delay::AddDelay">
+     <properties>
+      <property name="0" type="float" value="1"/>
+     </properties>
+    </property>
+    <property name="can_move" type="class" propertytype="spirit_hotel_movement::components::can_move::CanMove"/>
+    <property name="follow" type="class" propertytype="spirit_hotel_pathfinding_movement::components::follow::Follow">
+     <properties>
+      <property name="0" type="object" value="24"/>
+     </properties>
+    </property>
+    <property name="from_trigger" type="class" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger">
+     <properties>
+      <property name=":variant" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant" value="FadeIn"/>
+     </properties>
+    </property>
+    <property name="in_world_grid" type="class" propertytype="spirit_hotel_pathfinding::components::in_world_grid::InWorldGrid"/>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
+    <property name="movement_duration" type="class" propertytype="spirit_hotel_movement::components::movement_duration::MovementDuration">
+     <properties>
+      <property name="0" type="float" value="1"/>
+     </properties>
+    </property>
+    <property name="spawn_image" type="class" propertytype="spirit_hotel_trigger::components::spawn_image::SpawnImage">
+     <properties>
+      <property name="0" type="file" value="../../images/splash.png"/>
+     </properties>
+    </property>
+    <property name="without_pathfinding" type="class" propertytype="spirit_hotel_pathfinding_movement::components::without_pathfinding::WithoutPathfinding"/>
+   </properties>
+  </object>
+  <object id="21" template="../templates/path_node.tx" x="480" y="512">
+   <properties>
+    <property name="path_node" type="class" propertytype="spirit_hotel_pathfinding::components::path_node::PathNode">
+     <properties>
+      <property name="0" type="object" value="24"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="22" template="../templates/path_node.tx" x="480" y="576">
+   <properties>
+    <property name="path_node" type="class" propertytype="spirit_hotel_pathfinding::components::path_node::PathNode">
+     <properties>
+      <property name="0" type="object" value="21"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="23" template="../templates/path_node.tx" x="544" y="576">
+   <properties>
+    <property name="path_node" type="class" propertytype="spirit_hotel_pathfinding::components::path_node::PathNode">
+     <properties>
+      <property name="0" type="object" value="22"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="24" template="../templates/path_node.tx" x="544" y="512">
+   <properties>
+    <property name="path_node" type="class" propertytype="spirit_hotel_pathfinding::components::path_node::PathNode">
+     <properties>
+      <property name="0" type="object" value="23"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="25" gid="39" x="256" y="480" width="32" height="32">
+   <properties>
+    <property name="show_in_scene" type="class" propertytype="spirit_hotel_scene::components::show_in_game_scene::ShowInGameScene">
+     <properties>
+      <property name="0" value="trigger_test"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="26" x="192" y="448" width="32" height="32">
+   <properties>
+    <property name="change_game_scene" type="class" propertytype="spirit_hotel_scene::components::change_game_scene::ChangeGameScene">
+     <properties>
+      <property name="action" type="class" propertytype="spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction">
+       <properties>
+        <property name=":variant" propertytype="spirit_hotel_scene::components::change_game_scene::ChangeGameSceneAction:::Variant" value="Toggle"/>
+       </properties>
+      </property>
+      <property name="scene" value="trigger_test"/>
+     </properties>
+    </property>
+    <property name="continuous_trigger" type="class" propertytype="spirit_hotel_trigger::components::continuous_trigger::ContinuousTrigger"/>
+    <property name="interact_trigger" type="class" propertytype="spirit_hotel_trigger::components::interact_trigger::InteractTrigger"/>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
+    <property name="throttle_trigger" type="class" propertytype="spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger">
+     <properties>
+      <property name="0" type="float" value="0.5"/>
+     </properties>
+    </property>
    </properties>
   </object>
  </objectgroup>

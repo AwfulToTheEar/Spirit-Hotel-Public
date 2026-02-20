@@ -1,31 +1,60 @@
-use std::ops::Add;
-use std::time::Duration;
-use bevy::ecs::relationship::RelationshipSourceCollection;
-use bevy::prelude::*;
+use crate::components::prelude::{
+    ContinuousTrigger, InteractTrigger, SubTriggerOf, SubTriggers, ThrottleTrigger,
+    ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, TriggerHeldFor,
+};
 use crate::{
     components::prelude::{InsideTriggers, IsTrigger},
     events::prelude::TriggerActivated,
 };
-use crate::components::prelude::{ContinuousTrigger, TriggerHeldFor, InteractTrigger, ThrottleTrigger, ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, SubTriggers, SubTriggerOf};
+use bevy::ecs::relationship::RelationshipSourceCollection;
+use bevy::prelude::*;
+use std::ops::Add;
+use std::time::Duration;
 
 pub fn activate_interact_triggers(
     mut commands: Commands,
     time: Res<Time>,
     keyboard_input: Res<ButtonInput<KeyCode>>,
     q_inside_triggers: Query<(Entity, &InsideTriggers)>,
-    mut q_triggers: Query<(Option<&TriggerFor>, Option<&SubTriggers>, Option<&ThrottleTrigger>, Has<ThrottleTriggerTimer>, Has<ContinuousTrigger>, Has<TriggerHeldFor>, Has<InteractTrigger>), With<IsTrigger>>,
-    q_sub_triggers: Query<(&SubTriggerOf, Has<TriggerHasBeenActivated>, Has<TriggerHeldFor>)>,
+    mut q_triggers: Query<
+        (
+            Option<&TriggerFor>,
+            Option<&SubTriggers>,
+            Option<&ThrottleTrigger>,
+            Has<ThrottleTriggerTimer>,
+            Has<ContinuousTrigger>,
+            Has<TriggerHeldFor>,
+            Has<InteractTrigger>,
+        ),
+        With<IsTrigger>,
+    >,
+    q_sub_triggers: Query<(
+        &SubTriggerOf,
+        Has<TriggerHasBeenActivated>,
+        Has<TriggerHeldFor>,
+    )>,
 ) {
     for (entity, inside_triggers) in q_inside_triggers.iter() {
         for trigger_entity in inside_triggers.entities.iter() {
-            let Ok((option_trigger_for, option_sub_triggers, option_throttle_trigger, has_throttle_trigger_timer, has_continuous_trigger, has_trigger_held_for, has_interact_trigger)) = q_triggers.get_mut(trigger_entity) else {
+            let Ok((
+                option_trigger_for,
+                option_sub_triggers,
+                option_throttle_trigger,
+                has_throttle_trigger_timer,
+                has_continuous_trigger,
+                has_trigger_held_for,
+                has_interact_trigger,
+            )) = q_triggers.get_mut(trigger_entity)
+            else {
                 continue;
             };
 
             if let Some(sub_triggers) = option_sub_triggers {
                 let mut sub_triggers_not_valid = false;
                 for sub_trigger in sub_triggers.iter() {
-                    let Ok((sub_trigger_of, has_trigger_been_activated, has_trigger_held_for)) = q_sub_triggers.get(sub_trigger) else {
+                    let Ok((sub_trigger_of, has_trigger_been_activated, has_trigger_held_for)) =
+                        q_sub_triggers.get(sub_trigger)
+                    else {
                         continue;
                     };
 
@@ -45,7 +74,14 @@ pub fn activate_interact_triggers(
                 }
             }
 
-            if has_interact_trigger && !keyboard_input.just_pressed(KeyCode::KeyE) || !has_interact_trigger && !has_continuous_trigger {
+            if has_interact_trigger
+                && !has_continuous_trigger
+                && !keyboard_input.just_pressed(KeyCode::KeyE)
+                || !has_interact_trigger && !has_continuous_trigger
+                || has_interact_trigger
+                    && has_continuous_trigger
+                    && !keyboard_input.pressed(KeyCode::KeyE)
+            {
                 continue;
             }
 
@@ -54,14 +90,23 @@ pub fn activate_interact_triggers(
             }
 
             if let Some(throttle_trigger) = option_throttle_trigger {
-                commands.entity(trigger_entity).insert(ThrottleTriggerTimer(Timer::from_seconds(throttle_trigger.0, TimerMode::Once)));
+                commands
+                    .entity(trigger_entity)
+                    .insert(ThrottleTriggerTimer(Timer::from_seconds(
+                        throttle_trigger.0,
+                        TimerMode::Once,
+                    )));
             }
 
-            if !has_trigger_held_for {
-                commands.entity(trigger_entity).insert(TriggerHeldFor(Duration::ZERO));
+            if has_continuous_trigger && !has_trigger_held_for {
+                commands
+                    .entity(trigger_entity)
+                    .insert(TriggerHeldFor(Duration::ZERO));
             }
 
-            if let Some(trigger_for) = option_trigger_for && trigger_for.0 != entity {
+            if let Some(trigger_for) = option_trigger_for
+                && trigger_for.0 != entity
+            {
                 continue;
             }
 

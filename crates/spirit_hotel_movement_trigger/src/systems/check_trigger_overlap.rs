@@ -14,7 +14,7 @@ pub fn check_trigger_overlap(
         (With<Transform>, Without<MoveToLocation>, With<CanMove>),
     >,
     q_colliders: Query<(&Collider, &GlobalTransform)>,
-    q_trigger_colliders: Query<(&Collider, &GlobalTransform, &ChildOf), With<TriggerCollider>>,
+    q_trigger_colliders: Query<(Entity, &Collider, &GlobalTransform, &ChildOf), With<TriggerCollider>>,
 ) {
     for (entity, children, mut inside_triggers_option) in q_entites.iter_mut() {
         for child in children.iter() {
@@ -22,7 +22,11 @@ pub fn check_trigger_overlap(
                 continue;
             };
 
-            for (trigger_collider, trigger_transform, child_of) in q_trigger_colliders.iter() {
+            for (trigger_entity, trigger_collider, trigger_transform, child_of) in q_trigger_colliders.iter() {
+                if child == trigger_entity {
+                    continue;
+                }
+
                 let Ok(result) = contact_query::intersection_test(
                     collider,
                     collider_transform.translation().truncate(),
