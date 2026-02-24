@@ -5,7 +5,7 @@ use spirit_hotel_pathfinding_movement::components::prelude::CollidedWithFollowTa
 
 pub fn handle_move_to_target_action_target_reached(
     mut commands: Commands,
-    mut q_moving_to_target: Query<
+    mut q_moving_to_target: Populated<
         (Entity, &mut TargetInReach),
         (With<MoveToTargetAction>, Added<CollidedWithFollowTarget>),
     >,

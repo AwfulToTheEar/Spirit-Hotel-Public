@@ -3,21 +3,30 @@ pub mod audio;
 pub mod dismissibles;
 pub mod fades;
 pub mod game;
+pub mod general_controls;
 pub mod menus;
 pub mod screens;
 pub mod theme;
 
-use bevy::camera::visibility::RenderLayers;
 use crate::dismissibles::DismissiblesOpen;
 use crate::fades::Fade;
+use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 use bevy::reflect::Array;
+use bevy_enhanced_input::EnhancedInputPlugin;
+use leafwing_manifest::asset_state::SimpleAssetState;
+use leafwing_manifest::plugin::ManifestPlugin;
 
 pub struct SpiritHotelCorePlugin;
 
 impl Plugin for SpiritHotelCorePlugin {
     fn build(&self, app: &mut App) {
         // Add other plugins.
+        app.init_state::<SimpleAssetState>();
+        app.add_plugins((
+            EnhancedInputPlugin,
+            ManifestPlugin::<SimpleAssetState>::default()
+        ));
         app.add_plugins((
             asset_tracking::plugin,
             audio::plugin,
@@ -27,6 +36,7 @@ impl Plugin for SpiritHotelCorePlugin {
             theme::plugin,
             fades::plugin,
             dismissibles::plugin,
+            general_controls::plugin,
         ));
 
         // Order new `AppSystems` variants by adding them here:

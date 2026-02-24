@@ -6,7 +6,7 @@ use spirit_hotel_player::components::prelude::Player;
 
 pub fn handle_check_if_player_exists_action(
     mut commands: Commands,
-    mut q_checking_if_player_exists: Query<
+    mut q_checking_if_player_exists: Populated<
         (Entity, &mut PlayerExists),
         With<CheckIfPlayerExistsAction>,
     >,

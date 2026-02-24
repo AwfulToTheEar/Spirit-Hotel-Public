@@ -48,7 +48,7 @@ pub fn check_trigger_overlap(
                     commands.entity(entity).insert(inside_triggers);
 
                     commands.trigger(TriggerEntered {
-                        entity,
+                        by: entity,
                         trigger: child_of.0,
                     });
 
@@ -67,7 +67,7 @@ pub fn check_trigger_overlap(
                     }
 
                     commands.trigger(TriggerExited {
-                        entity,
+                        by: entity,
                         trigger: child_of.0,
                     });
 
@@ -79,7 +79,7 @@ pub fn check_trigger_overlap(
                 }
 
                 commands.trigger(TriggerEntered {
-                    entity,
+                    by: entity,
                     trigger: child_of.0,
                 });
 

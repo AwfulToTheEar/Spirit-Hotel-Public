@@ -1,0 +1,11 @@
+[package]
+name = "spirit_hotel_inventory"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { workspace = true }
+leafwing_manifest = { workspace = true }
+serde = { workspace = true }
+
+spirit_hotel_core = { workspace = true }

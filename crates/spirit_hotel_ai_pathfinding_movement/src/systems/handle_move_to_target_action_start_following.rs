@@ -7,7 +7,7 @@ use crate::components::prelude::MoveToTargetAction;
 
 pub fn handle_move_to_target_action_start_following(
     mut commands: Commands,
-    q_moving_to_target: Query<(Entity, &Target, &AgentOfGrid), (With<MoveToTargetAction>, With<CanMove>)>,
+    q_moving_to_target: Populated<(Entity, &Target, &AgentOfGrid), (With<MoveToTargetAction>, With<CanMove>)>,
     q_targets: Query<(&AgentOfGrid)>
 ) {
     for (entity, target, agent_of_grid) in q_moving_to_target.iter() {

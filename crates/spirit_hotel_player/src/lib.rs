@@ -6,19 +6,19 @@ use crate::components::prelude::Player;
 use crate::systems::prelude::*;
 
 pub mod components;
-pub mod input;
+pub mod inputs;
 pub mod systems;
 
 pub struct SpiritHotelPlayerPlugin;
 
 impl Plugin for SpiritHotelPlayerPlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugins(EnhancedInputPlugin)
-            .register_type::<Player>()
+        app.register_type::<Player>()
             .add_input_context::<Player>()
+            .add_observer(add_player_input_actions)
             .add_systems(
                 Update,
-                ((apply_player_translate_to_camera, add_player_input_actions)
+                ((apply_player_translate_to_camera)
                      .in_set(AppSystems::Update),)
                     .in_set(GameplaySystems),
             );

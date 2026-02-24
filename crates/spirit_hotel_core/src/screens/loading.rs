@@ -2,7 +2,7 @@
 //! This reduces stuttering, especially for audio on Wasm.
 
 use bevy::prelude::*;
-
+use leafwing_manifest::asset_state::SimpleAssetState;
 use crate::{asset_tracking::ResourceHandles, screens::Screen, theme::prelude::*};
 
 pub(super) fn plugin(app: &mut App) {
@@ -28,6 +28,6 @@ fn enter_gameplay_screen(
     next_screen.set(Screen::Gameplay);
 }
 
-fn all_assets_loaded(resource_handles: Res<ResourceHandles>) -> bool {
-    resource_handles.is_all_done()
+fn all_assets_loaded(resource_handles: Res<ResourceHandles>, asset_state: Res<State<SimpleAssetState>>) -> bool {
+    resource_handles.is_all_done() && matches!(asset_state.get(), SimpleAssetState::Ready)
 }

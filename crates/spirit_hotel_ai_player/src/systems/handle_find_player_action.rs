@@ -5,7 +5,7 @@ use crate::components::prelude::FindPlayerAction;
 
 pub fn handle_find_player_action(
     mut commands: Commands,
-    mut q_looking_for_player: Query<(Entity, &mut HasTarget, Option<&mut Target>), With<FindPlayerAction>>,
+    mut q_looking_for_player: Populated<(Entity, &mut HasTarget, Option<&mut Target>), With<FindPlayerAction>>,
     q_player: Query<Entity, With<Player>>
 ) {
     let Ok(player) = q_player.single() else {

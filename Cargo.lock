@@ -585,7 +585,7 @@ dependencies = [
  "downcast-rs 2.0.2",
  "either",
  "petgraph",
- "ron",
+ "ron 0.10.1",
  "serde",
  "smallvec",
  "thiserror 2.0.18",
@@ -694,7 +694,7 @@ dependencies = [
  "js-sys",
  "notify-debouncer-full",
  "parking_lot 0.12.5",
- "ron",
+ "ron 0.10.1",
  "serde",
  "stackfuture",
  "thiserror 2.0.18",
@@ -787,6 +787,19 @@ dependencies = [
  "serde",
  "thiserror 2.0.18",
  "wgpu-types",
+]
+
+[[package]]
+name = "bevy_common_assets"
+version = "0.14.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bf2d95660d90ec38e1259afa5fe95c5b9f72d822d4dfd2dbfa6ef4c176d3078f"
+dependencies = [
+ "anyhow",
+ "bevy",
+ "ron 0.11.0",
+ "serde",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
@@ -3939,6 +3952,8 @@ dependencies = [
  "num-traits",
  "png",
  "tiff",
+ "zune-core 0.5.1",
+ "zune-jpeg 0.5.12",
 ]
 
 [[package]]
@@ -4144,6 +4159,18 @@ name = "lazy_static"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
+
+[[package]]
+name = "leafwing_manifest"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "396f7bf388949ebe00ad0dbb7fdbcafc2e08e360950c3443505b478d0deb9af5"
+dependencies = [
+ "bevy",
+ "bevy_common_assets",
+ "serde",
+ "thiserror 1.0.69",
+]
 
 [[package]]
 name = "lewton"
@@ -5680,6 +5707,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "ron"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "db09040cc89e461f1a265139777a2bde7f8d8c67c4936f700c63ce3e2904d468"
+dependencies = [
+ "base64",
+ "bitflags 2.10.0",
+ "serde",
+ "serde_derive",
+ "unicode-ident",
+]
+
+[[package]]
 name = "roxmltree"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6046,9 +6086,11 @@ dependencies = [
  "bevy",
  "bevy-inspector-egui",
  "bevy_dogoap",
+ "bevy_enhanced_input",
  "bevy_light_2d",
  "bevy_mod_debugdump",
  "bevy_northstar",
+ "leafwing_manifest",
  "spirit_hotel_ai",
  "spirit_hotel_ai_all",
  "spirit_hotel_ai_pathfinding",
@@ -6067,9 +6109,12 @@ dependencies = [
  "spirit_hotel_drowned_child_player_movement",
  "spirit_hotel_drowned_child_player_pathfinding",
  "spirit_hotel_drowned_child_player_pathfinding_movement",
+ "spirit_hotel_inventory",
+ "spirit_hotel_inventory_trigger",
  "spirit_hotel_level",
  "spirit_hotel_level_animation",
  "spirit_hotel_level_drowned_child",
+ "spirit_hotel_level_inventory",
  "spirit_hotel_level_movement",
  "spirit_hotel_level_pathfinding",
  "spirit_hotel_level_player",
@@ -6083,6 +6128,8 @@ dependencies = [
  "spirit_hotel_pathfinding_movement_trigger",
  "spirit_hotel_pathfinding_trigger",
  "spirit_hotel_player",
+ "spirit_hotel_player_inventory",
+ "spirit_hotel_player_inventory_trigger",
  "spirit_hotel_player_movement",
  "spirit_hotel_scene",
  "spirit_hotel_scene_dialogue",
@@ -6177,7 +6224,9 @@ version = "0.1.0"
 dependencies = [
  "avian2d",
  "bevy",
+ "bevy_enhanced_input",
  "bitvec",
+ "leafwing_manifest",
 ]
 
 [[package]]
@@ -6290,6 +6339,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "spirit_hotel_inventory"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "leafwing_manifest",
+ "serde",
+ "spirit_hotel_core",
+]
+
+[[package]]
+name = "spirit_hotel_inventory_trigger"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "leafwing_manifest",
+ "spirit_hotel_core",
+ "spirit_hotel_inventory",
+ "spirit_hotel_trigger",
+]
+
+[[package]]
 name = "spirit_hotel_level"
 version = "0.1.0"
 dependencies = [
@@ -6319,6 +6389,16 @@ dependencies = [
  "bevy_ecs_tiled",
  "spirit_hotel_core",
  "spirit_hotel_drowned_child",
+ "spirit_hotel_level",
+]
+
+[[package]]
+name = "spirit_hotel_level_inventory"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_ecs_tiled",
+ "spirit_hotel_inventory",
  "spirit_hotel_level",
 ]
 
@@ -6470,6 +6550,31 @@ dependencies = [
  "bevy",
  "bevy_enhanced_input",
  "spirit_hotel_core",
+]
+
+[[package]]
+name = "spirit_hotel_player_inventory"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_enhanced_input",
+ "leafwing_manifest",
+ "spirit_hotel_core",
+ "spirit_hotel_inventory",
+ "spirit_hotel_player",
+]
+
+[[package]]
+name = "spirit_hotel_player_inventory_trigger"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "leafwing_manifest",
+ "spirit_hotel_core",
+ "spirit_hotel_inventory",
+ "spirit_hotel_inventory_trigger",
+ "spirit_hotel_player",
+ "spirit_hotel_trigger",
 ]
 
 [[package]]
@@ -6746,7 +6851,7 @@ dependencies = [
  "half",
  "quick-error",
  "weezl",
- "zune-jpeg",
+ "zune-jpeg 0.4.21",
 ]
 
 [[package]]
@@ -8529,10 +8634,25 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f423a2c17029964870cfaabb1f13dfab7d092a62a29a89264f4d36990ca414a"
 
 [[package]]
+name = "zune-core"
+version = "0.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cb8a0807f7c01457d0379ba880ba6322660448ddebc890ce29bb64da71fb40f9"
+
+[[package]]
 name = "zune-jpeg"
 version = "0.4.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "29ce2c8a9384ad323cf564b67da86e21d3cfdff87908bc1223ed5c99bc792713"
 dependencies = [
- "zune-core",
+ "zune-core 0.4.12",
+]
+
+[[package]]
+name = "zune-jpeg"
+version = "0.5.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "410e9ecef634c709e3831c2cfdb8d9c32164fae1c67496d5b68fff728eec37fe"
+dependencies = [
+ "zune-core 0.5.1",
 ]

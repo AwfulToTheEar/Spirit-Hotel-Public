@@ -14,12 +14,8 @@ pub fn add_breath_input_actions(
             Without<Breathing>,
         ),
     >,
-    q_breath_timer: Query<&BreathTimer, Added<BreathTimer>>,
+    _: Populated<&BreathTimer, Added<BreathTimer>>,
 ) {
-    if q_breath_timer.is_empty() {
-        return;
-    }
-
     let entity = s_player.into_inner();
     commands.entity(entity).insert((
         Breathing,

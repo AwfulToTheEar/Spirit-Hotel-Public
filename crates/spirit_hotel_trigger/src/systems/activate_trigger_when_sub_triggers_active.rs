@@ -34,7 +34,7 @@ pub fn activate_trigger_when_sub_triggers_active(
         }
 
         commands.trigger(TriggerActivated {
-            entity: None,
+            by: None,
             trigger: trigger_entity,
         });
     }

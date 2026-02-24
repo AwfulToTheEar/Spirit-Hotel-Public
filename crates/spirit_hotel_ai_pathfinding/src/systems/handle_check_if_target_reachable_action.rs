@@ -9,7 +9,7 @@ use crate::components::prelude::{CanReachTarget, CheckIfTargetReachableAction};
 
 pub fn handle_check_if_target_reachable_action(
     mut commands: Commands,
-    mut q_checking_if_target_reachable: Query<(Entity, &mut CanReachTarget, &Target, &AgentOfGrid, &AgentPos), With<CheckIfTargetReachableAction>>,
+    mut q_checking_if_target_reachable: Populated<(Entity, &mut CanReachTarget, &Target, &AgentOfGrid, &AgentPos), With<CheckIfTargetReachableAction>>,
     q_targets: Query<(&AgentOfGrid, &AgentPos)>,
     q_grids: Query<&Grid<CardinalNeighborhood>>
 ) {

@@ -13,6 +13,8 @@ impl Plugin for SpiritHotelTriggerPlugin {
     fn build(&self, app: &mut App) {
         app.register_type::<IsTrigger>()
             .add_observer(activate_instant_triggers)
+            .add_observer(activate_trigger_when_external_action_completed)
+            .add_observer(unlock_trigger_when_external_action_completed)
             .add_observer(action_on_activated_trigger)
             .add_observer(add_delay_on_activated_trigger)
             .add_observer(spawn_image_on_activated_trigger)

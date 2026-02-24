@@ -9,6 +9,7 @@ use bevy_mod_debugdump::CommandLineArgs;
 use spirit_hotel_core::Pause;
 use spirit_hotel_core::fades::Fade;
 use spirit_hotel_core::screens::Screen;
+use spirit_hotel_inventory::components::prelude::{InventoryItem};
 use spirit_hotel_player::components::prelude::Player;
 use spirit_hotel_trigger::components::prelude::{InsideTriggers, TriggerHeldFor};
 
@@ -19,7 +20,7 @@ impl Plugin for SpiritHotelDevToolsPlugin {
         app.add_plugins((
             EguiPlugin::default(),
             FilterQueryInspectorPlugin::<(
-                With<TriggerHeldFor>,
+                With<InventoryItem>,
             )>::new(),
             WorldInspectorPlugin::new(),
             //TiledDebugPluginGroup,

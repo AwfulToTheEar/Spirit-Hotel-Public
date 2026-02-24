@@ -1,16 +1,15 @@
 use crate::components::prelude::Player;
-use crate::input::prelude::{WalkHorizontal, WalkVertical};
+use crate::inputs::prelude::{WalkHorizontal, WalkVertical};
 use bevy_enhanced_input::prelude::*;
 use bevy::prelude::*;
 
 pub fn add_player_input_actions(
+    e_player_added: On<Add, Player>,
     mut commands: Commands,
-    s_player: Single<Entity, (With<Player>, Without<Actions<Player>>)>,
 ) {
     info!("Adding player input actions.");
-    let entity = s_player.into_inner();
 
-    commands.entity(entity).insert(actions!(
+    commands.entity(e_player_added.entity).insert(actions!(
         Player[
             (
                 Action::<WalkVertical>::new(),

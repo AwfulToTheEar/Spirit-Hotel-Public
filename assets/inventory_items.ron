@@ -1,0 +1,33 @@
+RawInventoryManifest(
+    items:[
+        (
+            position: (0,0),
+            id: "item_1",
+            name: "Item 1",
+            description: "This is a test item",
+        ),
+        (
+            position: (0,1),
+            id: "item_2",
+            name: "Item 2",
+            description: "This is a test item",
+        ),
+        (
+            position: (0,2),
+            id: "item_3",
+            name: "Item 3",
+            description: "This is a test item",
+        )
+    ],
+    combinations: {
+        ("item_1", "item_2"): "item_3"
+    },
+    texture: "images/inventory_items.png",
+    layout: (
+        tile_size: (64,64),
+        rows: 9,
+        columns: 9,
+        padding: None,
+        offset: None
+    )
+)

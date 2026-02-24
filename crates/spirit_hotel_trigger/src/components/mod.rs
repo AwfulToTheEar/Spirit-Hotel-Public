@@ -14,6 +14,9 @@ mod spawn_image;
 mod throttle_trigger_timer;
 mod trigger_held_for;
 mod activate_when_sub_triggers_active;
+mod wait_for_external_action;
+mod unlock_on_external_action_completed;
+mod activate_on_external_action_completed;
 
 pub mod prelude {
     pub use super::inside_triggers::*;
@@ -32,4 +35,5 @@ pub mod prelude {
     pub use super::throttle_trigger_timer::*;
     pub use super::trigger_held_for::*;
     pub use super::activate_when_sub_triggers_active::*;
+    pub use super::wait_for_external_action::*;
 }

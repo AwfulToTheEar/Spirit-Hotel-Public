@@ -1,7 +1,4 @@
-use crate::components::prelude::{
-    ContinuousTrigger, InteractTrigger, SubTriggerOf, SubTriggers, ThrottleTrigger,
-    ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, TriggerHeldFor,
-};
+use crate::components::prelude::{ContinuousTrigger, InteractTrigger, SubTriggerOf, SubTriggers, ThrottleTrigger, ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, TriggerHeldFor, WaitForExternalAction};
 use crate::{
     components::prelude::{InsideTriggers, IsTrigger},
     events::prelude::TriggerActivated,
@@ -26,7 +23,7 @@ pub fn activate_interact_triggers(
             Has<TriggerHeldFor>,
             Has<InteractTrigger>,
         ),
-        With<IsTrigger>,
+        (With<IsTrigger>, Without<WaitForExternalAction>)
     >,
     q_sub_triggers: Query<(
         &SubTriggerOf,
@@ -111,7 +108,7 @@ pub fn activate_interact_triggers(
             }
 
             commands.trigger(TriggerActivated {
-                entity: Some(entity),
+                by: Some(entity),
                 trigger: trigger_entity,
             });
         }

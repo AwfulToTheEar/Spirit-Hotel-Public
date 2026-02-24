@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="27">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="34">
  <tileset firstgid="1" source="../tilesets/orthogonal_1.tsx"/>
  <tileset firstgid="8" source="../tilesets/rogues.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="20">
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,
+2,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
 2,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,
@@ -283,6 +283,61 @@
       <property name="0" type="float" value="0.5"/>
      </properties>
     </property>
+   </properties>
+  </object>
+  <object id="30" template="../templates/load_level_trigger.tx" x="512" y="64">
+   <properties>
+    <property name="load_level" type="class" propertytype="spirit_hotel_level_trigger::components::load_level::LoadLevel">
+     <properties>
+      <property name="0" type="file" value="../worlds/drowned_child/hallway.world"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="31" x="352" y="192" width="64" height="64">
+   <properties>
+    <property name="inventory_item_ref" type="class" propertytype="spirit_hotel_inventory::components::inventory_item_ref::InventoryItemRef">
+     <properties>
+      <property name="0" value="item_3"/>
+     </properties>
+    </property>
+   </properties>
+  </object>
+  <object id="33" x="224" y="192" width="32" height="32">
+   <properties>
+    <property name="activate_on_external_action_completed" type="class" propertytype="spirit_hotel_trigger::components::activate_on_external_action_completed::ActivateOnExternalActionCompleted"/>
+    <property name="add_delay" type="class" propertytype="spirit_hotel_trigger::components::add_delay::AddDelay">
+     <properties>
+      <property name="0" type="float" value="3"/>
+     </properties>
+    </property>
+    <property name="add_item_from_world" type="class" propertytype="spirit_hotel_inventory_trigger::components::add_item_from_world::AddItemFromWorld">
+     <properties>
+      <property name="0" type="object" value="31"/>
+     </properties>
+    </property>
+    <property name="from_trigger" type="class" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger">
+     <properties>
+      <property name=":variant" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant" value="FadeIn"/>
+     </properties>
+    </property>
+    <property name="is_trigger" type="class" propertytype="spirit_hotel_trigger::components::is_trigger::IsTrigger"/>
+    <property name="remove_item_from_ref" type="class" propertytype="spirit_hotel_inventory_trigger::components::remove_item_from_ref::RemoveItemFromRef">
+     <properties>
+      <property name="0" value="item_1"/>
+     </properties>
+    </property>
+    <property name="requires_item" type="class" propertytype="spirit_hotel_inventory_trigger::components::requires_item::RequiresItem">
+     <properties>
+      <property name="0" value="item_1"/>
+     </properties>
+    </property>
+    <property name="spawn_image" type="class" propertytype="spirit_hotel_trigger::components::spawn_image::SpawnImage">
+     <properties>
+      <property name="0" type="file" value="../../images/splash.png"/>
+     </properties>
+    </property>
+    <property name="unlock_on_external_action_completed" type="class" propertytype="spirit_hotel_trigger::components::unlock_on_external_action_completed::UnlockOnExternalActionCompleted"/>
    </properties>
   </object>
  </objectgroup>

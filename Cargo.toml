@@ -32,11 +32,14 @@ spirit_hotel_level_player = { workspace = true }
 spirit_hotel_level_trigger = { workspace = true }
 spirit_hotel_level_scene = { workspace = true }
 spirit_hotel_level_drowned_child = { workspace = true }
+spirit_hotel_level_inventory = { workspace = true }
 spirit_hotel_movement_trigger = { workspace = true }
 spirit_hotel_pathfinding_movement = { workspace = true }
 spirit_hotel_pathfinding_movement_trigger = { workspace = true }
 spirit_hotel_pathfinding_trigger = { workspace = true }
 spirit_hotel_player_movement = { workspace = true }
+spirit_hotel_player_inventory = { workspace = true }
+spirit_hotel_player_inventory_trigger = { workspace = true }
 spirit_hotel_scene_dialogue = { workspace = true }
 spirit_hotel_scene_trigger = { workspace = true }
 spirit_hotel_drowned_child = { workspace = true }
@@ -52,6 +55,8 @@ spirit_hotel_ai_pathfinding = { workspace = true }
 spirit_hotel_ai_pathfinding_movement = { workspace = true }
 spirit_hotel_ai_player = { workspace = true }
 spirit_hotel_ai_all = { workspace = true }
+spirit_hotel_inventory = { workspace = true }
+spirit_hotel_inventory_trigger = { workspace = true }
 
 # Your web builds will start failing if you add a dependency that pulls in `getrandom` v0.3+.
 # To fix this, you should tell `getrandom` to use the `wasm_js` backend on Wasm.
@@ -65,10 +70,10 @@ spirit_hotel_ai_all = { workspace = true }
 #[patch.crates-io]
 #getrandom = { git = "https://github.com/benfrankel/getrandom" }
 [workspace]
-members = ["crates/spirit_hotel*", "crates/spirit_hotel_cutscene_trigger"]
+members = ["crates/spirit_hotel*"]
 
 [workspace.dependencies]
-bevy = { version = "0.17.3", features = ["wayland"] }
+bevy = { version = "0.17.3", features = ["wayland", "jpeg"] }
 avian2d = "0.4.1"
 bevy_aseprite_ultra = "0.7.0"
 bevy_yarnspinner = "0.6.0"
@@ -81,6 +86,8 @@ bevy_enhanced_input = "0.20.0"
 bevy_av1 = { git = "https://github.com/AwfulToTheEar/bevy_av1.git" }
 bevy_dogoap = { git = "https://github.com/victorb/dogoap.git" }
 bitvec = "1.0.1"
+leafwing_manifest = { version = "0.5.0", features = ["ron"] }
+serde = "1"
 
 spirit_hotel_core = { path = "crates/spirit_hotel_core" }
 spirit_hotel_player = { path = "crates/spirit_hotel_player" }
@@ -101,11 +108,14 @@ spirit_hotel_level_player = { path = "crates/spirit_hotel_level_player" }
 spirit_hotel_level_trigger = { path = "crates/spirit_hotel_level_trigger" }
 spirit_hotel_level_scene = { path = "crates/spirit_hotel_level_scene" }
 spirit_hotel_level_drowned_child = { path = "crates/spirit_hotel_level_drowned_child" }
+spirit_hotel_level_inventory = { path = "crates/spirit_hotel_level_inventory" }
 spirit_hotel_movement_trigger = { path = "crates/spirit_hotel_movement_trigger" }
 spirit_hotel_pathfinding_movement = { path = "crates/spirit_hotel_pathfinding_movement" }
 spirit_hotel_pathfinding_movement_trigger = { path = "crates/spirit_hotel_pathfinding_movement_trigger" }
 spirit_hotel_pathfinding_trigger = { path = "crates/spirit_hotel_pathfinding_trigger" }
 spirit_hotel_player_movement = { path = "crates/spirit_hotel_player_movement" }
+spirit_hotel_player_inventory = { path = "crates/spirit_hotel_player_inventory" }
+spirit_hotel_player_inventory_trigger = { path = "crates/spirit_hotel_player_inventory_trigger" }
 spirit_hotel_scene_dialogue = { path = "crates/spirit_hotel_scene_dialogue" }
 spirit_hotel_scene_trigger = { path = "crates/spirit_hotel_scene_trigger" }
 spirit_hotel_drowned_child = { path = "crates/spirit_hotel_drowned_child" }
@@ -121,6 +131,8 @@ spirit_hotel_ai_pathfinding = { path = "crates/spirit_hotel_ai_pathfinding" }
 spirit_hotel_ai_pathfinding_movement = { path = "crates/spirit_hotel_ai_pathfinding_movement" }
 spirit_hotel_ai_player = { path = "crates/spirit_hotel_ai_player" }
 spirit_hotel_ai_all = { path = "crates/spirit_hotel_ai_all" }
+spirit_hotel_inventory = { path = "crates/spirit_hotel_inventory" }
+spirit_hotel_inventory_trigger = { path = "crates/spirit_hotel_inventory_trigger" }
 
 
 [features]
@@ -141,6 +153,10 @@ dev_native = [
     # Enable embedded asset hot reloading for native dev builds.
     "bevy/embedded_watcher",
 ]
+
+[dev-dependencies]
+bevy_enhanced_input = { workspace = true }
+leafwing_manifest = { workspace = true }
 
 
 [package.metadata.bevy_cli.release]

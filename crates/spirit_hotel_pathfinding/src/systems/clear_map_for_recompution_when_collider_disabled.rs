@@ -7,13 +7,9 @@ use crate::components::prelude::GridCollisionCalculated;
 pub fn clear_map_for_recompution_when_collider_disabled(
     mut commands: Commands,
     mut q_grids: Query<&mut Grid<CardinalNeighborhood>>,
-    q_disabled_colliders: Query<Entity, (Added<Disabled>, With<GridCollisionCalculated>)>,
+    q_disabled_colliders: Populated<Entity, (Added<Disabled>, With<GridCollisionCalculated>)>,
     q_colliders: Query<Entity, With<GridCollisionCalculated>>,
 ) {
-    if q_disabled_colliders.is_empty() {
-        return;
-    }
-
     for entity in q_disabled_colliders.iter() {
         commands.entity(entity).remove::<GridCollisionCalculated>();
     }

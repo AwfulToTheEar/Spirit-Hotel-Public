@@ -8,8 +8,8 @@ mod dev_tools;
 
 #[cfg(feature = "dev")]
 use crate::dev_tools::SpiritHotelDevToolsPlugin;
-use bevy::{asset::AssetMetaCheck, prelude::*};
 use bevy::log::LogPlugin;
+use bevy::{asset::AssetMetaCheck, prelude::*};
 use spirit_hotel_ai::SpiritHotelAiPlugin;
 use spirit_hotel_ai_all::SpiritHotelAiAllPlugin;
 use spirit_hotel_ai_pathfinding::SpiritHotelAiPathfindingPlugin;
@@ -28,9 +28,12 @@ use spirit_hotel_drowned_child_player::SpiritHotelDrownedChildPlayerPlugin;
 use spirit_hotel_drowned_child_player_movement::SpiritHotelDrownedChildPlayerMovementPlugin;
 use spirit_hotel_drowned_child_player_pathfinding::SpiritHotelDrownedChildPlayerPathfindingPlugin;
 use spirit_hotel_drowned_child_player_pathfinding_movement::SpiritHotelDrownedChildPlayerPathfindingMovementPlugin;
+use spirit_hotel_inventory::SpiritHotelInventoryPlugin;
+use spirit_hotel_inventory_trigger::SpiritHotelInventoryTriggerPlugin;
 use spirit_hotel_level::SpiritHotelLevelPlugin;
 use spirit_hotel_level_animation::SpiritHotelLevelAnimationPlugin;
 use spirit_hotel_level_drowned_child::SpiritHotelLevelDrownedChildPlugin;
+use spirit_hotel_level_inventory::SpiritHotelLevelInventoryPlugin;
 use spirit_hotel_level_movement::SpiritHotelLevelMovementPlugin;
 use spirit_hotel_level_pathfinding::SpiritHotelLevelPathfindingPlugin;
 use spirit_hotel_level_player::SpiritHotelLevelPlayerPlugin;
@@ -44,6 +47,8 @@ use spirit_hotel_pathfinding_movement::SpiritHotelPathfindingMovementPlugin;
 use spirit_hotel_pathfinding_movement_trigger::SpiritHotelPathfindingMovementTriggerPlugin;
 use spirit_hotel_pathfinding_trigger::SpiritHotelPathfindingTriggerPlugin;
 use spirit_hotel_player::SpiritHotelPlayerPlugin;
+use spirit_hotel_player_inventory::SpiritHotelPlayerInventoryPlugin;
+use spirit_hotel_player_inventory_trigger::SpiritHotelPlayerInventoryTriggerPlugin;
 use spirit_hotel_player_movement::SpiritHotelPlayerMovementPlugin;
 use spirit_hotel_scene::SpiritHotelScenePlugin;
 use spirit_hotel_scene_dialogue::SpiritHotelSceneDialoguePlugin;
@@ -81,7 +86,7 @@ impl Plugin for AppPlugin {
                 .set(LogPlugin {
                     //filter: "dogoap=debug,bevy_dogoap=debug".to_string(),
                     ..default()
-                })
+                }),
         );
 
         app.add_plugins((
@@ -98,6 +103,7 @@ impl Plugin for AppPlugin {
             SpiritHotelDrownedChildPlugin,
             SpiritHotelCutscenePlugin,
             SpiritHotelAiPlugin,
+            SpiritHotelInventoryPlugin,
             #[cfg(feature = "dev")]
             SpiritHotelDevToolsPlugin,
         ));
@@ -111,6 +117,7 @@ impl Plugin for AppPlugin {
             SpiritHotelLevelTriggerPlugin,
             SpiritHotelLevelScenePlugin,
             SpiritHotelLevelDrownedChildPlugin,
+            SpiritHotelLevelInventoryPlugin,
         ))
         .add_plugins(SpiritHotelDialogueTriggerPlugin)
         .add_plugins((
@@ -120,7 +127,11 @@ impl Plugin for AppPlugin {
         ))
         .add_plugins(SpiritHotelMovementTriggerPlugin)
         .add_plugins(SpiritHotelAnimationMovementPlugin)
-        .add_plugins(SpiritHotelPlayerMovementPlugin)
+        .add_plugins((
+            SpiritHotelPlayerMovementPlugin,
+            SpiritHotelPlayerInventoryPlugin,
+            SpiritHotelPlayerInventoryTriggerPlugin,
+        ))
         .add_plugins((
             SpiritHotelSceneDialoguePlugin,
             SpiritHotelSceneTriggerPlugin,
@@ -137,7 +148,8 @@ impl Plugin for AppPlugin {
             SpiritHotelAiPathfindingPlugin,
             SpiritHotelAiPathfindingMovementPlugin,
             SpiritHotelAiPlayerPlugin,
-            SpiritHotelAiAllPlugin
-        ));
+            SpiritHotelAiAllPlugin,
+        ))
+        .add_plugins(SpiritHotelInventoryTriggerPlugin);
     }
 }

@@ -3,6 +3,7 @@
 use std::collections::VecDeque;
 
 use bevy::prelude::*;
+use leafwing_manifest::asset_state::SimpleAssetState;
 
 pub(super) fn plugin(app: &mut App) {
     app.init_resource::<ResourceHandles>();

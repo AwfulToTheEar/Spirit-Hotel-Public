@@ -1,7 +1,7 @@
 use spirit_hotel_player::components::prelude::Player;
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
-use spirit_hotel_player::input::prelude::WalkVertical;
+use spirit_hotel_player::inputs::prelude::WalkVertical;
 use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent};
 
 pub fn record_player_input_vertical(

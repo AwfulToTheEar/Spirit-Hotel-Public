@@ -5,12 +5,8 @@ use crate::components::prelude::{KagumeKagumeCycle, KagumeKagumeCycleIndicator};
 
 pub fn spawn_kagume_kagume_cycle_ui(
     mut commands: Commands,
-    q_kagume_kagume_cycle: Query<&KagumeKagumeCycle, Added<KagumeKagumeCycle>>,
+    _: Populated<&KagumeKagumeCycle, Added<KagumeKagumeCycle>>,
 ) {
-    if q_kagume_kagume_cycle.is_empty() {
-        return;
-    }
-
     commands.spawn((
         widget::ui_root("Kagume Kagume Cycle Ui"),
         GlobalZIndex(1),

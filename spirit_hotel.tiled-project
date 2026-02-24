@@ -806,6 +806,67 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 192,
+            "members": [
+                {
+                    "name": "description",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "index",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_inventory::components::inventory_item::InventoryItem",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 193,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_inventory::components::inventory_item_ref::InventoryItemRef",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 195,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_inventory_trigger::components::requires_item::RequiresItem",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 111,
             "members": [
             ],
@@ -839,6 +900,18 @@
                 }
             ],
             "name": "spirit_hotel_level::components::inside_map::InsideMap",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 185,
+            "members": [
+            ],
+            "name": "spirit_hotel_level::components::reparent_to_world::ReparentToWorld",
             "type": "class",
             "useAs": [
                 "property"
@@ -1279,6 +1352,30 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 196,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::activate_on_external_action_completed::ActivateOnExternalActionCompleted",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 187,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::activate_when_sub_triggers_active::ActivateWhenSubTriggersActive",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 173,
             "members": [
                 {
@@ -1288,6 +1385,18 @@
                 }
             ],
             "name": "spirit_hotel_trigger::components::add_delay::AddDelay",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 188,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::continuous_trigger::ContinuousTrigger",
             "type": "class",
             "useAs": [
                 "property"
@@ -1378,6 +1487,45 @@
         {
             "color": "#ff000000",
             "drawFill": true,
+            "id": 189,
+            "members": [
+                {
+                    "name": "entity",
+                    "type": "object",
+                    "value": 0
+                },
+                {
+                    "name": "should_be_held",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 186,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
             "id": 171,
             "members": [
                 {
@@ -1407,10 +1555,10 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 185,
+            "id": 197,
             "members": [
             ],
-            "name": "spirit_hotel_level::components::reparent_to_world::ReparentToWorld",
+            "name": "spirit_hotel_trigger::components::unlock_on_external_action_completed::UnlockOnExternalActionCompleted",
             "type": "class",
             "useAs": [
                 "property"
@@ -1419,15 +1567,27 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 186,
+            "id": 194,
+            "members": [
+            ],
+            "name": "spirit_hotel_trigger::components::wait_for_external_action::WaitForExternalAction",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 200,
             "members": [
                 {
                     "name": "0",
-                    "type": "float",
-                    "value": 0
+                    "type": "string",
+                    "value": ""
                 }
             ],
-            "name": "spirit_hotel_trigger::components::throttle_trigger::ThrottleTrigger",
+            "name": "spirit_hotel_inventory_trigger::components::add_item_from_ref::AddItemFromRef",
             "type": "class",
             "useAs": [
                 "property"
@@ -1436,44 +1596,32 @@
         {
             "color": "#ff000000",
             "drawFill": true,
-            "id": 187,
-            "members": [
-            ],
-            "name": "spirit_hotel_trigger::components::activate_when_sub_triggers_active::ActivateWhenSubTriggersActive",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 188,
-            "members": [
-            ],
-            "name": "spirit_hotel_trigger::components::continuous_trigger::ContinuousTrigger",
-            "type": "class",
-            "useAs": [
-                "property"
-            ]
-        },
-        {
-            "color": "#ff000000",
-            "drawFill": true,
-            "id": 189,
+            "id": 201,
             "members": [
                 {
-                    "name": "entity",
+                    "name": "0",
                     "type": "object",
                     "value": 0
-                },
-                {
-                    "name": "should_be_held",
-                    "type": "bool",
-                    "value": false
                 }
             ],
-            "name": "spirit_hotel_trigger::components::sub_trigger_of::SubTriggerOf",
+            "name": "spirit_hotel_inventory_trigger::components::add_item_from_world::AddItemFromWorld",
+            "type": "class",
+            "useAs": [
+                "property"
+            ]
+        },
+        {
+            "color": "#ff000000",
+            "drawFill": true,
+            "id": 202,
+            "members": [
+                {
+                    "name": "0",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "spirit_hotel_inventory_trigger::components::remove_item_from_ref::RemoveItemFromRef",
             "type": "class",
             "useAs": [
                 "property"

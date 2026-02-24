@@ -6,12 +6,8 @@ use crate::components::prelude::KagumeKagumeDancer;
 pub fn add_force_movement_kagume_kagume_dancers(
     mut commands: Commands,
     q_kagume_kagume_dancers: Query<Entity, With<KagumeKagumeDancer>>,
-    q_kagume_kagume: Query<Entity, With<KagumeKagume>>
+    _: Populated<Entity, With<KagumeKagume>>
 ) {
-    if q_kagume_kagume.is_empty() {
-        return;
-    }
-    
     for entity in q_kagume_kagume_dancers.iter() {
         commands.entity(entity).insert(MovementFlag::Force);
     }
