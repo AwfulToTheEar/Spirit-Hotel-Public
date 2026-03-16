@@ -18,6 +18,7 @@ impl Plugin for SpiritHotelInventoryPlugin {
             .add_observer(handle_inventory_item_node_add_visuals)
             .add_observer(handle_inventory_item_selected)
             .add_observer(handle_inventory_section_spawned)
-            .add_observer(handle_inventory_menu_spawned);
+            .add_observer(handle_inventory_menu_spawned)
+            .add_observer(handle_add_selected_item_highlight);
     }
 }

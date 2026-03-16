@@ -311,11 +311,6 @@
       <property name="0" type="float" value="3"/>
      </properties>
     </property>
-    <property name="add_item_from_world" type="class" propertytype="spirit_hotel_inventory_trigger::components::add_item_from_world::AddItemFromWorld">
-     <properties>
-      <property name="0" type="object" value="31"/>
-     </properties>
-    </property>
     <property name="from_trigger" type="class" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger">
      <properties>
       <property name=":variant" propertytype="spirit_hotel_trigger::components::from_trigger::FromTrigger:::Variant" value="FadeIn"/>

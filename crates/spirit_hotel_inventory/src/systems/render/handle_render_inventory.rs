@@ -13,6 +13,8 @@ pub fn handle_render_inventory(e_render: On<Render>, mut commands: Commands) {
         .insert(children![(
             Node {
                 display: Display::Grid,
+                min_width: Val::Px(1200.),
+                max_width: Val::Vw(100.),
                 grid_template_columns: vec![GridTrack::flex(1.), GridTrack::fr(1.)],
                 column_gap: Val::Px(10.),
                 ..default()

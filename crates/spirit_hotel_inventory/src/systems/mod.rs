@@ -6,6 +6,7 @@ mod handle_inventory_item_selected;
 mod handle_inventory_menu_spawned;
 mod handle_inventory_section_spawned;
 mod render;
+mod handle_add_selected_item_highlight;
 
 pub mod prelude {
     pub use super::actions::*;
@@ -16,4 +17,5 @@ pub mod prelude {
     pub use super::handle_inventory_menu_spawned::*;
     pub use super::handle_inventory_section_spawned::*;
     pub use super::render::*;
+    pub use super::handle_add_selected_item_highlight::*;
 }
