@@ -2,7 +2,9 @@ title: TheHallway
 position: -264,-451
 ---
 <<set $name1 to "Protagonist">>
-{$name1}: Ugh ... it's so dark ...
+[character name="[{$name1}](glitch)" /][nomarkup]Ugh ... it's so [dark](wobble) ...[/nomarkup]
+-> test
+-> test2
 {$name1}: Hey, (friend), are you okay?
 ...
 {$name1}: Hello...?

@@ -73,20 +73,22 @@ spirit_hotel_inventory_trigger = { workspace = true }
 members = ["crates/spirit_hotel*"]
 
 [workspace.dependencies]
-bevy = { version = "0.17.3", features = ["wayland", "jpeg"] }
-avian2d = "0.4.1"
-bevy_aseprite_ultra = "0.7.0"
-bevy_yarnspinner = "0.6.0"
-bevy_yarnspinner_example_dialogue_view = "0.6.0"
+bevy = { version = "0.17", features = ["wayland", "jpeg"] }
+avian2d = "0.4"
+bevy_aseprite_ultra = "0.7"
+bevy_yarnspinner = "0.6"
+bevy_yarnspinner_example_dialogue_view = "0.6"
 bevy_ecs_tiled = { git = "https://github.com/AwfulToTheEar/bevy_ecs_tiled.git", branch = "add-text-support", features = ["avian_debug", "user_properties"] }
-bevy_light_2d = "0.8.0"
-bevy_ecs_tilemap = "0.17.0"
-bevy_northstar = "0.5.0"
-bevy_enhanced_input = "0.20.0"
+bevy_light_2d = "0.8"
+bevy_ecs_tilemap = "0.17"
+bevy_northstar = "0.5"
+bevy_enhanced_input = "0.20"
 bevy_av1 = { git = "https://github.com/AwfulToTheEar/bevy_av1.git" }
 bevy_dogoap = { git = "https://github.com/victorb/dogoap.git" }
-bitvec = "1.0.1"
-leafwing_manifest = { version = "0.5.0", features = ["ron"] }
+bevy_pretty_text = "0.3"
+pretty_text_parser = "0.2"
+bitvec = "1.0"
+leafwing_manifest = { version = "0.5", features = ["ron"] }
 serde = "1"
 
 spirit_hotel_core = { path = "crates/spirit_hotel_core" }
@@ -134,6 +136,8 @@ spirit_hotel_ai_all = { path = "crates/spirit_hotel_ai_all" }
 spirit_hotel_inventory = { path = "crates/spirit_hotel_inventory" }
 spirit_hotel_inventory_trigger = { path = "crates/spirit_hotel_inventory_trigger" }
 
+[build-dependencies] # <--- Note this is in the build dependencies!
+bevy_reflect = {version="0.17", features = ["documentation"]}
 
 [features]
 # Default to a native dev build.

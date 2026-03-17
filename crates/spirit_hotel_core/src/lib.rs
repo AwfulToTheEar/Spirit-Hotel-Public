@@ -14,6 +14,7 @@ use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 use bevy::reflect::Array;
 use bevy_enhanced_input::EnhancedInputPlugin;
+use bevy_pretty_text::PrettyTextPlugin;
 use leafwing_manifest::asset_state::SimpleAssetState;
 use leafwing_manifest::plugin::ManifestPlugin;
 
@@ -25,7 +26,8 @@ impl Plugin for SpiritHotelCorePlugin {
         app.init_state::<SimpleAssetState>();
         app.add_plugins((
             EnhancedInputPlugin,
-            ManifestPlugin::<SimpleAssetState>::default()
+            ManifestPlugin::<SimpleAssetState>::default(),
+            PrettyTextPlugin
         ));
         app.add_plugins((
             asset_tracking::plugin,

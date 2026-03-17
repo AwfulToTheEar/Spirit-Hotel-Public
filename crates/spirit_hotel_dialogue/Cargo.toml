@@ -7,5 +7,8 @@ edition = "2024"
 bevy = { workspace = true }
 bevy_yarnspinner = { workspace = true }
 bevy_yarnspinner_example_dialogue_view = { workspace = true }
+bevy_pretty_text = { workspace = true }
+pretty_text_parser = { workspace = true }
+bevy_enhanced_input = { workspace = true }
 
 spirit_hotel_core = { workspace = true }
