@@ -1,12 +1,15 @@
+use crate::components::prelude::FindPlayerAction;
 use bevy::prelude::*;
 use spirit_hotel_ai::components::prelude::{HasTarget, Target};
 use spirit_hotel_player::components::prelude::Player;
-use crate::components::prelude::FindPlayerAction;
 
 pub fn handle_find_player_action(
     mut commands: Commands,
-    mut q_looking_for_player: Populated<(Entity, &mut HasTarget, Option<&mut Target>), With<FindPlayerAction>>,
-    q_player: Query<Entity, With<Player>>
+    mut q_looking_for_player: Populated<
+        (Entity, &mut HasTarget, Option<&mut Target>),
+        With<FindPlayerAction>,
+    >,
+    q_player: Query<Entity, With<Player>>,
 ) {
     let Ok(player) = q_player.single() else {
         panic!("Expected exactly one player entity");

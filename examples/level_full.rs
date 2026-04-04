@@ -1,7 +1,7 @@
 use bevy::prelude::*;
+use spirit_hotel_animation::SpiritHotelAnimationPlugin;
 use spirit_hotel_core::SpiritHotelCorePlugin;
 use spirit_hotel_level::SpiritHotelLevelPlugin;
-use spirit_hotel_animation::SpiritHotelAnimationPlugin;
 use spirit_hotel_level_animation::SpiritHotelLevelAnimationPlugin;
 use spirit_hotel_level_movement::SpiritHotelLevelMovementPlugin;
 use spirit_hotel_level_pathfinding::SpiritHotelLevelPathfindingPlugin;
@@ -27,20 +27,16 @@ fn main() {
             SpiritHotelPathfindingPlugin,
             SpiritHotelPlayerPlugin,
             SpiritHotelTriggerPlugin,
-
             SpiritHotelLevelTriggerPlugin,
             SpiritHotelLevelPathfindingPlugin,
             SpiritHotelLevelPlayerPlugin,
             //SpiritHotelLevelMovementPlugin,
-            SpiritHotelLevelAnimationPlugin
+            SpiritHotelLevelAnimationPlugin,
         ))
         .add_systems(Startup, spawn_camera)
         .run();
 }
 
 fn spawn_camera(mut commands: Commands) {
-    commands.spawn((
-        Name::new("Camera"),
-        Camera2d,
-    ));
+    commands.spawn((Name::new("Camera"), Camera2d));
 }

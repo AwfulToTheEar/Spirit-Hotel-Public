@@ -1,8 +1,8 @@
 use crate::systems::prelude::*;
 use bevy::prelude::*;
 
-pub mod systems;
 pub mod components;
+pub mod systems;
 
 pub struct SpiritHotelCutsceneTriggerPlugin;
 

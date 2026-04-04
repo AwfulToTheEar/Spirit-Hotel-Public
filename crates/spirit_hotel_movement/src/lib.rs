@@ -1,6 +1,6 @@
+use crate::{components::prelude::*, systems::prelude::*};
 use bevy::prelude::*;
 use spirit_hotel_core::{AppSystems, PausableSystems, game::GameplaySystems};
-use crate::{components::prelude::*, systems::prelude::*};
 
 pub mod components;
 pub mod systems;

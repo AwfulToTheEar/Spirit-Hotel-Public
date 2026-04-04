@@ -11,5 +11,5 @@ pub fn handle_object_path_node(
         return;
     };
 
-commands.entity(e_object_created.origin).despawn();
+    commands.entity(e_object_created.origin).despawn();
 }

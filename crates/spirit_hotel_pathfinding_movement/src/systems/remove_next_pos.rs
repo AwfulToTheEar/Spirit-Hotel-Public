@@ -1,8 +1,10 @@
 use bevy::prelude::*;
 use bevy_northstar::prelude::{AgentOfGrid, AgentPos, NextPos};
 
-use spirit_hotel_movement::components::prelude::{CheckMovementIntent, MoveToLocation, MovementIntent};
 use crate::components::prelude::NextPosToBeRemoved;
+use spirit_hotel_movement::components::prelude::{
+    CheckMovementIntent, MoveToLocation, MovementIntent,
+};
 
 pub fn remove_next_pos(
     mut commands: Commands,
@@ -19,7 +21,10 @@ pub fn remove_next_pos(
     for (entity, grid_pos, next_pos) in q_next_positions.iter() {
         if grid_pos.0 != next_pos.0 {
             //TODO: do something when position can't be reached
-            warn!("position not reached (at: {}, goal: {})", grid_pos.0, next_pos.0);
+            warn!(
+                "position not reached (at: {}, goal: {})",
+                grid_pos.0, next_pos.0
+            );
             continue;
         }
 

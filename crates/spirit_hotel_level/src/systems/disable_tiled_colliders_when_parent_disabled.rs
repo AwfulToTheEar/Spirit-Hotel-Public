@@ -1,6 +1,6 @@
-use bevy::{ecs::entity_disabling::Disabled, prelude::*};
-use bevy_ecs_tiled::prelude::{TiledColliderSource};
 use crate::components::prelude::DisabledByParent;
+use bevy::{ecs::entity_disabling::Disabled, prelude::*};
+use bevy_ecs_tiled::prelude::TiledColliderSource;
 
 pub fn disable_tiled_colliders_when_parent_disabled(
     mut commands: Commands,

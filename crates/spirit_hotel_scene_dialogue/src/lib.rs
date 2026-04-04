@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use crate::systems::observers::prelude::add_scene_dialogue_commands;
+use bevy::prelude::*;
 
 pub mod systems;
 

@@ -1,10 +1,13 @@
-use bevy_aseprite_ultra::prelude::AseAnimation;
-use bevy::prelude::*;
-use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation, MovementIntent};
 use crate::components::prelude::MovementAnimations;
+use bevy::prelude::*;
+use bevy_aseprite_ultra::prelude::AseAnimation;
+use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation, MovementIntent};
 
 pub fn start_animation_movement(
-    mut q_moving_entities: Query<(&MovementIntent, &MovementAnimations, &Children), (With<CanMove>, Added<MoveToLocation>)>,
+    mut q_moving_entities: Query<
+        (&MovementIntent, &MovementAnimations, &Children),
+        (With<CanMove>, Added<MoveToLocation>),
+    >,
     mut q_visuals: Query<&mut AseAnimation>,
 ) {
     for (movement_intent, movement_animations, children) in q_moving_entities.iter_mut() {
@@ -14,7 +17,9 @@ pub fn start_animation_movement(
             };
 
             if movement_intent.0 == Vec2::new(1., 0.) && !movement_animations.right.is_empty() {
-                ase_animation.animation.play_loop(&movement_animations.right);
+                ase_animation
+                    .animation
+                    .play_loop(&movement_animations.right);
             }
 
             if movement_intent.0 == Vec2::new(-1., 0.) && !movement_animations.left.is_empty() {

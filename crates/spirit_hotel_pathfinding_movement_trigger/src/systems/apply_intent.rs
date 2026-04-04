@@ -1,11 +1,14 @@
+use crate::utils::prelude::compute_intent;
 use avian2d::prelude::Collider;
 use bevy::prelude::*;
 use bevy_northstar::prelude::{AgentOfGrid, CardinalNeighborhood, Grid};
-use spirit_hotel_movement::components::prelude::{CanMove, CanPush, CheckMovementIntent, MoveToLocation, MovementDuration, MovementFlag, MovementIntent, Pushable, UpdateMovementIntent};
+use spirit_hotel_movement::components::prelude::{
+    CanMove, CanPush, CheckMovementIntent, MoveToLocation, MovementDuration, MovementFlag,
+    MovementIntent, Pushable, UpdateMovementIntent,
+};
 use spirit_hotel_pathfinding::components::prelude::{GridTileSize, ScanCollider};
 use spirit_hotel_pathfinding_movement::components::prelude::Follow;
 use spirit_hotel_trigger::components::prelude::TriggerCollider;
-use crate::utils::prelude::compute_intent;
 
 //TODO: support multiple grids
 pub fn apply_intent(
@@ -23,7 +26,12 @@ pub fn apply_intent(
             &Transform,
             &Children,
         ),
-        (With<CanMove>, Without<MoveToLocation>, Without<CheckMovementIntent>, Without<UpdateMovementIntent>),
+        (
+            With<CanMove>,
+            Without<MoveToLocation>,
+            Without<CheckMovementIntent>,
+            Without<UpdateMovementIntent>,
+        ),
     >,
     q_colliders: Query<
         (Entity, &Collider, &GlobalTransform, &ChildOf),
@@ -34,8 +42,17 @@ pub fn apply_intent(
         (With<CanMove>, With<Pushable>),
     >,
 ) {
-    for (entity, option_follow, agent_of_grid, intent, duration, can_push, movement_flag_option, transform, children) in
-        q_entities_with_intent.iter()
+    for (
+        entity,
+        option_follow,
+        agent_of_grid,
+        intent,
+        duration,
+        can_push,
+        movement_flag_option,
+        transform,
+        children,
+    ) in q_entities_with_intent.iter()
     {
         let Ok(grid_tile_size) = q_grid_tile_sizes.get(agent_of_grid.0) else {
             continue;

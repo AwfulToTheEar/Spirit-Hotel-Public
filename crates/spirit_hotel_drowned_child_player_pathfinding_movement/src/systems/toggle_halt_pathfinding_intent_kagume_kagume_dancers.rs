@@ -7,7 +7,7 @@ use spirit_hotel_pathfinding_movement::components::prelude::HaltPathfindingInten
 pub fn toggle_halt_pathfinding_intent_kagume_kagume_dancers(
     mut commands: Commands,
     q_kagume_kagume_dance_actions: Query<(&ActionValue, &ActionOf<KagumeKagumeDancer>)>,
-    _: Populated<Entity, With<KagumeKagume>>
+    _: Populated<Entity, With<KagumeKagume>>,
 ) {
     for (action_value, action_of) in q_kagume_kagume_dance_actions.iter() {
         if action_value.as_bool() {

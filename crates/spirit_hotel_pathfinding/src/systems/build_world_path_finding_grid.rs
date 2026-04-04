@@ -6,11 +6,11 @@ use bevy_northstar::{
     prelude::{CardinalNeighborhood, DebugGridBuilder},
 };
 
+use crate::components::prelude::{GridTileSize, ScanCollider};
 use avian2d::prelude::Collider;
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::{TiledMapAsset, TiledWorldAsset};
 use bevy_ecs_tiled::prelude::{TiledWorld, TilemapAnchor};
-use crate::components::prelude::{GridTileSize, ScanCollider};
 
 pub fn build_world_path_finding_grid(
     mut commands: Commands,

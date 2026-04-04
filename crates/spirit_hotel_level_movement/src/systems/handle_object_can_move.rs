@@ -12,5 +12,7 @@ pub fn handle_object_can_move(
         return;
     }
 
-    commands.entity(e_collider_created.origin).insert(RigidBody::Kinematic);
+    commands
+        .entity(e_collider_created.origin)
+        .insert(RigidBody::Kinematic);
 }

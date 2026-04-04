@@ -3,8 +3,8 @@ use crate::events::prelude::SetDialogueCharacter;
 use crate::systems::show_options_on_line_typewriter_finish::show_options_on_line_typewriter_finish;
 use crate::utils::prelude::parse_pretty_text;
 use bevy::prelude::*;
-use bevy_pretty_text::parser::{ParsedPrettyText};
-use bevy_pretty_text::prelude::{Typewriter};
+use bevy_pretty_text::parser::ParsedPrettyText;
+use bevy_pretty_text::prelude::Typewriter;
 use bevy_yarnspinner::events::PresentLine;
 
 pub fn present_line(
@@ -12,7 +12,6 @@ pub fn present_line(
     mut commands: Commands,
     s_dialogue_ui_text: Single<Entity, With<DialogueUiText>>,
 ) {
-
     let name = e_line.line.character_name().unwrap_or("");
 
     commands.trigger(SetDialogueCharacter(name.to_string()));
@@ -31,5 +30,4 @@ pub fn present_line(
             DialogueLine(e_line.line.clone()),
         ))
         .observe(show_options_on_line_typewriter_finish);
-
 }

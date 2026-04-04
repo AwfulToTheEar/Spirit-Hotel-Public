@@ -8,10 +8,12 @@ pub fn handle_inventory_item_tiled_object_add_visuals(
     e_inventory_item_added: On<Add, InventoryItem>,
     mut commands: Commands,
     inventory_manifest: Res<InventoryManifest>,
-    q_inventory_items: Query<(&InventoryItem, &TiledObject), (With<Transform>, Without<TiledObjectVisuals>)>,
+    q_inventory_items: Query<
+        (&InventoryItem, &TiledObject),
+        (With<Transform>, Without<TiledObjectVisuals>),
+    >,
 ) {
-    let Ok((inventory_item, tiled_object)) =
-        q_inventory_items.get(e_inventory_item_added.entity)
+    let Ok((inventory_item, tiled_object)) = q_inventory_items.get(e_inventory_item_added.entity)
     else {
         return;
     };

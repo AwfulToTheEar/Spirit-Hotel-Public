@@ -4,5 +4,5 @@ use bevy::prelude::*;
 #[reflect(Component)]
 pub enum Brain {
     #[default]
-    PlayerFollower
+    PlayerFollower,
 }

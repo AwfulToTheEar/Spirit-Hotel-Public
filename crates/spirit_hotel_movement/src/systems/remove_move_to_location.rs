@@ -1,6 +1,8 @@
 use bevy::prelude::*;
 
-use crate::components::prelude::{CheckMovementIntent, MoveToLocation, MovementIntent, SyncMovement};
+use crate::components::prelude::{
+    CheckMovementIntent, MoveToLocation, MovementIntent, SyncMovement,
+};
 
 pub fn remove_move_to_location(
     mut commands: Commands,

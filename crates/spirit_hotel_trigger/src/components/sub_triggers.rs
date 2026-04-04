@@ -1,6 +1,6 @@
-use std::slice;
-use bevy::prelude::*;
 use crate::components::prelude::SubTriggerOf;
+use bevy::prelude::*;
+use std::slice;
 
 #[derive(Component, Reflect)]
 #[reflect(Component)]

@@ -1,9 +1,9 @@
-use bevy_enhanced_input::prelude::*;
 use bevy::prelude::*;
+use bevy_enhanced_input::prelude::*;
 
-use spirit_hotel_core::{game::GameplaySystems, AppSystems};
 use crate::components::prelude::Player;
 use crate::systems::prelude::*;
+use spirit_hotel_core::{AppSystems, game::GameplaySystems};
 
 pub mod components;
 pub mod inputs;
@@ -18,8 +18,7 @@ impl Plugin for SpiritHotelPlayerPlugin {
             .add_observer(add_player_input_actions)
             .add_systems(
                 Update,
-                ((apply_player_translate_to_camera)
-                     .in_set(AppSystems::Update),)
+                ((apply_player_translate_to_camera).in_set(AppSystems::Update),)
                     .in_set(GameplaySystems),
             );
     }

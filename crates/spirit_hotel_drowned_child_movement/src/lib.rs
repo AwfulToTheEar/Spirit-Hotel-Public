@@ -1,9 +1,11 @@
 use crate::components::prelude::*;
 use crate::systems::prelude::*;
 use bevy::prelude::*;
-use spirit_hotel_core::{AppSystems, PausableSystems};
 use spirit_hotel_core::game::GameplaySystems;
-use spirit_hotel_movement::systems::prelude::{mark_movement_completed, remove_move_to_location_synced};
+use spirit_hotel_core::{AppSystems, PausableSystems};
+use spirit_hotel_movement::systems::prelude::{
+    mark_movement_completed, remove_move_to_location_synced,
+};
 
 pub mod components;
 pub mod systems;

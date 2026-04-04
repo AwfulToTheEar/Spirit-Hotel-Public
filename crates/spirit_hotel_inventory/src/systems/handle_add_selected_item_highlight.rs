@@ -23,27 +23,29 @@ pub fn handle_add_selected_item_highlight(
 
     let ui_image = asset_server.load("images/FreeHorrorUi.png");
 
-    commands.entity(e_add_inventory_item_id.entity).insert(children![(
-        Node {
-            width: Val::Percent(100.),
-            height: Val::Percent(100.),
-            ..default()
-        },
-        ImageNode {
-            image: ui_image.clone(),
-            rect: Some(Rect {
-                min: Vec2::new(198., 132.),
-                max: Vec2::new(222., 157.)
-            }),
-            image_mode: NodeImageMode::Sliced(TextureSlicer {
-                border: BorderRect::all(9.),
-                max_corner_scale: 6.,
-                center_scale_mode: SliceScaleMode::Stretch,
-                sides_scale_mode: SliceScaleMode::Stretch,
+    commands
+        .entity(e_add_inventory_item_id.entity)
+        .insert(children![(
+            Node {
+                width: Val::Percent(100.),
+                height: Val::Percent(100.),
                 ..default()
-            }),
-            ..default()
-        },
-        ZIndex(2)
-    )]);
+            },
+            ImageNode {
+                image: ui_image.clone(),
+                rect: Some(Rect {
+                    min: Vec2::new(198., 132.),
+                    max: Vec2::new(222., 157.)
+                }),
+                image_mode: NodeImageMode::Sliced(TextureSlicer {
+                    border: BorderRect::all(9.),
+                    max_corner_scale: 6.,
+                    center_scale_mode: SliceScaleMode::Stretch,
+                    sides_scale_mode: SliceScaleMode::Stretch,
+                    ..default()
+                }),
+                ..default()
+            },
+            ZIndex(2)
+        )]);
 }

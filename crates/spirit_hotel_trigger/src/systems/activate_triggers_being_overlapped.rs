@@ -1,4 +1,8 @@
-use crate::components::prelude::{ContinuousTrigger, InteractTrigger, SubTriggerOf, SubTriggers, ThrottleTrigger, ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, TriggerHeldFor, WaitForExternalAction};
+use crate::components::prelude::{
+    ContinuousTrigger, InteractTrigger, SubTriggerOf, SubTriggers, ThrottleTrigger,
+    ThrottleTriggerTimer, TriggerFor, TriggerHasBeenActivated, TriggerHeldFor,
+    WaitForExternalAction,
+};
 use crate::{
     components::prelude::{InsideTriggers, IsTrigger},
     events::prelude::TriggerActivated,
@@ -21,7 +25,7 @@ pub fn activate_interact_triggers(
             Has<TriggerHeldFor>,
             Has<InteractTrigger>,
         ),
-        (With<IsTrigger>, Without<WaitForExternalAction>)
+        (With<IsTrigger>, Without<WaitForExternalAction>),
     >,
     q_sub_triggers: Query<(
         &SubTriggerOf,

@@ -1,4 +1,4 @@
-use crate::components::prelude::{PlayerExists, CheckIfPlayerExistsAction};
+use crate::components::prelude::{CheckIfPlayerExistsAction, PlayerExists};
 use bevy::prelude::*;
 use bevy_dogoap::planner::UpdatePlan;
 use spirit_hotel_ai::Possible;

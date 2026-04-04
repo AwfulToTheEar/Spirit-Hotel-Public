@@ -1,9 +1,9 @@
+use crate::input::prelude::HoldBreath;
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
 use spirit_hotel_core::screens::Screen;
 use spirit_hotel_drowned_child::components::prelude::Breathing;
 use spirit_hotel_player::components::prelude::Player;
-use crate::input::prelude::HoldBreath;
 
 pub fn lose_game_breath_timer_not_held(
     s_hold_breath: Single<(&ActionEvents, &ActionValue), With<Action<HoldBreath>>>,

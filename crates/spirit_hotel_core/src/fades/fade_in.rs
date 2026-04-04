@@ -1,4 +1,8 @@
-use crate::{AppSystems, fades::{Fade, FadeData}, theme::widget};
+use crate::{
+    AppSystems,
+    fades::{Fade, FadeData},
+    theme::widget,
+};
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 
@@ -51,4 +55,3 @@ pub fn check_fade_in_timer(mut next_fade: ResMut<NextState<Fade>>, q_fade_in: Qu
         next_fade.set(Fade::Waiting);
     }
 }
-

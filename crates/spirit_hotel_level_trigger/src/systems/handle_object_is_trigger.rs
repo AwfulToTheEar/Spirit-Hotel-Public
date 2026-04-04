@@ -7,10 +7,11 @@ pub fn handle_object_is_trigger(
     mut commands: Commands,
     q_triggers: Query<Entity, With<IsTrigger>>,
 ) {
+    if !q_triggers.contains(e_collider_created.event.collider_of.0) {
+        return;
+    };
 
-        if !q_triggers.contains(e_collider_created.event.collider_of.0) {
-            return;
-        };
-
-        commands.entity(e_collider_created.origin).insert(TriggerCollider);
+    commands
+        .entity(e_collider_created.origin)
+        .insert(TriggerCollider);
 }

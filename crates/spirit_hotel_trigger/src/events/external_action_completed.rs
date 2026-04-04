@@ -4,5 +4,5 @@ use bevy::prelude::*;
 pub struct ExternalActionCompleted {
     pub by: Option<Entity>,
     #[event_target]
-    pub trigger: Entity
+    pub trigger: Entity,
 }

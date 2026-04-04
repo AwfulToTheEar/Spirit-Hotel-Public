@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use crate::components::prelude::{KagumeKagumeCycle, KagumeKagumeCycleIndicator};
+use bevy::prelude::*;
 
 pub fn update_kagume_kagume_cycle_indicator(
     s_kagume_kagume_cycle: Single<(&KagumeKagumeCycle, Ref<KagumeKagumeCycle>)>,

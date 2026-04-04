@@ -6,7 +6,7 @@ use bevy_northstar::{
     prelude::{AgentOfGrid, AgentPos, CardinalNeighborhood},
 };
 use spirit_hotel_core::game::Teleport;
-use spirit_hotel_pathfinding::components::prelude::{GridTileSize};
+use spirit_hotel_pathfinding::components::prelude::GridTileSize;
 
 pub fn set_grid_pos_from_transform(
     mut commands: Commands,
@@ -18,7 +18,10 @@ pub fn set_grid_pos_from_transform(
             &AgentOfGrid,
             Option<&mut AgentPos>,
         ),
-        (Or<(Changed<Transform>, Without<AgentPos>)>, Without<Teleport>),
+        (
+            Or<(Changed<Transform>, Without<AgentPos>)>,
+            Without<Teleport>,
+        ),
     >,
 ) {
     for (entity, transform, agent_of_grid, grid_pos_option) in q_grid_items.iter_mut() {

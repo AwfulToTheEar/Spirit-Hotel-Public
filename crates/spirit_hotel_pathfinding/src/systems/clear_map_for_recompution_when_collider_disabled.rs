@@ -1,7 +1,7 @@
 use bevy_northstar::{grid::Grid, nav::Nav, prelude::CardinalNeighborhood};
 
-use bevy::{ecs::entity_disabling::Disabled, prelude::*};
 use crate::components::prelude::GridCollisionCalculated;
+use bevy::{ecs::entity_disabling::Disabled, prelude::*};
 
 //very inefficient
 pub fn clear_map_for_recompution_when_collider_disabled(

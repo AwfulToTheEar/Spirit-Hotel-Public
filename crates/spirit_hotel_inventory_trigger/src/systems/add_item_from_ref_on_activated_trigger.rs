@@ -1,4 +1,4 @@
-use crate::components::prelude::{AddItemFromRef};
+use crate::components::prelude::AddItemFromRef;
 use bevy::prelude::*;
 use leafwing_manifest::identifier::Id;
 use spirit_hotel_core::menus::inventory::InventoryMenu;

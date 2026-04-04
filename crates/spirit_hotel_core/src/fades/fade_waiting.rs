@@ -16,7 +16,9 @@ pub(super) fn plugin(app: &mut App) {
         .register_fade_task::<ShowImage>()
         .add_fade_task_enter::<ChangeScreen>(change_screen)
         .add_fade_task_update::<Delay>((
-            tick_delay.in_set(AppSystems::TickTimers).run_if(in_state(Pause(false))),
+            tick_delay
+                .in_set(AppSystems::TickTimers)
+                .run_if(in_state(Pause(false))),
             complete_delay.in_set(AppSystems::Update),
         ));
 }

@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use crate::components::prelude::SubTriggers;
+use bevy::prelude::*;
 
 #[derive(Component, Reflect)]
 #[reflect(Component)]
@@ -7,5 +7,5 @@ use crate::components::prelude::SubTriggers;
 pub struct SubTriggerOf {
     #[relationship]
     pub entity: Entity,
-    pub should_be_held: bool
+    pub should_be_held: bool,
 }

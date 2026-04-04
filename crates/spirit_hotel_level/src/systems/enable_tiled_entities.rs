@@ -1,6 +1,6 @@
+use crate::components::prelude::DisabledByVisibility;
 use bevy::{ecs::entity_disabling::Disabled, prelude::*};
 use bevy_ecs_tiled::prelude::{TiledLayer, TiledMap, TiledObject};
-use crate::components::prelude::DisabledByVisibility;
 
 pub fn enable_tiled_entities(
     mut commands: Commands,
@@ -9,11 +9,7 @@ pub fn enable_tiled_entities(
         (
             With<DisabledByVisibility>,
             With<Disabled>,
-            Or<(
-                With<TiledMap>,
-                With<TiledLayer>,
-                With<TiledObject>,
-            )>,
+            Or<(With<TiledMap>, With<TiledLayer>, With<TiledObject>)>,
         ),
     >,
 ) {

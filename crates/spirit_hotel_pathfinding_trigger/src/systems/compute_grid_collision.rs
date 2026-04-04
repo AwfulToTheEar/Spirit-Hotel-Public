@@ -4,9 +4,11 @@ use avian2d::{
 };
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::TilemapAnchor;
-use spirit_hotel_pathfinding::components::prelude::{GridCollisionCalculated, GridTileSize, ScanCollider};
 use bevy_ecs_tilemap::map::{TilemapGridSize, TilemapSize, TilemapTileSize, TilemapType};
 use bevy_northstar::{grid::Grid, nav::Nav, prelude::CardinalNeighborhood};
+use spirit_hotel_pathfinding::components::prelude::{
+    GridCollisionCalculated, GridTileSize, ScanCollider,
+};
 use spirit_hotel_trigger::components::prelude::TriggerCollider;
 
 pub fn compute_grid_collision(
@@ -20,10 +22,16 @@ pub fn compute_grid_collision(
     q_scan_colliders: Query<(&Collider, &ChildOf), With<ScanCollider>>,
     q_colliders: Query<
         (Entity, &GlobalTransform, &Collider, Option<&RigidBody>),
-        (Without<GridCollisionCalculated>, Without<TriggerCollider>, Without<ScanCollider>),
+        (
+            Without<GridCollisionCalculated>,
+            Without<TriggerCollider>,
+            Without<ScanCollider>,
+        ),
     >,
 ) {
-    let filtered_colliders = q_colliders.iter().filter(|(_, _, _, optional_rigid_body)| optional_rigid_body.is_none() || *optional_rigid_body.unwrap() == RigidBody::Static);
+    let filtered_colliders = q_colliders.iter().filter(|(_, _, _, optional_rigid_body)| {
+        optional_rigid_body.is_none() || *optional_rigid_body.unwrap() == RigidBody::Static
+    });
 
     if filtered_colliders.clone().count() == 0 {
         return;
@@ -46,7 +54,9 @@ pub fn compute_grid_collision(
             continue;
         };
 
-        for (collider_entity, other_collider_transform, other_collider, _) in filtered_colliders.clone() {
+        for (collider_entity, other_collider_transform, other_collider, _) in
+            filtered_colliders.clone()
+        {
             info!("{}", collider_entity);
             for x in 0..grid.width() {
                 for y in 0..grid.height() {
@@ -71,7 +81,9 @@ pub fn compute_grid_collision(
                 }
             }
 
-            commands.entity(collider_entity).insert(GridCollisionCalculated);
+            commands
+                .entity(collider_entity)
+                .insert(GridCollisionCalculated);
         }
 
         grid.build();

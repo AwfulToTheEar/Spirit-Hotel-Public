@@ -1,8 +1,8 @@
+use bevy::prelude::*;
 use bevy_aseprite_ultra::prelude::AseAnimation;
 use spirit_hotel_animation::{
     components::prelude::AnimatableMarker, resources::prelude::AnimationAssets,
 };
-use bevy::prelude::*;
 
 pub fn init_animatable_entities(
     mut commands: Commands,

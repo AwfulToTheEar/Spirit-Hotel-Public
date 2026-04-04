@@ -1,7 +1,7 @@
+use bevy::prelude::*;
 use bevy_aseprite_ultra::prelude::AseAnimation;
 use spirit_hotel_animation::components::prelude::AnimatableMarker;
-use bevy::prelude::*;
-use spirit_hotel_movement::components::prelude::{MovementIntent};
+use spirit_hotel_movement::components::prelude::MovementIntent;
 
 pub fn stop_animation_movement(
     mut removed: RemovedComponents<MovementIntent>,

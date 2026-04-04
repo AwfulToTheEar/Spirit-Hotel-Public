@@ -5,5 +5,5 @@ use bevy::prelude::*;
 pub enum FromTrigger {
     #[default]
     FadeIn,
-    OpenDismissibles
+    OpenDismissibles,
 }

@@ -1,10 +1,13 @@
-use crate::components::prelude::{DialogueInputControls, DialogueUiCharacter, DialogueUiControls, DialogueUiOptions, DialogueUiRoot, DialogueUiText};
+use crate::components::prelude::{
+    DialogueInputControls, DialogueUiCharacter, DialogueUiControls, DialogueUiOptions,
+    DialogueUiRoot, DialogueUiText,
+};
+use crate::inputs::prelude::ContinueDialogue;
 use bevy::prelude::*;
-use bevy_enhanced_input::{actions, bindings};
 use bevy_enhanced_input::context::ContextActivity;
 use bevy_enhanced_input::prelude::Action;
+use bevy_enhanced_input::{actions, bindings};
 use spirit_hotel_core::screens::Screen;
-use crate::inputs::prelude::ContinueDialogue;
 
 pub fn spawn_dialogue_ui(mut commands: Commands) {
     commands.spawn((
@@ -26,10 +29,12 @@ pub fn spawn_dialogue_ui(mut commands: Commands) {
             )],
             ..default()
         },
-        actions!(DialogueInputControls[(
-            Action::<ContinueDialogue>::new(),
-            bindings!(KeyCode::Space, KeyCode::Enter)
-        )]),
+        actions!(
+            DialogueInputControls[(
+                Action::<ContinueDialogue>::new(),
+                bindings!(KeyCode::Space, KeyCode::Enter)
+            )]
+        ),
         ContextActivity::<DialogueInputControls>::INACTIVE,
         children![
             (

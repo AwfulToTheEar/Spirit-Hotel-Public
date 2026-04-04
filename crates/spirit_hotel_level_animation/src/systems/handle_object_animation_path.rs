@@ -1,8 +1,8 @@
+use bevy::prelude::*;
+use bevy_ecs_tiled::prelude::{ObjectCreated, TiledEvent};
 use spirit_hotel_animation::{
     components::prelude::AnimationPath, resources::prelude::AnimationAssets,
 };
-use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::{ObjectCreated, TiledEvent};
 use std::path::PathBuf;
 
 pub fn handle_object_animation_path(
@@ -19,5 +19,7 @@ pub fn handle_object_animation_path(
     path.push("worlds");
     path.push(animation_path.0.clone());
 
-    animation_assets.0.insert(e_object_created.origin, asset_server.load(path));
+    animation_assets
+        .0
+        .insert(e_object_created.origin, asset_server.load(path));
 }

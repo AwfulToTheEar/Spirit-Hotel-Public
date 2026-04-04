@@ -18,8 +18,7 @@ pub fn add_player_kagume_kagume_follow_path(
     let path_node_entity = s_kagume_kagume_start_path_node.into_inner();
     let world_grid_entity = s_world_grid.into_inner();
 
-    commands.entity(entity).insert((
-        Follow(path_node_entity),
-        AgentOfGrid(world_grid_entity),
-    ));
+    commands
+        .entity(entity)
+        .insert((Follow(path_node_entity), AgentOfGrid(world_grid_entity)));
 }

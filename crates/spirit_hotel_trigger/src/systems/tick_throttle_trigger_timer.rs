@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use crate::components::prelude::ThrottleTriggerTimer;
+use bevy::prelude::*;
 
 pub fn tick_throttle_trigger_timer(
     time: Res<Time>,

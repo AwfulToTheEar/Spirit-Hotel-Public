@@ -1,11 +1,9 @@
 use crate::systems::prelude::{start_animation_movement, stop_animation_movement};
 use bevy::prelude::*;
-use spirit_hotel_core::{
-    AppSystems, PausableSystems, game::GameplaySystems,
-};
+use spirit_hotel_core::{AppSystems, PausableSystems, game::GameplaySystems};
 
-pub mod systems;
 mod components;
+pub mod systems;
 
 pub struct SpiritHotelAnimationMovementPlugin;
 

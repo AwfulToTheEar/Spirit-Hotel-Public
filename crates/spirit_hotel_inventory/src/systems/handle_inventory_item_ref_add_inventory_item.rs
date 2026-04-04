@@ -1,5 +1,5 @@
 use crate::components::prelude::{InventoryItemId, InventoryItemRef};
-use crate::resources::prelude::{InventoryManifest};
+use crate::resources::prelude::InventoryManifest;
 use bevy::prelude::*;
 use leafwing_manifest::identifier::Id;
 use leafwing_manifest::manifest::Manifest;
@@ -22,10 +22,5 @@ pub fn handle_inventory_item_ref_add_inventory_item(
     commands
         .entity(e_inventory_item_ref_added.entity)
         .remove::<InventoryItemRef>()
-        .insert(
-            (
-                InventoryItemId(id),
-                inventory_item.clone()
-            )
-        );
+        .insert((InventoryItemId(id), inventory_item.clone()));
 }

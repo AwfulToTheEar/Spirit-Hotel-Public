@@ -11,7 +11,7 @@ pub fn toggle_block_movement_player_oni(
     let (entity, option_movement_flag) = s_player.into_inner();
 
     let kagume_kagume = s_kagume_kagume.into_inner();
-    
+
     if kagume_kagume.is_oni {
         commands.entity(entity).insert(MovementFlag::Block);
         return;

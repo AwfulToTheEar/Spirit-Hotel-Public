@@ -1,12 +1,15 @@
-use bevy_aseprite_ultra::AsepriteUltraPlugin;
 use bevy::prelude::*;
+use bevy_aseprite_ultra::AsepriteUltraPlugin;
 
+use crate::components::prelude::{AnimationPath, InitAnimation};
+use crate::resources::prelude::AnimationAssets;
+use crate::systems::prelude::{
+    pause_animation, reset_disabled_animations, start_animation_idle, start_init_animations,
+    unpause_animation,
+};
 use spirit_hotel_core::{
     AppSystems, PausableSystems, Pause, asset_tracking::LoadResource, game::GameplaySystems,
 };
-use crate::components::prelude::{AnimationPath, InitAnimation};
-use crate::resources::prelude::AnimationAssets;
-use crate::systems::prelude::{pause_animation, reset_disabled_animations, start_animation_idle, start_init_animations, unpause_animation};
 
 pub mod components;
 pub mod resources;

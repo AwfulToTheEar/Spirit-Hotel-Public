@@ -1,12 +1,12 @@
+use crate::components::prelude::{Follow, WithoutPathfinding};
 use bevy::prelude::*;
+use bevy_northstar::prelude::NextPos;
 use bevy_northstar::{
     path::Path,
     prelude::{AgentOfGrid, AgentPos, DebugPath, Pathfind},
 };
-use bevy_northstar::prelude::NextPos;
 use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation, MovementIntent};
 use spirit_hotel_pathfinding::components::prelude::PathNode;
-use crate::components::prelude::{Follow, WithoutPathfinding};
 
 pub fn apply_goal_from_path_node(
     mut commands: Commands,
@@ -22,10 +22,15 @@ pub fn apply_goal_from_path_node(
             Without<MoveToLocation>,
         ),
     >,
-    q_path_nodes: Query<(&AgentPos, &PathNode, &AgentOfGrid, Has<WithoutPathfinding>), Without<CanMove>>,
+    q_path_nodes: Query<
+        (&AgentPos, &PathNode, &AgentOfGrid, Has<WithoutPathfinding>),
+        Without<CanMove>,
+    >,
 ) {
     for (entity, mut goal, agent_of_grid, moveable_without_pathfinding) in q_movables.iter_mut() {
-        let Ok((goal_pos, next, path_of_grid, path_node_without_pathfinding)) = q_path_nodes.get(goal.0) else {
+        let Ok((goal_pos, next, path_of_grid, path_node_without_pathfinding)) =
+            q_path_nodes.get(goal.0)
+        else {
             continue;
         };
 
@@ -40,9 +45,7 @@ pub fn apply_goal_from_path_node(
         }
 
         if moveable_without_pathfinding || path_node_without_pathfinding {
-            commands.entity(entity).insert(
-                NextPos(goal_pos.0)
-            );
+            commands.entity(entity).insert(NextPos(goal_pos.0));
 
             continue;
         }

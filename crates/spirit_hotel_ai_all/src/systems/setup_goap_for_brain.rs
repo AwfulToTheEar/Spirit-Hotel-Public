@@ -3,10 +3,12 @@ use bevy::prelude::*;
 use bevy_dogoap::prelude::*;
 use spirit_hotel_ai::Possible;
 use spirit_hotel_ai::components::prelude::HasTarget;
-use spirit_hotel_ai_pathfinding::components::prelude::{CanReachTarget, CheckIfTargetReachableAction, TargetInReach};
+use spirit_hotel_ai_pathfinding::components::prelude::{
+    CanReachTarget, CheckIfTargetReachableAction, TargetInReach,
+};
 use spirit_hotel_ai_pathfinding_movement::components::prelude::MoveToTargetAction;
 use spirit_hotel_ai_player::components::prelude::{
-    PlayerExists, CheckIfPlayerExistsAction, FindPlayerAction,
+    CheckIfPlayerExistsAction, FindPlayerAction, PlayerExists,
 };
 
 pub fn setup_goap_for_brain(

@@ -1,12 +1,12 @@
 use std::path::PathBuf;
 
+use crate::components::prelude::LoadLevel;
 use bevy::prelude::*;
-use spirit_hotel_core::fades::{ChangeScreen, FadeTasks, FadeTask};
+use spirit_hotel_core::fades::{ChangeScreen, FadeTask, FadeTasks};
 use spirit_hotel_core::screens::Screen;
 use spirit_hotel_level::resources::prelude::LevelAssets;
 use spirit_hotel_trigger::components::prelude::{FromTrigger, IsTrigger};
 use spirit_hotel_trigger::events::prelude::TriggerActivated;
-use crate::components::prelude::LoadLevel;
 
 pub fn load_level_from_activated_trigger(
     e_trigger_activated: On<TriggerActivated>,

@@ -1,7 +1,7 @@
 pub mod systems;
 
-use bevy::prelude::*;
 use crate::systems::prelude::handle_inventory_item_tiled_object_add_visuals;
+use bevy::prelude::*;
 
 pub struct SpiritHotelLevelInventoryPlugin;
 

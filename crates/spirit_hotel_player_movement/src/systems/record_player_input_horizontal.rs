@@ -1,8 +1,10 @@
-use spirit_hotel_player::components::prelude::Player;
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
+use spirit_hotel_movement::components::prelude::{
+    MoveToLocation, MovementIntent, UpdateMovementIntent,
+};
+use spirit_hotel_player::components::prelude::Player;
 use spirit_hotel_player::inputs::prelude::WalkHorizontal;
-use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent, UpdateMovementIntent};
 
 pub fn record_player_input_horizontal(
     trigger: On<Fire<WalkHorizontal>>,
@@ -21,7 +23,7 @@ pub fn record_player_input_horizontal(
     }
 
     let entity = s_player.into_inner();
-    
+
     commands
         .entity(entity)
         .remove::<UpdateMovementIntent>()

@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use crate::systems::prelude::start_conversation_from_activated_trigger;
+use bevy::prelude::*;
 
 pub mod systems;
 

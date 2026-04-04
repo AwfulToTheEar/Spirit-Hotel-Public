@@ -23,7 +23,9 @@ pub fn handle_render_inventory(e_render: On<Render>, mut commands: Commands) {
                 parent
                     .spawn_empty()
                     .observe(handle_render_selected_inventory_item)
-                    .trigger(SectionSpawned::with_section(InventoryMenuSection::SelectedInventoryItem));
+                    .trigger(SectionSpawned::with_section(
+                        InventoryMenuSection::SelectedInventoryItem,
+                    ));
 
                 parent.spawn((
                     Node {
@@ -34,7 +36,9 @@ pub fn handle_render_inventory(e_render: On<Render>, mut commands: Commands) {
                         parent
                             .spawn_empty()
                             .observe(handle_render_inventory_items)
-                            .trigger(SectionSpawned::with_section(InventoryMenuSection::InventoryItems));
+                            .trigger(SectionSpawned::with_section(
+                                InventoryMenuSection::InventoryItems,
+                            ));
 
                         parent
                             .spawn_empty()

@@ -1,6 +1,6 @@
 use crate::components::prelude::PausedByState;
-use bevy_aseprite_ultra::prelude::AseAnimation;
 use bevy::prelude::*;
+use bevy_aseprite_ultra::prelude::AseAnimation;
 
 pub fn unpause_animation(
     mut commands: Commands,

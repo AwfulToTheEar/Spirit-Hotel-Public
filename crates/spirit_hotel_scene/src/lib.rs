@@ -1,20 +1,15 @@
 use bevy::prelude::*;
 
-use spirit_hotel_core::{
-    AppSystems,
-    game::{
-        GameplaySystems
-    },
-};
 use crate::components::prelude::{ChangeGameScene, HideInGameScene, ShowInGameScene};
 use crate::resources::prelude::{CurrentGameScenes, StartingGameScene};
 use crate::system_sets::prelude::SceneSystems;
 use crate::systems::prelude::{hide_scene_entities, set_starting_scene};
+use spirit_hotel_core::{AppSystems, game::GameplaySystems};
 
 pub mod components;
 pub mod resources;
-pub mod systems;
 pub mod system_sets;
+pub mod systems;
 
 pub struct SpiritHotelScenePlugin;
 
@@ -38,9 +33,7 @@ impl Plugin for SpiritHotelScenePlugin {
             )
             .add_systems(
                 Update,
-                (
-                    hide_scene_entities,
-                )
+                (hide_scene_entities,)
                     .in_set(GameplaySystems)
                     .in_set(SceneSystems)
                     .in_set(AppSystems::Update),

@@ -8,7 +8,6 @@ pub fn handle_world_init_breath_timer(
     q_init_breath_timer: Query<&InitBreathTimer>,
     s_tiled_world: Single<Entity, With<TiledWorld>>,
 ) {
-
     let Ok(init_breath_timer) = q_init_breath_timer.get(e_map_created.origin) else {
         return;
     };
@@ -21,6 +20,7 @@ pub fn handle_world_init_breath_timer(
             init_breath_timer.0 as f32,
             TimerMode::Once,
         )));
-    commands.entity(e_map_created.origin).remove::<InitBreathTimer>();
-
+    commands
+        .entity(e_map_created.origin)
+        .remove::<InitBreathTimer>();
 }

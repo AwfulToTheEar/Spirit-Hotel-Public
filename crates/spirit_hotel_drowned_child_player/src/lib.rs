@@ -17,19 +17,19 @@ impl Plugin for SpiritHotelDrownedChildPlayerPlugin {
             .add_observer(enable_player_input_action_context)
             .add_observer(teleport_player_kagume_kagume_start_position)
             .add_systems(
-            Update,
-            (
-                tick_breath_timer
-                    .in_set(AppSystems::TickTimers)
-                    .in_set(PausableSystems),
+                Update,
                 (
-                    lose_game_breath_timer_not_held,
-                    add_breath_input_actions,
-                    remove_breath_input_actions,
+                    tick_breath_timer
+                        .in_set(AppSystems::TickTimers)
+                        .in_set(PausableSystems),
+                    (
+                        lose_game_breath_timer_not_held,
+                        add_breath_input_actions,
+                        remove_breath_input_actions,
+                    )
+                        .in_set(AppSystems::Update),
                 )
-                    .in_set(AppSystems::Update),
-            )
-                .in_set(GameplaySystems),
-        );
+                    .in_set(GameplaySystems),
+            );
     }
 }

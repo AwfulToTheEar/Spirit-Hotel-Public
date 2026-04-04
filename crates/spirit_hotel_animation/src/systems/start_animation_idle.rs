@@ -1,10 +1,10 @@
-use bevy_aseprite_ultra::prelude::AseAnimation;
-use bevy::prelude::*;
 use crate::components::prelude::IdleAnimation;
+use bevy::prelude::*;
+use bevy_aseprite_ultra::prelude::AseAnimation;
 
 pub fn start_animation_idle(
     q_animatables: Query<(&IdleAnimation, &Children)>,
-    mut q_visuals: Query<&mut AseAnimation>
+    mut q_visuals: Query<&mut AseAnimation>,
 ) {
     for (idle_animation, children) in q_animatables.iter() {
         for child in children.iter() {

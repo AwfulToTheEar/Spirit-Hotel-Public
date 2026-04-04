@@ -28,13 +28,13 @@ impl Plugin for SpiritHotelPathfindingPlugin {
                 (build_world_path_finding_grid, mark_agents_in_world_grid)
                     .chain()
                     .in_set(GameplaySystems)
-                    .in_set(PathfindingSystems)
+                    .in_set(PathfindingSystems),
             )
             .add_systems(
                 PostUpdate,
                 clear_map_for_recompution_when_collider_disabled
                     .in_set(GameplaySystems)
-                    .in_set(PathfindingSystems)
+                    .in_set(PathfindingSystems),
             );
     }
 }

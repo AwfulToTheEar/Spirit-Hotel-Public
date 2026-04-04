@@ -1,7 +1,7 @@
+use crate::input::prelude::KagumeKagumeDance;
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
 use spirit_hotel_drowned_child_movement::components::prelude::KagumeKagumeDancer;
-use crate::input::prelude::KagumeKagumeDance;
 
 pub fn add_kagume_kagume_dancer_input_actions(
     mut commands: Commands,

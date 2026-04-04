@@ -1,7 +1,7 @@
+use crate::components::prelude::{KagumeKagumeCycle, KagumeKagumeCycleIndicator};
 use bevy::prelude::*;
 use spirit_hotel_core::screens::Screen;
 use spirit_hotel_core::theme::widget;
-use crate::components::prelude::{KagumeKagumeCycle, KagumeKagumeCycleIndicator};
 
 pub fn spawn_kagume_kagume_cycle_ui(
     mut commands: Commands,

@@ -3,9 +3,9 @@ use bevy_northstar::{
     prelude::{AgentOfGrid, CardinalNeighborhood},
 };
 
-use bevy::prelude::*;
-use bevy_ecs_tiled::prelude::{TiledWorld};
 use crate::components::prelude::InWorldGrid;
+use bevy::prelude::*;
+use bevy_ecs_tiled::prelude::TiledWorld;
 
 pub fn mark_agents_in_world_grid(
     mut commands: Commands,

@@ -1,27 +1,28 @@
 use bevy::prelude::*;
-use bevy_enhanced_input::context::InputContextAppExt;
 use bevy_enhanced_input::EnhancedInputPlugin;
+use bevy_enhanced_input::context::InputContextAppExt;
 use bevy_enhanced_input::prelude::Start;
 use bevy_inspector_egui::bevy_egui::EguiPlugin;
 use bevy_inspector_egui::quick::WorldInspectorPlugin;
 use leafwing_manifest::asset_state::SimpleAssetState;
 use leafwing_manifest::plugin::ManifestPlugin;
-use spirit_hotel_core::menus::inventory::InventoryMenu;
 use spirit_hotel_core::SpiritHotelCorePlugin;
+use spirit_hotel_core::menus::inventory::InventoryMenu;
 use spirit_hotel_core::screens::Screen;
 use spirit_hotel_inventory::SpiritHotelInventoryPlugin;
 use spirit_hotel_player::SpiritHotelPlayerPlugin;
 use spirit_hotel_player::components::prelude::Player;
 use spirit_hotel_player::systems::prelude::add_player_input_actions;
-use spirit_hotel_player_inventory::inputs::prelude::OpenInventory;
 use spirit_hotel_player_inventory::SpiritHotelPlayerInventoryPlugin;
-use spirit_hotel_player_inventory::systems::prelude::{add_player_input_actions_open_inventory, add_player_inventory};
+use spirit_hotel_player_inventory::inputs::prelude::OpenInventory;
+use spirit_hotel_player_inventory::systems::prelude::{
+    add_player_input_actions_open_inventory, add_player_inventory,
+};
 
 fn main() {
     let mut app = App::new();
 
-    app
-        .add_plugins(DefaultPlugins)
+    app.add_plugins(DefaultPlugins)
         .init_state::<SimpleAssetState>()
         .add_plugins((
             EguiPlugin::default(),

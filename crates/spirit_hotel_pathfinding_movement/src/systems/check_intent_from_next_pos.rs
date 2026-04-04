@@ -1,4 +1,4 @@
-use crate::components::prelude::{NextPosToBeRemoved};
+use crate::components::prelude::NextPosToBeRemoved;
 use bevy::prelude::*;
 use bevy_northstar::components::{AgentOfGrid, NextPos};
 use bevy_northstar::prelude::Path;
@@ -31,6 +31,8 @@ pub fn check_intent_from_next_pos(
             continue;
         }
 
-        commands.entity(entity).remove::<(MovementIntent, CheckMovementIntent)>();
+        commands
+            .entity(entity)
+            .remove::<(MovementIntent, CheckMovementIntent)>();
     }
 }

@@ -1,6 +1,6 @@
+use crate::components::prelude::Player;
 use bevy::prelude::*;
 use spirit_hotel_core::MainCamera;
-use crate::components::prelude::Player;
 
 pub fn apply_player_translate_to_camera(
     mut camera: Single<&mut Transform, With<MainCamera>>,

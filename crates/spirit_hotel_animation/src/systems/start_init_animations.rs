@@ -1,6 +1,6 @@
 use crate::components::prelude::InitAnimation;
-use bevy_aseprite_ultra::prelude::{AnimationRepeat, AseAnimation};
 use bevy::prelude::*;
+use bevy_aseprite_ultra::prelude::{AnimationRepeat, AseAnimation};
 
 pub fn start_init_animations(
     mut commands: Commands,

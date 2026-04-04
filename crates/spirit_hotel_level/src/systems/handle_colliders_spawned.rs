@@ -1,6 +1,6 @@
+use crate::components::prelude::TiledCollidersSpawned;
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::{ColliderCreated, TiledEvent, TiledLayer, TiledMap, TiledObject};
-use crate::components::prelude::TiledCollidersSpawned;
 
 pub fn handle_colliders_spawned(
     mut commands: Commands,

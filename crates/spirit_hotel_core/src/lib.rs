@@ -26,7 +26,7 @@ impl Plugin for SpiritHotelCorePlugin {
         app.add_plugins((
             EnhancedInputPlugin,
             ManifestPlugin::<SimpleAssetState>::default(),
-            PrettyTextPlugin
+            PrettyTextPlugin,
         ));
         app.add_plugins((
             asset_tracking::plugin,

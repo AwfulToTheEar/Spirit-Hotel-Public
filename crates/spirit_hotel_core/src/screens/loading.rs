@@ -1,9 +1,9 @@
 //! A loading screen during which game assets are loaded if necessary.
 //! This reduces stuttering, especially for audio on Wasm.
 
+use crate::{asset_tracking::ResourceHandles, screens::Screen, theme::prelude::*};
 use bevy::prelude::*;
 use leafwing_manifest::asset_state::SimpleAssetState;
-use crate::{asset_tracking::ResourceHandles, screens::Screen, theme::prelude::*};
 
 pub(super) fn plugin(app: &mut App) {
     app.add_systems(OnEnter(Screen::Loading), spawn_loading_screen);
@@ -22,12 +22,13 @@ fn spawn_loading_screen(mut commands: Commands) {
     ));
 }
 
-fn enter_gameplay_screen(
-    mut next_screen: ResMut<NextState<Screen>>,
-) {
+fn enter_gameplay_screen(mut next_screen: ResMut<NextState<Screen>>) {
     next_screen.set(Screen::Gameplay);
 }
 
-fn all_assets_loaded(resource_handles: Res<ResourceHandles>, asset_state: Res<State<SimpleAssetState>>) -> bool {
+fn all_assets_loaded(
+    resource_handles: Res<ResourceHandles>,
+    asset_state: Res<State<SimpleAssetState>>,
+) -> bool {
     resource_handles.is_all_done() && matches!(asset_state.get(), SimpleAssetState::Ready)
 }

@@ -53,7 +53,8 @@ pub fn compute_intent(
             continue;
         };
 
-        for (other_collider_entity, other_collider, other_transform, child_of) in q_colliders.iter() {
+        for (other_collider_entity, other_collider, other_transform, child_of) in q_colliders.iter()
+        {
             if collider_entity == other_collider_entity {
                 continue;
             }
@@ -73,7 +74,9 @@ pub fn compute_intent(
                 continue;
             }
 
-            if let Some(follow) = option_follow && follow.0 == child_of.0 {
+            if let Some(follow) = option_follow
+                && follow.0 == child_of.0
+            {
                 commands.entity(entity).insert(CollidedWithFollowTarget);
             }
 

@@ -1,4 +1,6 @@
-use crate::components::prelude::{InventoryMenuSection, InventoryMenuSections, ItemToCombine, SelectedItemId};
+use crate::components::prelude::{
+    InventoryMenuSection, InventoryMenuSections, ItemToCombine, SelectedItemId,
+};
 use crate::events::prelude::Render;
 use bevy::prelude::*;
 use spirit_hotel_core::menus::inventory::InventoryMenu;
@@ -11,5 +13,7 @@ pub fn handle_selected_item_combine_with(
     let (menu, sections, selected_item) = s_menu.into_inner();
 
     commands.entity(menu).insert(ItemToCombine(selected_item.0));
-    commands.entity(*sections.get(InventoryMenuSection::Actions).unwrap()).trigger(Render::new);
+    commands
+        .entity(*sections.get(InventoryMenuSection::Actions).unwrap())
+        .trigger(Render::new);
 }

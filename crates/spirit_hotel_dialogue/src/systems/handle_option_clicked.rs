@@ -1,7 +1,7 @@
-use bevy::prelude::*;
-use bevy_yarnspinner::prelude::DialogueRunner;
 use crate::components::prelude::DialogueOption;
 use crate::events::prelude::ClearDialogueBody;
+use bevy::prelude::*;
+use bevy_yarnspinner::prelude::DialogueRunner;
 
 pub fn handle_option_clicked(
     e_clicked: On<Pointer<Click>>,
@@ -14,6 +14,6 @@ pub fn handle_option_clicked(
     if s_dialogue_runner.select_option(option.0.id).is_err() {
         return;
     };
-    
+
     commands.trigger(ClearDialogueBody);
 }

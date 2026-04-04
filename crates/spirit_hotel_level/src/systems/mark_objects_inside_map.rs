@@ -1,6 +1,6 @@
+use crate::components::prelude::InsideMap;
 use bevy::prelude::*;
 use bevy_ecs_tiled::prelude::{TiledColliderSource, TiledMap, TiledMapAsset, TiledObject};
-use crate::components::prelude::InsideMap;
 
 pub fn mark_objects_inside_map(
     mut commands: Commands,

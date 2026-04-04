@@ -1,5 +1,5 @@
-use std::marker::PhantomData;
 use bevy::prelude::*;
+use std::marker::PhantomData;
 
 use crate::components::prelude::SyncMovement;
 #[derive(Component, Reflect)]

@@ -1,8 +1,10 @@
-pub mod systems;
 pub mod inputs;
+pub mod systems;
 
+use crate::systems::prelude::{
+    add_player_input_actions_open_inventory, add_player_inventory, open_inventory,
+};
 use bevy::prelude::*;
-use crate::systems::prelude::{add_player_input_actions_open_inventory, add_player_inventory, open_inventory};
 
 pub struct SpiritHotelPlayerInventoryPlugin;
 

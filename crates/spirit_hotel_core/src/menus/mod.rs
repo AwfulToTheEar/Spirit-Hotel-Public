@@ -1,10 +1,10 @@
 //! The game's menus and transitions between them.
 
 mod credits;
+pub mod inventory;
 mod main;
 mod pause;
 mod settings;
-pub mod inventory;
 
 use bevy::prelude::*;
 

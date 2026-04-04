@@ -1,7 +1,7 @@
-use bevy::prelude::*;
-use spirit_hotel_core::menus::inventory::InventoryMenu;
 use crate::components::prelude::InventoryMenuSections;
 use crate::events::prelude::{Render, SectionSpawned};
+use bevy::prelude::*;
+use spirit_hotel_core::menus::inventory::InventoryMenu;
 
 pub fn handle_inventory_section_spawned(
     e_spawned: On<SectionSpawned>,
@@ -12,7 +12,9 @@ pub fn handle_inventory_section_spawned(
 
     let mut sections = s_menu.into_inner();
 
-    sections.0.insert(e_spawned.section.clone(), e_spawned.entity);
+    sections
+        .0
+        .insert(e_spawned.section.clone(), e_spawned.entity);
 
     commands.entity(e_spawned.entity).trigger(Render::new);
 }

@@ -1,6 +1,6 @@
-use bevy::prelude::*;
 use avian2d::collision::collider::contact_query;
 use avian2d::prelude::Collider;
+use bevy::prelude::*;
 use spirit_hotel_movement::components::prelude::{CanMove, MoveToLocation};
 use spirit_hotel_trigger::{
     components::prelude::{InsideTriggers, TriggerCollider},
@@ -14,7 +14,10 @@ pub fn check_trigger_overlap(
         (With<Transform>, Without<MoveToLocation>, With<CanMove>),
     >,
     q_colliders: Query<(&Collider, &GlobalTransform)>,
-    q_trigger_colliders: Query<(Entity, &Collider, &GlobalTransform, &ChildOf), With<TriggerCollider>>,
+    q_trigger_colliders: Query<
+        (Entity, &Collider, &GlobalTransform, &ChildOf),
+        With<TriggerCollider>,
+    >,
 ) {
     for (entity, children, mut inside_triggers_option) in q_entites.iter_mut() {
         for child in children.iter() {
@@ -22,7 +25,9 @@ pub fn check_trigger_overlap(
                 continue;
             };
 
-            for (trigger_entity, trigger_collider, trigger_transform, child_of) in q_trigger_colliders.iter() {
+            for (trigger_entity, trigger_collider, trigger_transform, child_of) in
+                q_trigger_colliders.iter()
+            {
                 if child == trigger_entity {
                     continue;
                 }

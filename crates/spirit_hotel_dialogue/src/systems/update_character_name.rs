@@ -2,7 +2,7 @@ use crate::components::prelude::DialogueUiCharacter;
 use crate::events::prelude::SetDialogueCharacter;
 use crate::utils::prelude::parse_pretty_text;
 use bevy::prelude::*;
-use bevy_pretty_text::parser::{ParsedPrettyText};
+use bevy_pretty_text::parser::ParsedPrettyText;
 
 pub fn update_character_name(
     e_set_dialogue_character: On<SetDialogueCharacter>,

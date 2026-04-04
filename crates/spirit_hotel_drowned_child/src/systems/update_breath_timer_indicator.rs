@@ -1,5 +1,5 @@
-use bevy::prelude::*;
 use crate::components::prelude::{BreathTimer, BreathTimerIndicator};
+use bevy::prelude::*;
 
 pub fn update_breath_timer_indicator(
     s_breath_timer: Single<(&BreathTimer, Ref<BreathTimer>)>,

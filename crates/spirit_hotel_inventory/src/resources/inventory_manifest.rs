@@ -58,16 +58,16 @@ impl Manifest for InventoryManifest {
             })
             .collect();
 
-        let combinations =
-            raw_manifest
-                .combinations
-                .into_iter()
-                .map(|((input_a, input_b), result)| {
-                    (
-                        (Id::from_name(&input_a), Id::from_name(&input_b)),
-                        Id::from_name(&result),
-                    )
-                }).collect::<HashMap<_, _>>();
+        let combinations = raw_manifest
+            .combinations
+            .into_iter()
+            .map(|((input_a, input_b), result)| {
+                (
+                    (Id::from_name(&input_a), Id::from_name(&input_b)),
+                    Id::from_name(&result),
+                )
+            })
+            .collect::<HashMap<_, _>>();
 
         Ok(InventoryManifest {
             items,

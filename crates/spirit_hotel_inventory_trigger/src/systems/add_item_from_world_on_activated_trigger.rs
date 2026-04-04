@@ -1,10 +1,10 @@
+use crate::components::prelude::AddItemFromWorld;
 use bevy::prelude::*;
 use spirit_hotel_core::menus::inventory::InventoryMenu;
 use spirit_hotel_inventory::components::prelude::{Inventory, InventoryItemId};
 use spirit_hotel_inventory::events::prelude::Render;
 use spirit_hotel_trigger::components::prelude::IsTrigger;
 use spirit_hotel_trigger::events::prelude::TriggerActivated;
-use crate::components::prelude::{AddItemFromWorld};
 
 pub fn add_item_from_world_on_activated_trigger(
     e_trigger_activated: On<TriggerActivated>,
@@ -18,7 +18,9 @@ pub fn add_item_from_world_on_activated_trigger(
         return;
     };
 
-    let Ok((item, inventory_item_id)) = q_inventory_items.get(add_item_from_world.0) else { return; };
+    let Ok((item, inventory_item_id)) = q_inventory_items.get(add_item_from_world.0) else {
+        return;
+    };
 
     commands.entity(item).despawn();
 

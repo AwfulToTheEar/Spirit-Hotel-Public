@@ -10,5 +10,7 @@ pub fn enable_player_input_action_context(
 ) {
     let entity = s_player.into_inner();
 
-    commands.entity(entity).try_insert(ContextActivity::<Player>::ACTIVE);
+    commands
+        .entity(entity)
+        .try_insert(ContextActivity::<Player>::ACTIVE);
 }

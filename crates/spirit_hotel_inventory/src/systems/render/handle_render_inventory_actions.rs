@@ -1,9 +1,9 @@
-use bevy::prelude::*;
-use spirit_hotel_core::menus::inventory::InventoryMenu;
-use spirit_hotel_core::theme::widget;
 use crate::components::prelude::{ItemToCombine, SelectedItemId};
 use crate::events::prelude::{AddActions, Render};
 use crate::systems::actions::*;
+use bevy::prelude::*;
+use spirit_hotel_core::menus::inventory::InventoryMenu;
+use spirit_hotel_core::theme::widget;
 
 pub fn handle_render_inventory_actions(
     e_render: On<Render>,
@@ -12,10 +12,10 @@ pub fn handle_render_inventory_actions(
 ) {
     let (selected_item, option_item_to_combine) = s_menu.into_inner();
 
-    commands.entity(e_render.0).despawn_children().insert((
-        Name::from("Actions"),
-        Node::default(),
-    ));
+    commands
+        .entity(e_render.0)
+        .despawn_children()
+        .insert((Name::from("Actions"), Node::default()));
 
     if let Some(item_to_combine) = option_item_to_combine
         && selected_item.0 != item_to_combine.0

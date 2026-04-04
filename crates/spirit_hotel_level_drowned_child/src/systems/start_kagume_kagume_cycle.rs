@@ -8,7 +8,7 @@ pub fn start_kagume_kagume_cycle(
     s_world: Single<Entity, (With<TiledWorld>, Without<KagumeKagumeCycle>)>,
 ) {
     let entity = s_world.into_inner();
-    
+
     let mut kagume_kagume = s_kagume_kagume.into_inner();
 
     let Some(cycle_time) = kagume_kagume.dance_cycles.pop() else {
@@ -17,5 +17,10 @@ pub fn start_kagume_kagume_cycle(
 
     info!("starting kagume cycle");
 
-    commands.entity(entity).insert(KagumeKagumeCycle(Timer::from_seconds(cycle_time, TimerMode::Once)));
+    commands
+        .entity(entity)
+        .insert(KagumeKagumeCycle(Timer::from_seconds(
+            cycle_time,
+            TimerMode::Once,
+        )));
 }
