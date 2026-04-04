@@ -13,7 +13,7 @@ pub fn lose_game_breath_timer_not_held(
 ) {
     let (hold_breath_events, hold_breath_value) = s_hold_breath.into_inner();
 
-    if *hold_breath_events == ActionEvents::COMPLETED {
+    if *hold_breath_events == ActionEvents::COMPLETE {
         next_screen.set(Screen::Title);
         return;
     }
@@ -23,7 +23,7 @@ pub fn lose_game_breath_timer_not_held(
     }
 
     for other_action_events in q_other_action_events.iter() {
-        if *other_action_events == ActionEvents::FIRED {
+        if *other_action_events == ActionEvents::FIRE {
             next_screen.set(Screen::Title);
             return;
         }

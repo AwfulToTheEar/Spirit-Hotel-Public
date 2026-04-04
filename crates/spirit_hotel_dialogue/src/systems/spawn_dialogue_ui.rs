@@ -4,7 +4,6 @@ use bevy_enhanced_input::{actions, bindings};
 use bevy_enhanced_input::context::ContextActivity;
 use bevy_enhanced_input::prelude::Action;
 use spirit_hotel_core::screens::Screen;
-use spirit_hotel_core::theme::widget;
 use crate::inputs::prelude::ContinueDialogue;
 
 pub fn spawn_dialogue_ui(mut commands: Commands) {

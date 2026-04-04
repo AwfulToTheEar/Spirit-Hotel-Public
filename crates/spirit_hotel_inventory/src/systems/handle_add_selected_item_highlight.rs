@@ -1,5 +1,4 @@
 use crate::components::prelude::{InventoryItemId, SelectedItemId};
-use crate::events::prelude::Render;
 use bevy::prelude::*;
 use spirit_hotel_core::menus::inventory::InventoryMenu;
 

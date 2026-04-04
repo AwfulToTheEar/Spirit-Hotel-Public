@@ -5,7 +5,7 @@ use crate::components::prelude::{BreathTimer, BreathTimerIndicator};
 
 pub fn spawn_breath_timer_ui(
     mut commands: Commands,
-    q_breath_timer: Populated<&BreathTimer, Added<BreathTimer>>,
+    _: Populated<(), Added<BreathTimer>>,
 ) {
     commands.spawn((
         widget::ui_root("Breath Timer Ui"),

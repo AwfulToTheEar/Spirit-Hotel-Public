@@ -8,11 +8,11 @@ use bevy_pretty_text::prelude::{Typewriter};
 use bevy_yarnspinner::events::PresentLine;
 
 pub fn present_line(
-    mut e_line: On<PresentLine>,
+    e_line: On<PresentLine>,
     mut commands: Commands,
-    mut s_dialogue_ui_text: Single<Entity, With<DialogueUiText>>,
+    s_dialogue_ui_text: Single<Entity, With<DialogueUiText>>,
 ) {
-    
+
     let name = e_line.line.character_name().unwrap_or("");
 
     commands.trigger(SetDialogueCharacter(name.to_string()));
@@ -31,5 +31,5 @@ pub fn present_line(
             DialogueLine(e_line.line.clone()),
         ))
         .observe(show_options_on_line_typewriter_finish);
-    
+
 }

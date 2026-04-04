@@ -7,7 +7,7 @@ use bevy_yarnspinner::events::{PresentOptions};
 use crate::systems::handle_option_clicked::handle_option_clicked;
 
 pub fn present_options(
-    mut e_options: On<PresentOptions>,
+    e_options: On<PresentOptions>,
     mut commands: Commands,
     s_dialogue_ui_options: Single<Entity, With<DialogueUiOptions>>,
 ) {

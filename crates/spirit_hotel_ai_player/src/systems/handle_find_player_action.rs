@@ -10,10 +10,9 @@ pub fn handle_find_player_action(
 ) {
     let Ok(player) = q_player.single() else {
         panic!("Expected exactly one player entity");
-        return;
     };
 
-    for (entity, mut has_target, mut target) in q_looking_for_player.iter_mut() {
+    for (entity, mut has_target, target) in q_looking_for_player.iter_mut() {
         has_target.0 = true;
 
         let Some(mut target) = target else {

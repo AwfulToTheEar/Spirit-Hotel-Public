@@ -1,27 +1,17 @@
-use crate::components::prelude::{Inventory, InventoryItem, InventoryItemId, SelectedItemId};
+use crate::components::prelude::{Inventory, InventoryItemId};
 use crate::events::prelude::Render;
 use crate::resources::prelude::InventoryManifest;
-use crate::systems::handle_add_selected_item_highlight::handle_add_selected_item_highlight;
 use crate::systems::prelude::handle_inventory_item_clicked;
 use bevy::prelude::*;
-use leafwing_manifest::identifier::Id;
 use leafwing_manifest::manifest::Manifest;
-use spirit_hotel_core::menus::inventory::InventoryMenu;
 
 pub fn handle_render_inventory_items(
     e_render: On<Render>,
     mut commands: Commands,
     inventory_manifest: Res<InventoryManifest>,
     s_inventory: Single<&Inventory>,
-    s_menu: Single<Option<&SelectedItemId>, With<InventoryMenu>>,
 ) {
     let inventory = s_inventory.into_inner();
-
-    let mut option_selected_item_id: Option<Id<InventoryItem>> = None;
-
-    if let Some(selected_item_id_wrapper) = s_menu.into_inner() {
-        option_selected_item_id = Some(selected_item_id_wrapper.0);
-    }
 
     let inventory_item_buttons = inventory
         .0

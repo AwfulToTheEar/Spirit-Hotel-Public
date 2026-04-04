@@ -1,4 +1,4 @@
-use crate::components::prelude::{AddItemFromRef, RemoveItemFromRef};
+use crate::components::prelude::{AddItemFromRef};
 use bevy::prelude::*;
 use leafwing_manifest::identifier::Id;
 use spirit_hotel_core::menus::inventory::InventoryMenu;
@@ -10,7 +10,7 @@ use spirit_hotel_trigger::events::prelude::TriggerActivated;
 pub fn add_item_from_ref_on_activated_trigger(
     e_trigger_activated: On<TriggerActivated>,
     mut commands: Commands,
-    mut s_inventory: Single<&mut Inventory>,
+    s_inventory: Single<&mut Inventory>,
     q_menu: Query<Entity, With<InventoryMenu>>,
     q_triggers: Query<&AddItemFromRef, With<IsTrigger>>,
 ) {

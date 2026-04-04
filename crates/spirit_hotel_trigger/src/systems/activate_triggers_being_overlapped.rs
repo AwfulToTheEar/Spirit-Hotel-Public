@@ -5,12 +5,10 @@ use crate::{
 };
 use bevy::ecs::relationship::RelationshipSourceCollection;
 use bevy::prelude::*;
-use std::ops::Add;
 use std::time::Duration;
 
 pub fn activate_interact_triggers(
     mut commands: Commands,
-    time: Res<Time>,
     keyboard_input: Res<ButtonInput<KeyCode>>,
     q_inside_triggers: Query<(Entity, &InsideTriggers)>,
     mut q_triggers: Query<

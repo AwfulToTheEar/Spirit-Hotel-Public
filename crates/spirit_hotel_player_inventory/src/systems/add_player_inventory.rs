@@ -1,5 +1,4 @@
 use bevy::prelude::*;
-use leafwing_manifest::identifier::Id;
 use spirit_hotel_inventory::components::prelude::Inventory;
 use spirit_hotel_player::components::prelude::Player;
 

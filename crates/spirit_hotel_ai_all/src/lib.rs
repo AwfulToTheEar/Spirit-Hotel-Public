@@ -3,7 +3,6 @@ mod systems;
 
 use crate::systems::prelude::setup_goap_for_brain;
 use bevy::prelude::*;
-use bevy_dogoap::prelude::*;
 
 pub struct SpiritHotelAiAllPlugin;
 

@@ -1,6 +1,6 @@
-use crate::components::prelude::{HaltPathfindingIntent, NextPosToBeRemoved};
+use crate::components::prelude::{NextPosToBeRemoved};
 use bevy::prelude::*;
-use bevy_northstar::components::{AgentOfGrid, AgentPos, NextPos};
+use bevy_northstar::components::{AgentOfGrid, NextPos};
 use bevy_northstar::prelude::Path;
 use spirit_hotel_movement::components::prelude::{
     CheckMovementIntent, MoveToLocation, MovementIntent, UpdateMovementIntent,
