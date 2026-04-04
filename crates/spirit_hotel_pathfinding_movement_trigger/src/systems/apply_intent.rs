@@ -1,7 +1,7 @@
 use avian2d::prelude::Collider;
 use bevy::prelude::*;
 use bevy_northstar::prelude::{AgentOfGrid, CardinalNeighborhood, Grid};
-use spirit_hotel_movement::components::prelude::{CanMove, CanPush, MoveToLocation, MovementDuration, MovementFlag, MovementIntent, Pushable};
+use spirit_hotel_movement::components::prelude::{CanMove, CanPush, CheckMovementIntent, MoveToLocation, MovementDuration, MovementFlag, MovementIntent, Pushable, UpdateMovementIntent};
 use spirit_hotel_pathfinding::components::prelude::{GridTileSize, ScanCollider};
 use spirit_hotel_pathfinding_movement::components::prelude::Follow;
 use spirit_hotel_trigger::components::prelude::TriggerCollider;
@@ -23,7 +23,7 @@ pub fn apply_intent(
             &Transform,
             &Children,
         ),
-        (With<CanMove>, Without<MoveToLocation>),
+        (With<CanMove>, Without<MoveToLocation>, Without<CheckMovementIntent>, Without<UpdateMovementIntent>),
     >,
     q_colliders: Query<
         (Entity, &Collider, &GlobalTransform, &ChildOf),

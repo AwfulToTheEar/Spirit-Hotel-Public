@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use crate::components::prelude::{MoveToLocation, MovementCompleted, MovementIntent, SyncMovement, SyncMovementWith};
+use crate::components::prelude::{CheckMovementIntent, MoveToLocation, MovementCompleted, MovementIntent, SyncMovement, SyncMovementWith};
 
 pub fn remove_move_to_location_synced<C: Component>(
     mut commands: Commands,
@@ -12,6 +12,7 @@ pub fn remove_move_to_location_synced<C: Component>(
     for (entity, _) in q_synced_entities.iter() {
         commands
             .entity(entity)
-            .remove::<(MovementIntent, MoveToLocation, MovementCompleted)>();
+            .insert(CheckMovementIntent)
+            .remove::<(MoveToLocation, MovementCompleted)>();
     }
 }

@@ -1,10 +1,6 @@
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
-use bevy_yarnspinner::events::{
-    DialogueCompleteEvent, DialogueStartEvent, PresentLineEvent, PresentOptionsEvent,
-};
 use bevy_yarnspinner::prelude::{YarnProject, YarnSpinnerPlugin};
-use bevy_yarnspinner_example_dialogue_view::ExampleYarnSpinnerDialogueViewPlugin;
 
 use spirit_hotel_core::screens::Screen;
 
@@ -30,15 +26,10 @@ impl Plugin for SpiritHotelDialoguePlugin {
         .add_observer(update_character_name)
         .add_observer(handle_continue_dialogue)
         .add_observer(handle_clear_dialogue_body)
-        .add_systems(
-            Update,
-            (
-                show_dialogue_ui.run_if(on_message::<DialogueStartEvent>),
-                hide_dialogue_ui.run_if(on_message::<DialogueCompleteEvent>),
-                present_line.run_if(on_message::<PresentLineEvent>),
-                present_options.run_if(on_message::<PresentOptionsEvent>),
-            ),
-        )
+        .add_observer(show_dialogue_ui)
+        .add_observer(hide_dialogue_ui)
+        .add_observer(present_line)
+        .add_observer(present_options)
         .add_systems(
             OnEnter(Screen::Gameplay),
             (

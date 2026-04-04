@@ -1,7 +1,7 @@
 use bevy::prelude::*;
 use bevy_northstar::prelude::{AgentOfGrid, AgentPos, NextPos};
 
-use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent};
+use spirit_hotel_movement::components::prelude::{CheckMovementIntent, MoveToLocation, MovementIntent};
 use crate::components::prelude::NextPosToBeRemoved;
 
 pub fn remove_next_pos(
@@ -10,7 +10,7 @@ pub fn remove_next_pos(
         (Entity, &AgentPos, &NextPos),
         (
             With<AgentOfGrid>,
-            Without<MovementIntent>,
+            Or<(Without<MovementIntent>, With<CheckMovementIntent>)>,
             Without<MoveToLocation>,
             With<NextPosToBeRemoved>,
         ),

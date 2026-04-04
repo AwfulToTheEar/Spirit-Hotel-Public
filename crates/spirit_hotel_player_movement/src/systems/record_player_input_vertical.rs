@@ -2,7 +2,7 @@ use spirit_hotel_player::components::prelude::Player;
 use bevy::prelude::*;
 use bevy_enhanced_input::prelude::*;
 use spirit_hotel_player::inputs::prelude::WalkVertical;
-use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent};
+use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent, UpdateMovementIntent};
 
 pub fn record_player_input_vertical(
     trigger: On<Fire<WalkVertical>>,
@@ -11,7 +11,7 @@ pub fn record_player_input_vertical(
         Entity,
         (
             With<Player>,
-            Without<MovementIntent>,
+            Or<(Without<MovementIntent>, With<UpdateMovementIntent>)>,
             Without<MoveToLocation>,
         ),
     >,
@@ -24,5 +24,6 @@ pub fn record_player_input_vertical(
 
     commands
         .entity(entity)
+        .remove::<UpdateMovementIntent>()
         .insert(MovementIntent((Vec2::Y * trigger.value).normalize()));
 }

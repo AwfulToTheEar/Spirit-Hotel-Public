@@ -1,10 +1,10 @@
 use bevy_aseprite_ultra::prelude::AseAnimation;
 use spirit_hotel_animation::components::prelude::AnimatableMarker;
 use bevy::prelude::*;
-use spirit_hotel_movement::components::prelude::MoveToLocation;
+use spirit_hotel_movement::components::prelude::{MoveToLocation, MovementIntent};
 
 pub fn stop_animation_movement(
-    mut removed: RemovedComponents<MoveToLocation>,
+    mut removed: RemovedComponents<MovementIntent>,
     q_animatable_entities: Query<&Children, With<AnimatableMarker>>,
     mut q_visuals: Query<&mut AseAnimation>,
 ) {
