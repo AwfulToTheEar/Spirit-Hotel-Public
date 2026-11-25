@@ -78,13 +78,13 @@ avian2d = "0.6"
 bevy_aseprite_ultra = "0.8"
 bevy_yarnspinner = "0.8"
 bevy_yarnspinner_example_dialogue_view = "0.8"
-bevy_ecs_tiled = { git = "https://github.com/AwfulToTheEar/bevy_ecs_tiled.git", branch = "main", features = ["avian_debug", "user_properties"] }
+bevy_ecs_tiled = { version = "0.12", features = ["avian_debug", "user_properties"] }
 bevy_light_2d = "0.9"
 bevy_ecs_tilemap = "0.18"
 bevy_northstar = "0.6"
 bevy_enhanced_input = "0.24"
 bevy_av1 = { git = "https://github.com/AwfulToTheEar/bevy_av1.git", branch = "update-to-0.18"}
-bevy_dogoap = { git = "https://github.com/ekwoka/dogoap.git", branch = "bevy-18"}
+bevy_dogoap = { git = "https://github.com/AwfulToTheEar/dogoap.git", branch = "upgrade-to-0.18"}
 bevy_pretty_text = "0.4"
 pretty_text_parser = "0.3"
 bitvec = "1.0"

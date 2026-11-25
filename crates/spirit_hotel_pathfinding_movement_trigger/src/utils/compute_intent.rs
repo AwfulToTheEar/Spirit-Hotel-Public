@@ -16,20 +16,20 @@ pub fn compute_intent(
     intent: &MovementIntent,
     duration: &MovementDuration,
     step: Vec3,
-    children: &Children,
     can_push: bool,
     movement_flag_option: Option<&MovementFlag>,
     q_colliders: &Query<
-        (Entity, &Collider, &GlobalTransform, &ChildOf),
+        (Entity, &Collider, &GlobalTransform),
         (Without<TriggerCollider>, Without<ScanCollider>),
     >,
     q_pushables: &Query<
-        (Entity, &Transform, Has<MoveToLocation>, &Children),
+        (Entity, &Transform, Has<MoveToLocation>),
         (With<CanMove>, With<Pushable>),
     >,
     being_pushed: bool,
 ) -> bool {
     if let Some(movement_flag) = movement_flag_option {
+        info!("movement flag: {:?}", movement_flag);
         return match movement_flag {
             MovementFlag::Force => {
                 commands.entity(entity).insert(MoveToLocation {
@@ -48,84 +48,86 @@ pub fn compute_intent(
         };
     }
 
-    for collider_entity in children.iter() {
-        let Ok((_, collider, collider_transform, _)) = q_colliders.get(collider_entity) else {
+    let Ok((_, collider, collider_transform)) = q_colliders.get(entity) else {
+        commands.entity(entity).insert(MoveToLocation {
+            timer: Timer::from_seconds(duration.0, TimerMode::Once),
+            start: transform.translation,
+            end: transform.translation + step,
+        });
+        return false;
+    };
+
+    for (other_collider_entity, other_collider, other_transform) in q_colliders.iter()
+    {
+        if entity == other_collider_entity {
+            continue;
+        }
+
+        let Ok(result) = contact_query::intersection_test(
+            collider,
+            (collider_transform.translation() + step).truncate(),
+            collider_transform.rotation(),
+            other_collider,
+            other_transform.translation().truncate(),
+            other_transform.rotation(),
+        ) else {
             continue;
         };
 
-        for (other_collider_entity, other_collider, other_transform, child_of) in q_colliders.iter()
-        {
-            if collider_entity == other_collider_entity {
-                continue;
-            }
-
-            let Ok(result) = contact_query::intersection_test(
-                collider,
-                (collider_transform.translation() + step).truncate(),
-                collider_transform.rotation(),
-                other_collider,
-                other_transform.translation().truncate(),
-                other_transform.rotation(),
-            ) else {
-                continue;
-            };
-
-            if !result {
-                continue;
-            }
-
-            if let Some(follow) = option_follow
-                && follow.0 == child_of.0
-            {
-                commands.entity(entity).insert(CollidedWithFollowTarget);
-            }
-
-            if !can_push || can_push && q_pushables.get(child_of.0).is_err() {
-                commands.entity(entity).remove::<MovementIntent>();
-                return true;
-            }
-
-            let (pushable_entity, pushable_transform, has_move_to_location, pushable_children) =
-                q_pushables.get(child_of.0).unwrap();
-
-            if has_move_to_location {
-                commands.entity(entity).remove::<MovementIntent>();
-                return true;
-            }
-
-            let obstructed = compute_intent(
-                commands,
-                pushable_entity,
-                None,
-                pushable_transform,
-                intent,
-                duration,
-                step,
-                pushable_children,
-                can_push,
-                movement_flag_option,
-                q_colliders,
-                q_pushables,
-                true,
-            );
-
-            if obstructed {
-                commands.entity(entity).remove::<MovementIntent>();
-
-                return true;
-            }
-
-            if being_pushed {
-                commands.entity(entity).insert(*intent);
-            }
-
-            commands.entity(entity).insert(MoveToLocation {
-                timer: Timer::from_seconds(duration.0, TimerMode::Once),
-                start: transform.translation,
-                end: transform.translation + step,
-            });
-            return false;
+        if !result {
+            continue;
         }
+
+        if let Some(follow) = option_follow
+            && follow.0 == other_collider_entity
+        {
+            commands.entity(entity).insert(CollidedWithFollowTarget);
+        }
+
+        if !can_push || can_push && q_pushables.get(other_collider_entity).is_err() {
+            commands.entity(entity).remove::<MovementIntent>();
+            return true;
+        }
+
+        let (pushable_entity, pushable_transform, has_move_to_location) =
+            q_pushables.get(other_collider_entity).unwrap();
+
+        if has_move_to_location {
+            commands.entity(entity).remove::<MovementIntent>();
+            return true;
+        }
+
+        let obstructed = compute_intent(
+            commands,
+            pushable_entity,
+            None,
+            pushable_transform,
+            intent,
+            duration,
+            step,
+            can_push,
+            movement_flag_option,
+            q_colliders,
+            q_pushables,
+            true,
+        );
+
+        if obstructed {
+            commands.entity(entity).remove::<MovementIntent>();
+
+            return true;
+        }
+
+        if being_pushed {
+            commands.entity(entity).insert(*intent);
+        }
+
+        commands.entity(entity).insert(MoveToLocation {
+            timer: Timer::from_seconds(duration.0, TimerMode::Once),
+            start: transform.translation,
+            end: transform.translation + step,
+        });
+        return false;
     }
 
     if being_pushed {

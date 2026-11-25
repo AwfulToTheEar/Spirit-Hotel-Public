@@ -10,86 +10,84 @@ use spirit_hotel_trigger::{
 pub fn check_trigger_overlap(
     mut commands: Commands,
     mut q_entites: Query<
-        (Entity, &Children, Option<&mut InsideTriggers>),
+        (
+            Entity,
+            &Collider,
+            &GlobalTransform,
+            Option<&mut InsideTriggers>,
+        ),
         (With<Transform>, Without<MoveToLocation>, With<CanMove>),
     >,
-    q_colliders: Query<(&Collider, &GlobalTransform)>,
     q_trigger_colliders: Query<
-        (Entity, &Collider, &GlobalTransform, &ChildOf),
+        (Entity, &Collider, &GlobalTransform),
         With<TriggerCollider>,
     >,
 ) {
-    for (entity, children, mut inside_triggers_option) in q_entites.iter_mut() {
-        for child in children.iter() {
-            let Ok((collider, collider_transform)) = q_colliders.get(child) else {
+    for (entity, collider, transform, mut inside_triggers_option) in q_entites.iter_mut() {
+        for (trigger_entity, trigger_collider, trigger_transform) in
+            q_trigger_colliders.iter()
+        {
+            if entity == trigger_entity {
+                continue;
+            }
+
+            let Ok(result) = contact_query::intersection_test(
+                collider,
+                transform.translation().truncate(),
+                transform.rotation(),
+                trigger_collider,
+                trigger_transform.translation().truncate(),
+                trigger_transform.rotation(),
+            ) else {
                 continue;
             };
 
-            for (trigger_entity, trigger_collider, trigger_transform, child_of) in
-                q_trigger_colliders.iter()
-            {
-                if child == trigger_entity {
-                    continue;
-                }
-
-                let Ok(result) = contact_query::intersection_test(
-                    collider,
-                    collider_transform.translation().truncate(),
-                    collider_transform.rotation(),
-                    trigger_collider,
-                    trigger_transform.translation().truncate(),
-                    trigger_transform.rotation(),
-                ) else {
-                    continue;
-                };
-
-                let Some(inside_triggers) = &mut inside_triggers_option else {
-                    if !result {
-                        continue;
-                    }
-
-                    let mut inside_triggers = InsideTriggers::default();
-                    inside_triggers.entities.push(child_of.0);
-                    commands.entity(entity).insert(inside_triggers);
-
-                    commands.trigger(TriggerEntered {
-                        by: entity,
-                        trigger: child_of.0,
-                    });
-
-                    continue;
-                };
-
+            let Some(inside_triggers) = &mut inside_triggers_option else {
                 if !result {
-                    if !inside_triggers.entities.contains(&child_of.0) {
-                        continue;
-                    }
-
-                    inside_triggers.entities.retain(|e| e != &child_of.0);
-
-                    if inside_triggers.entities.is_empty() {
-                        commands.entity(entity).remove::<InsideTriggers>();
-                    }
-
-                    commands.trigger(TriggerExited {
-                        by: entity,
-                        trigger: child_of.0,
-                    });
-
                     continue;
                 }
 
-                if inside_triggers.entities.contains(&child_of.0) {
-                    continue;
-                }
+                let mut inside_triggers = InsideTriggers::default();
+                inside_triggers.entities.push(trigger_entity);
+                commands.entity(entity).insert(inside_triggers);
 
                 commands.trigger(TriggerEntered {
                     by: entity,
-                    trigger: child_of.0,
+                    trigger: trigger_entity,
                 });
 
-                inside_triggers.entities.push(child_of.0);
+                continue;
+            };
+
+            if !result {
+                if !inside_triggers.entities.contains(&trigger_entity) {
+                    continue;
+                }
+
+                inside_triggers.entities.retain(|e| e != &trigger_entity);
+
+                if inside_triggers.entities.is_empty() {
+                    commands.entity(entity).remove::<InsideTriggers>();
+                }
+
+                commands.trigger(TriggerExited {
+                    by: entity,
+                    trigger: trigger_entity,
+                });
+
+                continue;
             }
+
+            if inside_triggers.entities.contains(&trigger_entity) {
+                continue;
+            }
+
+            commands.trigger(TriggerEntered {
+                by: entity,
+                trigger: trigger_entity,
+            });
+
+            inside_triggers.entities.push(trigger_entity);
         }
     }
 }

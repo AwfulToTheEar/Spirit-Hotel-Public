@@ -1,4 +1,4 @@
-use crate::OverlayRoot;
+use crate::{OverlayCamera, OverlayRoot};
 use crate::fades::{FadeTask, FadeTaskFinished};
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
@@ -19,6 +19,7 @@ pub fn show_image(
     mut commands: Commands,
     option_show_image: Option<Res<ShowImage>>,
     option_fade_task: Option<Res<FadeTask<ShowImage>>>,
+    s_overlay_camera: Single<Entity, With<OverlayCamera>>
 ) {
     let Some(show_image) = option_show_image else {
         return;
@@ -31,7 +32,7 @@ pub fn show_image(
             height: percent(100),
             ..default()
         },
-        RenderLayers::layer(1),
+        UiTargetCamera(s_overlay_camera.entity()),
         ImageNode::new(show_image.0.clone()),
         ImageOverlay,
         ChildOf(e_overlay_root_added.entity),

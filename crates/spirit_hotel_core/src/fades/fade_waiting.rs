@@ -4,7 +4,7 @@ use crate::fades::{
 use crate::game::ShowImage;
 use crate::screens::Screen;
 use crate::theme::widget;
-use crate::{AppSystems, OverlayRoot, Pause};
+use crate::{AppSystems, OverlayCamera, OverlayRoot, Pause};
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 
@@ -23,12 +23,12 @@ pub(super) fn plugin(app: &mut App) {
         ));
 }
 
-pub fn spawn_fade_waiting(mut commands: Commands, fade_data: Res<FadeData>) {
+pub fn spawn_fade_waiting(mut commands: Commands, fade_data: Res<FadeData>, s_overlay_camera: Single<Entity, With<OverlayCamera>>) {
     commands.spawn((
         widget::ui_root("Fade Waiting"),
         DespawnOnExit(Fade::Waiting),
         BackgroundColor(fade_data.color),
-        RenderLayers::layer(1),
+        UiTargetCamera(s_overlay_camera.entity()),
         OverlayRoot,
     ));
 }

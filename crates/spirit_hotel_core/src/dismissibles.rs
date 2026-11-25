@@ -2,7 +2,7 @@ use crate::fades::FadeTask;
 use crate::game::GameplaySystems;
 use crate::theme::palette::DISMISSIBLE_BACKGROUND_COLOR;
 use crate::theme::widget;
-use crate::{AppSystems, OverlayRoot};
+use crate::{AppSystems, OverlayCamera, OverlayRoot};
 use bevy::camera::visibility::RenderLayers;
 use bevy::ecs::system::ScheduleSystem;
 use bevy::input::common_conditions::input_just_pressed;
@@ -43,12 +43,12 @@ impl<M> AddDismissible<M> for App {
 #[states(scoped_entities)]
 pub struct DismissiblesOpen(pub bool);
 
-pub fn spawn_dismissible_root(mut commands: Commands) {
+pub fn spawn_dismissible_root(mut commands: Commands, s_overlay_camera: Single<Entity, With<OverlayCamera>>) {
     commands.spawn((
         widget::ui_root("Dismissible Root"),
         DespawnOnExit(DismissiblesOpen(true)),
         BackgroundColor(DISMISSIBLE_BACKGROUND_COLOR),
-        RenderLayers::layer(1),
+        UiTargetCamera(s_overlay_camera.entity()),
         OverlayRoot,
     ));
 }

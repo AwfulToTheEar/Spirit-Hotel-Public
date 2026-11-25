@@ -113,6 +113,9 @@ pub struct PausableSystems;
 pub struct MainCamera;
 
 #[derive(Component)]
+pub struct OverlayCamera;
+
+#[derive(Component)]
 pub struct OverlayRoot;
 
 fn spawn_cameras(mut commands: Commands) {
@@ -134,6 +137,7 @@ fn spawn_cameras(mut commands: Commands) {
             ..default()
         },
         Camera2d,
-        RenderLayers::layer(1),
+        OverlayCamera,
+        RenderLayers::none(),
     ));
 }

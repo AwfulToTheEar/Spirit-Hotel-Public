@@ -1,3 +1,4 @@
+use std::result;
 use crate::utils::prelude::compute_intent;
 use avian2d::prelude::Collider;
 use bevy::prelude::*;
@@ -24,7 +25,6 @@ pub fn apply_intent(
             Has<CanPush>,
             Option<&MovementFlag>,
             &Transform,
-            &Children,
         ),
         (
             With<CanMove>,
@@ -34,11 +34,11 @@ pub fn apply_intent(
         ),
     >,
     q_colliders: Query<
-        (Entity, &Collider, &GlobalTransform, &ChildOf),
+        (Entity, &Collider, &GlobalTransform),
         (Without<TriggerCollider>, Without<ScanCollider>),
     >,
     q_pushables: Query<
-        (Entity, &Transform, Has<MoveToLocation>, &Children),
+        (Entity, &Transform, Has<MoveToLocation>),
         (With<CanMove>, With<Pushable>),
     >,
 ) {
@@ -51,7 +51,6 @@ pub fn apply_intent(
         can_push,
         movement_flag_option,
         transform,
-        children,
     ) in q_entities_with_intent.iter()
     {
         let Ok(grid_tile_size) = q_grid_tile_sizes.get(agent_of_grid.0) else {
@@ -60,7 +59,7 @@ pub fn apply_intent(
 
         let step = (intent.0 * grid_tile_size.0.as_vec2()).extend(0.);
 
-        compute_intent(
+        let result = compute_intent(
             &mut commands,
             entity,
             option_follow,
@@ -68,7 +67,6 @@ pub fn apply_intent(
             intent,
             duration,
             step,
-            children,
             can_push,
             movement_flag_option,
             &q_colliders,

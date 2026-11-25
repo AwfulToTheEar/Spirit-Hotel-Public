@@ -1,8 +1,4 @@
-use crate::{
-    AppSystems,
-    fades::{Fade, FadeData},
-    theme::widget,
-};
+use crate::{AppSystems, fades::{Fade, FadeData}, theme::widget, OverlayCamera};
 use bevy::camera::visibility::RenderLayers;
 use bevy::prelude::*;
 
@@ -22,13 +18,13 @@ pub(super) fn plugin(app: &mut App) {
 #[reflect(Component)]
 pub struct FadeIn(Timer);
 
-pub fn spawn_fade_in(mut commands: Commands, fade_data: Res<FadeData>) {
+pub fn spawn_fade_in(mut commands: Commands, fade_data: Res<FadeData>, s_overlay_camera: Single<Entity, With<OverlayCamera>>) {
     commands.spawn((
         widget::ui_root("Fade In"),
         DespawnOnExit(Fade::In),
         BackgroundColor(fade_data.color.with_alpha(0.)),
         FadeIn(Timer::from_seconds(fade_data.duration, TimerMode::Once)),
-        RenderLayers::layer(1),
+        UiTargetCamera(s_overlay_camera.entity())
     ));
 }
 
